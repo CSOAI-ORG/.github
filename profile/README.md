@@ -14,7 +14,7 @@ We ship Model Context Protocol servers that audit AI systems against real regula
 
 | Regulation | MCP | Enforcement |
 |---|---|---|
-| EU AI Act | [`eu-ai-act-compliance-mcp`](https://pypi.org/project/eu-ai-act-compliance-mcp/) | 2 Aug 2026 — €35M or 7% turnover |
+| EU AI Act | [`eu-ai-act-compliance-mcp`](https://pypi.org/project/eu-ai-act-compliance-mcp/) | Art 50: 2 Nov 2026 · Annex III: 2 Dec 2027 — €35M or 7% turnover |
 | DORA | [`dora-compliance-mcp`](https://pypi.org/project/dora-compliance-mcp/) | 17 Jan 2025 (live) — 1% daily turnover (CTPPs) |
 | NIS2 | [`nis2-compliance-mcp`](https://pypi.org/project/nis2-compliance-mcp/) | 17 Oct 2024 (transposition) — €10M or 2% turnover |
 | CRA | [`cra-compliance-mcp`](https://pypi.org/project/cra-compliance-mcp/) | 11 Dec 2027 — €15M or 2.5% turnover |
