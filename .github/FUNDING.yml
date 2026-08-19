@@ -1,6 +1,3 @@
-# These are supported funding model platforms
+# Org-wide Sponsor button. Sponsorship funds the instrument; it never buys a result.
+# No payment processors, no external sponsor pages: GitHub Sponsors only (open-source rail).
 github: [CSOAI-ORG]
-custom:
-  - https://buy.stripe.com/eVqfZj9P98mTcHXcw0eZ20A
-  - https://meok.ai/sponsor
-  - https://nlnet.nl/propose
