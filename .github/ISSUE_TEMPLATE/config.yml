@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Verify a grade
+    url: https://councilof.ai/gspc-verify
+    about: Free, no account. A grade is never sold.
+  - name: Living GSPC board
+    url: https://councilof.ai/api/gspc
+    about: Live counts, slots, and signed board payload.
+  - name: Firewall Charter
+    url: https://councilof.ai/firewall-charter
+    about: Sponsorship funds the instrument. It never buys a result.

@@ -1,0 +1,32 @@
+name: Measurement challenge
+description: Recompute or contest a published, signed measurement.
+title: "challenge: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        CSOAI Ltd measures and signs. We do not remediate or sell a grade.
+        Point at a public harness and a signed receipt.
+  - type: input
+    id: board_or_receipt
+    attributes:
+      label: Board or receipt
+      description: URL of the living board, verify page, or signed receipt.
+      placeholder: https://councilof.ai/api/gspc
+    validations:
+      required: true
+  - type: textarea
+    id: disagreement
+    attributes:
+      label: What disagrees
+      description: The published claim, your recomputed result, and the split/grader used.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: Commands or commit SHA that reproduce your numbers from public artifacts.
+    validations:
+      required: true

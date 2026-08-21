@@ -1,78 +1,44 @@
-# .Github
+# Council of AI — GitHub defaults
 
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
-[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/.github/)
+This repository holds the [CSOAI-ORG](https://github.com/CSOAI-ORG) profile
+and the default community-health files used when a repository does not ship
+its own.
 
-> 
+**CSOAI Ltd** (UK Companies House 16939677) is an independent AI-measurement
+body. We measure AI systems against the rules that govern them, sign the
+result (Ed25519), and publish what we cannot yet measure. Measurement, not
+certification. We do not remediate.
 
-.github MCP — AI-powered automation tool. MIT.
+| Surface | URL |
+|---|---|
+| Public site | [councilof.ai](https://councilof.ai) |
+| Living board | [councilof.ai/api/gspc](https://councilof.ai/api/gspc) |
+| Verify a grade (free) | [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify) |
+| Honesty gate | [councilof.ai/honesty](https://councilof.ai/honesty) |
+| Firewall Charter | [councilof.ai/firewall-charter](https://councilof.ai/firewall-charter) |
 
----
+Open measurement tooling: [carder](https://github.com/CSOAI-ORG/carder) ·
+[inspect-receipts](https://github.com/CSOAI-ORG/inspect-receipts) ·
+[a2a-signed-receipts](https://github.com/CSOAI-ORG/a2a-signed-receipts) ·
+[codabench-gspc](https://github.com/CSOAI-ORG/codabench-gspc)
 
-## 🚀 Quick Start
+This repository is **not** a package, MCP server, or installable product.
 
-```bash
-# Install via pip
-pip install .github
+## Default files
 
-# Or install via Smithery
-npx -y @smithery/cli@latest install .github --client claude
-```
+| File | Purpose |
+|---|---|
+| [`profile/README.md`](profile/README.md) | Account profile shown at [github.com/CSOAI-ORG](https://github.com/CSOAI-ORG) |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | How we work in public |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | What we accept, and what we do not |
+| [`SECURITY.md`](SECURITY.md) | How to report a vulnerability |
+| [`SUPPORT.md`](SUPPORT.md) | Where to get help |
+| [`.github/FUNDING.yml`](.github/FUNDING.yml) | GitHub Sponsors only — funds the instrument, never a result |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) | Default issue forms |
+| [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md) | Default pull-request checklist |
 
-## ✨ Features
+## Licence
 
-- MCP protocol compliant
-- Easy installation
-- Well-documented API
-- Production-ready
-- Active maintenance
+MIT © CSOAI Ltd (UK 16939677)
 
-## 📖 Documentation
-
-- [Full Documentation](https://docs.meok.ai/.github)
-- [API Reference](https://api.meok.ai)
-- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
-
-## 🛡️ Compliance
-
-This MCP server is built with **EU AI Act compliance** built-in:
-
-- ✅ Article 9 — Risk Management System
-- ✅ Article 13 — Transparency & Instructions for Use
-- ✅ Article 15 — Bias Detection & Testing
-- ✅ Article 26 — FRIA Support (where applicable)
-- ✅ Article 50 — AI Content Watermarking (where applicable)
-
-Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
-
-## 🏢 Enterprise
-
-Need custom development, SLA guarantees, or white-label deployment?
-
-- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
-- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
-
-[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
-
-## 🤝 Part of the MEOK Ecosystem
-
-This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
-
-| Domain | Purpose |
-|--------|---------|
-| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
-| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
-| [meok.ai](https://meok.ai) | Sovereign AI platform |
-| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
-
-## 📜 License
-
-MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
-
----
-
-<p align="center">
-  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
-</p>
+Contact: [nicholas@csoai.org](mailto:nicholas@csoai.org)

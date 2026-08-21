@@ -4,7 +4,7 @@
 them, sign the result (Ed25519), and publish what we cannot yet measure. Measurement, not
 certification. We do not remediate.
 
-- **The board:** the GSPC 14-slot board, live at [councilof.ai/api/gspc](https://councilof.ai/api/gspc) — deterministic grading, Wilson intervals, ties stated as ties. The item count is live in the API; we do not hardcode it.
+- **The board:** the living GSPC board at [councilof.ai/api/gspc](https://councilof.ai/api/gspc) — deterministic grading, Wilson intervals, ties stated as ties. Counts, slots, and dates are live in the API; we do not hardcode them here.
 - **Verify free, forever:** [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify) — no account, no fee. A grade is never sold; ranked never pay.
 - **The honesty gate:** we publish our own models losing our own arena — [councilof.ai/honesty](https://councilof.ai/honesty).
 - **State changes:** [RSS](https://councilof.ai/api/feed.xml) · [REPORTED third-party context](https://councilof.ai/api/reported) · [Firewall Charter](https://councilof.ai/firewall-charter)
