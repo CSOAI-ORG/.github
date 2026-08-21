@@ -1,0 +1,24 @@
+name: Defect
+description: A factual error in public copy, a broken link, or a tooling bug.
+title: "defect: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for wrong URLs, stale dates, or a claim that contradicts the
+        living board. Do not use it to request a rank change.
+  - type: input
+    id: url
+    attributes:
+      label: Where
+      description: Repository, file, or public URL.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What is wrong
+      description: The current text or behaviour, and what the living source of truth says.
+    validations:
+      required: true
