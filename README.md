@@ -13,6 +13,7 @@ certification. We do not remediate.
 |---|---|
 | Public site | [councilof.ai](https://councilof.ai) |
 | Living board | [councilof.ai/api/gspc](https://councilof.ai/api/gspc) |
+| Axis name lock (agents) | [`docs/GSPC_AXIS_CANON.md`](docs/GSPC_AXIS_CANON.md) — 14 board + 2 in-lane; live API wins on counts |
 | Verify a grade (free) | [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify) |
 | Honesty gate | [councilof.ai/honesty](https://councilof.ai/honesty) |
 | Firewall Charter | [councilof.ai/firewall-charter](https://councilof.ai/firewall-charter) |
