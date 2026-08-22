@@ -28,7 +28,7 @@ Axis names: [`GSPC_AXIS_CANON.md`](GSPC_AXIS_CANON.md). Plan: [`MASTER_PLAN.md`]
 | Fact-cards / valves | `carder` | Strong |
 | Brand badges | `brand-assets` | Minimal |
 | Claim linter (SOVOS) | `csoai-static-deploy2/.../claim_linter.py` | Exists |
-| **ClaimGuard product** | — | **NOT in any CSOAI-ORG tree** (chat-only) |
+| **ClaimGuard product** | [`claimguard`](https://github.com/CSOAI-ORG/claimguard) | **Landed 2026-08-22** — live attestation verify + claim rules |
 | ConsciousnessNonClaimGuard | `meok-ai` | Different product |
 
 ## Hugging Face (`csoai`) — GSPC public
@@ -82,7 +82,7 @@ Fat host `https://csoai-site.pages.dev` serves many of the 404s. Sitemap adverti
 
 ## Track-loss register (land or kill)
 
-1. ClaimGuard session files / jail evidence sigs  
+1. ~~ClaimGuard session files~~ → landed in `CSOAI-ORG/claimguard` (session jail evidence sigs still local-only)  
 2. Apex vs fat deploy split  
 3. AG-UI not on brand origin  
 4. XR HF card contamination  

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GSPC-JAIL — jail · CSOAI GSPC</title>
+<meta name="description" content="GSPC-JAIL: Containment floor — escape-attempt detection. Not a ranking.. Measurement, not certification.">
+<style>
+:root{--bg:#f4f8f6;--panel:#fff;--line:#d3e2db;--ink:#0c1a15;--dim:#5a6f66;--accent:#f87171;
+  --mono:ui-monospace,'SF Mono',Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#061310;--panel:#0c1f18;--line:#1d3a2e;--ink:#e8f5ef;--dim:#9db6ab}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:clamp(24px,5vw,64px)}
+main{max-width:720px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-size:clamp(30px,6vw,44px);margin:12px 0 6px;letter-spacing:-.02em;line-height:1.05}
+.axis{color:var(--dim);font-size:18px;margin:0 0 18px}
+.chip{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 11px;border-radius:20px;background:var(--accent);color:#fff;text-transform:uppercase}
+.task{font-size:18px;margin:22px 0}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:18px 0}
+.box h2{font-size:12px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 0 10px;font-weight:600}
+.box p{margin:0;font-size:15px}
+.kv{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.kv:last-child{border-bottom:none}
+.kv span:last-child{font-family:var(--mono);text-align:right}
+a.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:10px 18px;border-radius:9px;font-weight:600;font-size:15px;margin:6px 8px 0 0}
+a.btn.ghost{background:none;color:var(--dim);border:1px solid var(--line);font-weight:400}
+footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+</style></head><body><main>
+<p class="eyebrow">CSOAI · GSPC suite · 14-slot board</p>
+<h1>GSPC-JAIL</h1>
+<p class="axis">the <strong>jail</strong> axis &nbsp; <span class="chip">measured · separation UNTESTED</span></p>
+<p class="task">Containment floor — escape-attempt detection. Not a ranking.</p>
+<div class="box"><h2>Note</h2><p>Jail uses a 7-model fleet, not the 19-model board fleet. Separation is UNTESTED until McNemar runs.</p></div>
+<div class="box"><h2>Living numbers</h2><p>Do not freeze scores here. Read <code>GET https://councilof.ai/api/gspc</code>.</p></div>
+<div class="box"><h2>At a glance</h2>
+<div class="kv"><span>axis</span><span>jail</span></div>
+<div class="kv"><span>state</span><span>measured · separation UNTESTED</span></div>
+<div class="kv"><span>items (card)</span><span>71</span></div>
+<div class="kv"><span>grading</span><span>deterministic</span></div>
+<div class="kv"><span>licence</span><span>CC-BY-4.0</span></div>
+</div>
+<p>
+<a class="btn" href="https://huggingface.co/datasets/csoai/gspc-jail">The dataset</a>
+<a class="btn ghost" href="https://councilof.ai/api/gspc">Living board</a>
+<a class="btn ghost" href="https://councilof.ai">Council of AI</a>
+</p>
+<footer><strong>Measurement, not certification.</strong> CSOAI Ltd (GB, Companies House 16939677) · councilof.ai</footer>
+</main></body></html>
