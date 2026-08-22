@@ -5,7 +5,8 @@
 Do not hardcode totals, dates, or leaders in READMEs or marketplace copy.
 This file names the axes so agents stop inventing “14 / 15 / 16” from chat.
 
-**Audited against live API:** 2026-08-22 · schema `csoai.gspc-axes/0.5`
+**Audited against live API:** 2026-08-22 · schema `csoai.gspc-axes/0.5`  
+**Plan / inventory:** [`MASTER_PLAN.md`](MASTER_PLAN.md) · [`ESTATE_INVENTORY.md`](ESTATE_INVENTORY.md)
 
 ## The count rule (one sentence)
 
