@@ -137,7 +137,10 @@ Status legend: ✅ done this run · 🔧 ready (patch/PR) · 👤 owner dashboar
 120. ⏳ OpenRouter harness → board refresh on schedule (RunPod 3090 sim_burst)
 
 ## Owner actions required now
+- 👤 **Merge PR #356** (councilof-ai AG-UI bridge — clean) + **PR #37** (static ag-ui postMessage)
+- 👤 Close **PR #355** (superseded dirty 727-file diff)
 - 👤 Cloudflare: disable Pages Git auto-deploy on `councilof-ai` (DEPLOY-LOCK)
-- 👤 Re-run deploy workflow; confirm alias routes 200 (homepage already fat)
+- 👤 Re-run deploy workflow; confirm `/ag-ui` serves iframe (not lobby redirect)
+- 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
 - 👤 Merge councilof-ai PR #324 (API functions guard)
 - 👤 HF write token in agent env → apply `docs/hf-patches/**`
