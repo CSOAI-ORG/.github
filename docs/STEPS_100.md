@@ -128,8 +128,8 @@ Status legend: ✅ done this run · 🔧 ready (patch/PR) · 👤 owner dashboar
 111. ✅ Architecture doc `CHAT_AGUI_OPENROUTER.md` (chat ≠ AG-UI; one contract)
 112. ✅ Patch bundle `docs/patches/councilof-ai-openrouter-agui/` (AgUiBridge + scripts)
 113. ✅ `scripts/e2e-integration-stack.mjs` in .github (live smoke)
-114. 🔧 Merge councilof-ai branch `cursor/openrouter-agui-e2e-ff6e` (push blocked for bot)
-115. 🔧 Merge static-deploy2 `cursor/agui-chat-bridge-ff6e` (ag-ui.html postMessage)
+114. 🔧 Merge councilof-ai **PR #356** `cursor/agui-bridge-clean-ff6e` (clean; supersedes dirty #355)
+115. 🔧 Merge csoai-static-deploy2 **PR #37** `cursor/agui-chat-bridge-ff6e` (ag-ui.html postMessage)
 116. 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
 117. ⏳ `/ag-ui` serves AgUiBridge (currently 308 → lobby on live)
 118. ⏳ Static ag-ui iframe chat grounded via parent bridge
