@@ -31,6 +31,10 @@ python claimguard.py check --board board.json --claim "14 quotable axes" --json
 # fail any "marked per Article 50 / C2PA verified" claim it does not support.
 python claimguard.py check --board board.json \
   --claim "this image is marked per Article 50" --c2pa manifest.json
+
+# Emit the verdict as a composable in-toto Statement (v0.3), optionally DSSE-signed.
+python claimguard.py check --board board.json --claim "14 quotable axes" --intoto
+python claimguard.py check --board board.json --intoto --sign-key ed25519.seed
 ```
 
 Exit code `0` = PASS, `1` = FAIL.

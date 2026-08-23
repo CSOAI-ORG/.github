@@ -454,6 +454,10 @@ def main(argv: list[str] | None = None) -> int:
         help="Path to a C2PA-style signed manifest JSON (Article 50 provenance check)",
     )
     c.add_argument("--json", action="store_true", help="Emit JSON report")
+    c.add_argument("--intoto", action="store_true",
+                   help="Emit the report as an in-toto Statement v1 (composable attestation)")
+    c.add_argument("--sign-key", help="Ed25519 seed file (hex/b64url) to DSSE-sign the --intoto Statement")
+    c.add_argument("--keyid", help="Override keyid for the DSSE signature")
     c.add_argument("--skip-sig", action="store_true")
     args = p.parse_args(argv)
 
@@ -475,6 +479,18 @@ def main(argv: list[str] | None = None) -> int:
         with open(args.c2pa, encoding="utf-8") as f:
             c2pa_manifest = json.load(f)
     report = audit(board, claims, skip_sig=args.skip_sig, c2pa=c2pa_manifest)
+    if args.intoto:
+        from attest import load_signing_key, subject_digest, to_dsse, to_intoto_statement
+        stmt = to_intoto_statement(
+            report.to_dict(), subject_name="gspc-board", subject_sha256=subject_digest(board)
+        )
+        if args.sign_key:
+            key, kid = load_signing_key(args.sign_key)
+            out = to_dsse(stmt, key, keyid=args.keyid or kid)
+        else:
+            out = stmt
+        print(json.dumps(out, indent=2))
+        return 0 if report.ok else 1
     if args.json:
         print(json.dumps(report.to_dict(), indent=2))
     else:

@@ -1,15 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "claimguard"
-version = "0.2.0"
+version = "0.3.0"
 description = "Claim-vs-signed-artifact integrity checker for GSPC boards + EU AI Act Article 50 / C2PA provenance"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "CSOAI Ltd", email = "nicholas@csoai.org" }]
+keywords = ["ai-act", "article-50", "c2pa", "provenance", "attestation", "in-toto", "dsse", "ed25519", "gspc"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Software Development :: Quality Assurance",
+]
 dependencies = ["cryptography>=42"]
+
+[project.urls]
+Homepage = "https://councilof.ai"
+"Living board" = "https://councilof.ai/api/gspc"
+Source = "https://github.com/CSOAI-ORG/claimguard"
+"Axis canon" = "https://github.com/CSOAI-ORG/.github/blob/main/docs/GSPC_AXIS_CANON.md"
 
 [project.scripts]
 claimguard = "claimguard:main"
 
 [tool.setuptools]
-py-modules = ["claimguard", "canonical", "c2pa"]
+py-modules = ["claimguard", "canonical", "c2pa", "attest"]
