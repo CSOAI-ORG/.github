@@ -99,6 +99,17 @@ One live board receipt round-trips: `/api/gspc` payload → in-toto Statement �
 DSSE → re-verified by both our Ed25519 verifier **and** a generic
 `cosign verify-blob`/in-toto verifier, with a log entry retrievable by digest.
 
+## Implemented in `harness/` (2026-08-23, e2e-proven)
+- `receipts.py` — in-toto Statement v1 + DSSE + verify (round-trips).
+- `verify_external.py` — **independent** DSSE verifier (no shared internals) that
+  accepts a board receipt from the published envelope + public key alone — interop
+  proof that a third party / `cosign`-style tool can verify us.
+- `tlog.py` + `/api/attestations/log` — hash-chained transparency log; e2e proves
+  the chain verifies and that tampering any entry breaks it.
+- `schemas/measurement.v1.json`, `schemas/detection.v1.json` — published predicate
+  schemas, served at `/schemas/*`.
+Remaining: move helpers into `signed-receipts`, Rekor mirror, Zenodo DOIs, apex.
+
 ## Non-goals
 Not dropping did:web. Not moving measurement into CI. Not signing anything the
 board didn't actually measure.
