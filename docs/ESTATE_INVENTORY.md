@@ -8,7 +8,7 @@ Axis names: [`GSPC_AXIS_CANON.md`](GSPC_AXIS_CANON.md). Plan: [`MASTER_PLAN.md`]
 | Asset | Repo / URL | Status |
 |---|---|---|
 | Living board API | `councilof.ai/api/gspc` | **Live** |
-| Site + lobby + scoreboard | `CSOAI-ORG/councilof-ai` | Code rich; **apex thin** vs fat `csoai-site.pages.dev` |
+| Site + lobby + scoreboard | `CSOAI-ORG/councilof-ai` | Homepage **fat** (213 KB); **alias routes 404** on apex |
 | Static boards / SOVOS / scorecard | `CSOAI-ORG/csoai-static-deploy2` | Fat host live; Moody’s `scorecard.html` |
 | AG-UI wire | `CSOAI-ORG/csoai-agui-wire` | Code verified; **not on apex** |
 | MCP worker | via `councilof.ai/.well-known/mcp.json` | Tools: measure, verify, jail-probe, enter-arena |
@@ -61,14 +61,19 @@ Cite on axis cards (mostly missing today).
 
 ~356 repos with `mcp` in the name. **Not** the weekend readiness signal. Prefer GSPC MCP worker tools over catalog sprawl.
 
-## Live route reality (apex `councilof.ai`)
+## Live route reality (apex `councilof.ai`) — audited 2026-08-23
 
-| 200 | REAL 404 (coded elsewhere / fat host) |
+| 200 | REAL 404 (coded in place-end-user-aliases, not on production alias) |
 |---|---|
-| `/`, `/api/gspc`, `/api/chat`, `/api/health`, `/api/cross` | `/lobby`, `/agui`, `/scorecard`, `/honesty`, `/verify` |
-| `/arena`, `/gspc-scoreboard`, `/benchmarks`, `/*bench` | `/coliseum`, `/live-ledger`, `/methodology`, `/about` |
+| `/` (213 KB + CouncilLobby), `/?lobby=home` | `/lobby`, `/scorecard`, `/honesty`, `/library` |
+| `/api/gspc`, `/api/health`, `/api/cross`, `/api/cards`, `/api/axis-register` | `/api/chat` |
+| `/gspc-scoreboard`, `/gspc-verify/` (slash) | `/gspc`, `/verify`, `/console`, `/gspc-verify` (no slash) |
+| `/os/`, `/arena`, `/govbench`, `/about` | `/pricing`, `/regulators`, `/start`, `/methodology` |
+| `/.well-known/mcp.json`, `agent-card.json` | `/agui`, `/coliseum`, `/live-ledger` |
 
-Fat host `https://csoai-site.pages.dev` serves many of the 404s. Sitemap advertises hundreds of keyword URLs that 404 on apex — trust debt.
+Full matrix: [`FRONTEND_AUDIT_CHECKLIST.md`](FRONTEND_AUDIT_CHECKLIST.md).  
+`csoai-site.pages.dev` returned 403 in audit env — do not rely as fallback.  
+Sitemap advertises hundreds of keyword URLs that 404 on apex — trust debt.
 
 ## Board counting (do not mix)
 

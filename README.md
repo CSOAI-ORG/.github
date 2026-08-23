@@ -17,6 +17,9 @@ certification. We do not remediate.
 | Master plan | [`docs/MASTER_PLAN.md`](docs/MASTER_PLAN.md) — Moody’s × LM Arena × AG-UI one ask→does-it system |
 | Estate inventory | [`docs/ESTATE_INVENTORY.md`](docs/ESTATE_INVENTORY.md) — mined surfaces, gaps, track-loss |
 | 100-step execute list | [`docs/STEPS_100.md`](docs/STEPS_100.md) — status of the weekend plan |
+| Frontend audit checklist | [`docs/FRONTEND_AUDIT_CHECKLIST.md`](docs/FRONTEND_AUDIT_CHECKLIST.md) — all end-user types, live test matrix |
+| Monorepo + RunPod ops | [`docs/MONOREPO_RUNPOD_OPS.md`](docs/MONOREPO_RUNPOD_OPS.md) — consolidation map, GPU signing lane |
+| Live audit runner | `node scripts/run-frontend-audit.mjs` — one-command persona + route check |
 | Verify a grade (free) | [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify) |
 | Honesty gate | [councilof.ai/honesty](https://councilof.ai/honesty) |
 | Firewall Charter | [councilof.ai/firewall-charter](https://councilof.ai/firewall-charter) |
