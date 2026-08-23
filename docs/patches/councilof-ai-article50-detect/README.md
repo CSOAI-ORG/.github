@@ -47,6 +47,14 @@ RFC 8785 for the ASCII/number payloads used across the estate (see
 reference harness, and this Function all agree. Finding codes (`c2pa.*`,
 `detect.*`) are stable across all three.
 
+## `intoto.ts` (optional, recommended)
+`intoto.ts` (in this bundle) ports the in-toto Statement v1 + DSSE wrapper to TS
+(WebCrypto). Use it so `/api/detect` emits its verdict as the **standard** DSSE
+envelope auditors read, instead of a bespoke receipt. Validated: a DSSE built by
+`intoto.ts`'s exact logic (Node) verifies with the `.github` **independent** Python
+verifier (`harness/verify_external.py`) — `signature_ok: true`. Same canonical rule,
+PAE, and `payloadType` as `harness/receipts.py`.
+
 ## Provenance of this patch
 Ported from the `.github` reference kit: `harness/detect.py`, `products/claimguard/c2pa.py`.
 Specs: `docs/ARTICLE50_DETECTION.md`, `docs/RECEIPT_INTEROP.md`.
