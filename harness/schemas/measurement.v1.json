@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://councilof.ai/attestations/measurement/v1",
+  "title": "CSOAI GSPC measurement predicate v1",
+  "description": "in-toto predicate for a signed GSPC measurement. Counts/leaders are carried from the live board (https://councilof.ai/api/gspc) and are not authoritative in this predicate; the subject digest binds the RFC 8785 canonical board payload.",
+  "type": "object",
+  "required": ["schema", "totals"],
+  "properties": {
+    "schema": {"type": "string", "description": "board payload schema, e.g. csoai.gspc-axes/0.5"},
+    "totals": {
+      "type": "object",
+      "properties": {
+        "axes": {"type": "integer"},
+        "measured_axes": {"type": "integer"},
+        "quotable_axes": {"type": "integer"},
+        "public_count": {"type": "string"}
+      }
+    },
+    "grading": {"type": "string", "enum": ["deterministic+wilson+mcnemar"]},
+    "method_doi": {"type": "string"},
+    "site_attestation": {
+      "type": "object",
+      "required": ["alg", "signer", "sig"],
+      "properties": {
+        "alg": {"const": "Ed25519"},
+        "signer": {"type": "string", "description": "did:web keyid"},
+        "sig": {"type": "string"}
+      }
+    }
+  }
+}

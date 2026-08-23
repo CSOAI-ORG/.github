@@ -16,7 +16,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const LANES = [
   { name: "lint:python", cmd: "python3", args: ["-m", "py_compile",
       "products/claimguard/claimguard.py", "products/claimguard/canonical.py", "products/claimguard/c2pa.py",
-      "harness/receipts.py", "harness/board.py", "harness/detect.py", "harness/register.py", "harness/server.py", "harness/e2e_harness.py"] },
+      "harness/receipts.py", "harness/board.py", "harness/detect.py", "harness/register.py", "harness/server.py",
+      "harness/tlog.py", "harness/verify_external.py", "harness/e2e_harness.py"] },
   { name: "lint:node", cmd: "node", args: ["--check", "scripts/run-frontend-audit.mjs"] },
   { name: "lint:node2", cmd: "node", args: ["--check", "scripts/e2e-integration-stack.mjs"] },
   { name: "test:claimguard", cmd: "python3", args: ["-m", "pytest", "-q", "products/claimguard"] },

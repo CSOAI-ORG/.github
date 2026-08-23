@@ -34,15 +34,32 @@ for p in (_HERE, _CG):
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey  # noqa: E402
 
 import claimguard  # noqa: E402
+import hashlib  # noqa: E402
+
 from board import make_board  # noqa: E402
 from detect import detect  # noqa: E402
 from register import build_register  # noqa: E402
 from receipts import MEASUREMENT_PREDICATE, sign_payload_as_receipt  # noqa: E402
+from tlog import TransparencyLog  # noqa: E402
 
 SIGNER_KEYID = "did:web:localhost#harness-demo"
 _KEY = Ed25519PrivateKey.generate()
 _PUB = _KEY.public_key().public_bytes_raw()
 _BOARD = make_board(_KEY, signer=SIGNER_KEYID)
+_TLOG = TransparencyLog()
+
+
+def _receipt_digest(receipt: dict[str, Any]) -> str:
+    return hashlib.sha256(json.dumps(receipt, sort_keys=True).encode()).hexdigest()
+
+
+def _log(subject: str, receipt: dict[str, Any]) -> dict[str, Any]:
+    return _TLOG.append({"subject": subject, "receipt_sha256": _receipt_digest(receipt)})
+
+
+# Seed the log with the board's genesis receipt.
+_log("gspc-board", sign_payload_as_receipt(_BOARD, _KEY, subject_name="gspc-board",
+     keyid=SIGNER_KEYID, predicate_type=MEASUREMENT_PREDICATE))
 
 
 def _agent_card() -> dict[str, Any]:
@@ -162,6 +179,15 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, rec)
         if path == "/api/register":
             return self._send(200, build_register(_KEY, signer_keyid=SIGNER_KEYID))
+        if path == "/api/attestations/log":
+            return self._send(200, _TLOG.as_dict())
+        if path.startswith("/schemas/"):
+            fn = os.path.basename(path)
+            fp = os.path.join(_HERE, "schemas", fn)
+            if os.path.isfile(fp) and fn.endswith(".json"):
+                with open(fp, "r", encoding="utf-8") as f:
+                    return self._send(200, f.read(), "application/schema+json")
+            return self._send(404, {"error": "schema not found", "schema": fn})
         return self._send(404, {"error": "not found", "path": path})
 
     def _read_json(self) -> dict[str, Any]:
@@ -182,6 +208,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(400, {"error": "manifest (object) required"})
             out = detect(manifest, sign_key=_KEY, signer_keyid=SIGNER_KEYID,
                          claims=body.get("claims"), asset_hash=body.get("asset_hash"))
+            entry = _log("ai-content-detection", out["receipt"])
+            out["log_index"] = entry["index"]
             return self._send(200, out)
         if path == "/api/claimguard":
             board = body.get("board") or _BOARD

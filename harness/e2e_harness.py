@@ -21,6 +21,8 @@ for p in (_HERE, _CG):
 import claimguard  # noqa: E402
 import server as srv  # noqa: E402
 from receipts import verify_dsse, dsse_statement, verify_intoto_subject  # noqa: E402
+from verify_external import verify_receipt_external  # noqa: E402
+from tlog import verify_chain  # noqa: E402
 
 PORT = 8799
 BASE = f"http://127.0.0.1:{PORT}"
@@ -54,7 +56,8 @@ def main():
     t = threading.Thread(target=httpd.serve_forever, daemon=True)
     t.start()
     try:
-        pub = base64.urlsafe_b64decode(get("/.well-known/harness-key.json")["public_key_x"] + "==")
+        key_b64url = get("/.well-known/harness-key.json")["public_key_x"]
+        pub = base64.urlsafe_b64decode(key_b64url + "==")
 
         print("## backend + truth rail")
         if get("/api/health").get("ok"):
@@ -98,6 +101,33 @@ def main():
             ok("board round-trips as in-toto Statement + DSSE, subject digest matches")
         else:
             bad("board in-toto/DSSE round-trip")
+
+        print("## Move 2b — published schemas + independent (third-party) verifier")
+        sch = get("/schemas/measurement.v1.json")
+        if sch.get("$id", "").endswith("/measurement/v1") and "totals" in sch.get("properties", {}):
+            ok("measurement predicate schema published + well-formed")
+        else:
+            bad("measurement schema")
+        ext = verify_receipt_external(rec, key_b64url)
+        if ext["signature_ok"] and ext["intoto_structure_ok"]:
+            ok("independent DSSE verifier accepts board receipt (interop proven)")
+        else:
+            bad(f"independent verifier {ext}")
+
+        print("## Move J38 — transparency log (hash-chained)")
+        post("/api/detect", {"manifest": sample})  # add a couple of entries
+        post("/api/detect", {"manifest": sample})
+        log = get("/api/attestations/log")
+        if log["size"] >= 3 and verify_chain(log["log"]):
+            ok(f"transparency log chain verifies (size={log['size']})")
+        else:
+            bad(f"tlog chain size={log.get('size')}")
+        mutated = json.loads(json.dumps(log["log"]))
+        mutated[1]["entry"]["subject"] = "tampered"
+        if not verify_chain(mutated):
+            ok("tampering a log entry breaks the chain")
+        else:
+            bad("tlog tamper not detected")
 
         print("## Move 4 — agent distribution")
         card = get("/.well-known/agent-card.json")

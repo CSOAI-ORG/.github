@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://councilof.ai/attestations/detection/v1",
+  "title": "CSOAI Article 50 detection predicate v1",
+  "description": "in-toto predicate for a free AI-content detection verdict (EU AI Act Article 50). The watermark layer is declared, never claimed.",
+  "type": "object",
+  "required": ["verdict", "detected"],
+  "properties": {
+    "verdict": {"type": "string", "enum": ["AI_MARKED", "NOT_AI_MARKED", "UNVERIFIABLE"]},
+    "source_type": {"type": ["string", "null"], "description": "IPTC/schema.org digitalSourceType"},
+    "manifest_signer": {"type": ["string", "null"]},
+    "detected": {
+      "type": "object",
+      "required": ["metadata_layer", "watermark_layer"],
+      "properties": {
+        "metadata_layer": {"type": "string", "enum": ["verified", "unverified"]},
+        "watermark_layer": {"const": "not_checked"}
+      }
+    },
+    "findings": {"type": "array", "items": {"type": "object"}},
+    "claims": {"type": "array", "items": {"type": "object"}}
+  }
+}
