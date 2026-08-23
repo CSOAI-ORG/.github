@@ -1,0 +1,24 @@
+{
+  "claim": {
+    "claim_generator": "reference-diffusion/1.0",
+    "assertions": [
+      {
+        "label": "c2pa.actions",
+        "data": {
+          "digitalSourceType": "trainedAlgorithmicMedia"
+        }
+      }
+    ],
+    "asset": {
+      "hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "format": "image/png"
+    },
+    "timestamp": "2026-08-23T12:00:00Z"
+  },
+  "signature": {
+    "alg": "Ed25519",
+    "sig": "39e1fdf325095a7669fc1042ede391dd7056671c6a4fc68aeeb4084474658125f23a9399cc589209d0d50552f082dac42a8d72e656976036e835275d3c93020d",
+    "public_key_x": "57iu740ez0hje1cMG58Hz4U-WXdQBvpnulvYaVo7YB0",
+    "signer": "did:web:reference.example#c2pa-1"
+  }
+}

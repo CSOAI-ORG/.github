@@ -1,0 +1,12 @@
+{
+  "schema": "csoai.detector-interop/0.1",
+  "_note": "Static template. The LIVE signed matrix is served at /api/detector-interop (harness) and, once deployed, councilof.ai. Wilson intervals + SEPARATED/TIE/UNTESTED, never Elo.",
+  "marks": ["c2pa", "synthid", "watermark-x", "fingerprint-y"],
+  "detectors": ["csoai-detect"],
+  "cells": [
+    {"detector": "csoai-detect", "mark": "c2pa", "result": "READS", "case": "cases/c2pa_ai_image", "note": "signed-metadata layer verified deterministically (ClaimGuard c2pa)"},
+    {"detector": "csoai-detect", "mark": "synthid", "result": "CANNOT_READ", "note": "watermark layer not decoded — declared, not faked (honesty gate)"},
+    {"detector": "csoai-detect", "mark": "watermark-x", "result": "CANNOT_READ", "note": "no decoder"},
+    {"detector": "csoai-detect", "mark": "fingerprint-y", "result": "CANNOT_READ", "note": "no decoder"}
+  ]
+}

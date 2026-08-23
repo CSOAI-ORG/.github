@@ -1,0 +1,6 @@
+{
+  "mark": "c2pa",
+  "expected_verdict": "AI_MARKED",
+  "expected_source_type": "trainedAlgorithmicMedia",
+  "note": "self-contained: manifest embeds its public_key_x, so any verifier can check it offline"
+}
