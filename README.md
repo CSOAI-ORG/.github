@@ -13,9 +13,9 @@ certification. We do not remediate.
 |---|---|
 | Public site | [councilof.ai](https://councilof.ai) |
 | Living board | [councilof.ai/api/gspc](https://councilof.ai/api/gspc) |
-| Verify a grade (free) | [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify) |
-| Honesty gate | [councilof.ai/honesty](https://councilof.ai/honesty) |
-| Firewall Charter | [councilof.ai/firewall-charter](https://councilof.ai/firewall-charter) |
+| Verify a grade (free) | [councilof.ai/gspc-verify/](https://councilof.ai/gspc-verify/) |
+| Honesty gate | [councilof.ai/honesty/](https://councilof.ai/honesty/) |
+| Firewall Charter | [councilof.ai/firewall-charter/](https://councilof.ai/firewall-charter/) |
 
 Open measurement tooling: [carder](https://github.com/CSOAI-ORG/carder) ·
 [inspect-receipts](https://github.com/CSOAI-ORG/inspect-receipts) ·
@@ -23,6 +23,7 @@ Open measurement tooling: [carder](https://github.com/CSOAI-ORG/carder) ·
 [codabench-gspc](https://github.com/CSOAI-ORG/codabench-gspc)
 
 This repository is **not** a package, MCP server, or installable product.
+See [`ESTATE.md`](ESTATE.md) for where the site, DID apex, and measurement packages live.
 
 ## Default files
 
