@@ -128,37 +128,21 @@ Status legend: ✅ done this run · 🔧 ready (patch/PR) · 👤 owner dashboar
 111. ✅ Architecture doc `CHAT_AGUI_OPENROUTER.md` (chat ≠ AG-UI; one contract)
 112. ✅ Patch bundle `docs/patches/councilof-ai-openrouter-agui/` (AgUiBridge + scripts)
 113. ✅ `scripts/e2e-integration-stack.mjs` in .github (live smoke)
-<<<<<<< HEAD
 114. ✅ Merge councilof-ai **PR #365** (squash to master — AgUiBridge + CORS + redirects)
 115. ✅ Merge csoai-static-deploy2 **PR #37** (ag-ui.html postMessage)
-116. 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
-117. 👤 Gated deploy councilof-ai → `/ag-ui` serves iframe (code merged; live still 404)
-118. 👤 Deploy csoai-static-deploy2 → static `ag-ui` has `council-chat-ask` bridge
-119. ⏳ `e2e-integration-stack.mjs` green after both deploys
+116. 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages (RunPod `agui_wire.py :8785` — dashboard secret)
+117. ✅ Gated deploy landed — `/ag-ui` HTTP 200 iframe (PR **#372** re-applied after #365 revert)
+118. ✅ csoai-site deploy — static `ag-ui` has `council-chat-ask` bridge (workflow 32643294287)
+119. ⏳ `e2e-integration-stack.mjs` — 2 checks left: `/agui` alias + chat generic ask grounding
 120. ⏳ OpenRouter harness → board refresh on schedule (RunPod 3090 sim_burst)
 
-## Owner actions required now
-- 👤 **Gated deploy** `councilof-ai` master (PR #365 merged) — `/ag-ui`, `/models/`, alias pack
-- 👤 **Deploy** `csoai-static-deploy2` main (PR #37 merged) — static iframe postMessage bridge
-- 👤 Cloudflare: disable Pages Git auto-deploy on `councilof-ai` (DEPLOY-LOCK) before deploy
-- 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
-- 👤 `node scripts/e2e-integration-stack.mjs` after deploy → expect PASS
-- 👤 HF write token → apply `docs/hf-patches/**`
-=======
-114. 🔧 Merge councilof-ai **PR #356** `cursor/agui-bridge-clean-ff6e` (clean; supersedes dirty #355)
-115. 🔧 Merge csoai-static-deploy2 **PR #37** `cursor/agui-chat-bridge-ff6e` (ag-ui.html postMessage)
-116. 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
-117. ⏳ `/ag-ui` serves AgUiBridge (currently 308 → lobby on live)
-118. ⏳ Static ag-ui iframe chat grounded via parent bridge
-119. ⏳ `e2e-integration-stack.mjs` green after deploy
-120. ⏳ OpenRouter harness → board refresh on schedule (RunPod 3090 sim_burst)
-
-## Owner actions required now
-- 👤 **Merge PR #356** (councilof-ai AG-UI bridge — clean) + **PR #37** (static ag-ui postMessage)
-- 👤 Close **PR #355** (superseded dirty 727-file diff)
-- 👤 Cloudflare: disable Pages Git auto-deploy on `councilof-ai` (DEPLOY-LOCK)
-- 👤 Re-run deploy workflow; confirm `/ag-ui` serves iframe (not lobby redirect)
-- 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
-- 👤 Merge councilof-ai PR #324 (API functions guard)
-- 👤 HF write token in agent env → apply `docs/hf-patches/**`
->>>>>>> origin/main
+## Owner actions — 2026-08-23 agent run
+- ✅ **App.tsx restore** — commit `80d2afd` unblocked sitemap/build after `046af49` placeholder
+- ✅ **Gated deploy** councilof-ai — deploy run `32646030286` success (fat prerender + aliases)
+- ✅ **csoai-site deploy** — PR #37 static bridge live on `csoai-site.pages.dev/ag-ui`
+- ✅ **PR #372** — AgUiBridge iframe + `/agui`→`/ag-ui` redirects re-applied to master
+- 👤 **DEPLOY-LOCK** — disable Pages Git auto-deploy on `councilof-ai` (Cloudflare dashboard only)
+- 👤 **`AGUI_WIRE_URL`** — set on Cloudflare Pages project env (not in agent secrets)
+- 👤 **HF write token** — `hf_fs` MCP read-only; apply `docs/hf-patches/**` manually or add `HF_TOKEN`
+- ⏳ **`/agui` alias** — `_redirects` has rule; may need next deploy or `agui.html` alias file
+- ⏳ **Chat grounding** — generic ask returns `ungrounded` + "twelve axes" drift; axis-specific asks work
