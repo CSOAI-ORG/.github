@@ -124,6 +124,18 @@ Status legend: ✅ done this run · 🔧 ready (patch/PR) · 👤 owner dashboar
 109. ⏳ Re-run audit after gated deploy lands aliases
 110. ⏳ HF upload + AG-UI deploy gates
 
+## Block G — Chat / AG-UI / OpenRouter E2E (111–120) — 2026-08-23
+111. ✅ Architecture doc `CHAT_AGUI_OPENROUTER.md` (chat ≠ AG-UI; one contract)
+112. ✅ Patch bundle `docs/patches/councilof-ai-openrouter-agui/` (AgUiBridge + scripts)
+113. ✅ `scripts/e2e-integration-stack.mjs` in .github (live smoke)
+114. 🔧 Merge councilof-ai branch `cursor/openrouter-agui-e2e-ff6e` (push blocked for bot)
+115. 🔧 Merge static-deploy2 `cursor/agui-chat-bridge-ff6e` (ag-ui.html postMessage)
+116. 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages
+117. ⏳ `/ag-ui` serves AgUiBridge (currently 308 → lobby on live)
+118. ⏳ Static ag-ui iframe chat grounded via parent bridge
+119. ⏳ `e2e-integration-stack.mjs` green after deploy
+120. ⏳ OpenRouter harness → board refresh on schedule (RunPod 3090 sim_burst)
+
 ## Owner actions required now
 - 👤 Cloudflare: disable Pages Git auto-deploy on `councilof-ai` (DEPLOY-LOCK)
 - 👤 Re-run deploy workflow; confirm alias routes 200 (homepage already fat)
