@@ -5,9 +5,9 @@ them, sign the result (Ed25519), and publish what we cannot yet measure. Measure
 certification. We do not remediate.
 
 - **The board:** the living GSPC board at [councilof.ai/api/gspc](https://councilof.ai/api/gspc) — deterministic grading, Wilson intervals, ties stated as ties. Counts, slots, and dates are live in the API; we do not hardcode them here.
-- **Verify free, forever:** [councilof.ai/gspc-verify](https://councilof.ai/gspc-verify) — no account, no fee. A grade is never sold; ranked never pay.
-- **The honesty gate:** we publish our own models losing our own arena — [councilof.ai/honesty](https://councilof.ai/honesty).
-- **State changes:** [RSS](https://councilof.ai/api/feed.xml) · [REPORTED third-party context](https://councilof.ai/api/reported) · [Firewall Charter](https://councilof.ai/firewall-charter)
+- **Verify free, forever:** [councilof.ai/gspc-verify/](https://councilof.ai/gspc-verify/) — no account, no fee. A grade is never sold; ranked never pay.
+- **The honesty gate:** we publish our own models losing our own arena — [councilof.ai/honesty/](https://councilof.ai/honesty/).
+- **State changes:** [RSS](https://councilof.ai/api/feed.xml) · [REPORTED third-party context](https://councilof.ai/api/reported) · [Firewall Charter](https://councilof.ai/firewall-charter/)
 - **Open tooling:** [carder](https://github.com/CSOAI-ORG/carder) · [inspect-receipts](https://github.com/CSOAI-ORG/inspect-receipts) · [a2a-signed-receipts](https://github.com/CSOAI-ORG/a2a-signed-receipts) · [codabench-gspc](https://github.com/CSOAI-ORG/codabench-gspc)
 
 **Sponsorship funds the instrument — compute, item banks, and re-measurement. It never buys
