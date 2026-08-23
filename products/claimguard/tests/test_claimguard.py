@@ -61,6 +61,13 @@ def test_fail_jail_separation_claim():
     assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r.findings)
 
 
+def test_fail_axis_overcount_claim():
+    # "17 measured axes" (and any >14) must fail as an overclaim.
+    r = audit(_signed_board(), ["17 measured axes"])
+    assert not r.ok
+    assert any(f.code == "claim.axis_overcount" and f.status == Status.FAIL for f in r.findings)
+
+
 def test_fail_empty_axes():
     b = _signed_board()
     # resign would be needed for sig; skip_sig to isolate payload rule

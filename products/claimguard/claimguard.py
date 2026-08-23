@@ -194,6 +194,11 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
         "Public ruling is 13 measured of 14 quotable — not 15 axes.",
     ),
     (
+        re.compile(r"\b(1[7-9]|[2-9]\d)\s+(measured\s+)?axes?\b", re.I),
+        "claim.axis_overcount",
+        "GSPC has 14 quotable board slots; any claim of >14 measured axes is an overclaim.",
+    ),
+    (
         re.compile(r"\b(elo|éelo)\s+league\b|\bpublic\s+elo\b|\belo\s+ranking\b", re.I),
         "claim.elo_league",
         "GSPC public ranking is Wilson+McNemar, not Elo. Elo league is not on /api/gspc.",
