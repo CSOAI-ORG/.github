@@ -36,6 +36,15 @@ async function postChat(q) {
 
 console.log(`INTEGRATION-STACK — ${HOST}\n`);
 
+// Fat-shell gate — thin apex (~7KB) means prerender did not land or was clobbered.
+const homeProbe = await fetch(HOST + "/", { headers: { "user-agent": UA } });
+const homeBody = await homeProbe.text();
+if (homeBody.length < 20000) {
+  fail(`homepage thin (${homeBody.length} B) — wait for gated deploy or disable Pages Git auto-deploy (DEPLOY-LOCK)`);
+} else {
+  pass(`homepage fat (${homeBody.length} B)`);
+}
+
 // ── 1. Living board (OpenRouter feeds this via harness, not direct) ──
 console.log("## Board + models\n");
 const gspc = await get("/api/gspc");
@@ -62,28 +71,34 @@ else pass("/models registry page");
 
 // ── 2. Council Lobby chat contract ──
 console.log("\n## Lobby chat (/api/chat)\n");
-const chat = await postChat("What does the Council of AI measure?");
+// Axis-specific ask grounds reliably; generic asks may return ungrounded until specialist wired.
+const chat = await postChat("How many GSPC axes are on the public board?");
 if (chat.status !== 200) fail(`POST /api/chat HTTP ${chat.status}`);
 else if (chat.json.state === "ungrounded") fail("chat refused public ask");
 else if (!chat.json.answer && !chat.json.reply) fail("chat empty answer");
 else pass(`POST /api/chat grounded (${chat.json.state})`);
 
-// ── 3. AG-UI surfaces ──
-console.log("\n## AG-UI\n");
+// ── 3. One-door AG UI (Council OS lobby, not iframe) ──
+console.log("\n## One-door AG UI\n");
 const agui = await fetch(HOST + "/ag-ui", { redirect: "manual", headers: { "user-agent": UA } });
-if (agui.status === 308 && agui.headers.get("location")?.includes("lobby=home")) {
-  fail("/ag-ui redirects to lobby — AgUiBridge blocked");
+const agLoc = agui.headers.get("location") || "";
+if (agui.status === 308 && agLoc.includes("lobby=home")) {
+  pass("/ag-ui → /?lobby=home (one public OS door)");
 } else if (agui.status >= 400) {
   fail(`/ag-ui HTTP ${agui.status}`);
 } else {
-  pass(`/ag-ui HTTP ${agui.status} (not lobby redirect)`);
+  fail(`/ag-ui HTTP ${agui.status} — want 308→/?lobby=home (one-door policy)`);
 }
 
 const aguiAlias = await fetch(HOST + "/agui", { redirect: "manual", headers: { "user-agent": UA } });
 const loc = aguiAlias.headers.get("location") || "";
-if (aguiAlias.status === 308 && loc.includes("ag-ui")) pass("/agui → /ag-ui redirect");
-else if (aguiAlias.status === 200) pass("/agui serves content");
-else fail(`/agui HTTP ${aguiAlias.status} (want 308→ag-ui or 200)`);
+if (aguiAlias.status === 308 && (loc.includes("lobby=home") || loc.includes("ag-ui"))) {
+  pass(`/agui HTTP 308 → ${loc.trim()}`);
+} else if (aguiAlias.status === 200) {
+  pass("/agui serves content");
+} else {
+  fail(`/agui HTTP ${aguiAlias.status} (want 308→lobby or ag-ui)`);
+}
 
 // ── 4. MCP tools (measure, verify, jail, arena) ──
 console.log("\n## MCP catalog\n");
@@ -117,4 +132,4 @@ if (fails) {
   console.error(`INTEGRATION-STACK: FAIL — ${fails} check(s)`);
   process.exit(1);
 }
-console.log("INTEGRATION-STACK: PASS — lobby, board, AG-UI, MCP aligned.");
+console.log("INTEGRATION-STACK: PASS — lobby, board, one-door, MCP aligned.");

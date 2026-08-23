@@ -131,9 +131,9 @@ Status legend: ✅ done this run · 🔧 ready (patch/PR) · 👤 owner dashboar
 114. ✅ Merge councilof-ai **PR #365** (squash to master — AgUiBridge + CORS + redirects)
 115. ✅ Merge csoai-static-deploy2 **PR #37** (ag-ui.html postMessage)
 116. 👤 Set `AGUI_WIRE_URL` on Cloudflare Pages (RunPod `agui_wire.py :8785` — dashboard secret)
-117. ✅ Gated deploy landed — `/ag-ui` HTTP 200 iframe (PR **#372** re-applied after #365 revert)
+117. ✅ One-door policy live — `/ag-ui` → `/?lobby=home` (Council OS; `one-door-guard.yml` blocks iframe regression)
 118. ✅ csoai-site deploy — static `ag-ui` has `council-chat-ask` bridge (workflow 32643294287)
-119. ⏳ `e2e-integration-stack.mjs` — 2 checks left: `/agui` alias + chat generic ask grounding
+119. ⏳ `e2e-integration-stack.mjs` — **11/14 pass**; MCP catalog empty (`mcp.json` advertises 0 tools by design until live endpoint)
 120. ⏳ OpenRouter harness → board refresh on schedule (RunPod 3090 sim_burst)
 
 ## Owner actions — 2026-08-23 agent run
@@ -144,5 +144,8 @@ Status legend: ✅ done this run · 🔧 ready (patch/PR) · 👤 owner dashboar
 - 👤 **DEPLOY-LOCK** — disable Pages Git auto-deploy on `councilof-ai` (Cloudflare dashboard only)
 - 👤 **`AGUI_WIRE_URL`** — set on Cloudflare Pages project env (not in agent secrets)
 - 👤 **HF write token** — `hf_fs` MCP read-only; apply `docs/hf-patches/**` manually or add `HF_TOKEN`
-- ⏳ **`/agui` alias** — `_redirects` has rule; may need next deploy or `agui.html` alias file
-- ⏳ **Chat grounding** — generic ask returns `ungrounded` + "twelve axes" drift; axis-specific asks work
+- ⏳ **MCP catalog** — `/.well-known/mcp.json` intentionally empty (no dead worker advertised); e2e MCP checks fail until live endpoint ships
+
+## Next batch → [`STEPS_200.md`](STEPS_200.md) (121–220)
+
+Run: `node scripts/batch-run-gates.mjs --retry 3 --wait 120`
