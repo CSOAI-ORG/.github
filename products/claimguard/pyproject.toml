@@ -1,7 +1,7 @@
 [project]
 name = "claimguard"
-version = "0.1.0"
-description = "Claim-vs-signed-artifact integrity checker for GSPC boards"
+version = "0.2.0"
+description = "Claim-vs-signed-artifact integrity checker for GSPC boards + EU AI Act Article 50 / C2PA provenance"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -12,4 +12,4 @@ dependencies = ["cryptography>=42"]
 claimguard = "claimguard:main"
 
 [tool.setuptools]
-py-modules = ["claimguard", "canonical"]
+py-modules = ["claimguard", "canonical", "c2pa"]

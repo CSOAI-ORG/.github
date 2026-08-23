@@ -30,6 +30,7 @@ from cryptography.hazmat.primitives.asymmetric.ed25519 import (
 )
 
 from canonical import canonicalize
+from c2pa import C2paResult, verify_c2pa_manifest
 
 BOARD_DID_KEY = "did:web:csoai.org#board-attestation-1"
 DID_URL = "https://csoai.org/.well-known/did.json"
@@ -210,7 +211,26 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
 ]
 
 
-def check_claims(board: dict[str, Any], claims: list[str]) -> list[Finding]:
+# A claim that asserts the content carries an Article 50 machine-readable AI
+# mark / provenance. Such a claim must be backed by a verifiable C2PA manifest.
+ARTICLE50_MARKING_CLAIM = re.compile(
+    r"\bc2pa\b"
+    r"|\bcontent\s+credential"
+    r"|\bmachine[-\s]?readable\s+mark"
+    r"|\bwatermark(?:ed|ing)?\b"
+    r"|\bprovenance\s+(?:verified|attached|signed|marked)"
+    r"|\barticle\s*50\b"
+    r"|\bai[-\s]?generated\s+(?:mark|label|tag)"
+    r"|\bmarked\s+as\s+ai\b",
+    re.I,
+)
+
+
+def check_claims(
+    board: dict[str, Any],
+    claims: list[str],
+    c2pa_result: C2paResult | None = None,
+) -> list[Finding]:
     out: list[Finding] = []
     totals = board.get("totals") or {}
     axes_by_id = {
@@ -221,6 +241,40 @@ def check_claims(board: dict[str, Any], claims: list[str]) -> list[Finding]:
         if not text:
             continue
         matched = False
+        if ARTICLE50_MARKING_CLAIM.search(text):
+            matched = True
+            if c2pa_result is None:
+                out.append(
+                    Finding(
+                        Status.FAIL,
+                        "claim.article50_unsupported",
+                        f"Claims AI-content marking but no C2PA manifest supplied to verify: {text!r}",
+                    )
+                )
+            elif not c2pa_result.ok:
+                out.append(
+                    Finding(
+                        Status.FAIL,
+                        "claim.article50_bad_manifest",
+                        f"C2PA manifest failed verification; marking claim unsupported: {text!r}",
+                    )
+                )
+            elif not c2pa_result.is_ai_marked:
+                out.append(
+                    Finding(
+                        Status.FAIL,
+                        "claim.article50_not_ai_marked",
+                        f"Manifest carries no AI digitalSourceType; cannot claim AI marking: {text!r}",
+                    )
+                )
+            else:
+                out.append(
+                    Finding(
+                        Status.PASS,
+                        "claim.article50_supported",
+                        f"Article 50 AI marking verified via C2PA ({c2pa_result.source_type}): {text!r}",
+                    )
+                )
         for pat, code, msg in CLAIM_RULES:
             if pat.search(text):
                 matched = True
@@ -272,6 +326,7 @@ def audit(
     claims: list[str] | None = None,
     *,
     skip_sig: bool = False,
+    c2pa: dict[str, Any] | None = None,
 ) -> Report:
     report = Report()
     totals = board.get("totals") or {}
@@ -285,8 +340,17 @@ def audit(
         report.add(Status.WARN, "attestation.skipped", "signature check skipped")
 
     report.findings.extend(check_payload_complete(board))
-    if claims:
-        report.findings.extend(check_claims(board, claims))
+
+    c2pa_result: C2paResult | None = None
+    if c2pa is not None:
+        c2pa_result = verify_c2pa_manifest(c2pa)
+        for f in c2pa_result.findings:
+            report.add(Status(f.status), f.code, f.message)
+
+    if claims or c2pa_result is not None:
+        report.findings.extend(
+            check_claims(board, claims or [], c2pa_result=c2pa_result)
+        )
     return report
 
 
@@ -332,7 +396,42 @@ def _self_test() -> int:
     r3 = audit(signed, claims=["jail separation resolved"])
     assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r3.findings)
 
-    print("SELF-TEST PASS — signature holds; mutation + overclaims FAIL as required")
+    # Article 50 / C2PA: a signed manifest marking AI-generated media supports the
+    # claim; a manifest tampered after signing (or none at all) FAILs it.
+    c2pa_key = Ed25519PrivateKey.generate()
+    claim = {
+        "claim_generator": "demo-generator/1.0",
+        "assertions": [
+            {"label": "c2pa.actions", "data": {"digitalSourceType": "trainedAlgorithmicMedia"}}
+        ],
+        "asset": {"hash": "sha256:deadbeef", "format": "image/png"},
+        "timestamp": "2026-08-23T00:00:00Z",
+    }
+    csig = c2pa_key.sign(canonicalize(claim)).hex()
+    cx = base64.urlsafe_b64encode(c2pa_key.public_key().public_bytes_raw()).decode().rstrip("=")
+    good_manifest = {
+        "claim": claim,
+        "signature": {"alg": "Ed25519", "sig": csig, "public_key_x": cx, "signer": "did:web:example#k1"},
+    }
+    r4 = audit(signed, claims=["this image is marked per Article 50 (C2PA)"], c2pa=good_manifest)
+    assert r4.ok, r4.to_dict()
+    assert any(f.code == "claim.article50_supported" for f in r4.findings)
+
+    # Manifest tampered after signing → signature fails → marking claim unsupported.
+    bad_manifest = json.loads(json.dumps(good_manifest))
+    bad_manifest["claim"]["assertions"][0]["data"]["digitalSourceType"] = "digitalCapture"
+    r5 = audit(signed, claims=["C2PA verified AI content"], c2pa=bad_manifest)
+    assert not r5.ok, "tampered C2PA manifest must fail"
+
+    # Marking claim with no manifest at all → unsupported FAIL.
+    r6 = audit(signed, claims=["fully compliant with Article 50 machine-readable marking"])
+    assert not r6.ok
+    assert any(f.code == "claim.article50_unsupported" for f in r6.findings)
+
+    print(
+        "SELF-TEST PASS — board signature holds; mutation, overclaims, and "
+        "unbacked Article 50 / C2PA marking claims FAIL as required"
+    )
     return 0
 
 
@@ -345,6 +444,10 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--live", action="store_true", help="Fetch https://councilof.ai/api/gspc")
     c.add_argument("--claim", action="append", default=[], help="Claim text (repeatable)")
     c.add_argument("--claims-file", help="File with one claim per line")
+    c.add_argument(
+        "--c2pa",
+        help="Path to a C2PA-style signed manifest JSON (Article 50 provenance check)",
+    )
     c.add_argument("--json", action="store_true", help="Emit JSON report")
     c.add_argument("--skip-sig", action="store_true")
     args = p.parse_args(argv)
@@ -362,7 +465,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.claims_file:
         with open(args.claims_file, encoding="utf-8") as f:
             claims.extend(line.strip() for line in f if line.strip())
-    report = audit(board, claims, skip_sig=args.skip_sig)
+    c2pa_manifest = None
+    if args.c2pa:
+        with open(args.c2pa, encoding="utf-8") as f:
+            c2pa_manifest = json.load(f)
+    report = audit(board, claims, skip_sig=args.skip_sig, c2pa=c2pa_manifest)
     if args.json:
         print(json.dumps(report.to_dict(), indent=2))
     else:
