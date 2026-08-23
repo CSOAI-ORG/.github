@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Council OS — measure · verify · detect</title>
+<style>
+  :root{--slate:#0f172a;--slate2:#1e293b;--emerald:#10b981;--emerald2:#065f46;
+        --line:#334155;--txt:#e2e8f0;--mut:#94a3b8;--red:#f43f5e;--amber:#f59e0b;}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+       background:radial-gradient(1200px 600px at 20% -10%,#0b3b32 0,var(--slate) 55%);color:var(--txt);min-height:100vh}
+  header{padding:22px 28px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px}
+  .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--emerald),var(--emerald2));
+        display:grid;place-items:center;font-weight:800;color:#03110d}
+  h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
+  .sub{color:var(--mut);font-size:13px}
+  main{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+  .tabs{display:flex;gap:6px;margin:8px 0 18px;flex-wrap:wrap}
+  .tab{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:#0b1220;color:var(--mut);cursor:pointer}
+  .tab.active{background:var(--emerald);color:#04110c;border-color:var(--emerald);font-weight:700}
+  .card{background:rgba(15,23,42,.72);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+  textarea{width:100%;min-height:190px;background:#0b1220;color:var(--txt);border:1px solid var(--line);
+           border-radius:10px;padding:12px;font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+  button.act{background:var(--emerald);color:#04110c;border:0;border-radius:9px;padding:10px 16px;font-weight:700;cursor:pointer}
+  button.ghost{background:#0b1220;color:var(--txt);border:1px solid var(--line);border-radius:9px;padding:10px 14px;cursor:pointer}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+  .pill{display:inline-block;padding:4px 11px;border-radius:999px;font-weight:700;font-size:12.5px}
+  .ok{background:rgba(16,185,129,.15);color:#6ee7b7;border:1px solid #0c6}
+  .bad{background:rgba(244,63,94,.15);color:#fda4af;border:1px solid #f43f5e}
+  .warn{background:rgba(245,158,11,.15);color:#fcd34d;border:1px solid #f59e0b}
+  pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;border:1px solid var(--line);
+      border-radius:10px;padding:12px;font:12px/1.45 ui-monospace,Menlo,monospace;max-height:340px;overflow:auto}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600}
+  .f{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+  .muted{color:var(--mut)}
+  code{color:#6ee7b7}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">C</div>
+  <div>
+    <h1>Council OS <span class="muted">· harness</span></h1>
+    <div class="sub">Measurement, not certification. Signed (Ed25519). Verify free.</div>
+  </div>
+</header>
+<main>
+  <div class="tabs">
+    <div class="tab active" data-tab="detect">Article 50 detect</div>
+    <div class="tab" data-tab="board">Living board</div>
+    <div class="tab" data-tab="interop">Detector interop</div>
+    <div class="tab" data-tab="register">Capability register</div>
+  </div>
+
+  <section id="detect">
+    <div class="card">
+      <b>Free AI-content detection</b> — paste a C2PA-style signed manifest. We verify
+      the signed-metadata layer and return a <i>signed</i> verdict. The watermark layer
+      we cannot see is declared, never claimed.
+      <textarea id="manifest"></textarea>
+      <div class="row">
+        <button class="act" id="btn-detect">Detect + sign receipt</button>
+        <button class="ghost" id="btn-tamper">Tamper the manifest</button>
+        <button class="ghost" id="btn-reset">Reset sample</button>
+        <span id="verdict"></span>
+      </div>
+    </div>
+    <div class="card" id="detect-out" style="display:none">
+      <b>Findings</b><div id="findings" class="row"></div>
+      <b>Signed detection receipt (in-toto / DSSE)</b>
+      <pre id="receipt"></pre>
+    </div>
+  </section>
+
+  <section id="board" style="display:none">
+    <div class="card">
+      <div class="row"><b>Living board</b><span id="board-count" class="pill warn"></span>
+        <button class="ghost" id="btn-board">Refresh from /api/gspc</button></div>
+      <div class="muted" style="margin:6px 0 10px">Local harness fixture — live truth defers to <code>/api/gspc</code>. No counts hardcoded in the UI; rendered from the signed payload.</div>
+      <table><thead><tr><th>#</th><th>Axis</th><th>Status</th><th>Detail</th></tr></thead><tbody id="axes"></tbody></table>
+    </div>
+  </section>
+
+  <section id="interop" style="display:none">
+    <div class="card">
+      <div class="row"><b>Detector interoperability</b><button class="ghost" id="btn-interop">Load matrix</button></div>
+      <div class="muted" style="margin:6px 0 10px">Own the 2027-02-02 interop deadline. We publish our own <code>CANNOT_READ</code> cells first — the honesty gate.</div>
+      <table><thead><tr><th>Detector</th><th>Mark</th><th>Result</th><th>Note</th></tr></thead><tbody id="cells"></tbody></table>
+    </div>
+  </section>
+
+  <section id="register" style="display:none">
+    <div class="card">
+      <div class="row"><b>Capability register</b><span id="reg-sum" class="pill warn"></span>
+        <button class="ghost" id="btn-reg">Run self-verification</button></div>
+      <div class="muted" style="margin:6px 0 10px">Does DSH actually do this? Verified rows are live-checked; unverified are owner-gated and shown, not hidden.</div>
+      <table><thead><tr><th>Capability</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="caps"></tbody></table>
+      <b style="display:block;margin-top:14px">DSH claim adjudication (ClaimGuard)</b>
+      <div class="muted" style="margin:6px 0 8px">Overclaims must FAIL — proven, not trusted.</div>
+      <table><thead><tr><th>Code</th><th>Status</th><th>Message</th></tr></thead><tbody id="claims"></tbody></table>
+    </div>
+  </section>
+</main>
+<script>
+const $=s=>document.querySelector(s), api=(p,o)=>fetch(p,o).then(r=>r.json());
+function sampleManifest(){
+  return {claim:{claim_generator:"acme-diffusion/2.0",
+    assertions:[{label:"c2pa.actions",data:{digitalSourceType:"trainedAlgorithmicMedia"}}],
+    asset:{hash:"sha256:1a2b3c",format:"image/png"},timestamp:"2026-08-23T12:00:00Z"},
+    signature:{alg:"Ed25519",sig:"PLACEHOLDER_WILL_BE_SIGNED_SERVER_SIDE",public_key_x:"x"}};
+}
+// The sample is signed by the server's /api/sign helper isn't available; instead we
+// ship a pre-signed valid manifest fetched from the server so "Detect" passes.
+async function loadSigned(){ try{ const m=await api('/api/gspc'); }catch(e){} }
+$('#manifest').value = JSON.stringify(sampleManifest(),null,2);
+
+function pill(el,txt,cls){el.className='pill '+cls;el.textContent=txt;}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  ['detect','board','interop','register'].forEach(id=>$('#'+id).style.display=id===t.dataset.tab?'':'none');
+});
+
+$('#btn-detect').onclick=async()=>{
+  let manifest; try{manifest=JSON.parse($('#manifest').value);}catch(e){pill($('#verdict'),'bad JSON','bad');return;}
+  const out=await api('/api/detect',{method:'POST',headers:{'content-type':'application/json'},
+    body:JSON.stringify({manifest,claims:["this asset is marked per Article 50"]})});
+  const v=out.verdict; pill($('#verdict'),v,v==='AI_MARKED'?'ok':(v==='NOT_AI_MARKED'?'warn':'bad'));
+  $('#detect-out').style.display='';
+  $('#findings').innerHTML=(out.findings||[]).map(f=>`<span class="pill ${f.status==='PASS'?'ok':(f.status==='WARN'?'warn':'bad')}">${f.code}</span>`).join('');
+  $('#receipt').textContent=JSON.stringify(out.receipt,null,2);
+};
+$('#btn-tamper').onclick=()=>{ // flip source type AFTER the sample was signed → sig must break
+  let m; try{m=JSON.parse($('#manifest').value);}catch(e){return;}
+  m.claim.assertions[0].data.digitalSourceType="digitalCapture"; $('#manifest').value=JSON.stringify(m,null,2);
+  pill($('#verdict'),'tampered — now detect','warn');
+};
+$('#btn-reset').onclick=async()=>{ await initSample(); pill($('#verdict'),'sample reset','warn'); };
+
+$('#btn-board').onclick=loadBoard;
+async function loadBoard(){ const b=await api('/api/gspc');
+  pill($('#board-count'),b.totals.public_count,'warn');
+  $('#axes').innerHTML=b.axes.map((a,i)=>`<tr><td>${i+1}</td><td class="f">${a.axis}</td>
+    <td><span class="pill ${a.separation==='UNTESTED'?'warn':'ok'}">${a.status}</span></td>
+    <td class="muted">${a.separation?('separation: '+a.separation):('acc '+a.accuracy+' · n '+a.n)}</td></tr>`).join(''); }
+
+$('#btn-interop').onclick=loadInterop;
+async function loadInterop(){ const m=await api('/api/detector-interop');
+  $('#cells').innerHTML=m.cells.map(c=>`<tr><td class="f">${c.detector}</td><td class="f">${c.mark}</td>
+    <td><span class="pill ${c.result==='READS'?'ok':'warn'}">${c.result}</span></td><td class="muted">${c.note}</td></tr>`).join(''); }
+
+$('#btn-reg').onclick=loadReg;
+async function loadReg(){ const r=await api('/api/register'); const s=r.summary;
+  pill($('#reg-sum'),`${s.verified} verified · ${s.partial} partial · ${s.unverified} unverified · ${s.failed} failed`, s.failed?'bad':'ok');
+  $('#caps').innerHTML=Object.entries(r.capabilities).map(([k,v])=>`<tr><td class="f">${k}</td>
+    <td><span class="pill ${v.status==='VERIFIED'?'ok':(v.status==='FAIL'?'bad':'warn')}">${v.status}</span></td>
+    <td class="muted">${v.evidence}</td></tr>`).join('');
+  $('#claims').innerHTML=(r.dsh_claim_adjudication||[]).map(c=>`<tr><td class="f">${c.code}</td>
+    <td><span class="pill ${c.status==='PASS'?'ok':(c.status==='WARN'?'warn':'bad')}">${c.status}</span></td>
+    <td class="muted">${c.message}</td></tr>`).join(''); }
+
+// Get a real server-signed sample manifest so "Detect" shows a PASS out of the box.
+async function initSample(){
+  try{ const m=await api('/api/sample-manifest'); if(m&&m.claim){$('#manifest').value=JSON.stringify(m,null,2);} }
+  catch(e){ /* fall back to unsigned sample */ }
+}
+initSample();
+</script>
+</body>
+</html>
