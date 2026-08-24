@@ -81,10 +81,26 @@ if (counters.status === 200 && counters.json?.schema?.includes("wave1-counters")
   pass("GET /api/counters — Wave-1 counters schema");
   const live = (counters.json.counters || []).filter((c) => c.status === "LIVE").length;
   if (live > 0) pass(`${live} counter(s) bound to live aggregates`);
-  else warn("All counters UNPUBLISHED — honest zero state until KV binds");
+  else warn("All counters UNPUBLISHED — honest zero state until live bind deploys");
 } else {
   fail(`GET /api/counters → ${counters.status}`);
 }
+
+const waveDash = await get("/api/wave-dashboard");
+if (waveDash.status === 200 && waveDash.json?.schema?.includes("wave-dashboard")) {
+  pass("GET /api/wave-dashboard — runtime wave aggregates");
+  const measured = (waveDash.json.waves || []).filter((w) => w.register === "MEASURED").length;
+  pass(`${measured} wave(s) MEASURED from live APIs`);
+} else if (waveDash.status === 404) {
+  warn("/api/wave-dashboard → 404 — await challenge/wave PR deploy");
+} else {
+  warn(`/api/wave-dashboard → ${waveDash.status}`);
+}
+
+const challengeGet = await get("/api/challenge");
+if (challengeGet.status === 200) pass("GET /api/challenge — redress door schema");
+else if (challengeGet.status === 404) warn("GET /api/challenge → 404 — await deploy");
+else fail(`GET /api/challenge → ${challengeGet.status}`);
 
 const receipts = await get("/api/receipts/latest");
 if (receipts.status === 200 && receipts.json?.status === "UNPUBLISHED" && receipts.json?.count === 0) {

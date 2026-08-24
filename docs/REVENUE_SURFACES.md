@@ -55,7 +55,7 @@ stranger
   → verify free          https://councilof.ai/gspc-verify/
   → lobby ask            https://councilof.ai/?lobby=home
   → scoreboard           https://councilof.ai/gspc-scoreboard
-  → enterprise           https://councilof.ai/start   (or lobby “start” ask while 404)
+  → enterprise           https://councilof.ai/start
 ```
 
 | Stage | Proof you show | Do not sell |
@@ -88,7 +88,8 @@ stranger
 ## Readiness gate
 
 ```bash
-node scripts/weekend-demo-smoke.mjs
+node scripts/batch-run-gates.mjs
+node scripts/e2e-revenue.mjs
 ```
 
-Sales-demo **PASS** requires living board API, verify slash route, MCP catalogue, and chat axis-ask grounded without overclaim drift. Stranger marketing routes may still FAIL independently — track them here, do not hide them.
+Sales-demo **PASS** requires living board API, verify slash route, MCP catalogue, and chat axis-ask grounded without overclaim drift.
