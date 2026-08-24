@@ -19,6 +19,7 @@ echo "=== N5-10/11: validate server.json ==="
 
 if [[ ! -f "$HOME/.mcp_publisher_token" ]]; then
   echo "GATED: run '$PUBLISHER login github' first (owner OAuth device flow)" >&2
+  echo "NOTE: automated OIDC publish via csoai-static-deploy2 mcp-registry-publish.yml also works (registry/gspc.json)" >&2
   exit 2
 fi
 
