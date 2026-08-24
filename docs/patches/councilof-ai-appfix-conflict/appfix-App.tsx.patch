@@ -1,5 +1,5 @@
 diff --git a/client/src/App.tsx b/client/src/App.tsx
-index 9fb9b08..a036fde 100644
+index 9fb9b08..18f6995 100644
 --- a/client/src/App.tsx
 +++ b/client/src/App.tsx
 @@ -669,14 +669,13 @@ function App() {
@@ -29,15 +29,7 @@ index 9fb9b08..a036fde 100644
                    <Route path="/towns">{() => <Redirect to="/gspc-arena?view=towns" />}</Route>
                    <Route path="/minds" component={SovereignMinds} />
                    <Route path="/try" component={TryCouncil} />
-@@ -698,7 +699,6 @@ function App() {
-                   <Route path="/temples" component={Temples} />
-                   <Route path="/playbooks" component={Playbooks} />
-                   <Route path="/dragonfly" component={Dragonfly} />
--                  <Route path="/csoai-law" component={MeokLaw} />
-                   <Route path="/meok-law" component={MeokLaw} />
-                   <Route path="/law" component={MeokLaw} />
-                   <Route path="/hive-model" component={HiveModel} />
-@@ -707,6 +707,7 @@ function App() {
+@@ -707,6 +708,7 @@ function App() {
                    <Route path="/how-it-works" component={HowItWorks} />
                    <Route path="/sectors" component={SectorsAtlas} />
                    <Route path="/regions" component={RegionsMap} />
@@ -45,7 +37,7 @@ index 9fb9b08..a036fde 100644
                    <Route path="/globe">{() => <Redirect to="/gspc-arena?view=globe" />}</Route>
                    <Route path="/registry" component={RegistryAll} />
                    <Route path="/eu-ai-act-checklist" component={EUActChecklist} />
-@@ -738,7 +739,7 @@ function App() {
+@@ -738,7 +740,7 @@ function App() {
                    <Route path="/texas-ai-act">{() => <UsStateAct state="texas" />}</Route>
                    <Route path="/california-ai-law">{() => <UsStateAct state="california" />}</Route>
                    <Route path="/connect" component={SocialConnect} />
@@ -54,7 +46,7 @@ index 9fb9b08..a036fde 100644
                    <Route path="/me" component={SovereignHub} />
                    <Route path="/nist-vs-eu-ai-act" component={NistVsEuAct} />
                    <Route path="/nist-eu" component={NistVsEuAct} />
-@@ -759,6 +760,7 @@ function App() {
+@@ -759,6 +761,7 @@ function App() {
                    <Route path="/iso-eu" component={Iso42001VsEuAct} />
                    <Route path="/fines" component={Penalties} />
                    <Route path="/all" component={RegistryAll} />
@@ -62,7 +54,7 @@ index 9fb9b08..a036fde 100644
                    <Route path="/bft">{() => <Redirect to="/council" />}</Route>
                    <Route path="/consensus">{() => <Redirect to="/council" />}</Route>
                    <Route path="/world">{() => <Redirect to="/gspc-arena?view=globe" />}</Route>
-@@ -787,6 +789,7 @@ function App() {
+@@ -787,6 +790,7 @@ function App() {
                    <Route path="/rediscovered" component={Lineage} />
                    <Route path="/voice" component={SovereignMinds} />
                    <Route path="/sov-towns">{() => <Redirect to="/gspc-arena?view=towns" />}</Route>
@@ -70,7 +62,7 @@ index 9fb9b08..a036fde 100644
                    <Route path="/crown-jewels">{() => <Redirect to="/" />}</Route>
                    <Route path="/cobol" component={LegacyBridge} />
                    <Route path="/risk-heatmap" component={RiskHeatmap} />
-@@ -794,136 +797,6 @@ function App() {
+@@ -794,136 +798,6 @@ function App() {
                    <Route path="/evidence" component={EvidenceHub} />
                    <Route path="/oscal" component={OscalStudio} />
                    <Route path="/sovereign-town">{() => <Redirect to="/gspc-arena?view=towns" />}</Route>

@@ -38,13 +38,30 @@ If any of these should follow the "upstream" behaviour instead (esp. the
 `/csoai-law` alias, easily re-added), say so and I'll adjust. The security-relevant
 one is `/workbench` auth-gating — the kept side is stricter.
 
-## NOT fixed here (separate, pre-existing)
-`tsc` also reports unrelated tRPC router collisions — **not** touched by this patch:
-- `client/src/pages/Support.tsx` (`support`)
-- `client/src/pages/VerifyCertificate.tsx` (`certificates`)
-- `client/src/pages/WatchdogIncidentReport.tsx` (`watchdog`)
-These are "property collides with a built-in method" errors needing a backend
-router-key rename; flagging for a separate fix, not guessed here.
+## NOT fixed here — deeper pre-existing breakage the client also has (owner-only)
+Removing the markers exposes breakages that were hidden behind the invalid syntax.
+These are **missing files not committed to the repo** — I will not fabricate core
+app infrastructure by guessing:
+
+1. **Missing `client/src/components/RequireAuth`** — `App.tsx` imports it on line 5
+   and uses it **12×**, but the file is absent. This alone breaks the Vite client
+   build (esbuild can't resolve the import), independent of the conflict.
+2. **Missing `server/` backend / `server/routers`** — `client/src/lib/trpc.ts`
+   imports `AppRouter` from `../../../server/routers`, but **no `server/` path is
+   tracked in the repo** (it is not gitignored — simply absent). This dangling
+   `AppRouter` type is the **root cause of the tRPC errors** in `Support.tsx`,
+   `VerifyCertificate.tsx`, `WatchdogIncidentReport.tsx` (they resolve to the
+   "property collides with a built-in method" guard type). It is **not** a
+   router-key rename — the whole backend module is missing.
+3. Pre-existing `Compare` lazy-component typing on `/vs*` routes (both conflict
+   sides had it).
+
+**Implication:** `master`'s client currently cannot build or typecheck. This patch
+fixes only the committed merge-conflict markers (one clear defect). Restoring
+`RequireAuth` and the `server/` backend (or correcting those imports) is an
+owner action — likely those live in a separate package or were left uncommitted.
+The **Functions** layer (`functions/api/*`, which actually serves the API incl.
+`/api/detect`) is independent of this client breakage and builds fine.
 
 ## Why a patch, not a PR
 `App.tsx` (~1200 lines) is too large to push reliably via the API path available to
