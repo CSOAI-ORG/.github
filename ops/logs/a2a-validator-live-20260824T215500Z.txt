@@ -1,0 +1,11 @@
+A2A validator: 10 PASS, 0 FAIL
+  [PASS] field present: name
+  [PASS] field present: description
+  [PASS] field present: version
+  [PASS] field present: capabilities
+  [PASS] field present: supportedInterfaces
+  [PASS] field present: defaultInputModes
+  [PASS] field present: defaultOutputModes
+  [PASS] field present: skills
+  [PASS] supportedInterfaces: 2 entry/entries
+  [PASS] skills: 4 entry/entries

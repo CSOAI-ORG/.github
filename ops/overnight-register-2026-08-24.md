@@ -1,15 +1,15 @@
 # Overnight Register — Five-Venue Pack (N5-01..N5-30)
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
-**Branch:** cursor/overnight-five-venues-ff6e  
-**Commit:** (pending) (continued 2026-08-24T21:48Z)  
+**Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
+**Commit:** d514f18 (continued 2026-08-24T21:55Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (21:48Z)
+## Current status snapshot (21:55Z)
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -18,7 +18,7 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | README cards on live datasets |
 | N5-05 | GATED | DOI mint after HF publish |
-| N5-06 | PARTIAL | Space HTTP 200 sdk=static; leaderboard-results 401 |
+| N5-06 | PARTIAL | Space HTTP 200 sdk=static; leaderboard-results missing (401) |
 | N5-07 | PASS | ClaimGuard + banned-strings |
 | N5-08–09 | LIVE | server.json + registry/gspc.json validated |
 | N5-10–11 | LIVE | MCP registry v1.0.2 isLatest |
@@ -266,4 +266,41 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 |------|--------|---------------|
 | N5-06 | **PREP** | N5-06 · scripts/overnight-hf-publish.sh · (this commit) · 2026-08-24T21:52Z · added `hf spaces restart` after upload (live Space sdk=static → export sdk=gradio) |
 | N5-01 | **GATED** | HF_TOKEN still absent; leaderboard-results HTTP 401; HF MCP contribute-repos read-only in shell |
+
+---
+
+## Continuation log 9 (2026-08-24T21:55Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T215506Z.log · (this commit) · 2026-08-24T21:55:06Z · ClaimGuard + banned-strings re-run PASS |
+| N5-14 | **LIVE PASS** | N5-14 · /tmp/live-agent-card.json · (this commit) · 2026-08-24T21:55Z · 10 PASS 0 FAIL on live card (2 interfaces, 4 skills) |
+| N5-11 | **LIVE** | N5-11 · registry.modelcontextprotocol.io · — · 2026-08-24T21:55Z · v1.0.2 isLatest=true confirmed |
+| N5-02/03 | **LIVE** | gspc-board + gspc-bench-results HTTP 200 (unchanged) |
+| N5-06 | **CONFIRMED** | Space sdk=static HTTP 200; leaderboard-results dataset not found (hub_repo_details + HTTP 401) |
+| N5-01 | **GATED** | `hf auth whoami` → Not logged in; `gh workflow run overnight-hf-publish` → 403; HF MCP OAuth has contribute-repos but shell/MCP fs read-only |
+| N5-17 | **PR OPEN** | https://github.com/ai-boost/awesome-a2a/pull/157 · mergeable_state=clean · awaiting maintainer |
+
+### Pack completion audit (21:55Z)
+
+| Category | Done | Gated/Blocked | Score |
+|----------|------|---------------|-------|
+| HF (N5-01..06) | 2 datasets live | publish + DOI + leaderboard + Gradio | 4/6 |
+| MCP (N5-08..12) | v1.0.2 live | — | 5/5 |
+| A2A (N5-13..19) | card live + awesome-a2a PR | a2aagentlist/artinet/discussion/GCP | 3/7 |
+| Trust (N5-20..21) | evidence pack + ClaimGuard | — | 2/2 |
+| Marketplace (N5-22..25) | drafts committed | owner submit | 4/4 prep |
+| Insurance (N5-26..29) | skeletons committed | owner outreach | 4/4 prep |
+| G-Cloud (N5-30) | checklist | window closed | 1/1 prep |
+
+**Pack score: 22/30 moves done or submitted; 8 owner-gated.**
+
+### Owner morning — unblock HF (only remaining critical path)
+
+| Step | Action | Evidence when done |
+|------|--------|-------------------|
+| 1 | Repo Settings → Secrets → `HF_TOKEN` (write, org csoai) | secret listed |
+| 2 | Actions → **overnight-hf-publish** → Run workflow | leaderboard-results HTTP 200; Space sdk=gradio |
+| 3 | HF Settings → Generate DOI for gspc-board + gspc-bench-results | DOI URLs in register |
+| 4 | Optional: a2aagentlist email; Discussion #97 comment manually | register lines N5-15, N5-18 |
 
