@@ -431,3 +431,17 @@ No new credentials. Agent prep complete; awaiting owner `HF_TOKEN` + workflow ru
 
 HF gate still closed. No publish attempted. Next timer fire in ~15m.
 
+---
+
+## Continuation log 17 (2026-08-24T22:15Z) — timer recheck (+15m)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` fired · 2026-08-24T22:15Z · sub_92e7f494 |
+| N5-VERIFY | **PASS** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T221507Z.log · (this commit) · 2026-08-24T22:15:07Z · 4 WARN unchanged |
+| N5-01 | **GATED** | HF_TOKEN unset; 0 workflow runs; leaderboard HTTP 401 |
+
+### Timer recheck result (+15m)
+
+HF gate still closed. Pack **22/30**. Owner unblock unchanged.
+
