@@ -2,10 +2,38 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** cursor/overnight-five-venues-ff6e  
-**Commit:** (pending) (continued 2026-08-24T21:35Z)  
+**Commit:** (pending) (continued 2026-08-24T21:48Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
+
+---
+
+## Current status snapshot (21:48Z)
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN / workflow_dispatch |
+| N5-02 | LIVE | gspc-board HTTP 200 |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | README cards on live datasets |
+| N5-05 | GATED | DOI mint after HF publish |
+| N5-06 | PARTIAL | Space HTTP 200 sdk=static; leaderboard-results 401 |
+| N5-07 | PASS | ClaimGuard + banned-strings |
+| N5-08–09 | LIVE | server.json + registry/gspc.json validated |
+| N5-10–11 | LIVE | MCP registry v1.0.2 isLatest |
+| N5-12 | DONE | glama.json aggregator watch |
+| N5-13–14 | LIVE | GSPC agent card + 10/10 validator |
+| N5-15 | PREP | a2aagentlist email draft |
+| N5-16 | BLOCKED | artinet.io placeholder |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 open |
+| N5-18 | GATED | Discussion #97 FORBIDDEN |
+| N5-19 | DEFERRED | no GCP account |
+| N5-20 | DONE | evidence pack (4 docs) |
+| N5-21 | PASS | ClaimGuard gate |
+| N5-22–25 | PREP | ADX/Snowflake/Datarade drafts |
+| N5-26–29 | PREP | insurance underwriter skeletons |
+| N5-30 | PREP | G-Cloud checklist |
 
 ---
 
@@ -194,4 +222,20 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
 2. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
 3. Discussion #97 comment (N5-18) — integration lacks write access
+
+---
+
+## Continuation log 6 (2026-08-24T21:48Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **GATED** | N5-01 · .github/workflows/overnight-hf-publish.yml · (this commit) · 2026-08-24T21:48Z · workflow_dispatch ready; needs HF_TOKEN repo secret |
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T214819Z.log · (this commit) · 2026-08-24T21:48:19Z · re-run PASS before workflow commit |
+| N5-06 | **CONFIRMED** | leaderboard-results: hf_fs stat → missing (not created); Space exists sdk=static |
+
+### Nick morning — one-click HF publish
+
+1. Add `HF_TOKEN` secret to CSOAI-ORG/.github repo settings
+2. Actions → **overnight-hf-publish** → Run workflow
+3. Mint DOIs in HF Settings for gspc-board + gspc-bench-results (N5-05)
 
