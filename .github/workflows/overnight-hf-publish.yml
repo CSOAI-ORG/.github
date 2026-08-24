@@ -1,0 +1,36 @@
+name: overnight-hf-publish
+
+# N5-01..N5-06: HF datasets + Space publish (ClaimGuard gated).
+# Trigger manually after adding HF_TOKEN repo secret (write/admin on org csoai).
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Hugging Face CLI
+        run: curl -LsSf https://hf.co/cli/install.sh | bash -s
+
+      - name: Publish HF exports (N5-01..N5-06)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: bash scripts/overnight-hf-publish.sh
+
+      - name: Upload verification log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hf-publish-logs
+          path: ops/logs/
+          if-no-files-found: ignore
