@@ -2,23 +2,23 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** e1c2be0 (continued 2026-08-24T23:39Z)  
+**Commit:** 2646e7b (continued 2026-08-24T23:53Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:39Z) — **22/30**
+## Current status snapshot (23:53Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; OIDC + browser + MCP OAuth→CLI all blocked |
+| N5-01 | GATED | HF_TOKEN unset; cron **now firing** but OIDC still fails on gspc-board |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README **EUNOMIA** (export has GSPC) |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
 | N5-05 | GATED | DOI not minted |
-| N5-06 | PARTIAL | Space sdk=static (export gradio); leaderboard-results HTTP 401 |
+| N5-06 | PARTIAL | Space sdk=static; leaderboard-results HTTP 401 |
 | N5-07 | PASS | ClaimGuard + banned-strings |
 | N5-08–12 | LIVE | MCP v1.0.2 isLatest=true |
 | N5-13–14 | LIVE | agent card 10/10 validator |
@@ -32,11 +32,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** `HF_TOKEN` repo secret OR Trusted Publishers on 4 HF repos + manual workflow run.
+**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos. Cron auto-retry active (first run 23:48Z).
 
 ---
 
-## Current status snapshot (23:38Z) — superseded
+## Current status snapshot (23:39Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1048,4 +1048,20 @@ HF gate unchanged. Agent lane exhausted. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T233936Z.log · ClaimGuard PASS |
 
 All agent lanes exhausted (shell, OIDC, MCP, browser). Pack **22/30**.
+
+---
+
+## Continuation log 54 (2026-08-24T23:53Z) — timer recheck (overnight-hf-recheck)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #8 · 2026-08-24T23:45Z |
+| N5-REGISTER | **MERGED** | PR #51 · 2646e7b · 2026-08-24T23:40Z · log 53 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; local publish skipped |
+| N5-01 | **CRON LIVE** | `overnight-hf-cron` run **32791004769** · schedule · 2026-08-24T23:48:58Z · **first cron run** |
+| N5-01 | **GATED** | Cron run OIDC fail: `No trusted publisher configured on datasets/csoai/gspc-board` |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T235336Z.log · 2026-08-24T23:53:36Z |
+| N5-07/21 | **PASS** | claimguard-20260824T235335Z.log · ClaimGuard PASS |
+
+Cron now firing every 15m; auth still blocked. Pack **22/30**. Owner: HF_TOKEN or Trusted Publishers.
 
