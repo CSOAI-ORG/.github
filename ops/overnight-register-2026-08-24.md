@@ -335,3 +335,19 @@ Pack score remains **22/30**. Critical path: owner adds `HF_TOKEN` + runs **over
 
 `bash ops/verify-overnight-pack.sh` → VERIFY PASS with 2 WARN (leaderboard-results, Space sdk). Log: `ops/logs/overnight-pack-verify-20260824T220040Z.log`
 
+---
+
+## Continuation log 12 (2026-08-24T22:01Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T220136Z.log · (this commit) · 2026-08-24T22:01:36Z · re-run on main; 2 WARN (HF gated) |
+| N5-01 | **GATED** | HF_TOKEN absent; workflow_dispatch 403; `hf auth whoami` → Not logged in |
+| N5-06 | **GATED** | leaderboard-results HTTP 401; Space sdk=static (unchanged) |
+| N5-17 | **PR OPEN** | awesome-a2a PR #157 · mergeable_state=clean · awaiting maintainer |
+| N5-WF | **PREP** | N5-WF · .github/workflows/overnight-hf-publish.yml · (this commit) · 2026-08-24T22:01Z · added post-publish `verify-overnight-pack.sh` step |
+
+### Pack status (22:01Z)
+
+Score **22/30**. All agent-actionable prep complete. Remaining: HF_TOKEN + workflow run + DOI mint + owner directory actions.
+

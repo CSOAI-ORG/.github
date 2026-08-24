@@ -27,6 +27,13 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: bash scripts/overnight-hf-publish.sh
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify overnight pack (N5-VERIFY)
+        run: bash ops/verify-overnight-pack.sh
+
       - name: Upload verification log
         if: always()
         uses: actions/upload-artifact@v4
