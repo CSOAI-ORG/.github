@@ -32,6 +32,8 @@ jobs:
           node-version: "22"
 
       - name: Verify overnight pack (N5-VERIFY)
+        env:
+          STRICT: "1"
         run: bash ops/verify-overnight-pack.sh
 
       - name: Upload verification log
