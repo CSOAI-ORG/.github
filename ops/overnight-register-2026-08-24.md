@@ -2,14 +2,14 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 705ee41 (continued 2026-08-24T22:37Z)  
+**Commit:** 69a7af9 (continued 2026-08-24T22:45Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (22:37Z) — **22/30**
+## Current status snapshot (22:45Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -760,4 +760,18 @@ HF gate unchanged. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T224303Z.log · ClaimGuard PASS |
 
 HF gate unchanged. Pack **22/30**.
+
+---
+
+## Continuation log 37 (2026-08-24T22:44Z) — timer recheck (+15m window)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T22:44Z |
+| N5-REGISTER | **MERGED** | PR #34 · 69a7af9 · 2026-08-24T22:43Z · log 36 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T224441Z.log · 2026-08-24T22:44:41Z |
+| N5-07/21 | **PASS** | claimguard-20260824T224440Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**. Next timer fire ~22:45Z.
 
