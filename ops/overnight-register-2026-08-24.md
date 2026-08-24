@@ -589,3 +589,17 @@ HF gate still closed. No publish attempted. Next timer fire ~15m.
 
 Pack **22/30**. Awaiting owner: Trusted Publishers or HF_TOKEN → probe → publish → DOI mint.
 
+---
+
+## Continuation log 26 (2026-08-24T22:32Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:32Z · sub_92e7f494 |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; publish skipped |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223234Z.log · 2026-08-24T22:32:34Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223236Z.log · ClaimGuard PASS |
+| N5-06 | **GATED** | leaderboard-results Exists: no; 0 workflow runs |
+
+HF gate unchanged. Pack **22/30**.
+
