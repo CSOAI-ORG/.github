@@ -445,3 +445,32 @@ HF gate still closed. No publish attempted. Next timer fire in ~15m.
 
 HF gate still closed. Pack **22/30**. Owner unblock unchanged.
 
+---
+
+## Continuation log 18 (2026-08-24T22:23Z) — timer recheck (+8m)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:23Z · sub_92e7f494 |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222304Z.log · (this commit) · 2026-08-24T22:23:04Z · STRICT=1 promotes 4 WARN → FAIL (DOIs ×2, leaderboard 401, Space sdk=static) |
+| N5-07/21 | **PASS** | N5-07 · ops/logs/claimguard-20260824T222319Z.log · (this commit) · 2026-08-24T22:23:19Z · ClaimGuard + banned-strings PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth list` → No access tokens; workflow_dispatch 403; 0 workflow runs |
+| N5-10/11 | **LIVE** | MCP registry v1.0.2 isLatest=true (reconfirmed 22:23Z) |
+| N5-13/14 | **LIVE** | councilof.ai agent card · 4 skills · validator PASS (reconfirmed) |
+| N5-17 | **PR OPEN** | awesome-a2a PR #157 · MERGEABLE · 2026-08-24T22:23Z |
+| N5-02 | **STALE** | Live gspc-board README still `pretty_name: …EUNOMIA…` — refresh on HF publish |
+
+### HF MCP audit (22:23Z)
+
+- `hf_whoami` → Nicholastempleman, **csoai admin**, OAuth scope `contribute-repos`
+- `hf_fs` → read-only (ls/cat/stat); **cannot upload** via MCP
+- Shell `HF_TOKEN` → absent; OAuth token not exposed to lane
+
+### Timer recheck result (+8m)
+
+HF gate still closed. Pack **22/30**. Owner unblock unchanged:
+
+1. Repo Settings → Secrets → `HF_TOKEN` (write, org `csoai`)
+2. Actions → **overnight-hf-publish** → Run workflow
+3. HF Settings → Generate DOI for `gspc-board` + `gspc-bench-results`
+
