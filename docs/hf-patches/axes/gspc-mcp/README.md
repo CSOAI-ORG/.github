@@ -6,29 +6,30 @@ tags:
   - ai-governance
   - measurement
   - gspc
-  - affect
+  - conformance
+  - mcp
   - eu-ai-act
 task_categories:
   - text-classification
-pretty_name: GSPC-AFFECT — affect
+pretty_name: GSPC-MCP — conformance
 ---
 
-# GSPC-AFFECT — GSPC axis `affect`
+# GSPC-MCP — GSPC axis `conformance`
 
 Council of AI (CSOAI Ltd, UK 16939677). Cream/ink. Measurement body.
 
-Emotional and embodied safety (manipulation / disclosure / vulnerability). MEASURED; labels counsel-pending, not hidden — behaviour measurement against a counsel-pending key, not a legal verdict.
+MCP tool conformance — whether a declared MCP tool matches the contract it claims.
 
 ## What it measures
 
-Emotional & embodied safety classification on a frozen public split (AffectBench). Deterministic grading; unparsed responses are UNMEASURED, never scored as wrong.
+MCP tool conformance on a frozen public split (MCPBench). The bank scores whether a declared MCP tool matches the contract it claims. Deterministic grading; unparsed responses are UNMEASURED, never scored as wrong.
 
 ## Living numbers (do not freeze)
 
 GET https://councilof.ai/api/gspc  
 Verify: https://councilof.ai/gspc-verify  
 Method DOI: https://doi.org/10.5281/zenodo.21991104  
-Canonical bank: https://huggingface.co/datasets/csoai/gspc-affect
+Canonical bank: https://huggingface.co/datasets/csoai/gspc-mcp
 
 Do not paste a score table here. n and leaders change with the stamp. Read the API.
 
@@ -42,7 +43,7 @@ Measurement item bank for the GSPC 14-slot board (13 measured of 14 quotable). N
 
 ## Limitations
 
-Counsel-pending labels. Bank scope and n are stated on the living board; unmeasured cells are stated, never interpolated. Scores are point-in-time.
+Bank scope and n are stated on the living board; unmeasured cells are stated, never interpolated. Scores are point-in-time.
 
 ## Footer
 
