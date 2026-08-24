@@ -112,9 +112,9 @@ if (/sign in to your account/i.test(dash.body) && !/Council OS|SOAI-PDCA|Complia
 
 // ── Software tab deep link ──
 console.log("\n## Council OS Software tab (?lobby=software)\n");
-const soft = await get("/?lobby=software");
-if (soft.status === 200) pass("/?lobby=software HTTP 200");
-else fail("/?lobby=software HTTP " + soft.status);
+const softTab = await get("/?lobby=software");
+if (softTab.status === 200) pass("/?lobby=software HTTP 200");
+else fail("/?lobby=software HTTP " + softTab.status);
 
 console.log("");
 if (hard) {
