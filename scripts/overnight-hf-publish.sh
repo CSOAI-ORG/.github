@@ -1,18 +1,45 @@
 #!/usr/bin/env bash
 # scripts/overnight-hf-publish.sh — HF overnight publish (N5-01..N5-06)
-# Requires: HF_TOKEN with write/admin on org csoai
+# Auth: HF_TOKEN secret OR GitHub Actions Trusted Publishers OIDC (HF_OIDC_RESOURCE per repo).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-
-if [[ -z "${HF_TOKEN:-}" ]]; then
-  echo "FATAL: HF_TOKEN not set (N5-01 blocked)" >&2
-  exit 1
-fi
 
 HF="${HF_CLI:-hf}"
 command -v "$HF" >/dev/null 2>&1 || HF=huggingface-cli
 
+USE_OIDC=0
+if [[ -z "${HF_TOKEN:-}" ]]; then
+  if [[ -n "${GITHUB_ACTIONS:-}" ]]; then
+    USE_OIDC=1
+    echo "HF_TOKEN unset — using Trusted Publishers OIDC (per-repo HF_OIDC_RESOURCE)"
+  else
+    echo "FATAL: HF_TOKEN not set and not in GitHub Actions (N5-01 blocked)" >&2
+    exit 1
+  fi
+fi
+
+oidc_resource_for() {
+  local type="$1" repo="$2"
+  case "$type" in
+    dataset) echo "datasets/$repo" ;;
+    space) echo "spaces/$repo" ;;
+    model) echo "$repo" ;;
+    *) echo "$repo" ;;
+  esac
+}
+
+refresh_hf_token() {
+  local type="$1" repo="$2"
+  if [[ "$USE_OIDC" == "1" ]]; then
+    export HF_OIDC_RESOURCE
+    HF_OIDC_RESOURCE="$(oidc_resource_for "$type" "$repo")"
+    HF_TOKEN="$("$HF" auth token)"
+    export HF_TOKEN
+  fi
+}
+
 echo "=== N5-01: HF auth ==="
+refresh_hf_token dataset csoai/gspc-board
 "$HF" auth whoami
 
 echo "=== N5-07: ClaimGuard gate (before public) ==="
@@ -20,6 +47,7 @@ bash "$ROOT/ops/claimguard-publish-gate.sh" "$ROOT/export"
 
 create_and_upload() {
   local type="$1" repo="$2" src="$3"
+  refresh_hf_token "$type" "$repo"
   echo "→ $type/$repo"
   "$HF" repo create --type "$type" "$repo" 2>/dev/null || true
   "$HF" upload --repo-type "$type" "$repo" "$src" . \
@@ -36,6 +64,7 @@ echo "=== N5-04: cards already in README.md ==="
 
 echo "=== N5-06: governance leaderboard Space + results dataset ==="
 create_and_upload dataset csoai/gspc-leaderboard-results "$ROOT/export/leaderboard-results"
+refresh_hf_token space csoai/gspc-governance-leaderboard
 "$HF" repo create --type space --space-sdk gradio csoai/gspc-governance-leaderboard 2>/dev/null || true
 create_and_upload space csoai/gspc-governance-leaderboard "$ROOT/export/gspc-governance-leaderboard"
 # Live Space was sdk=static; export README sets sdk=gradio — restart to pick up SDK change
