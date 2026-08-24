@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** b05fbd6 (continued 2026-08-24T23:16Z)  
+**Commit:** 9811fd1 (continued 2026-08-24T23:17Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -904,4 +904,19 @@ HF gate unchanged. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T231543Z.log · ClaimGuard PASS |
 
 Schedule on combined workflow not firing; split to dedicated cron wrapper. Pack **22/30**.
+
+---
+
+## Continuation log 47 (2026-08-24T23:17Z) — timer recheck (+15m window)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T23:15Z |
+| N5-CI | **MERGED** | PR #45 · 9811fd1 · 2026-08-24T23:16Z · `overnight-hf-cron.yml` + logs 45–46 |
+| N5-01 | **FAIL (OIDC)** | Run 32788615051 · 2026-08-24T23:16Z · PR #45 merge push; OIDC fail |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 `overnight-hf-cron` runs yet |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T231706Z.log · 2026-08-24T23:17:06Z |
+| N5-07/21 | **PASS** | claimguard-20260824T231706Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Dedicated cron armed; next boundary ~23:30Z. Pack **22/30**.
 
