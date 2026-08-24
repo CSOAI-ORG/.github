@@ -2,6 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** cursor/overnight-five-venues-ff6e  
+**Commit:** 009b735  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
