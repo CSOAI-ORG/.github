@@ -36,6 +36,7 @@
 ## N5-18: Discussion #97 reply
 
 **Repo:** a2aproject/A2A Discussion #97  
+**Status:** GATED — GraphQL `addDiscussionComment` → FORBIDDEN for integration (retried 2026-08-24T21:58Z); post manually  
 **Comment (one line + link):**
 
 > Council of AI — independent GSPC governance measurement (13 of 14 axes): https://councilof.ai/.well-known/agent-card.json
