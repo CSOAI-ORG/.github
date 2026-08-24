@@ -320,3 +320,18 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 
 Pack score remains **22/30**. Critical path: owner adds `HF_TOKEN` + runs **overnight-hf-publish** workflow.
 
+---
+
+## Continuation log 11 (2026-08-24T22:00Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **ADDED** | N5-VERIFY · ops/verify-overnight-pack.sh · (this commit) · 2026-08-24T22:00Z · read-only audit script; WARN on leaderboard-results 401 + Space sdk=static |
+| N5-06 | **PREP** | N5-06 · scripts/overnight-hf-publish.sh · (this commit) · 2026-08-24T22:00Z · post-upload verify log + EUNOMIA README check |
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T220008Z.log · (this commit) · 2026-08-24T22:00:08Z · re-run PASS |
+| N5-01 | **GATED** | HF_TOKEN absent; leaderboard-results HTTP 401; workflow_dispatch 403 |
+
+### Verification run (22:00Z)
+
+`bash ops/verify-overnight-pack.sh` → VERIFY PASS with 2 WARN (leaderboard-results, Space sdk). Log: `ops/logs/overnight-pack-verify-20260824T220040Z.log`
+

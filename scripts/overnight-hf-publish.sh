@@ -45,14 +45,24 @@ echo "=== N5-05: DOIs — mint manually in repo Settings after names confirmed =
 echo "WARNING: DOI locks rename/delete/visibility permanently"
 
 echo "=== Verify from outside ==="
-for url in \
-  "https://huggingface.co/datasets/csoai/gspc-board" \
-  "https://huggingface.co/datasets/csoai/gspc-bench-results" \
-  "https://huggingface.co/spaces/csoai/gspc-governance-leaderboard" \
-  "https://huggingface.co/datasets/csoai/gspc-leaderboard-results"
-do
-  code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
-  echo "$url → HTTP $code"
-done
+VERIFY_LOG="$ROOT/ops/logs/hf-publish-verify-$(date -u +%Y%m%dT%H%M%SZ).log"
+{
+  for url in \
+    "https://huggingface.co/datasets/csoai/gspc-board" \
+    "https://huggingface.co/datasets/csoai/gspc-bench-results" \
+    "https://huggingface.co/spaces/csoai/gspc-governance-leaderboard" \
+    "https://huggingface.co/datasets/csoai/gspc-leaderboard-results"
+  do
+    code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+    echo "$url → HTTP $code"
+  done
+  sdk=$(curl -s "https://huggingface.co/api/spaces/csoai/gspc-governance-leaderboard" | python3 -c "import sys,json; print(json.load(sys.stdin).get('sdk','?'))" 2>/dev/null || echo "?")
+  echo "Space sdk=$sdk (expected gradio)"
+  if curl -s "https://huggingface.co/datasets/csoai/gspc-board/README.md" | grep -qi eunomia; then
+    echo "WARN: gspc-board README still contains EUNOMIA — re-check card refresh"
+  else
+    echo "OK: gspc-board README free of EUNOMIA branding"
+  fi
+} | tee "$VERIFY_LOG"
 
-echo "HF overnight publish complete."
+echo "HF overnight publish complete. Verify log: $VERIFY_LOG"
