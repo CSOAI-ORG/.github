@@ -188,6 +188,16 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
         "Board is 14 quotable slots (+2 in-lane honesty-only). Never claim 16 measured axes.",
     ),
     (
+        re.compile(r"\b14\s+are\s+MEASURED\b|\ball\s+14\s+(axes?\s+)?(are\s+)?MEASURED\b", re.I),
+        "claim.fourteen_measured",
+        "Public ruling is 13 measured of 14 — jail is a floor (separation UNTESTED), not a 14th board-measured axis.",
+    ),
+    (
+        re.compile(r"\b12\s+(GSPC\s+)?axes?\b|\btwelve\s+(GSPC\s+)?axes?\b", re.I),
+        "claim.twelve_axes",
+        "Board is 14 quotable slots (13 measured of 14). Never claim twelve axes.",
+    ),
+    (
         re.compile(r"\b15\s+(measured\s+)?axes?\b", re.I),
         "claim.fifteen_axes",
         "Public ruling is 13 measured of 14 quotable — not 15 axes.",
@@ -331,6 +341,12 @@ def _self_test() -> int:
     # Jail separation overclaim
     r3 = audit(signed, claims=["jail separation resolved"])
     assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r3.findings)
+
+    # Fourteen-measured + twelve-axes overclaims
+    r4 = audit(signed, claims=["14 are MEASURED", "twelve GSPC axes"])
+    codes4 = {f.code for f in r4.findings if f.status == Status.FAIL}
+    assert "claim.fourteen_measured" in codes4, codes4
+    assert "claim.twelve_axes" in codes4, codes4
 
     print("SELF-TEST PASS — signature holds; mutation + overclaims FAIL as required")
     return 0

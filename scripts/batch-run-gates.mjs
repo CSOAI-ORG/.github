@@ -74,6 +74,14 @@ async function main() {
 
   if (await runE2EWithRetry()) fails++;
 
+  if (run("Weekend demo smoke", "node", ["scripts/weekend-demo-smoke.mjs", "--host", HOST])) {
+    fails++;
+  }
+
+  if (run("Mine live drifts", "node", ["scripts/mine-live-drifts.mjs", "--host", HOST])) {
+    fails++;
+  }
+
   if (run("Frontend audit", "node", ["scripts/run-frontend-audit.mjs", "--host", HOST])) {
     fails++;
   }

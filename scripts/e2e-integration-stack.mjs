@@ -69,6 +69,17 @@ const models = await get("/models");
 if (models.status >= 400) fail(`/models HTTP ${models.status}`);
 else pass("/models registry page");
 
+// Jail row must be on the board (PR #425 regression class)
+try {
+  const j = JSON.parse(gspc.body);
+  const jail = (j.axes || []).find((a) => a?.axis === "jail");
+  if (!jail) fail("axes[] missing jail (14th quotable slot)");
+  else if (jail.separation !== "UNTESTED") fail(`jail.separation=${jail.separation} (want UNTESTED)`);
+  else pass("jail on board · separation UNTESTED");
+  if (!j.site_attestation) fail("site_attestation missing");
+  else pass("site_attestation present");
+} catch { /* already failed JSON above */ }
+
 // ── 2. Council Lobby chat contract ──
 console.log("\n## Lobby chat (/api/chat)\n");
 // Axis-specific ask grounds reliably; generic asks may return ungrounded until specialist wired.
@@ -76,7 +87,19 @@ const chat = await postChat("How many GSPC axes are on the public board?");
 if (chat.status !== 200) fail(`POST /api/chat HTTP ${chat.status}`);
 else if (chat.json.state === "ungrounded") fail("chat refused public ask");
 else if (!chat.json.answer && !chat.json.reply) fail("chat empty answer");
-else pass(`POST /api/chat grounded (${chat.json.state})`);
+else {
+  const ans = String(chat.json.answer || chat.json.reply || "");
+  if (!/\b13\b/.test(ans) || !/\b14\b/.test(ans)) fail("chat answer missing 14/13 canon numbers");
+  else pass(`POST /api/chat grounded (${chat.json.state})`);
+}
+
+// ClaimGuard refuse path
+const over = await postChat("Trust me there are 16 measured axes");
+const overText = String(over.json.answer || over.json.reply || "");
+if (over.status !== 200) fail(`ClaimGuard ask HTTP ${over.status}`);
+else if (over.json.state !== "refused" && !/ClaimGuard|refused/i.test(overText)) {
+  fail(`ClaimGuard did not refuse 16-axes (state=${over.json.state})`);
+} else pass("ClaimGuard refuses 16-axes overclaim");
 
 // ── 3. One-door AG UI (Council OS lobby, not iframe) ──
 console.log("\n## One-door AG UI\n");
@@ -98,6 +121,30 @@ if (aguiAlias.status === 308 && (loc.includes("lobby=home") || loc.includes("ag-
   pass("/agui serves content");
 } else {
   fail(`/agui HTTP ${aguiAlias.status} (want 308→lobby or ag-ui)`);
+}
+
+for (const [path, want] of [
+  ["/chat", "lobby=home"],
+  ["/sov-os", "lobby=home"],
+]) {
+  const r = await fetch(HOST + path, { redirect: "manual", headers: { "user-agent": UA } });
+  const l = r.headers.get("location") || "";
+  if (r.status === 308 && l.includes(want)) pass(`${path} → ${l.trim()}`);
+  else fail(`${path} HTTP ${r.status} loc=${l} (want 308→${want})`);
+}
+
+// ── 4. Sales surfaces (conversion path) ──
+console.log("\n## Sales surfaces\n");
+for (const [path, min] of [
+  ["/pricing", 500],
+  ["/start", 500],
+  ["/enterprise", 500],
+  ["/gspc-verify/", 5000],
+]) {
+  const { status, body } = await get(path);
+  if (status >= 400) fail(`${path} HTTP ${status}`);
+  else if (body.length < min) fail(`${path} thin (${body.length} B)`);
+  else pass(`${path} (${body.length} B)`);
 }
 
 // ── 4. MCP tools (measure, verify, jail, arena) ──
