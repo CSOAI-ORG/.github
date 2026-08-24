@@ -23,6 +23,9 @@ on:
       - 'export/**'
       - 'scripts/overnight-hf-publish.sh'
       - '.github/workflows/overnight-hf-publish.yml'
+  # N5-WATCH: retry every 15m overnight — succeeds once owner adds HF_TOKEN or OIDC publishers.
+  schedule:
+    - cron: '*/15 * * * *'
 
 permissions:
   id-token: write   # required for Trusted Publishers OIDC exchange
@@ -42,6 +45,17 @@ jobs:
         run: |
           curl -LsSf https://hf.co/cli/install.sh | bash -s
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Probe OIDC publishers (N5-01 preflight)
+        continue-on-error: true
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "${HF_TOKEN:-}" ]; then
+            bash scripts/overnight-hf-oidc-probe.sh
+          else
+            echo "HF_TOKEN set — skipping OIDC probe"
+          fi
 
       - name: Publish HF exports (N5-01..N5-06)
         env:
