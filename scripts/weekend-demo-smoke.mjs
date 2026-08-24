@@ -91,8 +91,15 @@ console.log(`WEEKEND-DEMO-SMOKE — ${HOST}\n`);
     fail("api.chat.state", `state=${json.state}`);
   } else {
     pass("api.chat", `HTTP 200 · state=${json.state || "n/a"}`);
-    // Strip markdown so **14** are MEASURED still trips the overclaim gate
+    // Negation-safe: "Never 14 are MEASURED" must not trip the overclaim gate.
     const plain = text.replace(/[*_`#]/g, " ").replace(/\s+/g, " ");
+    const negated = (re) => {
+      const m = plain.match(re);
+      if (!m) return false;
+      const idx = m.index ?? 0;
+      const before = plain.slice(Math.max(0, idx - 24), idx).toLowerCase();
+      return !/\b(never|not|no|don't|do not|instead of)\b[\s\S]*$/i.test(before);
+    };
     const overclaims = [
       [/\b16\s+(measured\s+)?axes?\b/i, "16-axes overclaim"],
       [/\b15\s+(measured\s+)?axes?\b/i, "15-axes overclaim"],
@@ -101,7 +108,7 @@ console.log(`WEEKEND-DEMO-SMOKE — ${HOST}\n`);
       [/\bElo\b/i, "Elo as board language"],
       [/\bcertif(y|ied|ication)\b/i, "certification language"],
     ];
-    const hits = overclaims.filter(([re]) => re.test(plain)).map(([, label]) => label);
+    const hits = overclaims.filter(([re]) => negated(re)).map(([, label]) => label);
     if (hits.length) fail("api.chat.canon", hits.join("; "));
     else if (!/\b14\b/.test(plain)) fail("api.chat.canon", "answer missing 14-slot language");
     else if (!/\b13\b/.test(plain) && !/13 measured/i.test(plain)) {
