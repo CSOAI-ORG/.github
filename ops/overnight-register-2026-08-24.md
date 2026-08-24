@@ -258,3 +258,12 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 | 3 | HF Settings → Generate DOI for gspc-board + gspc-bench-results |
 | 4 | Optional: a2aagentlist email; Discussion #97 comment manually |
 
+---
+
+## Continuation log 8 (2026-08-24T21:52Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-06 | **PREP** | N5-06 · scripts/overnight-hf-publish.sh · (this commit) · 2026-08-24T21:52Z · added `hf spaces restart` after upload (live Space sdk=static → export sdk=gradio) |
+| N5-01 | **GATED** | HF_TOKEN still absent; leaderboard-results HTTP 401; HF MCP contribute-repos read-only in shell |
+

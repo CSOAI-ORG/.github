@@ -38,6 +38,8 @@ echo "=== N5-06: governance leaderboard Space + results dataset ==="
 create_and_upload dataset csoai/gspc-leaderboard-results "$ROOT/export/leaderboard-results"
 "$HF" repo create --type space --space-sdk gradio csoai/gspc-governance-leaderboard 2>/dev/null || true
 create_and_upload space csoai/gspc-governance-leaderboard "$ROOT/export/gspc-governance-leaderboard"
+# Live Space was sdk=static; export README sets sdk=gradio — restart to pick up SDK change
+"$HF" spaces restart csoai/gspc-governance-leaderboard 2>/dev/null || true
 
 echo "=== N5-05: DOIs — mint manually in repo Settings after names confirmed ==="
 echo "WARNING: DOI locks rename/delete/visibility permanently"
