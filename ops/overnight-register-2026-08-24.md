@@ -2,14 +2,41 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** b174443 (continued 2026-08-24T23:31Z)  
+**Commit:** 20aa8bd (continued 2026-08-24T23:33Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:30Z) — **22/30**
+## Current status snapshot (23:33Z) — **22/30**
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN unset; shell `hf auth whoami` → Not logged in; MCP OAuth has `contribute-repos` but not wired to CLI |
+| N5-02 | LIVE (stale) | gspc-board HTTP 200; live README still **EUNOMIA** branding |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
+| N5-05 | GATED | DOI not minted |
+| N5-06 | PARTIAL | Space sdk=static; leaderboard-results HTTP 401 |
+| N5-07 | PASS | ClaimGuard + banned-strings |
+| N5-08–12 | LIVE | MCP v1.0.2 isLatest=true |
+| N5-13–14 | LIVE | agent card 10/10 validator |
+| N5-15 | PREP | a2aagentlist draft |
+| N5-16 | BLOCKED | artinet.io placeholder |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 open (mergeable) |
+| N5-18 | GATED | Discussion #97 FORBIDDEN |
+| N5-19 | DEFERRED | no GCP account |
+| N5-20–21 | DONE | evidence pack + ClaimGuard |
+| N5-22–25 | PREP | marketplace drafts |
+| N5-26–29 | PREP | insurance skeletons |
+| N5-30 | PREP | G-Cloud checklist |
+
+**Owner unblock:** Add `HF_TOKEN` repo secret OR configure Trusted Publishers on 4 HF repos. `overnight-hf-cron` has **0 runs** (schedule not firing). Push trigger works but OIDC fails.
+
+---
+
+## Current status snapshot (23:30Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -949,4 +976,25 @@ GitHub schedule not firing on `.github` repo (push trigger works). Owner must ad
 | N5-07/21 | **PASS** | claimguard-20260824T233124Z.log · ClaimGuard PASS |
 
 HF gate unchanged. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
+
+---
+
+## Continuation log 50 (2026-08-24T23:33Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #7 · 2026-08-24T23:33Z |
+| N5-REGISTER | **MERGED** | PR #48 · 20aa8bd · 2026-08-24T23:31Z · log 49 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; TOKEN env invalid for HF |
+| N5-01 | **GATED** | MCP OAuth (@Nicholastempleman, csoai admin, `contribute-repos`) — not exposed to shell CLI |
+| N5-01 | **GATED** | `overnight-hf-cron` 0 runs; latest publish run 32788615051 (push, OIDC fail) |
+| N5-02 | **LIVE (stale)** | gspc-board README still EUNOMIA (export has GSPC branding) |
+| N5-06 | **PARTIAL** | leaderboard-results HTTP 401; Space sdk=static |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T233302Z.log · 2026-08-24T23:33:02Z |
+| N5-07/21 | **PASS** | claimguard-20260824T233302Z.log · ClaimGuard PASS |
+| N5-10/11 | **LIVE** | MCP v1.0.2 isLatest=true confirmed |
+| N5-13/14 | **LIVE** | agent card 4 skills; validator PASS |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 open mergeable_state=clean |
+
+HF gate unchanged. Agent lane exhausted for N5-01/05/06. Pack **22/30**.
 
