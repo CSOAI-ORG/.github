@@ -86,6 +86,10 @@ async function main() {
     fails++;
   }
 
+  if (run("Revenue rails E2E", "node", ["scripts/e2e-revenue.mjs", "--host", HOST])) {
+    fails++;
+  }
+
   if (run("Weekend demo smoke", "node", ["scripts/weekend-demo-smoke.mjs", "--host", HOST])) {
     fails++;
   }

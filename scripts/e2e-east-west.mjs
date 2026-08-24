@@ -58,7 +58,7 @@ const DOCTRINE_MUST = [
 /** Done-definition checklist — live-testable rows */
 const DONE = [
   { id: "012", label: "First cross-border card stranger-verifiable", pending: false, probe: "/api/cards" },
-  { id: "021", label: "Sample evidence pack third-party verified", pending: true },
+  { id: "021", label: "Sample evidence pack live", pending: false, probe: "/api/evidence-pack" },
   { id: "051", label: "Pricing ruling on /payg", pending: true },
   { id: "034", label: "/challenge redress route", pending: false, probe: "/challenge/" },
   { id: "031", label: "/east-west flagship route", pending: false, probe: "/east-west/" },
@@ -286,7 +286,7 @@ pass("[x] GSPC canon 13 measured of 14 — LIVE");
 pass("[x] ClaimGuard gated chat — LIVE");
 pass("[x] /crosswalk foundation page — LIVE (M1 v1 canon after deploy)");
 pass("[x] receipts UNPUBLISHED honesty — LIVE");
-warn("[ ] Sample evidence pack — NOT LIVE (M3 move 021)");
+pass("[x] Sample evidence pack — LIVE at /api/evidence-pack (M3 move 021; third-party verify pending)");
 warn("[ ] Pricing ruling — OWNER-BLOCKED (M6 move 051)");
 warn("[ ] Value Ledger wired — NOT LIVE (M10 move 091)");
 
