@@ -7,10 +7,16 @@ mkdir -p "$LOG_DIR"
 TS="$(date -u +%Y%m%dT%H%M%SZ)"
 LOG="$LOG_DIR/overnight-pack-verify-$TS.log"
 FAIL=0
+WARN=0
+STRICT="${STRICT:-0}"
 
 pass() { echo "  [PASS] $*"; }
 fail() { echo "  [FAIL] $*"; FAIL=1; }
-warn() { echo "  [WARN] $*"; }
+warn() {
+  echo "  [WARN] $*"
+  WARN=1
+  if [[ "$STRICT" == "1" ]]; then FAIL=1; fi
+}
 
 http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
 
@@ -73,13 +79,18 @@ print(latest[0] if latest else 'none')
     if [[ -f "$ROOT/trust/insurance-prep/$f" ]]; then pass "insurance-prep/$f"; else fail "insurance-prep/$f missing"; fi
   done
 
-  echo "--- Summary"
+  echo "--- Summary (STRICT=$STRICT)"
   if [[ "$FAIL" -eq 0 ]]; then
-    echo "VERIFY PASS (owner-gated items may still be pending: HF DOI, directories)"
+    if [[ "$WARN" -eq 1 ]]; then
+      echo "VERIFY PASS with warnings (owner-gated items may still be pending: HF DOI, directories)"
+    else
+      echo "VERIFY PASS — all checks green"
+    fi
   else
     echo "VERIFY FAIL — see failures above"
   fi
-} | tee "$LOG"
+} > "$LOG"
 
+cat "$LOG"
 echo "$LOG"
 exit "$FAIL"

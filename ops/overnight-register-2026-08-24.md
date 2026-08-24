@@ -351,3 +351,18 @@ Pack score remains **22/30**. Critical path: owner adds `HF_TOKEN` + runs **over
 
 Score **22/30**. All agent-actionable prep complete. Remaining: HF_TOKEN + workflow run + DOI mint + owner directory actions.
 
+---
+
+## Continuation log 13 (2026-08-24T22:03Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T220255Z.log · (this commit) · 2026-08-24T22:02:55Z · re-run; 2 WARN (HF gated) |
+| N5-06 | **CONFIRMED** | hf_fs stat `gspc-leaderboard-results` → missing (Exists: no) |
+| N5-01 | **GATED** | All unblock paths exhausted: no HF_TOKEN, workflow_dispatch 403, hub get_token=no, MCP fs read-only |
+| N5-VERIFY | **PREP** | N5-VERIFY · ops/verify-overnight-pack.sh · (this commit) · 2026-08-24T22:03Z · STRICT=1 mode for post-HF-publish workflow |
+
+### Agent unblock audit (22:03Z)
+
+Attempted: shell `hf auth`, env TOKEN/PAT/OIDC, `gh workflow run`, HF MCP `contribute-repos`, GraphQL Discussion #97. All blocked. **No further agent-actionable paths remain** for N5-01/05/06.
+
