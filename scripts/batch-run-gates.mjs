@@ -78,6 +78,10 @@ async function main() {
     fails++;
   }
 
+  if (run("East-West E2E", "node", ["scripts/e2e-east-west.mjs", "--host", HOST])) {
+    fails++;
+  }
+
   if (run("Weekend demo smoke", "node", ["scripts/weekend-demo-smoke.mjs", "--host", HOST])) {
     fails++;
   }
