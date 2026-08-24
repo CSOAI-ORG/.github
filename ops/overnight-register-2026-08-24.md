@@ -2,14 +2,41 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** d514f18 (continued 2026-08-24T21:55Z)  
+**Commit:** 705ee41 (continued 2026-08-24T22:37Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (21:55Z)
+## Current status snapshot (22:37Z) — **22/30**
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN unset; OIDC path on main (PR #24); 0 workflow runs |
+| N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | cards in export; live refresh pending publish |
+| N5-05 | GATED | DOI not minted |
+| N5-06 | PARTIAL | Space sdk=static; leaderboard-results missing |
+| N5-07 | PASS | ClaimGuard + banned-strings |
+| N5-08–12 | LIVE | MCP v1.0.2 isLatest |
+| N5-13–14 | LIVE | agent card 10/10 validator |
+| N5-15 | PREP | a2aagentlist draft |
+| N5-16 | BLOCKED | artinet.io placeholder |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 open |
+| N5-18 | GATED | Discussion #97 FORBIDDEN |
+| N5-19 | DEFERRED | no GCP account |
+| N5-20–21 | DONE | evidence pack + ClaimGuard |
+| N5-22–25 | PREP | marketplace drafts |
+| N5-26–29 | PREP | insurance skeletons |
+| N5-30 | PREP | G-Cloud checklist |
+
+**Owner unblock:** Trusted Publishers (4 repos) or HF_TOKEN → `overnight-hf-oidc-probe` → `overnight-hf-publish` → DOI mint.
+
+---
+
+## Current status snapshot (21:55Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
