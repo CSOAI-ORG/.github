@@ -39,6 +39,12 @@ http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
     if [[ "$code" == "200" ]]; then pass "$url HTTP $code"; else fail "$url HTTP $code"; fi
   done
 
+  echo "--- N5-05 HF DOIs"
+  for repo in csoai/gspc-board csoai/gspc-bench-results; do
+    doi=$(curl -s "https://huggingface.co/api/datasets/$repo" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('doi') or 'none')" 2>/dev/null || echo "none")
+    if [[ "$doi" != "none" && -n "$doi" ]]; then pass "$repo DOI=$doi"; else warn "$repo DOI not minted"; fi
+  done
+
   echo "--- N5-06 HF Space + leaderboard-results"
   code=$(http_code "https://huggingface.co/datasets/csoai/gspc-leaderboard-results")
   if [[ "$code" == "200" ]]; then pass "leaderboard-results HTTP $code"; else warn "leaderboard-results HTTP $code (expected 200 after publish)"; fi

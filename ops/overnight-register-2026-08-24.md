@@ -366,3 +366,40 @@ Score **22/30**. All agent-actionable prep complete. Remaining: HF_TOKEN + workf
 
 Attempted: shell `hf auth`, env TOKEN/PAT/OIDC, `gh workflow run`, HF MCP `contribute-repos`, GraphQL Discussion #97. All blocked. **No further agent-actionable paths remain** for N5-01/05/06.
 
+---
+
+## Continuation log 14 (2026-08-24T22:05Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T220436Z.log · (this commit) · 2026-08-24T22:04:36Z · 3 WARN (leaderboard, Space sdk, DOIs) |
+| N5-05 | **GATED** | gspc-board + gspc-bench-results API `doi: none` · mint after HF publish |
+| N5-01 | **GATED** | `overnight-hf-publish` workflow never run (0 runs); HF_TOKEN absent |
+| N5-17 | **PR OPEN** | awesome-a2a PR #157 · unchanged |
+
+### N5 requirement matrix (22:05Z)
+
+| ID | Requirement | Evidence | Status |
+|----|-------------|----------|--------|
+| N5-01 | HF publish pipeline | `scripts/overnight-hf-publish.sh` + workflow | GATED (HF_TOKEN) |
+| N5-02 | gspc-board dataset | HTTP 200 | LIVE |
+| N5-03 | gspc-bench-results | HTTP 200 | LIVE |
+| N5-04 | README cards | export/*/README.md | LIVE (stale EUNOMIA on board) |
+| N5-05 | DOIs | HF API doi=none | GATED |
+| N5-06 | Space + leaderboard | sdk=static; leaderboard missing | PARTIAL |
+| N5-07 | ClaimGuard | PASS logs | DONE |
+| N5-08–12 | MCP 1.0.2 | registry isLatest=true | DONE |
+| N5-13–14 | A2A card | 10/10 validator live | DONE |
+| N5-15 | a2aagentlist | draft only | PREP |
+| N5-16 | artinet.io | placeholder | BLOCKED |
+| N5-17 | awesome-a2a | PR #157 open | SUBMITTED |
+| N5-18 | Discussion #97 | FORBIDDEN | GATED |
+| N5-19 | GCP registry | no account | DEFERRED |
+| N5-20 | evidence pack | 4 docs | DONE |
+| N5-21 | ClaimGuard gate | PASS | DONE |
+| N5-22–25 | marketplace | drafts committed | DONE |
+| N5-26–29 | insurance | skeletons committed | DONE |
+| N5-30 | G-Cloud | checklist | PREP |
+
+**Pack score: 22/30 done or submitted. 8 owner-gated.**
+
