@@ -2,19 +2,19 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 2646e7b (continued 2026-08-24T23:53Z)  
+**Commit:** 1202ac0 (continued 2026-08-24T23:54Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:53Z) — **22/30**
+## Current status snapshot (23:54Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; cron **now firing** but OIDC still fails on gspc-board |
-| N5-02 | LIVE (stale) | gspc-board HTTP 200; README **EUNOMIA** (export has GSPC) |
+| N5-01 | GATED | HF_TOKEN unset; cron live (1 run); OIDC fail; workflow_dispatch 403 |
+| N5-02 | LIVE (stale) | gspc-board README still EUNOMIA (`pretty_name` confirmed live) |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
 | N5-05 | GATED | DOI not minted |
@@ -24,7 +24,7 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-13–14 | LIVE | agent card 10/10 validator |
 | N5-15 | PREP | a2aagentlist draft (email owner-gated) |
 | N5-16 | BLOCKED | artinet.io SPA; no registration API |
-| N5-17 | SUBMITTED | awesome-a2a PR #157 open |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 open (mergeable) |
 | N5-18 | GATED | Discussion #97 blocked |
 | N5-19 | DEFERRED | no GCP account |
 | N5-20–21 | DONE | evidence pack + ClaimGuard |
@@ -32,11 +32,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos. Cron auto-retry active (first run 23:48Z).
+**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos. Next cron ~00:03Z.
 
 ---
 
-## Current status snapshot (23:39Z) — superseded
+## Current status snapshot (23:53Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1064,4 +1064,22 @@ All agent lanes exhausted (shell, OIDC, MCP, browser). Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T235335Z.log · ClaimGuard PASS |
 
 Cron now firing every 15m; auth still blocked. Pack **22/30**. Owner: HF_TOKEN or Trusted Publishers.
+
+---
+
+## Continuation log 55 (2026-08-24T23:54Z) — continuation recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-24T23:54Z |
+| N5-REGISTER | **MERGED** | PR #52 · 1202ac0 · 2026-08-24T23:54Z · log 54 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; local publish skipped |
+| N5-01 | **GATED** | `gh workflow run overnight-hf-publish` → 403 |
+| N5-01 | **CRON** | 1 cron run (32791004769 @ 23:48Z); next boundary ~00:03Z |
+| N5-02 | **LIVE (stale)** | Live README frontmatter still EUNOMIA |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T235458Z.log · 2026-08-24T23:54:58Z |
+| N5-07/21 | **PASS** | claimguard-20260824T235458Z.log · ClaimGuard PASS |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 open mergeable_state=clean |
+
+No change. Pack **22/30**.
 
