@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** cursor/overnight-five-venues-ff6e  
-**Commit:** 009b735  
+**Commit:** c22417b (continued 2026-08-24T17:25Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -86,3 +86,29 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 **Nick's seven decisions:** AWS AMMP · Snowflake ORGADMIN · Datarade commission · AIUC-1 scoping · Armilla outreach · Broker engagement · G-Cloud prep spend
 
 **Needs nothing:** Gallagher Re (#68) · aggregator passive watch · Smithery/GitHub MCP Registry drafts queued
+
+---
+
+## Continuation log (2026-08-24T17:25Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **GATED** | Still no HF_TOKEN in lane env |
+| N5-02 | **PARTIAL LIVE** | N5-02 · https://huggingface.co/datasets/csoai/gspc-board · e79e8c7 · 2026-08-24T17:14Z · curl 200; board.json present (parallel lane upload) |
+| N5-03 | **PARTIAL LIVE** | N5-03 · https://huggingface.co/datasets/csoai/gspc-bench-results · 8b4b190 · 2026-08-24T17:17Z · curl 200 |
+| N5-05 | **GATED** | DOI not minted (no HF_TOKEN for Settings API) |
+| N5-06 | **GATED** | Space + leaderboard-results still HTTP 401 |
+| N5-08/09 | **PR OPEN** | N5-08 · https://github.com/CSOAI-ORG/csoai-static-deploy2/pull/40 · 17641db · 2026-08-24T17:22Z · server.json 1.0.2 + glama.json + package.json mcpName |
+| N5-10 | **GATED** | mcp-publisher not installed; OAuth required |
+| N5-13 | **MERGED, DEPLOY PENDING** | N5-13 · councilof-ai#483 merged c903a7d · 2026-08-24T17:19Z · master has v1.0.0 card; live still v0.2.0 (deploy cancelled/queued) |
+| N5-14 | **LOCAL PASS** | N5-14 · ops/logs/a2a-validator-local.json · (this commit) · 2026-08-24T17:22Z · 10 PASS 0 FAIL on generated card |
+| N5-15 | **PREP** | a2aagentlist.com/submit requires email to gal6111@gmail.com — no-spam law: NOT sent |
+| N5-16 | **BLOCKED** | artinet.io is placeholder ("evolving...") — no registration form |
+| N5-17 | **LOCAL COMMIT** | N5-17 · connect/a2a/awesome-a2a-pr.diff · 3e2d0e1 local · push blocked (cursor[bot] 403) — owner push fork branch add-council-of-ai |
+| N5-18 | **GATED** | Discussion #97 comment blocked (integration 403) — draft in directory-submissions.md |
+| N5-19 | **DEFERRED** | no GCP account |
+
+### Deploy queue note
+
+councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent master deploy still **pending** as of 17:25Z. A2A card live verification blocked until Cloudflare Pages deploy completes.
+
