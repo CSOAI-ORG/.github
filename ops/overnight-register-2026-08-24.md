@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 63bcb2a (continued 2026-08-24T22:50Z)  
+**Commit:** 5eac533 (continued 2026-08-24T22:52Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (22:50Z) — **22/30**
+## Current status snapshot (22:52Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; run 32786273294 failed OIDC; 15m schedule pending (PR TBD) |
+| N5-01 | GATED | OIDC probe 0/4 FAIL; run 32786617879 failed; 15m schedule LIVE |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -32,7 +32,7 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** Configure Trusted Publishers on 4 HF repos OR add `HF_TOKEN` secret. Push trigger live (PR #36); re-run via merge to `export/**` or workflow_dispatch.
+**Owner unblock:** Configure Trusted Publishers on 4 HF repos OR add `HF_TOKEN` secret. Auto-retry every 15m via schedule (PR #39) + push trigger (PR #36).
 
 ---
 
@@ -820,4 +820,17 @@ HF gate unchanged. Pack **22/30**. Awaiting owner Trusted Publishers or HF_TOKEN
 | N5-07/21 | **PASS** | claimguard-20260824T225035Z.log · ClaimGuard PASS |
 
 Auto-retry every 15m via GitHub Actions schedule (no agent timer dependency). Pack **22/30**.
+
+---
+
+## Continuation log 41 (2026-08-24T22:52Z) — schedule merged + run 2
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CI | **MERGED** | PR #39 · 5eac533 · 2026-08-24T22:51Z · cron `*/15 * * * *` + OIDC preflight on `overnight-hf-publish` |
+| N5-01 | **FAIL (OIDC)** | Run 32786617879 · 2026-08-24T22:51Z · OIDC probe 0/4 FAIL; publish `invalid_grant` on gspc-board |
+| N5-01 | **GATED** | HF_TOKEN unset; Trusted Publishers not configured on any of 4 HF repos |
+| N5-07/21 | **PASS** | ClaimGuard PASS (workflow preflight) |
+
+Schedule live — next auto-retry at cron boundary. Pack **22/30**.
 
