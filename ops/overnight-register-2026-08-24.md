@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** cursor/overnight-five-venues-ff6e  
-**Commit:** c22417b (continued 2026-08-24T17:25Z)  
+**Commit:** (pending) (continued 2026-08-24T21:35Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -125,4 +125,35 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 | N5-17 | **PR OPEN** | https://github.com/ai-boost/awesome-a2a/pull/157 · bef3b98 · submitted-awaiting-review |
 | N5-02/03 | **LIVE** | HF datasets HTTP 200 (unchanged) |
 | N5-06 | **GATED** | Space + leaderboard-results HTTP 401 — no HF_TOKEN |
+
+---
+
+## Continuation log 3 (2026-08-24T21:35Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-13 | **LIVE** | N5-13 · https://councilof.ai/.well-known/agent-card.json · a68b7f8 · 2026-08-24T21:35Z · GSPC card live: `gspc-board` skill, 2 interfaces; Content-Type `application/a2a+json` |
+| N5-14 | **LIVE PASS** | N5-14 · ops/logs/a2a-validator-live-20260824T213500Z.json · (this commit) · 2026-08-24T21:35Z · 10 PASS 0 FAIL on live card |
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T212938Z.log · (this commit) · 2026-08-24T21:29:38Z · re-run PASS before register close |
+| N5-06 | **PARTIAL LIVE** | N5-06 · https://huggingface.co/spaces/csoai/gspc-governance-leaderboard · — · 2026-08-24T21:35Z · HTTP 200 RUNNING; sdk=static (not Gradio scaffold); leaderboard-results dataset HTTP 401 |
+| N5-10 | **GATED** | server.json 1.0.2 on csoai-static-deploy2 main (fdff486); registry latest still 1.0.1 — mcp-publisher OAuth required |
+| N5-17 | **PR OPEN** | https://github.com/ai-boost/awesome-a2a/pull/157 · awaiting maintainer review (unchanged) |
+
+### Updated done-definition scorecard (D1–D6)
+
+| Done | Status | Notes |
+|------|--------|-------|
+| D1 HF Space live | **PARTIAL** | Space RUNNING HTTP 200; Gradio scaffold not deployed (sdk=static) |
+| D2 Datasets + DOIs | **PARTIAL** | gspc-board + gspc-bench-results HTTP 200; leaderboard-results 401; DOIs not minted |
+| D3 MCP 1.0.2 | **GATED** | Files on main; registry publish needs owner OAuth |
+| D4 agent-card + directories | **PARTIAL LIVE** | Card live + validated; awesome-a2a PR open; a2aagentlist/artinet/GCP gated |
+| D5 Evidence pack | **DONE** | 4 docs + ClaimGuard pass |
+| D6 Marketplace drafts | **DONE** | ADX/Snowflake/Datarade prep committed |
+
+### Owner unblock list (remaining)
+
+1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
+2. `mcp-publisher login github` from csoai-static-deploy2 root → `mcp-publisher publish` (N5-10/11)
+3. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
+4. Discussion #97 comment (N5-18) — Nick or integration with write access
 
