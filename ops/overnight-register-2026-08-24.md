@@ -112,3 +112,17 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 
 councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent master deploy still **pending** as of 17:25Z. A2A card live verification blocked until Cloudflare Pages deploy completes.
 
+---
+
+## Continuation log 2 (2026-08-24T17:36Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-08/09 | **MERGED** | csoai-static-deploy2#40 → fdff486 · server.json 1.0.2 + glama.json on main |
+| N5-10 | **GATED** | mcp-publisher OAuth still required for registry publish |
+| N5-13 | **FIX PR** | councilof-ai#498 merged dd79ba0 — restores GSPC card after EUNOMIA overwrite |
+| N5-14 | **PARTIAL LIVE** | application/a2a+json live; card content was EUNOMIA until #498 deploys |
+| N5-17 | **PR OPEN** | https://github.com/ai-boost/awesome-a2a/pull/157 · bef3b98 · submitted-awaiting-review |
+| N5-02/03 | **LIVE** | HF datasets HTTP 200 (unchanged) |
+| N5-06 | **GATED** | Space + leaderboard-results HTTP 401 — no HF_TOKEN |
+
