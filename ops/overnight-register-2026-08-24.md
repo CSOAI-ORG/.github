@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 8c58945 (continued 2026-08-24T22:48Z)  
+**Commit:** 63bcb2a (continued 2026-08-24T22:50Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (22:48Z) — **22/30**
+## Current status snapshot (22:50Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; run 32786273294 failed OIDC; no new runs |
+| N5-01 | GATED | HF_TOKEN unset; run 32786273294 failed OIDC; 15m schedule pending (PR TBD) |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -806,4 +806,18 @@ First `overnight-hf-publish` run executed (infrastructure unblocked). Publish bl
 | N5-07/21 | **PASS** | claimguard-20260824T224820Z.log · ClaimGuard PASS |
 
 HF gate unchanged. Pack **22/30**. Awaiting owner Trusted Publishers or HF_TOKEN.
+
+---
+
+## Continuation log 40 (2026-08-24T22:50Z) — schedule automation + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-24T22:50Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; workflow_dispatch/rerun 403 |
+| N5-CI | **PREP** | PR TBD · cron `*/15 * * * *` on `overnight-hf-publish` + OIDC preflight step |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T225040Z.log · 2026-08-24T22:50:40Z |
+| N5-07/21 | **PASS** | claimguard-20260824T225035Z.log · ClaimGuard PASS |
+
+Auto-retry every 15m via GitHub Actions schedule (no agent timer dependency). Pack **22/30**.
 
