@@ -516,3 +516,63 @@ Pack **22/30**. HF publish still gated on owner auth setup.
 
 HF gate still closed. PR #24 (OIDC fallback) OPEN. Owner: configure Trusted Publishers → run **overnight-hf-oidc-probe** → then **overnight-hf-publish**.
 
+---
+
+## Continuation log 22 (2026-08-24T22:29Z) — PR #24 merged + timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **MERGED** | N5-01 · PR #24 · a744691 · 2026-08-24T22:28:48Z · OIDC fallback + probe workflow on `main` |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222849Z.log · 2026-08-24T22:28:49Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T222841Z.log · ClaimGuard PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow_dispatch 403; **0 workflow runs** (publish + probe) |
+| N5-06 | **GATED** | gspc-leaderboard-results still missing (hf_fs Exists: no) |
+
+### Post-merge owner sequence
+
+1. Configure Trusted Publishers on 4 HF repos (log 20 table)
+2. Actions → **overnight-hf-oidc-probe** → Run workflow → expect 4/4 PASS
+3. Actions → **overnight-hf-publish** → Run workflow → `STRICT=1` verify in-job
+4. HF Settings → Generate DOI for `gspc-board` + `gspc-bench-results`
+
+Pack **22/30**. Agent lane exhausted; awaiting owner workflow run.
+
+---
+
+## Continuation log 23 (2026-08-24T22:30Z) — timer recheck (+15m)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:30Z · sub_92e7f494 |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222952Z.log · 2026-08-24T22:29:52Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T222954Z.log · ClaimGuard PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow_dispatch 403 (publish + probe); 0 workflow runs |
+| N5-02 | **STALE** | Live gspc-board README still EUNOMIA (`pretty_name` unchanged) |
+| N5-06 | **GATED** | leaderboard-results Exists: no; Space sdk=static |
+
+### N5 completion audit (22:30Z)
+
+| Done (22) | Gated/deferred (8) |
+|-----------|-------------------|
+| N5-02–04 partial live, N5-07, N5-08–14, N5-20–21, N5-22–25, N5-26–29, N5-30 prep, N5-17 submitted | N5-01, N5-05, N5-06 publish, N5-15, N5-16, N5-18, N5-19 |
+
+OIDC path on `main` (PR #24). Owner must run workflows manually.
+
+---
+
+## Continuation log 24 (2026-08-24T22:30Z) — timer `overnight-hf-recheck` fired
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · fired 2026-08-24T22:30:01Z |
+| N5-01 | **GATED** | `hf auth whoami` → Not logged in; HF_TOKEN unset; `hf auth list` → No access tokens |
+| N5-01 | **SKIP** | `scripts/overnight-hf-publish.sh` not run (no HF_TOKEN) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223051Z.log · 2026-08-24T22:30:51Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T223050Z.log · ClaimGuard PASS |
+| N5-06 | **GATED** | gspc-leaderboard-results Exists: no (hf_fs) |
+| N5-WF | **GATED** | `gh run list --workflow=overnight-hf-publish` → 0 runs |
+
+### Timer recheck result (22:30Z)
+
+HF gate still closed. No publish attempted. Next timer fire ~15m.
+
