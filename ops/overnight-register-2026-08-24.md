@@ -834,3 +834,18 @@ Auto-retry every 15m via GitHub Actions schedule (no agent timer dependency). Pa
 
 Schedule live — next auto-retry at cron boundary. Pack **22/30**.
 
+---
+
+## Continuation log 42 (2026-08-24T22:53Z) — goal continuation recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-24T22:53Z |
+| N5-REGISTER | **MERGED** | PR #40 · fe24214 · 2026-08-24T22:52Z · log 41 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; 2 workflow runs (both OIDC fail); next cron ~23:00Z |
+| N5-CI | **PREP** | PR TBD · OIDC probe prints HF settings URLs + workflow concurrency |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T225340Z.log · 2026-08-24T22:53:40Z |
+| N5-07/21 | **PASS** | claimguard-20260824T225339Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**. Schedule + push triggers armed; awaiting owner auth.
+
