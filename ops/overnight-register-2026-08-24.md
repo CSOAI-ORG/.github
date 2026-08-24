@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 79375ac (continued 2026-08-24T23:35Z)  
+**Commit:** ffec3e3 (continued 2026-08-24T23:38Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:35Z) — **22/30**
+## Current status snapshot (23:38Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; shell + MCP OAuth not wired to `hf` CLI upload |
+| N5-01 | GATED | HF_TOKEN unset; OIDC fail `invalid_grant: No trusted publisher` on gspc-board (run 32788615051) |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; live README still **EUNOMIA** branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
@@ -22,21 +22,21 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-07 | PASS | ClaimGuard + banned-strings |
 | N5-08–12 | LIVE | MCP v1.0.2 isLatest=true |
 | N5-13–14 | LIVE | agent card 10/10 validator |
-| N5-15 | PREP | a2aagentlist draft |
-| N5-16 | BLOCKED | artinet.io placeholder |
+| N5-15 | PREP | a2aagentlist draft (email owner-gated) |
+| N5-16 | BLOCKED | artinet.io SPA live but no public registration API found |
 | N5-17 | SUBMITTED | awesome-a2a PR #157 open (mergeable) |
-| N5-18 | GATED | Discussion #97 REST comment → 404; GraphQL FORBIDDEN |
+| N5-18 | GATED | Discussion #97 REST/GraphQL blocked |
 | N5-19 | DEFERRED | no GCP account |
 | N5-20–21 | DONE | evidence pack + ClaimGuard |
 | N5-22–25 | PREP | marketplace drafts |
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** Add `HF_TOKEN` repo secret OR configure Trusted Publishers on 4 HF repos. `overnight-hf-cron` has **0 runs**. Push trigger works but OIDC fails.
+**Owner unblock:** Add `HF_TOKEN` OR configure Trusted Publishers on 4 HF repos (settings URLs in OIDC probe logs). `overnight-hf-cron` **0 runs**.
 
 ---
 
-## Current status snapshot (23:33Z) — superseded
+## Current status snapshot (23:35Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1014,4 +1014,21 @@ HF gate unchanged. Agent lane exhausted for N5-01/05/06. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T233540Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
+
+---
+
+## Continuation log 52 (2026-08-24T23:38Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T23:38Z |
+| N5-REGISTER | **MERGED** | PR #49 · ffec3e3 · 2026-08-24T23:36Z · logs 50–51 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow run 32788615051 OIDC: `No trusted publisher configured on datasets/csoai/gspc-board` |
+| N5-01 | **GATED** | `overnight-hf-cron` 0 runs; MCP OAuth contribute-repos not exposed to shell |
+| N5-16 | **BLOCKED** | artinet.io returns SPA shell; no `/api` registration endpoint discovered |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T233715Z.log · 2026-08-24T23:37:15Z |
+| N5-07/21 | **PASS** | claimguard-20260824T233715Z.log · ClaimGuard PASS |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 open mergeable_state=clean |
+
+HF gate unchanged. Agent lane exhausted. Pack **22/30**.
 
