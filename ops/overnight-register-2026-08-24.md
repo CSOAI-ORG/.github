@@ -629,3 +629,29 @@ Pack **22/30**. Owner unblock unchanged (Trusted Publishers or HF_TOKEN → prob
 
 HF gate unchanged. Pack **22/30**. Agent lane exhausted.
 
+---
+
+## Continuation log 29 (2026-08-24T22:35Z) — PR #27 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #27 · 4d59bf2 · 2026-08-24T22:35:31Z · logs 27–28 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223523Z.log · 2026-08-24T22:35:23Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223525Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Awaiting owner workflow run (Trusted Publishers or HF_TOKEN).
+
+---
+
+## Continuation log 30 (2026-08-24T22:36Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:36Z · sub_92e7f494 |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223621Z.log · 2026-08-24T22:36:21Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223622Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**.
+
