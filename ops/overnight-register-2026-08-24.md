@@ -2,41 +2,41 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** ffec3e3 (continued 2026-08-24T23:38Z)  
+**Commit:** e1c2be0 (continued 2026-08-24T23:39Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:38Z) — **22/30**
+## Current status snapshot (23:39Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; OIDC fail `invalid_grant: No trusted publisher` on gspc-board (run 32788615051) |
-| N5-02 | LIVE (stale) | gspc-board HTTP 200; live README still **EUNOMIA** branding |
+| N5-01 | GATED | HF_TOKEN unset; OIDC + browser + MCP OAuth→CLI all blocked |
+| N5-02 | LIVE (stale) | gspc-board HTTP 200; README **EUNOMIA** (export has GSPC) |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
 | N5-05 | GATED | DOI not minted |
-| N5-06 | PARTIAL | Space sdk=static; leaderboard-results HTTP 401 |
+| N5-06 | PARTIAL | Space sdk=static (export gradio); leaderboard-results HTTP 401 |
 | N5-07 | PASS | ClaimGuard + banned-strings |
 | N5-08–12 | LIVE | MCP v1.0.2 isLatest=true |
 | N5-13–14 | LIVE | agent card 10/10 validator |
 | N5-15 | PREP | a2aagentlist draft (email owner-gated) |
-| N5-16 | BLOCKED | artinet.io SPA live but no public registration API found |
-| N5-17 | SUBMITTED | awesome-a2a PR #157 open (mergeable) |
-| N5-18 | GATED | Discussion #97 REST/GraphQL blocked |
+| N5-16 | BLOCKED | artinet.io SPA; no registration API |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 open |
+| N5-18 | GATED | Discussion #97 blocked |
 | N5-19 | DEFERRED | no GCP account |
 | N5-20–21 | DONE | evidence pack + ClaimGuard |
 | N5-22–25 | PREP | marketplace drafts |
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** Add `HF_TOKEN` OR configure Trusted Publishers on 4 HF repos (settings URLs in OIDC probe logs). `overnight-hf-cron` **0 runs**.
+**Owner unblock:** `HF_TOKEN` repo secret OR Trusted Publishers on 4 HF repos + manual workflow run.
 
 ---
 
-## Current status snapshot (23:35Z) — superseded
+## Current status snapshot (23:38Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1031,4 +1031,21 @@ No change. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
 | N5-17 | **SUBMITTED** | awesome-a2a PR #157 open mergeable_state=clean |
 
 HF gate unchanged. Agent lane exhausted. Pack **22/30**.
+
+---
+
+## Continuation log 53 (2026-08-24T23:39Z) — timer recheck + browser lane
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T23:39Z |
+| N5-REGISTER | **MERGED** | PR #50 · e1c2be0 · 2026-08-24T23:39Z · log 52 on `main` |
+| N5-01 | **GATED** | Browser lane: huggingface.co not logged in; `hf auth login` device flow incomplete |
+| N5-01 | **GATED** | MCP OAuth contribute-repos present; shell/browser sessions isolated from MCP token |
+| N5-02 | **LIVE (stale)** | Live README: `pretty_name: CSOAI GSPC Board — signed EUNOMIA measurement` |
+| N5-06 | **PARTIAL** | leaderboard-results HTTP 401 (repo missing); Space sdk=static vs export gradio |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T233936Z.log · 2026-08-24T23:39:36Z |
+| N5-07/21 | **PASS** | claimguard-20260824T233936Z.log · ClaimGuard PASS |
+
+All agent lanes exhausted (shell, OIDC, MCP, browser). Pack **22/30**.
 
