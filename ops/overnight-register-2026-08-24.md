@@ -239,3 +239,22 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 2. Actions → **overnight-hf-publish** → Run workflow
 3. Mint DOIs in HF Settings for gspc-board + gspc-bench-results (N5-05)
 
+---
+
+## Continuation log 7 (2026-08-24T21:50Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **MERGED** | PR #11 → main aed165f · 2026-08-24T21:50Z · overnight pack on main; HF workflow live |
+| N5-01 | **GATED** | workflow_dispatch blocked (integration 403); Nick adds HF_TOKEN secret + runs Actions |
+| N5-10–11 | **LIVE** | MCP v1.0.2 isLatest unchanged |
+
+### Final owner morning sheet
+
+| Step | Action |
+|------|--------|
+| 1 | Repo Settings → Secrets → add `HF_TOKEN` (write, org csoai) |
+| 2 | Actions → **overnight-hf-publish** → Run workflow |
+| 3 | HF Settings → Generate DOI for gspc-board + gspc-bench-results |
+| 4 | Optional: a2aagentlist email; Discussion #97 comment manually |
+
