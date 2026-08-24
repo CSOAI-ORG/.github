@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 8ccd336 (continued 2026-08-24T22:54Z)  
+**Commit:** 3d7f8ce (continued 2026-08-24T23:02Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (22:54Z) — **22/30**
+## Current status snapshot (23:02Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | 3 workflow runs failed OIDC; settings URLs in probe logs; cron ~23:00Z |
+| N5-01 | GATED | 3 push runs failed OIDC; 23:00Z cron not seen yet (GH delay); next ~23:15Z |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -862,4 +862,19 @@ HF gate unchanged. Pack **22/30**. Schedule + push triggers armed; awaiting owne
 | N5-07/21 | **PASS** | claimguard-20260824T225427Z.log · ClaimGuard PASS |
 
 3 workflow runs, all OIDC-blocked. Next cron retry ~23:00Z. Pack **22/30**.
+
+---
+
+## Continuation log 44 (2026-08-24T23:02Z) — 23:00Z cron watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation · watched 23:00Z cron window · 2026-08-24T23:02Z |
+| N5-REGISTER | **MERGED** | PR #42 · 3d7f8ce · 2026-08-24T22:55Z · log 43 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; 3 push runs only — no `schedule` event yet (GitHub delay ≤15m) |
+| N5-01 | **WATCH** | Next cron boundary ~23:15Z · workflow state=active |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T230225Z.log · 2026-08-24T23:02:25Z |
+| N5-07/21 | **PASS** | claimguard-20260824T230225Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**. Awaiting owner Trusted Publishers or HF_TOKEN.
 
