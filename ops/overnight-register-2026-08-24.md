@@ -516,3 +516,24 @@ Pack **22/30**. HF publish still gated on owner auth setup.
 
 HF gate still closed. PR #24 (OIDC fallback) OPEN. Owner: configure Trusted Publishers → run **overnight-hf-oidc-probe** → then **overnight-hf-publish**.
 
+---
+
+## Continuation log 22 (2026-08-24T22:29Z) — PR #24 merged + timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **MERGED** | N5-01 · PR #24 · a744691 · 2026-08-24T22:28:48Z · OIDC fallback + probe workflow on `main` |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222849Z.log · 2026-08-24T22:28:49Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T222841Z.log · ClaimGuard PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow_dispatch 403; **0 workflow runs** (publish + probe) |
+| N5-06 | **GATED** | gspc-leaderboard-results still missing (hf_fs Exists: no) |
+
+### Post-merge owner sequence
+
+1. Configure Trusted Publishers on 4 HF repos (log 20 table)
+2. Actions → **overnight-hf-oidc-probe** → Run workflow → expect 4/4 PASS
+3. Actions → **overnight-hf-publish** → Run workflow → `STRICT=1` verify in-job
+4. HF Settings → Generate DOI for `gspc-board` + `gspc-bench-results`
+
+Pack **22/30**. Agent lane exhausted; awaiting owner workflow run.
+
