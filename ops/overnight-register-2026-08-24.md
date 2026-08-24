@@ -576,3 +576,30 @@ OIDC path on `main` (PR #24). Owner must run workflows manually.
 
 HF gate still closed. No publish attempted. Next timer fire ~15m.
 
+---
+
+## Continuation log 25 (2026-08-24T22:31Z) — PR #25 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #25 · 8e9378b · 2026-08-24T22:31:46Z · logs 22–24 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; workflow_dispatch 403; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223139Z.log · 2026-08-24T22:31:39Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223147Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Awaiting owner: Trusted Publishers or HF_TOKEN → probe → publish → DOI mint.
+
+---
+
+## Continuation log 26 (2026-08-24T22:32Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:32Z · sub_92e7f494 |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; publish skipped |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223234Z.log · 2026-08-24T22:32:34Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223236Z.log · ClaimGuard PASS |
+| N5-06 | **GATED** | leaderboard-results Exists: no; 0 workflow runs |
+
+HF gate unchanged. Pack **22/30**.
+
