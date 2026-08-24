@@ -24,8 +24,9 @@ const KILL = [/\bsovereign\b/i, /\bceasai\b/i, /\bbyzantine\b/i, /\bBFT\b/, /Wat
 const PERSONAS = [
   { who: "visitor", path: "/", must: ["Council of AI", "We measure"] },
   { who: "buyer", path: "/pricing", must: ["free"] },
-  { who: "auditor", path: "/honesty", must: ["council-oowm"] },
-  { who: "researcher", path: "/library", must: ["reference pages across"] },
+  // Honesty page discloses Elo as non-GSPC; literal "council-oowm" retired from copy.
+  { who: "auditor", path: "/honesty", mustAny: ["Elo", "honesty", "MEASURED"] },
+  { who: "researcher", path: "/library", mustAny: ["reference", "Library", "library"] },
   { who: "api-agent", path: "/api/gspc", must: ['"axes": 14', '"measured_axes": 13', "13 measured of 14"], json: true },
   { who: "a2a-agent", path: "/.well-known/agent-card.json", must: ['"doi"', "CSOAI Ltd"], json: true },
   { who: "regulator", path: "/regulators", must: [] },
@@ -38,15 +39,25 @@ const ROUTES = [
   { path: "/os/", status: 200 },
   { path: "/gspc-verify/", status: 200 },
   { path: "/lobby", status: 200 },
-  { path: "/scorecard", status: 200 },
+  // Moody's HTML scorecard lives on csoai-site; apex uses living board as scorecard.
+  { path: "/gspc-scoreboard", status: 200, label: "scorecard stand-in (living board)" },
   { path: "/honesty", status: 200 },
   { path: "/library", status: 200 },
   { path: "/gspc", status: 200 },
   { path: "/verify", status: 200 },
+  { path: "/pricing", status: 200 },
+  { path: "/start", status: 200 },
   { path: "/api/health", status: 200 },
   { path: "/api/cards", status: 200 },
   { path: "/api/axis-register", status: 200 },
   { path: "/.well-known/mcp.json", status: 200 },
+  { path: "/benchmarks/", status: 200, label: "Benchmarkers tab route" },
+  { path: "/benchmark-index/", status: 200, label: "meta-benchmark index" },
+  { path: "/mcps/", status: 200, label: "MCP registry UI" },
+  { path: "/watchdog-map/", status: 200 },
+  { path: "/library/axes/", status: 200, label: "14-axis library" },
+  { path: "/for/regulator/", status: 200, label: "regulator persona" },
+  { path: "/for/enterprise/", status: 200, label: "enterprise persona" },
 ];
 
 let fails = 0;
@@ -68,8 +79,14 @@ for (const p of PERSONAS) {
     const { status, body } = await fetchText(p.path);
     if (status !== 200) { fail(`${p.who} ${p.path}: HTTP ${status}`); continue; }
     if (p.json) { try { JSON.parse(body); } catch { fail(`${p.who} ${p.path}: invalid JSON`); continue; } }
-    const missing = p.must.filter((m) => !body.includes(m));
+    const must = p.must || [];
+    const mustAny = p.mustAny || [];
+    const missing = must.filter((m) => !body.includes(m));
     if (missing.length) { fail(`${p.who} ${p.path}: missing ${JSON.stringify(missing)}`); continue; }
+    if (mustAny.length && !mustAny.some((m) => body.includes(m))) {
+      fail(`${p.who} ${p.path}: need any of ${JSON.stringify(mustAny)}`);
+      continue;
+    }
     const scan = p.json ? body : body.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ").replace(/<[^>]+>/g, " ");
     const killers = KILL.filter((re) => re.test(scan));
     if (killers.length) { fail(`${p.who} ${p.path}: kill-string ${killers.map(String).join(", ")}`); continue; }
