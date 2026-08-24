@@ -1,0 +1,10 @@
+field_name,type,description,example
+axis,string,GSPC axis identifier,governance
+bench,string,Benchmark name,GovBench
+status,string,MEASURED or UNMEASURED,MEASURED
+n,integer,Item count for axis,237
+accuracy,float,Leader accuracy (0-1),0.7
+leader,string,Leading model name,council-embodiment-v3-light
+separation,string,McNemar result,SEPARATED|TIE|UNTESTED
+license,string,Data licence,CC-BY-4.0
+verify_url,string,Stranger verification endpoint,https://councilof.ai/gspc-verify

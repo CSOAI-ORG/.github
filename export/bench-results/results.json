@@ -1,0 +1,165 @@
+{
+  "schema": "csoai.gspc-bench-results/0.1",
+  "as_of": "2026-08-24T17:09:35.649813Z",
+  "totals": {
+    "axes": 14,
+    "measured_axes": 13,
+    "quotable_axes": 14,
+    "public_count": "13 measured of 14 quotable (GSPC ruling 2026-08-18)",
+    "license": "CC-BY-4.0",
+    "license_note": "Board data is CC-BY-4.0 (attribute: Council of AI, CSOAI Ltd 16939677, councilof.ai). Our own valve-2 bench-card flagged the payload's missing licence field \u2014 fixed same day.",
+    "items": 887,
+    "separated_leads": 4,
+    "ties": 9,
+    "untested_separations": 1,
+    "mean_macro_f1": 0.7528,
+    "mean_accuracy": 0.7318,
+    "mean_fleet_mean": 0.5443,
+    "mean_harm": 0.4877,
+    "mean_unparsed_rate": 0.0813,
+    "mean_note": "Means are over MEASURED axes that carry the field. mean_accuracy averages the per-axis LEADERS; mean_fleet_mean averages each axis's measured fleet \u2014 the difference is selection, not skill. mean_harm is the severity-weighted failure mass the mean accuracy hides; it exists only for the 13 board-v2 axes."
+  },
+  "public_count": null,
+  "rows": [
+    {
+      "axis": "governance",
+      "bench": "GovBench",
+      "status": "MEASURED",
+      "n": 237,
+      "separation": "SEPARATED",
+      "leader": "council-embodiment-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "safety",
+      "bench": "DefBench",
+      "status": "MEASURED",
+      "n": 36,
+      "separation": "TIE",
+      "leader": "gemma3:12b (base model)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "provenance",
+      "bench": "ProvBench",
+      "status": "MEASURED",
+      "n": 32,
+      "separation": "TIE",
+      "leader": "council-aesthetics-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "continuity",
+      "bench": "PQCBench",
+      "status": "MEASURED",
+      "n": 33,
+      "separation": "TIE",
+      "leader": "council-destruction-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "conformance",
+      "bench": "MCPBench",
+      "status": "MEASURED",
+      "n": 35,
+      "separation": "TIE",
+      "leader": "council-preservation-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "openness",
+      "bench": "OSSBench",
+      "status": "MEASURED",
+      "n": 32,
+      "separation": "TIE",
+      "leader": "council-preservation-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "machinery-conformity",
+      "bench": "MachBench",
+      "status": "MEASURED",
+      "n": 33,
+      "separation": "TIE",
+      "leader": "llama3.2:3b (base model)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "care",
+      "bench": "CareBench",
+      "status": "MEASURED",
+      "n": 199,
+      "separation": "SEPARATED",
+      "leader": "council-ethics-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "cross-reality",
+      "bench": "XRAIV",
+      "status": "MEASURED",
+      "n": 32,
+      "separation": "TIE",
+      "leader": "mistral:7b (base model)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "detector-interop",
+      "bench": "DetBench",
+      "status": "MEASURED",
+      "n": 33,
+      "separation": "TIE",
+      "leader": "deepseek-r1:8b (base model)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "art5-safeguard",
+      "bench": "Art5Bench",
+      "status": "MEASURED",
+      "n": 36,
+      "separation": "TIE",
+      "leader": "council-relationality-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "swarm",
+      "bench": "SwarmBench v2b",
+      "status": "MEASURED",
+      "n": 37,
+      "separation": "SEPARATED",
+      "leader": "qwen2.5:7b (base model)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "affect",
+      "bench": "AffectBench",
+      "status": "MEASURED",
+      "n": 41,
+      "separation": "SEPARATED",
+      "leader": "council-preservation-v3-light (council specialist)",
+      "elo": null,
+      "wilson_ci": null
+    },
+    {
+      "axis": "jail",
+      "bench": "GoldBank-Detector",
+      "status": "MEASURED",
+      "n": 71,
+      "separation": "UNTESTED",
+      "leader": "qwen2.5:0.5b-instruct (base model)",
+      "elo": null,
+      "wilson_ci": null
+    }
+  ]
+}
