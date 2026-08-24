@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 36500f6 (continued 2026-08-24T23:03Z)  
+**Commit:** b05fbd6 (continued 2026-08-24T23:16Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -13,7 +13,7 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | 3 push runs failed OIDC; 23:00Z cron not seen yet (GH delay); next ~23:15Z |
+| N5-01 | GATED | 3 push runs failed OIDC; schedule not firing; dedicated cron PR TBD |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -877,4 +877,31 @@ HF gate unchanged. Pack **22/30**. Schedule + push triggers armed; awaiting owne
 | N5-07/21 | **PASS** | claimguard-20260824T230225Z.log · ClaimGuard PASS |
 
 HF gate unchanged. Pack **22/30**. Awaiting owner Trusted Publishers or HF_TOKEN.
+
+---
+
+## Continuation log 45 (2026-08-24T23:03Z) — timer recheck (+15m window)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T23:00Z |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 3 push runs (no schedule event yet) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T230311Z.log · 2026-08-24T23:03:11Z |
+| N5-07/21 | **PASS** | claimguard-20260824T230311Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**.
+
+---
+
+## Continuation log 46 (2026-08-24T23:16Z) — 23:15Z cron watch + dedicated cron workflow
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 23:00Z and 23:15Z cron windows · 2026-08-24T23:16Z |
+| N5-01 | **GATED** | HF_TOKEN unset; 3 push runs only — zero `schedule` events after 23:15Z |
+| N5-CI | **PREP** | PR TBD · `overnight-hf-cron.yml` dedicated schedule workflow |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T231543Z.log · 2026-08-24T23:15:43Z |
+| N5-07/21 | **PASS** | claimguard-20260824T231543Z.log · ClaimGuard PASS |
+
+Schedule on combined workflow not firing; split to dedicated cron wrapper. Pack **22/30**.
 

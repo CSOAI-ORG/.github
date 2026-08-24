@@ -1,33 +1,16 @@
-name: overnight-hf-publish
+name: overnight-hf-cron
 
-# N5-01..N5-06: HF datasets + Space publish (ClaimGuard gated).
-#
-# Auth (either path):
-#   A) HF_TOKEN repo secret (write/admin on org csoai), OR
-#   B) HF Trusted Publishers OIDC — configure on each HF repo:
-#        Provider: GitHub Actions
-#        repository = CSOAI-ORG/.github
-#        branch     = main
-#        workflow   = overnight-hf-publish.yml
-#      Repos: datasets/csoai/gspc-board, datasets/csoai/gspc-bench-results,
-#             datasets/csoai/gspc-leaderboard-results, spaces/csoai/gspc-governance-leaderboard
-#      Pre-create gspc-leaderboard-results on HF if missing (OIDC is repo-scoped).
+# N5-WATCH: dedicated schedule trigger (separate from push/dispatch workflow).
+# GitHub schedule on combined workflows can be delayed; this thin cron wrapper
+# shares concurrency group with overnight-hf-publish.
 
 on:
+  schedule:
+    - cron: '*/15 * * * *'
   workflow_dispatch:
-  # Auto-run on main merge when export artifacts change (bypasses workflow_dispatch 403 for agents).
-  # Auth: HF_TOKEN secret OR Trusted Publishers OIDC (see header comments).
-  push:
-    branches: [main]
-    paths:
-      - 'export/**'
-      - 'scripts/overnight-hf-publish.sh'
-      - '.github/workflows/overnight-hf-publish.yml'
-      - '.github/workflows/overnight-hf-cron.yml'
-  # Schedule moved to overnight-hf-cron.yml (dedicated workflow for reliable cron).
 
 permissions:
-  id-token: write   # required for Trusted Publishers OIDC exchange
+  id-token: write
   contents: read
 
 concurrency:
