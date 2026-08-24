@@ -1,0 +1,20 @@
+{
+  "schema": "csoai.detector-interop-index/0.1",
+  "count": 2,
+  "cases": [
+    {
+      "case": "c2pa_ai_image",
+      "mark": "c2pa",
+      "expected_verdict": "AI_MARKED",
+      "expected_source_type": "trainedAlgorithmicMedia",
+      "manifest": "cases/c2pa_ai_image/manifest.json"
+    },
+    {
+      "case": "c2pa_tampered",
+      "mark": "c2pa",
+      "expected_verdict": "UNVERIFIABLE",
+      "expected_source_type": null,
+      "manifest": "cases/c2pa_tampered/manifest.json"
+    }
+  ]
+}
