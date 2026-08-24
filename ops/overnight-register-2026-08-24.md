@@ -576,3 +576,16 @@ OIDC path on `main` (PR #24). Owner must run workflows manually.
 
 HF gate still closed. No publish attempted. Next timer fire ~15m.
 
+---
+
+## Continuation log 25 (2026-08-24T22:31Z) — PR #25 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #25 · 8e9378b · 2026-08-24T22:31:46Z · logs 22–24 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; workflow_dispatch 403; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223139Z.log · 2026-08-24T22:31:39Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223147Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Awaiting owner: Trusted Publishers or HF_TOKEN → probe → publish → DOI mint.
+
