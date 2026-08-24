@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** c8beea7 (continued 2026-08-24T22:47Z)  
+**Commit:** 8c58945 (continued 2026-08-24T22:48Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (22:47Z) — **22/30**
+## Current status snapshot (22:48Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | Workflow ran (run 32786273294); OIDC `invalid_grant` — no Trusted Publisher on gspc-board |
+| N5-01 | GATED | HF_TOKEN unset; run 32786273294 failed OIDC; no new runs |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -35,6 +35,8 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 **Owner unblock:** Configure Trusted Publishers on 4 HF repos OR add `HF_TOKEN` secret. Push trigger live (PR #36); re-run via merge to `export/**` or workflow_dispatch.
 
 ---
+
+## Current status snapshot (22:47Z) — superseded
 
 ## Current status snapshot (22:37Z) — superseded
 
@@ -790,4 +792,18 @@ HF gate unchanged. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T224440Z.log · ClaimGuard PASS |
 
 First `overnight-hf-publish` run executed (infrastructure unblocked). Publish blocked until owner configures Trusted Publishers on 4 HF repos or adds `HF_TOKEN`. Pack **22/30**.
+
+---
+
+## Continuation log 39 (2026-08-24T22:48Z) — timer recheck (+15m window)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T22:45Z |
+| N5-REGISTER | **MERGED** | PR #37 · 8c58945 · 2026-08-24T22:47Z · logs 37–38 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; latest run 32786273294 failure (OIDC) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T224820Z.log · 2026-08-24T22:48:20Z |
+| N5-07/21 | **PASS** | claimguard-20260824T224820Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**. Awaiting owner Trusted Publishers or HF_TOKEN.
 
