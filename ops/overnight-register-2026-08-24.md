@@ -747,3 +747,17 @@ HF gate unchanged. Pack **22/30**.
 
 HF gate unchanged. Pack **22/30**.
 
+---
+
+## Continuation log 36 (2026-08-24T22:43Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:43Z · sub_92e7f494 |
+| N5-REGISTER | **MERGED** | PR #33 · 7525281 · 2026-08-24T22:42Z · log 35 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T224301Z.log · 2026-08-24T22:43:01Z |
+| N5-07/21 | **PASS** | claimguard-20260824T224303Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**.
+
