@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 9811fd1 (continued 2026-08-24T23:17Z)  
+**Commit:** 40a8e6c (continued 2026-08-24T23:30Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:02Z) — **22/30**
+## Current status snapshot (23:30Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | 3 push runs failed OIDC; schedule not firing; dedicated cron PR TBD |
+| N5-01 | GATED | 4 push runs failed OIDC; **0 cron runs** through 23:30Z; workflow_dispatch 403 |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -919,4 +919,19 @@ Schedule on combined workflow not firing; split to dedicated cron wrapper. Pack 
 | N5-07/21 | **PASS** | claimguard-20260824T231706Z.log · ClaimGuard PASS |
 
 HF gate unchanged. Dedicated cron armed; next boundary ~23:30Z. Pack **22/30**.
+
+---
+
+## Continuation log 48 (2026-08-24T23:30Z) — 23:30Z cron watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 23:30Z cron window · 2026-08-24T23:30Z |
+| N5-REGISTER | **MERGED** | PR #46 · 40a8e6c · 2026-08-24T23:18Z · log 47 on `main` |
+| N5-01 | **GATED** | `overnight-hf-cron` workflow active but **0 runs** through 23:30Z |
+| N5-01 | **GATED** | workflow_dispatch 403; HF_TOKEN unset; schedules may be org-disabled |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T233023Z.log · 2026-08-24T23:30:23Z |
+| N5-07/21 | **PASS** | claimguard-20260824T233022Z.log · ClaimGuard PASS |
+
+GitHub schedule not firing on `.github` repo (push trigger works). Owner must add HF_TOKEN or configure OIDC + manual/push run. Pack **22/30**.
 
