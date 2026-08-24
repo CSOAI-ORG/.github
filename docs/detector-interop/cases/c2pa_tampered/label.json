@@ -1,0 +1,5 @@
+{
+  "mark": "c2pa",
+  "expected_verdict": "UNVERIFIABLE",
+  "note": "claim mutated after signing \u2014 a compliant verifier MUST reject it"
+}
