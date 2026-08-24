@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-08-24T21:40:00Z",
+  "tool": "mcp-publisher v1.8.1",
+  "file": "connect/mcp/gspc/server.json",
+  "result": "PASS",
+  "fixes": [
+    "description trimmed to 86 chars (registry max 100)",
+    "packages[] removed until @csoai/gspc-mcp published on npm"
+  ],
+  "blockedPublish": "mcp-publisher login github required (owner OAuth)"
+}
