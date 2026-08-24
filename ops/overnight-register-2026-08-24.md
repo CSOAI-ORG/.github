@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 5eac533 (continued 2026-08-24T22:52Z)  
+**Commit:** 8ccd336 (continued 2026-08-24T22:54Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (22:52Z) — **22/30**
+## Current status snapshot (22:54Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | OIDC probe 0/4 FAIL; run 32786617879 failed; 15m schedule LIVE |
+| N5-01 | GATED | 3 workflow runs failed OIDC; settings URLs in probe logs; cron ~23:00Z |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; README still EUNOMIA branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | cards in export; live refresh pending publish |
@@ -32,11 +32,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** Configure Trusted Publishers on 4 HF repos OR add `HF_TOKEN` secret. Auto-retry every 15m via schedule (PR #39) + push trigger (PR #36).
+**Owner unblock:** Configure Trusted Publishers on 4 HF repos (URLs in workflow logs) OR add `HF_TOKEN`. Auto-retry every 15m (PR #39) + push trigger (PR #36).
 
 ---
 
-## Current status snapshot (22:47Z) — superseded
+## Current status snapshot (22:52Z) — superseded
 
 ## Current status snapshot (22:37Z) — superseded
 
@@ -848,4 +848,18 @@ Schedule live — next auto-retry at cron boundary. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T225339Z.log · ClaimGuard PASS |
 
 HF gate unchanged. Pack **22/30**. Schedule + push triggers armed; awaiting owner auth.
+
+---
+
+## Continuation log 43 (2026-08-24T22:54Z) — PR #41 merged + run 3
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CI | **MERGED** | PR #41 · 8ccd336 · 2026-08-24T22:53Z · OIDC probe settings URLs + workflow concurrency |
+| N5-01 | **FAIL (OIDC)** | Run 32786807453 · 2026-08-24T22:54Z · probe 0/4 FAIL; settings URLs logged for all 4 repos |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T225427Z.log · 2026-08-24T22:54:27Z |
+| N5-07/21 | **PASS** | claimguard-20260824T225427Z.log · ClaimGuard PASS |
+
+3 workflow runs, all OIDC-blocked. Next cron retry ~23:00Z. Pack **22/30**.
 
