@@ -15,6 +15,14 @@ name: overnight-hf-publish
 
 on:
   workflow_dispatch:
+  # Auto-run on main merge when export artifacts change (bypasses workflow_dispatch 403 for agents).
+  # Auth: HF_TOKEN secret OR Trusted Publishers OIDC (see header comments).
+  push:
+    branches: [main]
+    paths:
+      - 'export/**'
+      - 'scripts/overnight-hf-publish.sh'
+      - '.github/workflows/overnight-hf-publish.yml'
 
 permissions:
   id-token: write   # required for Trusted Publishers OIDC exchange
