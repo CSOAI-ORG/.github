@@ -445,3 +445,55 @@ HF gate still closed. No publish attempted. Next timer fire in ~15m.
 
 HF gate still closed. Pack **22/30**. Owner unblock unchanged.
 
+---
+
+## Continuation log 18 (2026-08-24T22:23Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:23Z · sub_92e7f494 |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222304Z.log · 2026-08-24T22:23:04Z · 4 WARN → FAIL |
+| N5-07/21 | **PASS** | claimguard-20260824T222319Z.log · ClaimGuard + banned-strings PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow_dispatch 403; 0 workflow runs |
+| N5-02 | **STALE** | Live gspc-board README still EUNOMIA branding — refresh on publish |
+
+---
+
+## Continuation log 19 (2026-08-24T22:25Z) — timer recheck (+10m)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:25Z · sub_92e7f494 |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222500Z.log · 2026-08-24T22:25:00Z · unchanged 4 WARN |
+| N5-07/21 | **PASS** | claimguard-20260824T222459Z.log · ClaimGuard PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth list` → No access tokens; workflow_dispatch 403 |
+| N5-18 | **GATED** | GraphQL `addDiscussionComment` → FORBIDDEN (retry 22:25Z) |
+
+---
+
+## Continuation log 20 (2026-08-24T22:27Z) — HF Trusted Publishers OIDC path
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **PREP+** | N5-01 · .github/workflows/overnight-hf-publish.yml · (this commit) · 2026-08-24T22:27Z · added `id-token: write` + OIDC fallback (no HF_TOKEN secret required if publishers configured) |
+| N5-01 | **PREP+** | N5-01 · scripts/overnight-hf-publish.sh · (this commit) · 2026-08-24T22:27Z · per-repo `HF_OIDC_RESOURCE` exchange via `hf auth token` |
+
+### Owner unblock — path B (Trusted Publishers, no HF_TOKEN secret)
+
+Configure on **each** HF repo → Settings → Trusted Publishers:
+
+| HF repo | OIDC resource |
+|---------|---------------|
+| `csoai/gspc-board` | `datasets/csoai/gspc-board` |
+| `csoai/gspc-bench-results` | `datasets/csoai/gspc-bench-results` |
+| `csoai/gspc-leaderboard-results` | `datasets/csoai/gspc-leaderboard-results` (pre-create if missing) |
+| `csoai/gspc-governance-leaderboard` | `spaces/csoai/gspc-governance-leaderboard` |
+
+Publisher claims (all repos): `repository=CSOAI-ORG/.github`, `branch=main`, `workflow=overnight-hf-publish.yml`
+
+Then: Actions → **overnight-hf-publish** → Run workflow (Nick manual dispatch; integration lacks `workflow_dispatch`).
+
+Path A (HF_TOKEN secret) still supported.
+
+Pack **22/30**. HF publish still gated on owner auth setup.
+
