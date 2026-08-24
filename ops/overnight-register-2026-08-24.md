@@ -603,3 +603,16 @@ Pack **22/30**. Awaiting owner: Trusted Publishers or HF_TOKEN → probe → pub
 
 HF gate unchanged. Pack **22/30**.
 
+---
+
+## Continuation log 27 (2026-08-24T22:33Z) — PR #26 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #26 · 6e10d08 · 2026-08-24T22:33:31Z · logs 25–26 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223323Z.log · 2026-08-24T22:33:23Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223325Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Owner unblock unchanged (Trusted Publishers or HF_TOKEN → probe → publish → DOI).
+
