@@ -1,0 +1,25 @@
+name: overnight-hf-oidc-probe
+
+# N5-01: Test HF Trusted Publishers OIDC before full publish.
+# Configure publishers on each HF repo, then run this workflow to verify auth.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Hugging Face CLI
+        run: |
+          curl -LsSf https://hf.co/cli/install.sh | bash -s
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Probe OIDC per repo
+        run: bash scripts/overnight-hf-oidc-probe.sh

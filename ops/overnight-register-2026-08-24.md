@@ -497,3 +497,22 @@ Path A (HF_TOKEN secret) still supported.
 
 Pack **22/30**. HF publish still gated on owner auth setup.
 
+---
+
+## Continuation log 21 (2026-08-24T22:27Z) — timer recheck (+15m from log 17)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:27Z · sub_92e7f494 |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222718Z.log · 2026-08-24T22:27:18Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T222720Z.log · ClaimGuard PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow_dispatch 403; 0 workflow runs; leaderboard-results missing |
+| N5-10/11 | **LIVE** | MCP v1.0.2 isLatest=true (reconfirmed) |
+| N5-13/14 | **LIVE** | Live A2A card 10/10 validator PASS (reconfirmed 22:27Z) |
+| N5-17 | **PR OPEN** | awesome-a2a PR #157 MERGEABLE |
+| N5-01 | **PREP+** | N5-01 · scripts/overnight-hf-oidc-probe.sh + workflow · (this commit) · 2026-08-24T22:28Z · owner can test OIDC before full publish |
+
+### Timer recheck result
+
+HF gate still closed. PR #24 (OIDC fallback) OPEN. Owner: configure Trusted Publishers → run **overnight-hf-oidc-probe** → then **overnight-hf-publish**.
+
