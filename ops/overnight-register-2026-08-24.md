@@ -417,3 +417,17 @@ Attempted: shell `hf auth`, env TOKEN/PAT/OIDC, `gh workflow run`, HF MCP `contr
 
 No new credentials. Agent prep complete; awaiting owner `HF_TOKEN` + workflow run + DOI mint.
 
+---
+
+## Continuation log 16 (2026-08-24T22:08Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` fired · 2026-08-24T22:08Z · sub_92e7f494 |
+| N5-VERIFY | **PASS** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T220827Z.log · (this commit) · 2026-08-24T22:08:27Z · 4 WARN unchanged |
+| N5-01 | **GATED** | `hf auth whoami` → Not logged in; hub get_token=no; workflow_dispatch 403; 0 workflow runs |
+
+### Timer recheck result
+
+HF gate still closed. No publish attempted. Next timer fire in ~15m.
+
