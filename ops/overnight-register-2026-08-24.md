@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 20aa8bd (continued 2026-08-24T23:33Z)  
+**Commit:** 79375ac (continued 2026-08-24T23:35Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:33Z) — **22/30**
+## Current status snapshot (23:35Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; shell `hf auth whoami` → Not logged in; MCP OAuth has `contribute-repos` but not wired to CLI |
+| N5-01 | GATED | HF_TOKEN unset; shell + MCP OAuth not wired to `hf` CLI upload |
 | N5-02 | LIVE (stale) | gspc-board HTTP 200; live README still **EUNOMIA** branding |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
@@ -25,18 +25,18 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-15 | PREP | a2aagentlist draft |
 | N5-16 | BLOCKED | artinet.io placeholder |
 | N5-17 | SUBMITTED | awesome-a2a PR #157 open (mergeable) |
-| N5-18 | GATED | Discussion #97 FORBIDDEN |
+| N5-18 | GATED | Discussion #97 REST comment → 404; GraphQL FORBIDDEN |
 | N5-19 | DEFERRED | no GCP account |
 | N5-20–21 | DONE | evidence pack + ClaimGuard |
 | N5-22–25 | PREP | marketplace drafts |
 | N5-26–29 | PREP | insurance skeletons |
 | N5-30 | PREP | G-Cloud checklist |
 
-**Owner unblock:** Add `HF_TOKEN` repo secret OR configure Trusted Publishers on 4 HF repos. `overnight-hf-cron` has **0 runs** (schedule not firing). Push trigger works but OIDC fails.
+**Owner unblock:** Add `HF_TOKEN` repo secret OR configure Trusted Publishers on 4 HF repos. `overnight-hf-cron` has **0 runs**. Push trigger works but OIDC fails.
 
 ---
 
-## Current status snapshot (23:30Z) — superseded
+## Current status snapshot (23:33Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -997,4 +997,21 @@ HF gate unchanged. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
 | N5-17 | **SUBMITTED** | awesome-a2a PR #157 open mergeable_state=clean |
 
 HF gate unchanged. Agent lane exhausted for N5-01/05/06. Pack **22/30**.
+
+---
+
+## Continuation log 51 (2026-08-24T23:35Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T23:35Z |
+| N5-REGISTER | **OPEN** | PR #49 · 79375ac · log 50 pending merge |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in |
+| N5-01 | **GATED** | MCP OAuth contribute-repos present; hf_fs read-only; no hf_jobs in namespace |
+| N5-01 | **GATED** | `overnight-hf-cron` 0 runs through 23:35Z |
+| N5-18 | **GATED** | `gh api .../discussions/97/comments` → 404 Not Found |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T233541Z.log · 2026-08-24T23:35:41Z |
+| N5-07/21 | **PASS** | claimguard-20260824T233540Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
 
