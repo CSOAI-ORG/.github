@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-24T21:45:00Z",
+  "workflow": "csoai-static-deploy2 mcp-registry-publish.yml run 32780862507",
+  "commit": "c9fc14b",
+  "registry": "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.CSOAI-ORG/gspc",
+  "versions": [
+    {"version": "1.0.0", "isLatest": false},
+    {"version": "1.0.1", "isLatest": false, "title": "CSOAI GSPC measurement"},
+    {"version": "1.0.2", "isLatest": true, "title": "CSOAI GSPC measurement"}
+  ],
+  "publishLog": "ok: registry/gspc.json"
+}

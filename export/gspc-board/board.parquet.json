@@ -1,0 +1,142 @@
+[
+  {
+    "axis": "governance",
+    "bench": "GovBench",
+    "status": "MEASURED",
+    "n": 237,
+    "separation": "SEPARATED",
+    "leader": "council-embodiment-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "safety",
+    "bench": "DefBench",
+    "status": "MEASURED",
+    "n": 36,
+    "separation": "TIE",
+    "leader": "gemma3:12b (base model)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "provenance",
+    "bench": "ProvBench",
+    "status": "MEASURED",
+    "n": 32,
+    "separation": "TIE",
+    "leader": "council-aesthetics-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "continuity",
+    "bench": "PQCBench",
+    "status": "MEASURED",
+    "n": 33,
+    "separation": "TIE",
+    "leader": "council-destruction-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "conformance",
+    "bench": "MCPBench",
+    "status": "MEASURED",
+    "n": 35,
+    "separation": "TIE",
+    "leader": "council-preservation-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "openness",
+    "bench": "OSSBench",
+    "status": "MEASURED",
+    "n": 32,
+    "separation": "TIE",
+    "leader": "council-preservation-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "machinery-conformity",
+    "bench": "MachBench",
+    "status": "MEASURED",
+    "n": 33,
+    "separation": "TIE",
+    "leader": "llama3.2:3b (base model)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "care",
+    "bench": "CareBench",
+    "status": "MEASURED",
+    "n": 199,
+    "separation": "SEPARATED",
+    "leader": "council-ethics-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "cross-reality",
+    "bench": "XRAIV",
+    "status": "MEASURED",
+    "n": 32,
+    "separation": "TIE",
+    "leader": "mistral:7b (base model)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "detector-interop",
+    "bench": "DetBench",
+    "status": "MEASURED",
+    "n": 33,
+    "separation": "TIE",
+    "leader": "deepseek-r1:8b (base model)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "art5-safeguard",
+    "bench": "Art5Bench",
+    "status": "MEASURED",
+    "n": 36,
+    "separation": "TIE",
+    "leader": "council-relationality-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "swarm",
+    "bench": "SwarmBench v2b",
+    "status": "MEASURED",
+    "n": 37,
+    "separation": "SEPARATED",
+    "leader": "qwen2.5:7b (base model)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "affect",
+    "bench": "AffectBench",
+    "status": "MEASURED",
+    "n": 41,
+    "separation": "SEPARATED",
+    "leader": "council-preservation-v3-light (council specialist)",
+    "elo": null,
+    "wilson_ci": null
+  },
+  {
+    "axis": "jail",
+    "bench": "GoldBank-Detector",
+    "status": "MEASURED",
+    "n": 71,
+    "separation": "UNTESTED",
+    "leader": "qwen2.5:0.5b-instruct (base model)",
+    "elo": null,
+    "wilson_ci": null
+  }
+]

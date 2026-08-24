@@ -1,0 +1,19 @@
+=== ClaimGuard publish gate 20260824T171414Z ===
+board: /workspace/export/gspc-board/board.json
+--- claim: 13 measured of 14
+ClaimGuard PASS · axes=14 measured=13 · 13 measured of 14 quotable (GSPC ruling 2026-08-18)
+  [PASS] attestation.valid: site_attestation verified (did:web:csoai.org#board-attestation-1)
+  [PASS] payload.axes_present: axes[] has 14 rows
+  [WARN] claim.unchecked: No rule matched; human review: '13 measured of 14'
+--- claim: measurement not certification
+ClaimGuard FAIL · axes=14 measured=13 · 13 measured of 14 quotable (GSPC ruling 2026-08-18)
+  [PASS] attestation.valid: site_attestation verified (did:web:csoai.org#board-attestation-1)
+  [PASS] payload.axes_present: axes[] has 14 rows
+  [FAIL] claim.certification: Measurement, not certification — certification language is unsupported. Claim: 'measurement not certification'
+--- claim: first dedicated governance leaderboard we could find on HF
+ClaimGuard PASS · axes=14 measured=13 · 13 measured of 14 quotable (GSPC ruling 2026-08-18)
+  [PASS] attestation.valid: site_attestation verified (did:web:csoai.org#board-attestation-1)
+  [PASS] payload.axes_present: axes[] has 14 rows
+  [WARN] claim.unchecked: No rule matched; human review: 'first dedicated governance leaderboard we could find on HF'
+--- banned-strings
+PASS: zero banned-string hits

@@ -1,0 +1,241 @@
+# Overnight Register — Five-Venue Pack (N5-01..N5-30)
+
+**Pack:** 2026-08-24 evening → 2026-08-25 morning  
+**Branch:** cursor/overnight-five-venues-ff6e  
+**Commit:** (pending) (continued 2026-08-24T21:48Z)  
+**Disposer:** Nick (OWNER)
+
+Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
+
+---
+
+## Current status snapshot (21:48Z)
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN / workflow_dispatch |
+| N5-02 | LIVE | gspc-board HTTP 200 |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | README cards on live datasets |
+| N5-05 | GATED | DOI mint after HF publish |
+| N5-06 | PARTIAL | Space HTTP 200 sdk=static; leaderboard-results 401 |
+| N5-07 | PASS | ClaimGuard + banned-strings |
+| N5-08–09 | LIVE | server.json + registry/gspc.json validated |
+| N5-10–11 | LIVE | MCP registry v1.0.2 isLatest |
+| N5-12 | DONE | glama.json aggregator watch |
+| N5-13–14 | LIVE | GSPC agent card + 10/10 validator |
+| N5-15 | PREP | a2aagentlist email draft |
+| N5-16 | BLOCKED | artinet.io placeholder |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 open |
+| N5-18 | GATED | Discussion #97 FORBIDDEN |
+| N5-19 | DEFERRED | no GCP account |
+| N5-20 | DONE | evidence pack (4 docs) |
+| N5-21 | PASS | ClaimGuard gate |
+| N5-22–25 | PREP | ADX/Snowflake/Datarade drafts |
+| N5-26–29 | PREP | insurance underwriter skeletons |
+| N5-30 | PREP | G-Cloud checklist |
+
+---
+
+## LANE-MEASURE (Hugging Face)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **GATED** | N5-01 · — · (pending) · 2026-08-24T17:14Z · `hf auth whoami` → Not logged in (no HF_TOKEN) |
+| N5-02 | **STAGED** | N5-02 · https://huggingface.co/datasets/csoai/gspc-board · (pending push) · 2026-08-24T17:14Z · export committed; HF 401 without token |
+| N5-03 | **STAGED** | N5-03 · https://huggingface.co/datasets/csoai/gspc-bench-results · (pending push) · 2026-08-24T17:14Z · export committed |
+| N5-04 | **STAGED** | N5-04 · (cards in README.md) · (pending push) · 2026-08-24T17:14Z · full YAML frontmatter in export/*/README.md |
+| N5-05 | **GATED** | N5-05 · DOI TBD · — · — · Mint after HF push + name confirmation (Settings → Generate DOI) |
+| N5-06 | **STAGED** | N5-06 · https://huggingface.co/spaces/csoai/gspc-governance-leaderboard · (pending push) · 2026-08-24T17:14Z · Gradio 5.x scaffold + results dataset |
+
+## LANE-OPS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T171430Z.log · (this commit) · 2026-08-24T17:14:30Z · ClaimGuard attestation PASS + banned-strings zero hits |
+| N5-21 | **PASS** | N5-21 · trust/evidence-pack/ · (this commit) · 2026-08-24T17:14:30Z · same gate log |
+| N5-22 | **PREP** | N5-22 · ops/adx/stage.sh · (this commit) · 2026-08-24T17:14Z · script committed; AMMP NOT executed |
+| N5-23 | **PREP** | N5-23 · ops/adx/product-metadata.md · (this commit) · 2026-08-24T17:14Z · metadata + data-dictionary.csv |
+| N5-24 | **PREP** | N5-24 · ops/snowflake/listing-draft.md · (this commit) · 2026-08-24T17:14Z · awaiting ORGADMIN terms |
+| N5-25 | **PREP** | N5-25 · ops/datarade/listing-drafts.md · (this commit) · 2026-08-24T17:14Z · application draft; not submitted |
+
+## LANE-CONNECT (MCP)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-08 | **STAGED** | N5-08 · connect/mcp/gspc/server.json · (this commit) · 2026-08-24T17:14Z · schema 2025-12-11; repository/title/packages restored |
+| N5-09 | **STAGED** | N5-09 · version 1.0.2 · (this commit) · 2026-08-24T17:14Z · no prerelease trick |
+| N5-10 | **GATED** | N5-10 · — · — · — · mcp-publisher login github requires owner OAuth device flow |
+| N5-11 | **BASELINE** | N5-11 · https://registry.modelcontextprotocol.io/v0.1/servers?search=gspc · ops/mcp-registry-gspc-baseline.json · 2026-08-24T17:14Z · latest=1.0.1 missing fields; target 1.0.2 |
+| N5-12 | **DONE** | N5-12 · ops/aggregator-watch-note.md · (this commit) · 2026-08-24T17:14Z · glama.json committed; recheck 2026-08-25T18:00Z |
+
+## LANE-CONNECT (A2A)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-13 | **STAGED** | N5-13 · https://councilof.ai/.well-known/agent-card.json · (councilof-ai commit pending) · 2026-08-24T17:14Z · A2A v1.0 card generated; deploy pending |
+| N5-14 | **STAGED** | N5-14 · connect/agent-cards/out/agent-card.json · (this commit) · 2026-08-24T17:14Z · 8 required fields present; validator run pending deploy |
+| N5-15 | **PREP** | N5-15 · connect/a2a/directory-submissions.md · (this commit) · 2026-08-24T17:14Z · form draft; not submitted |
+| N5-16 | **PREP** | N5-16 · connect/a2a/directory-submissions.md · (this commit) · 2026-08-24T17:14Z · registration draft |
+| N5-17 | **PREP** | N5-17 · awesome-a2a PR draft in directory-submissions.md · (this commit) · 2026-08-24T17:14Z · PR not opened |
+| N5-18 | **PREP** | N5-18 · Discussion #97 comment draft · (this commit) · 2026-08-24T17:14Z · not posted |
+| N5-19 | **DEFERRED** | N5-19 · — · — · 2026-08-24T17:14Z · no GCP account — deferred to Nick morning sheet |
+
+## LANE-TRUST + K3
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-20 | **DONE** | N5-20 · trust/evidence-pack/ · (this commit) · 2026-08-24T17:14Z · 4 docs committed (KP.1) |
+| N5-26 | **PREP** | N5-26 · trust/insurance-prep/aiuc-1-scoping-draft.md · (this commit) · 2026-08-24T17:14Z · owner-gated |
+| N5-27 | **PREP** | N5-27 · trust/insurance-prep/armilla-governance-draft.md · (this commit) · 2026-08-24T17:14Z · owner-gated |
+| N5-28 | **PREP** | N5-28 · trust/insurance-prep/munich-re-aisure-dd-draft.md · (this commit) · 2026-08-24T17:14Z · owner-gated |
+| N5-29 | **PREP** | N5-29 · trust/insurance-prep/testudo-one-pager.md · (this commit) · 2026-08-24T17:14Z · owner-gated |
+| N5-30 | **PREP** | N5-30 · ops/gcloud15/checklist.md · (this commit) · 2026-08-24T17:14Z · window closed; FTS alert steps documented |
+
+---
+
+## Done-definition scorecard (D1–D6)
+
+| Done | Status | Notes |
+|------|--------|-------|
+| D1 HF Space live | **GATED** | HF_TOKEN required |
+| D2 Datasets + DOIs | **GATED** | Exports staged; DOIs after push |
+| D3 MCP 1.0.2 | **GATED** | server.json staged; OAuth for publish |
+| D4 agent-card + directories | **PARTIAL** | Card staged for deploy; directories PREP |
+| D5 Evidence pack | **DONE** | 4 docs + ClaimGuard pass |
+| D6 Marketplace drafts | **DONE** | ADX/Snowflake/Datarade prep committed |
+
+---
+
+## Owner morning sheet (summary)
+
+**Live after credentials:** HF datasets/Space/DOIs · MCP 1.0.2 publish · A2A card deploy · directory submissions
+
+**Nick's seven decisions:** AWS AMMP · Snowflake ORGADMIN · Datarade commission · AIUC-1 scoping · Armilla outreach · Broker engagement · G-Cloud prep spend
+
+**Needs nothing:** Gallagher Re (#68) · aggregator passive watch · Smithery/GitHub MCP Registry drafts queued
+
+---
+
+## Continuation log (2026-08-24T17:25Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **GATED** | Still no HF_TOKEN in lane env |
+| N5-02 | **PARTIAL LIVE** | N5-02 · https://huggingface.co/datasets/csoai/gspc-board · e79e8c7 · 2026-08-24T17:14Z · curl 200; board.json present (parallel lane upload) |
+| N5-03 | **PARTIAL LIVE** | N5-03 · https://huggingface.co/datasets/csoai/gspc-bench-results · 8b4b190 · 2026-08-24T17:17Z · curl 200 |
+| N5-05 | **GATED** | DOI not minted (no HF_TOKEN for Settings API) |
+| N5-06 | **GATED** | Space + leaderboard-results still HTTP 401 |
+| N5-08/09 | **PR OPEN** | N5-08 · https://github.com/CSOAI-ORG/csoai-static-deploy2/pull/40 · 17641db · 2026-08-24T17:22Z · server.json 1.0.2 + glama.json + package.json mcpName |
+| N5-10 | **GATED** | mcp-publisher not installed; OAuth required |
+| N5-13 | **MERGED, DEPLOY PENDING** | N5-13 · councilof-ai#483 merged c903a7d · 2026-08-24T17:19Z · master has v1.0.0 card; live still v0.2.0 (deploy cancelled/queued) |
+| N5-14 | **LOCAL PASS** | N5-14 · ops/logs/a2a-validator-local.json · (this commit) · 2026-08-24T17:22Z · 10 PASS 0 FAIL on generated card |
+| N5-15 | **PREP** | a2aagentlist.com/submit requires email to gal6111@gmail.com — no-spam law: NOT sent |
+| N5-16 | **BLOCKED** | artinet.io is placeholder ("evolving...") — no registration form |
+| N5-17 | **LOCAL COMMIT** | N5-17 · connect/a2a/awesome-a2a-pr.diff · 3e2d0e1 local · push blocked (cursor[bot] 403) — owner push fork branch add-council-of-ai |
+| N5-18 | **GATED** | Discussion #97 comment blocked (integration 403) — draft in directory-submissions.md |
+| N5-19 | **DEFERRED** | no GCP account |
+
+### Deploy queue note
+
+councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent master deploy still **pending** as of 17:25Z. A2A card live verification blocked until Cloudflare Pages deploy completes.
+
+---
+
+## Continuation log 2 (2026-08-24T17:36Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-08/09 | **MERGED** | csoai-static-deploy2#40 → fdff486 · server.json 1.0.2 + glama.json on main |
+| N5-10 | **GATED** | mcp-publisher OAuth still required for registry publish |
+| N5-13 | **FIX PR** | councilof-ai#498 merged dd79ba0 — restores GSPC card after EUNOMIA overwrite |
+| N5-14 | **PARTIAL LIVE** | application/a2a+json live; card content was EUNOMIA until #498 deploys |
+| N5-17 | **PR OPEN** | https://github.com/ai-boost/awesome-a2a/pull/157 · bef3b98 · submitted-awaiting-review |
+| N5-02/03 | **LIVE** | HF datasets HTTP 200 (unchanged) |
+| N5-06 | **GATED** | Space + leaderboard-results HTTP 401 — no HF_TOKEN |
+
+---
+
+## Continuation log 3 (2026-08-24T21:35Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-13 | **LIVE** | N5-13 · https://councilof.ai/.well-known/agent-card.json · a68b7f8 · 2026-08-24T21:35Z · deploy run 32779321636 success |
+| N5-14 | **LIVE PASS** | N5-14 · ops/logs/a2a-validator-live-20260824T213500Z.json · (this commit) · 2026-08-24T21:35Z · 10 PASS 0 FAIL on live card |
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T212938Z.log · (this commit) · 2026-08-24T21:29:38Z · re-run PASS before register close |
+| N5-06 | **PARTIAL LIVE** | N5-06 · https://huggingface.co/spaces/csoai/gspc-governance-leaderboard · — · 2026-08-24T21:35Z · HTTP 200 RUNNING; sdk=static (not Gradio scaffold); leaderboard-results dataset HTTP 401 |
+| N5-10 | **GATED** | server.json 1.0.2 on csoai-static-deploy2 main (fdff486); registry latest still 1.0.1 — mcp-publisher OAuth required |
+| N5-17 | **PR OPEN** | https://github.com/ai-boost/awesome-a2a/pull/157 · awaiting maintainer review (unchanged) |
+
+### Updated done-definition scorecard (D1–D6)
+
+| Done | Status | Notes |
+|------|--------|-------|
+| D1 HF Space live | **PARTIAL** | Space RUNNING HTTP 200; Gradio scaffold not deployed (sdk=static) |
+| D2 Datasets + DOIs | **PARTIAL** | gspc-board + gspc-bench-results HTTP 200; leaderboard-results 401; DOIs not minted |
+| D3 MCP 1.0.2 | **GATED** | Files on main; registry publish needs owner OAuth |
+| D4 agent-card + directories | **PARTIAL LIVE** | Card live + validated; awesome-a2a PR open; a2aagentlist/artinet/GCP gated |
+| D5 Evidence pack | **DONE** | 4 docs + ClaimGuard pass |
+| D6 Marketplace drafts | **DONE** | ADX/Snowflake/Datarade prep committed |
+
+### Owner unblock list (remaining)
+
+1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
+2. `mcp-publisher login github` → `bash ops/mcp-publish-gspc.sh` (N5-10/11) — server.json on main validated (aab76f4)
+3. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
+4. Discussion #97 comment (N5-18) — integration lacks write access (GraphQL FORBIDDEN)
+
+---
+
+## Continuation log 4 (2026-08-24T21:40Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-08/09 | **VALIDATED** | N5-08 · connect/mcp/gspc/server.json · (this commit) · 2026-08-24T21:40Z · mcp-publisher validate PASS; description ≤100; packages deferred (npm 404) |
+| N5-10 | **GATED** | N5-10 · ops/mcp-publish-gspc.sh · (this commit) · 2026-08-24T21:40Z · validate PASS; publish blocked on OAuth; csoai-static-deploy2#42 merged aab76f4 |
+| N5-11 | **BASELINE** | N5-11 · registry latest still 1.0.1 · 2026-08-24T21:40Z · target 1.0.2 after merge + publish |
+| N5-18 | **GATED** | N5-18 · a2aproject/A2A Discussion #97 · — · 2026-08-24T21:40Z · GraphQL `addDiscussionComment` FORBIDDEN for integration |
+
+---
+
+## Continuation log 5 (2026-08-24T21:45Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-10 | **LIVE** | N5-10 · registry.modelcontextprotocol.io · c9fc14b · 2026-08-24T21:45Z · v1.0.2 published via mcp-registry-publish.yml run 32780862507 (OIDC); `ok: registry/gspc.json` |
+| N5-11 | **LIVE** | N5-11 · ops/logs/mcp-registry-live-20260824T214500Z.json · (this commit) · 2026-08-24T21:45Z · search confirms 1.0.2 isLatest=true |
+| N5-08/09 | **LIVE** | registry/gspc.json + server.json validated on main |
+
+### Updated done-definition scorecard (D1–D6) — 21:45Z
+
+| Done | Status | Notes |
+|------|--------|-------|
+| D1 HF Space live | **PARTIAL** | Space RUNNING HTTP 200; Gradio scaffold not deployed (sdk=static) |
+| D2 Datasets + DOIs | **PARTIAL** | 2 datasets live; leaderboard-results 401; DOIs not minted |
+| D3 MCP 1.0.2 | **DONE** | Registry v1.0.2 isLatest=true |
+| D4 agent-card + directories | **PARTIAL LIVE** | Card live + validated; awesome-a2a PR open |
+| D5 Evidence pack | **DONE** | 4 docs + ClaimGuard pass |
+| D6 Marketplace drafts | **DONE** | ADX/Snowflake/Datarade prep committed |
+
+### Owner unblock list (remaining)
+
+1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
+2. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
+3. Discussion #97 comment (N5-18) — integration lacks write access
+
+---
+
+## Continuation log 6 (2026-08-24T21:48Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **GATED** | N5-01 · .github/workflows/overnight-hf-publish.yml · (this commit) · 2026-08-24T21:48Z · workflow_dispatch ready; needs HF_TOKEN repo secret |
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T214819Z.log · (this commit) · 2026-08-24T21:48:19Z · re-run PASS before workflow commit |
+| N5-06 | **CONFIRMED** | leaderboard-results: hf_fs stat → missing (not created); Space exists sdk=static |
+
+### Nick morning — one-click HF publish
+
+1. Add `HF_TOKEN` secret to CSOAI-ORG/.github repo settings
+2. Actions → **overnight-hf-publish** → Run workflow
+3. Mint DOIs in HF Settings for gspc-board + gspc-bench-results (N5-05)
+

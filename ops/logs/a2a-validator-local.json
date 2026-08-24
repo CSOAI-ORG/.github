@@ -1,0 +1,48 @@
+{
+  "ts": "2026-08-24T17:28:22.413Z",
+  "card": "/workspace/connect/agent-cards/out/agent-card.json",
+  "pass": 10,
+  "fail": 0,
+  "results": [
+    {
+      "status": "PASS",
+      "msg": "field present: name"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: description"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: version"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: capabilities"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: supportedInterfaces"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: defaultInputModes"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: defaultOutputModes"
+    },
+    {
+      "status": "PASS",
+      "msg": "field present: skills"
+    },
+    {
+      "status": "PASS",
+      "msg": "supportedInterfaces: 2 entry/entries"
+    },
+    {
+      "status": "PASS",
+      "msg": "skills: 4 entry/entries"
+    }
+  ]
+}
