@@ -76,7 +76,7 @@ All ⬜ — sample pack (021) gates launch.
 
 **Shipped (Council OS):** PR [#452](https://github.com/CSOAI-ORG/councilof-ai/pull/452) **MERGED** — Benchmarkers tab, /mcps registry, redirects.
 
-**Shipped (East-West):** PR M1+M4 — crosswalk v1, /east-west, /challenge, gspc domains, cards index (await deploy).
+**Shipped (East-West):** PR [#464](https://github.com/CSOAI-ORG/councilof-ai/pull/464) **MERGED** — crosswalk v1, /east-west, /challenge, gspc domains, cards index (await deploy).
 
 ### M5 Regulator rails (041–050)
 
