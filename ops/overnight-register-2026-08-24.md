@@ -706,3 +706,16 @@ HF gate unchanged. Pack **22/30**.
 
 HF gate unchanged. Pack **22/30**.
 
+---
+
+## Continuation log 33 (2026-08-24T22:39Z) — PR #30 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #30 · a8267f3 · 2026-08-24T22:39Z · logs 31–32 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223936Z.log · 2026-08-24T22:39:36Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223938Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Agent lane exhausted; owner must run HF workflows.
+
