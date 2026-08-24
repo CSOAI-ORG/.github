@@ -132,7 +132,7 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 
 | Move | Status | Register line |
 |------|--------|---------------|
-| N5-13 | **LIVE** | N5-13 · https://councilof.ai/.well-known/agent-card.json · a68b7f8 · 2026-08-24T21:35Z · GSPC card live: `gspc-board` skill, 2 interfaces; Content-Type `application/a2a+json` |
+| N5-13 | **LIVE** | N5-13 · https://councilof.ai/.well-known/agent-card.json · a68b7f8 · 2026-08-24T21:35Z · deploy run 32779321636 success |
 | N5-14 | **LIVE PASS** | N5-14 · ops/logs/a2a-validator-live-20260824T213500Z.json · (this commit) · 2026-08-24T21:35Z · 10 PASS 0 FAIL on live card |
 | N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T212938Z.log · (this commit) · 2026-08-24T21:29:38Z · re-run PASS before register close |
 | N5-06 | **PARTIAL LIVE** | N5-06 · https://huggingface.co/spaces/csoai/gspc-governance-leaderboard · — · 2026-08-24T21:35Z · HTTP 200 RUNNING; sdk=static (not Gradio scaffold); leaderboard-results dataset HTTP 401 |
