@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 40a8e6c (continued 2026-08-24T23:30Z)  
+**Commit:** b174443 (continued 2026-08-24T23:31Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -934,4 +934,19 @@ HF gate unchanged. Dedicated cron armed; next boundary ~23:30Z. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T233022Z.log · ClaimGuard PASS |
 
 GitHub schedule not firing on `.github` repo (push trigger works). Owner must add HF_TOKEN or configure OIDC + manual/push run. Pack **22/30**.
+
+---
+
+## Continuation log 49 (2026-08-24T23:31Z) — timer recheck (+15m window)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T23:30Z |
+| N5-REGISTER | **MERGED** | PR #47 · b174443 · 2026-08-24T23:31Z · log 48 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; latest run 32788615051 (push, OIDC fail) |
+| N5-01 | **GATED** | `overnight-hf-cron` 0 runs; cron not firing |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T233124Z.log · 2026-08-24T23:31:24Z |
+| N5-07/21 | **PASS** | claimguard-20260824T233124Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
 
