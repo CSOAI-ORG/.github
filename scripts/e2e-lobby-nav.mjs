@@ -69,6 +69,8 @@ const LOBBY_ROUTES = [
   "/refutation-ledger",
   "/firewall-charter",
   "/crosswalk",
+  "/east-west",
+  "/challenge",
   "/feed",
   "/library/axes",
 ];

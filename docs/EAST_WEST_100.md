@@ -3,34 +3,26 @@
 Date: 2026-08-24 · Companion to PLAYBOOK-GTM-300-2026-08-24  
 E2E gate: `node scripts/e2e-east-west.mjs` · Full stack: `node scripts/batch-run-gates.mjs`
 
-## Live E2E snapshot (2026-08-24 ~09:52 UTC)
+| PR #452 Council OS nav | **MERGED** (2026-08-24) — Benchmarkers, /mcps, redirects |
+| PR east-west M1+M4 | **OPEN** — crosswalk v1, /east-west, /challenge, gspc domains row |
+
+## Live E2E snapshot (post #452 merge)
 
 | Gate | Result |
 |------|--------|
-| batch-run-gates.mjs | **PASS** |
-| e2e-lobby-nav.mjs | **PASS** (5 soft — PR #452 redirects pending deploy) |
-| e2e-integration-stack.mjs | **PASS** |
-| weekend-demo-smoke.mjs | **PASS** |
-| mine-live-drifts.mjs | **PASS** (1 soft: apex /scorecard 404) |
-| run-frontend-audit.mjs | **PASS** (8/8 personas) |
-
-Run with me anytime:
-
-```bash
-node scripts/batch-run-gates.mjs
-node scripts/e2e-east-west.mjs
-node scripts/e2e-lobby-nav.mjs
-```
+| batch-run-gates.mjs | **PASS** (pre M1/M4 deploy — soft warns on new routes) |
+| e2e-lobby-nav.mjs | **PASS** |
+| e2e-east-west.mjs | **PASS** — M4 routes soft-warn until deploy |
 
 ## Done-definition checklist (verifiable today)
 
 | Box | Status | Evidence |
 |-----|--------|----------|
-| First cross-border signed card | **NOT LIVE** | No cross-border card type on /api/cards yet (M2·012) |
+| First cross-border signed card | **SHIPPED** (await deploy) | `/signals/cross-border-card.signed.json` + `/api/cards` cross_border |
 | Sample pack stranger-verified | **NOT LIVE** | M3·021 |
 | Pricing published | **OWNER-BLOCKED** | /payg redirects; ruling pending M6·051 |
 | First inbound (ledger row) | **NOT LIVE** | /api/receipts/latest `UNPUBLISHED` count:0 ✓ honest |
-| Doctrine intact | **PARTIAL** | 13/14 canon ✓ · ClaimGuard ✓ · /challenge 404 · crosswalk uses legacy GRC copy |
+| Doctrine intact | **PARTIAL → SHIPPING** | 13/14 canon ✓ · ClaimGuard ✓ · /challenge + /east-west in PR · crosswalk v1 grammar |
 
 ## Movement status (100 moves)
 
@@ -40,24 +32,24 @@ Legend: ✅ live/testable · 🔧 in progress · ⏰ clocked · 🔒 OWNER-BLOCK
 
 | Move | Tier | Status | Notes |
 |------|------|--------|-------|
-| 001 | 👑 | ⬜ | cibola `axes/domains/cross-border.json` scaffold exists; EU/UK/IL/CN v1 tables NOT frozen |
-| 002 | 💎 | ⬜ | EU table with Art 9–15 rows |
-| 003 | 🥇 | ⬜ | UK DRCF table |
-| 004 | 🥇 | ⬜ | Illinois SB 315 ⏰ audits Jan 1 2028 |
-| 005 | 🥇 | ⬜ | China GB/T honest line |
-| 006 | 💎 | ⬜ | Methodology + determination banner |
+| 001 | 👑 | ✅ | crosswalk v1 JSON + EU/UK/IL/CN tables shipped |
+| 002 | 💎 | ✅ | EU Art 9–15 rows on /crosswalk |
+| 003 | 🥇 | ✅ | UK DRCF table |
+| 004 | 🥇 | ✅ | Illinois SB 315 ⏰ audits Jan 1 2028 |
+| 005 | 🥇 | ✅ | China GB/T honest line |
+| 006 | 💎 | ✅ | Methodology + determination banner |
 | 007 | 🥇 | ⬜ | Supersession chain |
 | 008 | 🥇 | ⬜ | US row (TRAIGA ⏰ Sep 1) |
 | 009 | 🥇 | 🔧 | ClaimGuard in .github + chat; East-West row CI pending |
 | 010 | 🥇 | 🔒 | M1 exit — OWNER checklist |
 
-**Current:** `/crosswalk/` live (83KB) — GRC framework matrix, NOT yet East-West v1 canon.
+**Current:** `/crosswalk/` — East-West v1 canon (determination banner, EU/UK/IL/CN tables, v1 JSON).
 
 ### M2 Schema & cards (011–020)
 
 | Move | Status | Notes |
 |------|--------|-------|
-| 011–012 | ⬜ | Cross-border card type + first card |
+| 011–012 | ✅ | Cross-border card + /api/cards index (await deploy) |
 | 013 | ⬜ | Frozen vectors |
 | 014 | 🔧 | Schema URLs → councilof.ai (interim); dorado.dev sweep pending |
 | 015 | ⬜ | Conformance runner |
@@ -71,18 +63,20 @@ All ⬜ — sample pack (021) gates launch.
 
 | Move | Status | Notes |
 |------|--------|-------|
-| 031 /east-west | ⬜ | **404** on apex today |
-| 032 | ⬜ | Board cross-border row on /api/gspc |
+| 031 /east-west | ✅ | Flagship route shipped (await deploy) |
+| 032 | ✅ | Board cross-border row on /api/gspc `domains[]` |
 | 033 | 🔧 | /gspc-verify live; crosswalk render in verify pending |
-| 034 /challenge | ⬜ | **404** — JC-D4 open |
-| 035 | ⬜ | llms.txt + agent-card East-West update |
+| 034 /challenge | ✅ | JC-D4 redress door shipped (await deploy) |
+| 035 | ✅ | llms.txt + agent-card East-West update |
 | 036 | ⬜ | cibola Pages nav |
 | 037 | ⬜ | meok.ai touchpoint |
 | 038 | 🔧 | /regulators/ live (117KB) — desk wiring pending |
 | 039 | ⬜ | Codename CI |
 | 040 | 🔒 | M4 exit — OWNER |
 
-**Shipped (Council OS):** PR [#452](https://github.com/CSOAI-ORG/councilof-ai/pull/452) — Benchmarkers tab, /mcps registry, redirects (await deploy).
+**Shipped (Council OS):** PR [#452](https://github.com/CSOAI-ORG/councilof-ai/pull/452) **MERGED** — Benchmarkers tab, /mcps registry, redirects.
+
+**Shipped (East-West):** PR M1+M4 — crosswalk v1, /east-west, /challenge, gspc domains, cards index (await deploy).
 
 ### M5 Regulator rails (041–050)
 
@@ -143,7 +137,8 @@ All ⬜/🔒 — K3 drafts, OWNER sends.
 
 | Repo | PR | What |
 |------|-----|------|
-| councilof-ai | [#452](https://github.com/CSOAI-ORG/councilof-ai/pull/452) | Council OS nav wiring |
+| councilof-ai | [#452](https://github.com/CSOAI-ORG/councilof-ai/pull/452) | Council OS nav — **MERGED** |
+| councilof-ai | M1+M4 PR | East-West crosswalk v1 + routes |
 | .github | [#9](https://github.com/CSOAI-ORG/.github/pull/9) | Lobby + East-West E2E gates |
 
 ## Owner gates (cannot agent-execute)

@@ -57,11 +57,11 @@ const DOCTRINE_MUST = [
 
 /** Done-definition checklist — live-testable rows */
 const DONE = [
-  { id: "012", label: "First cross-border card stranger-verifiable", pending: true },
+  { id: "012", label: "First cross-border card stranger-verifiable", pending: false, probe: "/api/cards" },
   { id: "021", label: "Sample evidence pack third-party verified", pending: true },
   { id: "051", label: "Pricing ruling on /payg", pending: true },
-  { id: "034", label: "/challenge redress route", pending: true },
-  { id: "031", label: "/east-west flagship route", pending: true },
+  { id: "034", label: "/challenge redress route", pending: false, probe: "/challenge/" },
+  { id: "031", label: "/east-west flagship route", pending: false, probe: "/east-west/" },
   { id: "091", label: "Value Ledger six event types", pending: true },
 ];
 
@@ -80,6 +80,9 @@ else {
     else pass("totals.measured_axes 13");
     if (!String(j.totals?.public_count || "").includes("13 measured")) fail("public_count drift");
     else pass("public_count carries 13-of-14 ruling");
+    const cb = (j.domains || []).find((d) => d.domain === "cross-border");
+    if (cb) pass(`domains cross-border row (${cb.status || "live"})`);
+    else warn("M4 move 032: no cross-border domain row on /api/gspc");
     const jail = (j.axes || []).find((a) => a.axis === "jail");
     if (!jail) fail("jail slot missing");
     else if (jail.separation !== "UNTESTED") fail(`jail.separation=${jail.separation}`);
@@ -136,13 +139,34 @@ else {
   if (xw.body.includes("EU AI Act") && xw.body.includes("Art. 9")) pass("EU AI Act rows present");
   else warn("crosswalk missing EU Art. 9 rows");
   if (/comply once/i.test(xw.body)) warn("M1 grammar: crosswalk uses 'comply once' — East-West wants 'mapped' not 'compliant'");
+  else pass("M1 grammar: no 'comply once' on crosswalk");
   if (/determination stays with authorities/i.test(xw.body)) pass("determination banner present");
   else warn("M1: add 'determination stays with authorities' banner on crosswalk v1");
   if (/dorado\.dev/i.test(xw.body)) fail("JD-D1: dorado.dev reference on /crosswalk");
   else pass("no dorado.dev on /crosswalk");
 }
 
-// ── Movement 4: East-West routes (pending) ──
+// ── Cross-border card (M2 move 012) ──
+console.log("\n## Cross-border signed card\n");
+const cards = await get("/api/cards");
+if (cards.status !== 200) fail(`/api/cards HTTP ${cards.status}`);
+else {
+  try {
+    const j = JSON.parse(cards.body);
+    if (j.cross_border?.content_id || (j.cards?.list || []).some((c) => c.axis === "cross-border")) {
+      pass("cross-border card indexed on /api/cards");
+    } else {
+      warn("M2 move 012: cross-border card not yet on /api/cards (await deploy)");
+    }
+  } catch {
+    fail("/api/cards invalid JSON");
+  }
+}
+const cbCard = await get("/signals/cross-border-card.signed.json");
+if (cbCard.status === 200 && cbCard.body.includes("content_id")) pass("cross-border-card.signed.json stranger-fetchable");
+else warn("cross-border-card.signed.json not yet live");
+
+// ── Movement 4: East-West routes (target state) ──
 console.log("\n## M4 East-West surfaces (target state)\n");
 for (const [path, move, note] of [
   ["/east-west", "031", "flagship route"],
@@ -230,15 +254,21 @@ if (chatJ.state === "refused" || /ClaimGuard|refused|13.*14/i.test(chatText)) {
 // ── Done-definition checklist (live-testable) ──
 console.log("\n## Done-definition checklist (live probes)\n");
 for (const row of DONE) {
-  if (row.pending) warn(`[ ] Move ${row.id}: ${row.label} — PENDING`);
+  if (row.pending) {
+    warn(`[ ] Move ${row.id}: ${row.label} — PENDING`);
+  } else if (row.probe) {
+    const { status } = await get(row.probe);
+    if (status >= 400) warn(`[ ] Move ${row.id}: ${row.label} — probe ${row.probe} HTTP ${status} (await deploy)`);
+    else pass(`[x] Move ${row.id}: ${row.label}`);
+  } else {
+    pass(`[x] Move ${row.id}: ${row.label}`);
+  }
 }
 pass("[x] GSPC canon 13 measured of 14 — LIVE");
 pass("[x] ClaimGuard gated chat — LIVE");
-pass("[x] /crosswalk foundation page — LIVE (M1 scaffold, not yet v1 canon)");
+pass("[x] /crosswalk foundation page — LIVE (M1 v1 canon after deploy)");
 pass("[x] receipts UNPUBLISHED honesty — LIVE");
-warn("[ ] First cross-border signed card — NOT LIVE (M2 move 012)");
-warn("[ ] /east-west flagship — NOT LIVE (M4 move 031)");
-warn("[ ] /challenge redress — NOT LIVE (M4 move 034, JC-D4)");
+warn("[ ] Sample evidence pack — NOT LIVE (M3 move 021)");
 warn("[ ] Pricing ruling — OWNER-BLOCKED (M6 move 051)");
 warn("[ ] Value Ledger wired — NOT LIVE (M10 move 091)");
 
@@ -247,7 +277,7 @@ console.log("\n## First 5 moves (dependency order)\n");
 warn("072 OWNER-BLOCKED: £30 domains (cibola.dev + getcibola.com) — JD-D1");
 warn("071 OWNER-BLOCKED: P0-1 DID trust-root commit");
 warn("014+075 LANE: schema URLs off dorado.dev + test-identity re-sign — IN PROGRESS");
-warn("001-002 K3+POD: crosswalk canon v1 signed — NOT YET (scaffold in cibola cross-border.json)");
+warn("001-002 K3+POD: crosswalk canon v1 signed — SHIPPED in PR (await deploy)");
 warn("041-042 ⏰ Sep 2: DRCF Phase 2 + Art 73(7) intake — CLOCKED");
 
 console.log("");
