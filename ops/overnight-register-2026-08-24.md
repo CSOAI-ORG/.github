@@ -682,3 +682,27 @@ Pack **22/30**. Awaiting owner workflow run (Trusted Publishers or HF_TOKEN).
 
 HF gate unchanged. Pack **22/30**.
 
+---
+
+## Continuation log 31 (2026-08-24T22:37Z) — snapshot refresh + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #29 · dd6cb03 · 2026-08-24T22:37Z · status snapshot refreshed (22:37Z) |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223714Z.log · 2026-08-24T22:37:14Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223715Z.log · ClaimGuard PASS |
+
+---
+
+## Continuation log 32 (2026-08-24T22:38Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:38Z · sub_92e7f494 |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223813Z.log · 2026-08-24T22:38:13Z |
+| N5-07/21 | **PASS** | claimguard-20260824T223815Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**.
+
