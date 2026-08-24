@@ -153,7 +153,7 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 ### Owner unblock list (remaining)
 
 1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
-2. Merge [csoai-static-deploy2#41](https://github.com/CSOAI-ORG/csoai-static-deploy2/pull/41) → `mcp-publisher login github` → `bash ops/mcp-publish-gspc.sh` (N5-10/11)
+2. `mcp-publisher login github` → `bash ops/mcp-publish-gspc.sh` (N5-10/11) — server.json on main validated (aab76f4)
 3. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
 4. Discussion #97 comment (N5-18) — integration lacks write access (GraphQL FORBIDDEN)
 
@@ -164,7 +164,7 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 | Move | Status | Register line |
 |------|--------|---------------|
 | N5-08/09 | **VALIDATED** | N5-08 · connect/mcp/gspc/server.json · (this commit) · 2026-08-24T21:40Z · mcp-publisher validate PASS; description ≤100; packages deferred (npm 404) |
-| N5-10 | **GATED** | N5-10 · ops/mcp-publish-gspc.sh · (this commit) · 2026-08-24T21:40Z · validate PASS; publish blocked on OAuth; PR csoai-static-deploy2#41 |
+| N5-10 | **GATED** | N5-10 · ops/mcp-publish-gspc.sh · (this commit) · 2026-08-24T21:40Z · validate PASS; publish blocked on OAuth; csoai-static-deploy2#42 merged aab76f4 |
 | N5-11 | **BASELINE** | N5-11 · registry latest still 1.0.1 · 2026-08-24T21:40Z · target 1.0.2 after merge + publish |
 | N5-18 | **GATED** | N5-18 · a2aproject/A2A Discussion #97 · — · 2026-08-24T21:40Z · GraphQL `addDiscussionComment` FORBIDDEN for integration |
 
