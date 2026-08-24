@@ -21,6 +21,8 @@
  * codes are stable across CLI (ClaimGuard) / API / this Function.
  */
 
+import { DETECTION_PREDICATE, toDsse, toInTotoStatement } from "./intoto";
+
 interface Env {
   BOARD_ATTESTATION_KEY_PKCS8_B64?: string;
   ASSESS_SIGNING_KEY_PKCS8_B64?: string;
@@ -187,7 +189,25 @@ export const onRequestPost: PagesFunction<Env> = async (ctx) => {
     issuer: "CSOAI Ltd (UK 16939677)",
   };
   const receipt = await signVerdict(ctx.env, payload);
-  return Response.json({ ok: verdict !== "UNVERIFIABLE", ...payload, receipt });
+
+  // Also emit the standard in-toto/DSSE receipt (ecosystem-verifiable) when a key
+  // is bound — same envelope auditors/`cosign`-style tools read.
+  let receiptDsse: Record<string, unknown> | null = null;
+  const keyB64 = ctx.env.BOARD_ATTESTATION_KEY_PKCS8_B64 || ctx.env.ASSESS_SIGNING_KEY_PKCS8_B64;
+  if (keyB64) {
+    try {
+      const der = Uint8Array.from(atob(keyB64), (c) => c.charCodeAt(0));
+      const stmt = await toInTotoStatement(payload, {
+        subjectName: "ai-content-detection",
+        predicateType: DETECTION_PREDICATE,
+      });
+      receiptDsse = await toDsse(stmt, der, "did:web:csoai.org#board-attestation-1");
+    } catch {
+      receiptDsse = null;
+    }
+  }
+
+  return Response.json({ ok: verdict !== "UNVERIFIABLE", ...payload, receipt, receipt_dsse: receiptDsse });
 };
 
 export const onRequestGet: PagesFunction<Env> = async () =>
