@@ -168,3 +168,30 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 | N5-11 | **BASELINE** | N5-11 · registry latest still 1.0.1 · 2026-08-24T21:40Z · target 1.0.2 after merge + publish |
 | N5-18 | **GATED** | N5-18 · a2aproject/A2A Discussion #97 · — · 2026-08-24T21:40Z · GraphQL `addDiscussionComment` FORBIDDEN for integration |
 
+---
+
+## Continuation log 5 (2026-08-24T21:45Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-10 | **LIVE** | N5-10 · registry.modelcontextprotocol.io · c9fc14b · 2026-08-24T21:45Z · v1.0.2 published via mcp-registry-publish.yml run 32780862507 (OIDC); `ok: registry/gspc.json` |
+| N5-11 | **LIVE** | N5-11 · ops/logs/mcp-registry-live-20260824T214500Z.json · (this commit) · 2026-08-24T21:45Z · search confirms 1.0.2 isLatest=true |
+| N5-08/09 | **LIVE** | registry/gspc.json + server.json validated on main |
+
+### Updated done-definition scorecard (D1–D6) — 21:45Z
+
+| Done | Status | Notes |
+|------|--------|-------|
+| D1 HF Space live | **PARTIAL** | Space RUNNING HTTP 200; Gradio scaffold not deployed (sdk=static) |
+| D2 Datasets + DOIs | **PARTIAL** | 2 datasets live; leaderboard-results 401; DOIs not minted |
+| D3 MCP 1.0.2 | **DONE** | Registry v1.0.2 isLatest=true |
+| D4 agent-card + directories | **PARTIAL LIVE** | Card live + validated; awesome-a2a PR open |
+| D5 Evidence pack | **DONE** | 4 docs + ClaimGuard pass |
+| D6 Marketplace drafts | **DONE** | ADX/Snowflake/Datarade prep committed |
+
+### Owner unblock list (remaining)
+
+1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
+2. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
+3. Discussion #97 comment (N5-18) — integration lacks write access
+
