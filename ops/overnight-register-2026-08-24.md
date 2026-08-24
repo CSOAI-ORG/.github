@@ -304,3 +304,19 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 | 3 | HF Settings → Generate DOI for gspc-board + gspc-bench-results | DOI URLs in register |
 | 4 | Optional: a2aagentlist email; Discussion #97 comment manually | register lines N5-15, N5-18 |
 
+---
+
+## Continuation log 10 (2026-08-24T21:58Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **MERGED** | PR #14 → main `6b5b275` · 2026-08-24T21:58Z · register log 9 on main |
+| N5-07 | **PASS** | N5-07 · ops/logs/claimguard-20260824T215814Z.log · (this commit) · 2026-08-24T21:58:14Z · re-run PASS on main |
+| N5-18 | **GATED** | N5-18 · a2aproject/A2A Discussion #97 · — · 2026-08-24T21:58Z · GraphQL `addDiscussionComment` → FORBIDDEN (retry confirmed) |
+| N5-01 | **GATED** | TOKEN/GITHUB_PAT/OIDC env vars → HF whoami 401; `hf auth whoami` → Not logged in; workflow_dispatch 403 |
+| N5-06 | **CONFIRMED** | leaderboard-results HTTP 401; Space sdk=static; live gspc-board README still EUNOMIA-era (export has GSPC cards — refresh on HF publish) |
+
+### Lane status unchanged
+
+Pack score remains **22/30**. Critical path: owner adds `HF_TOKEN` + runs **overnight-hf-publish** workflow.
+
