@@ -537,3 +537,24 @@ HF gate still closed. PR #24 (OIDC fallback) OPEN. Owner: configure Trusted Publ
 
 Pack **22/30**. Agent lane exhausted; awaiting owner workflow run.
 
+---
+
+## Continuation log 23 (2026-08-24T22:30Z) — timer recheck (+15m)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:30Z · sub_92e7f494 |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T222952Z.log · 2026-08-24T22:29:52Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T222954Z.log · ClaimGuard PASS |
+| N5-01 | **GATED** | HF_TOKEN unset; workflow_dispatch 403 (publish + probe); 0 workflow runs |
+| N5-02 | **STALE** | Live gspc-board README still EUNOMIA (`pretty_name` unchanged) |
+| N5-06 | **GATED** | leaderboard-results Exists: no; Space sdk=static |
+
+### N5 completion audit (22:30Z)
+
+| Done (22) | Gated/deferred (8) |
+|-----------|-------------------|
+| N5-02–04 partial live, N5-07, N5-08–14, N5-20–21, N5-22–25, N5-26–29, N5-30 prep, N5-17 submitted | N5-01, N5-05, N5-06 publish, N5-15, N5-16, N5-18, N5-19 |
+
+OIDC path on `main` (PR #24). Owner must run workflows manually.
+
