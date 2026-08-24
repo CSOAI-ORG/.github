@@ -23,6 +23,10 @@ echo "=== HF Trusted Publishers OIDC probe $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
 
 for resource in "${RESOURCES[@]}"; do
   echo "--- $resource ---"
+  kind="${resource%%/*}"
+  repo="${resource#*/}"
+  settings_url="https://huggingface.co/${kind}/${repo}/settings/trusted-publishers"
+  echo "  settings: $settings_url"
   if token=$(HF_OIDC_RESOURCE="$resource" "$HF" auth token 2>/dev/null); then
     if HF_TOKEN="$token" "$HF" auth whoami >/dev/null 2>&1; then
       echo "  [PASS] OIDC exchange + whoami"

@@ -31,6 +31,10 @@ permissions:
   id-token: write   # required for Trusted Publishers OIDC exchange
   contents: read
 
+concurrency:
+  group: overnight-hf-publish
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
