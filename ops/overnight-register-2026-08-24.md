@@ -2,41 +2,34 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 1202ac0 (continued 2026-08-24T23:54Z)  
+**Commit:** 96976f1 (continued 2026-08-24T23:56Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:54Z) — **22/30**
+## Current status snapshot (23:56Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; cron live (1 run); OIDC fail; workflow_dispatch 403 |
-| N5-02 | LIVE (stale) | gspc-board README still EUNOMIA (`pretty_name` confirmed live) |
+| N5-01 | GATED | HF_TOKEN unset; 1 cron run @ 23:48Z; next cron ~00:03Z |
+| N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
-| N5-04 | LIVE | GSPC cards in export; live refresh pending publish |
+| N5-04 | LIVE | export ready; live refresh pending |
 | N5-05 | GATED | DOI not minted |
-| N5-06 | PARTIAL | Space sdk=static; leaderboard-results HTTP 401 |
-| N5-07 | PASS | ClaimGuard + banned-strings |
-| N5-08–12 | LIVE | MCP v1.0.2 isLatest=true |
-| N5-13–14 | LIVE | agent card 10/10 validator |
-| N5-15 | PREP | a2aagentlist draft (email owner-gated) |
-| N5-16 | BLOCKED | artinet.io SPA; no registration API |
-| N5-17 | SUBMITTED | awesome-a2a PR #157 open (mergeable) |
-| N5-18 | GATED | Discussion #97 blocked |
-| N5-19 | DEFERRED | no GCP account |
-| N5-20–21 | DONE | evidence pack + ClaimGuard |
-| N5-22–25 | PREP | marketplace drafts |
-| N5-26–29 | PREP | insurance skeletons |
-| N5-30 | PREP | G-Cloud checklist |
+| N5-06 | PARTIAL | Space sdk=static; leaderboard-results 401 |
+| N5-07–21 | PASS/DONE | ClaimGuard + evidence pack |
+| N5-08–14 | LIVE | MCP v1.0.2 + A2A card |
+| N5-15–18 | PREP/GATED | directories owner/manual |
+| N5-19 | DEFERRED | no GCP |
+| N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
 
-**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos. Next cron ~00:03Z.
+**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos.
 
 ---
 
-## Current status snapshot (23:53Z) — superseded
+## Current status snapshot (23:54Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1082,4 +1075,19 @@ Cron now firing every 15m; auth still blocked. Pack **22/30**. Owner: HF_TOKEN o
 | N5-17 | **SUBMITTED** | awesome-a2a PR #157 open mergeable_state=clean |
 
 No change. Pack **22/30**.
+
+---
+
+## Continuation log 56 (2026-08-24T23:56Z) — continuation recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-24T23:56Z |
+| N5-REGISTER | **MERGED** | PR #53 · 96976f1 · log 55 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; MCP OAuth contribute-repos (expires 02:57Z) not in shell |
+| N5-01 | **CRON** | Still 1 cron run (32791004769); awaiting ~00:03Z boundary |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T235619Z.log · 2026-08-24T23:56:19Z |
+| N5-07/21 | **PASS** | claimguard-20260824T235619Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Awaiting cron + owner auth.
 
