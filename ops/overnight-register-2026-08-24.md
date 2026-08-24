@@ -719,3 +719,17 @@ HF gate unchanged. Pack **22/30**.
 
 Pack **22/30**. Agent lane exhausted; owner must run HF workflows.
 
+---
+
+## Continuation log 34 (2026-08-24T22:40Z) — timer recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer continuation · 2026-08-24T22:40Z · sub_92e7f494 |
+| N5-REGISTER | **MERGED** | PR #31 · e442a10 · 2026-08-24T22:40Z · log 33 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped; 0 workflow runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T224044Z.log · 2026-08-24T22:40:44Z |
+| N5-07/21 | **PASS** | claimguard-20260824T224046Z.log · ClaimGuard PASS |
+
+HF gate unchanged. Pack **22/30**.
+
