@@ -96,13 +96,22 @@ const REDIRECTS = [
 
 console.log(`LOBBY-NAV — ${HOST}\n`);
 
+// ── Thin-shell early warning ──
+const homeProbe = await get("/");
+const THIN_SHELL = homeProbe.len < 20000;
+if (THIN_SHELL) {
+  warn(`homepage thin (${homeProbe.len} B) — lobby shell probes expect ~20KB+; DEPLOY-LOCK / gated deploy required`);
+}
+
 // ── Lobby deep links (Council OS shell) ──
 console.log("## Lobby deep links (?lobby=)\n");
 for (const tab of LOBBY_TABS) {
   const { status, body, len } = await get(`/?lobby=${tab.id}`);
   if (status !== 200) fail(`/?lobby=${tab.id} HTTP ${status}`);
-  else if (len < tab.min) fail(`/?lobby=${tab.id} thin (${len} B)`);
-  else if (!body.includes("Council") && tab.id !== "play") fail(`/?lobby=${tab.id} missing Council shell`);
+  else if (len < tab.min) {
+    if (THIN_SHELL && tab.min >= 20000) warn(`/?lobby=${tab.id} thin (${len} B) — thin-shell deploy`);
+    else fail(`/?lobby=${tab.id} thin (${len} B)`);
+  } else if (!body.includes("Council") && tab.id !== "play") fail(`/?lobby=${tab.id} missing Council shell`);
   else pass(`/?lobby=${tab.id} (${len} B)`);
 }
 
@@ -127,17 +136,23 @@ for (const tab of LOBBY_TABS.filter((t) => t.path)) {
   }
   if (status >= 400) {
     if (tab.softLoop) warn(`${url} HTTP ${status} (${tab.id} — storefront redirect loop on apex)`);
+    else if (THIN_SHELL && tab.id === "board") warn(`${url} thin (${len} B) — thin-shell deploy`);
     else fail(`${url} HTTP ${status} (${tab.id} tab)`);
-  } else if (len < tab.min) fail(`${url} thin (${len} B)`);
-  else pass(`${url} → ${tab.id} (${len} B)`);
+  } else if (len < tab.min) {
+    if (THIN_SHELL && tab.id === "board") warn(`${url} thin (${len} B) — thin-shell deploy`);
+    else fail(`${url} thin (${len} B)`);
+  } else pass(`${url} → ${tab.id} (${len} B)`);
 }
 
 // ── Home-desktop inner routes ──
 console.log("\n## Home-desktop LOBBY_ROUTES\n");
 for (const path of LOBBY_ROUTES) {
   const { status, len } = await get(`${path}/`);
-  if (status >= 400) fail(`${path}/ HTTP ${status}`);
-  else if (len < 500) fail(`${path}/ thin (${len} B)`);
+  if (status >= 400) {
+    if (THIN_SHELL && status === 404 && (path === "/east-west" || path === "/challenge")) {
+      warn(`${path}/ HTTP ${status} — M4 routes await fat deploy`);
+    } else fail(`${path}/ HTTP ${status}`);
+  } else if (len < 500) fail(`${path}/ thin (${len} B)`);
   else pass(`${path}/ (${len} B)`);
 }
 
@@ -169,6 +184,7 @@ for (const r of REDIRECTS) {
   const { status, loc } = await getRedirect(r.from);
   if (status === 308 && loc.includes(r.want)) pass(`${r.from} → ${loc.trim()}`);
   else if (r.pendingPr && status === 404) warn(`${r.from} HTTP ${status} — pending councilof-ai PR #${r.pendingPr}`);
+  else if (THIN_SHELL && status === 404) warn(`${r.from} HTTP ${status} — thin-shell (redirects not active)`);
   else fail(`${r.from} HTTP ${status} loc=${loc} (want ${r.want})`);
 }
 

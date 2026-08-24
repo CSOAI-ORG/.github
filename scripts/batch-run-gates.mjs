@@ -82,6 +82,10 @@ async function main() {
     fails++;
   }
 
+  if (run("DSH + auth E2E", "node", ["scripts/e2e-dsh.mjs", "--host", HOST])) {
+    fails++;
+  }
+
   if (run("Weekend demo smoke", "node", ["scripts/weekend-demo-smoke.mjs", "--host", HOST])) {
     fails++;
   }

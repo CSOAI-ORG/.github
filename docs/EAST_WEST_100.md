@@ -1,7 +1,7 @@
 # East-West 100-Move Play — Execution Tracker
 
 Date: 2026-08-24 · Companion to PLAYBOOK-GTM-300-2026-08-24  
-E2E gate: `node scripts/e2e-east-west.mjs` · Full stack: `node scripts/batch-run-gates.mjs`
+E2E gate: `node scripts/e2e-east-west.mjs` · DSH: `node scripts/e2e-dsh.mjs` · Full stack: `node scripts/batch-run-gates.mjs`
 
 | PR #452 Council OS nav | **MERGED** (2026-08-24) — Benchmarkers, /mcps, redirects |
 | PR east-west M1+M4 | **OPEN** — crosswalk v1, /east-west, /challenge, gspc domains row |
@@ -10,9 +10,10 @@ E2E gate: `node scripts/e2e-east-west.mjs` · Full stack: `node scripts/batch-ru
 
 | Gate | Result |
 |------|--------|
-| batch-run-gates.mjs | **PASS** (pre M1/M4 deploy — soft warns on new routes) |
-| e2e-lobby-nav.mjs | **PASS** |
-| e2e-east-west.mjs | **PASS** — M4 routes soft-warn until deploy |
+| batch-run-gates.mjs | **RUN** — includes DSH + auth gate |
+| e2e-dsh.mjs | **NEW** — auth + /api/dashboard/stats + /dashboard shell |
+| e2e-lobby-nav.mjs | **RUN** — thin-shell aware |
+| e2e-east-west.mjs | **RUN** — ClaimGuard + thin-shell aware |
 
 ## Done-definition checklist (verifiable today)
 
