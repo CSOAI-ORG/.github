@@ -558,3 +558,21 @@ Pack **22/30**. Agent lane exhausted; awaiting owner workflow run.
 
 OIDC path on `main` (PR #24). Owner must run workflows manually.
 
+---
+
+## Continuation log 24 (2026-08-24T22:30Z) — timer `overnight-hf-recheck` fired
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · fired 2026-08-24T22:30:01Z |
+| N5-01 | **GATED** | `hf auth whoami` → Not logged in; HF_TOKEN unset; `hf auth list` → No access tokens |
+| N5-01 | **SKIP** | `scripts/overnight-hf-publish.sh` not run (no HF_TOKEN) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T223051Z.log · 2026-08-24T22:30:51Z · 4 WARN unchanged |
+| N5-07/21 | **PASS** | claimguard-20260824T223050Z.log · ClaimGuard PASS |
+| N5-06 | **GATED** | gspc-leaderboard-results Exists: no (hf_fs) |
+| N5-WF | **GATED** | `gh run list --workflow=overnight-hf-publish` → 0 runs |
+
+### Timer recheck result (22:30Z)
+
+HF gate still closed. No publish attempted. Next timer fire ~15m.
+
