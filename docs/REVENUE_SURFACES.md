@@ -1,8 +1,8 @@
 # Revenue surfaces — live sales inventory
 
 **Host:** [`https://councilof.ai`](https://councilof.ai)  
-**Audited:** 2026-08-24 (this file) · prior matrix [`FRONTEND_AUDIT_CHECKLIST.md`](FRONTEND_AUDIT_CHECKLIST.md)  
-**Posture:** Measurement and verification are free. No fabricated ARR. Status below is HTTP reality on apex — not a wish list.
+**Audited:** 2026-08-24 (post-deploy) · prior matrix [`FRONTEND_AUDIT_CHECKLIST.md`](FRONTEND_AUDIT_CHECKLIST.md)  
+**Posture:** Measurement and verification are free. No fabricated ARR. Status below is HTTP reality on apex — fat deploy landed (~214 KB homepage).
 
 ---
 
@@ -10,12 +10,14 @@
 
 | Route | Role | Apex status (2026-08-24) | Notes |
 |---|---|---|---|
-| [`/pricing`](https://councilof.ai/pricing) | Buyer posture — free measure/verify, artefacts not seats | **404** when apex thin | Coded in stranger dirs; gated deploy / alias gap |
-| [`/start`](https://councilof.ai/start) | Enterprise intake | **404** when apex thin | Use lobby ask until alias lands |
-| [`/enterprise`](https://councilof.ai/enterprise) | Enterprise landing | **404** when apex thin | Same alias family |
-| [`/government`](https://councilof.ai/government) | Public-sector landing | **404** when apex thin | Adjacent live: `/for/regulator` **200** |
-| [`/regulators`](https://councilof.ai/regulators) | Regulator persona | **404** when apex thin | Prefer `/for/regulator` until fixed |
-| [`/insurers`](https://councilof.ai/insurers) | Insurer reliance path | **404** when apex thin | Do not invent coverage language |
+| [`/pricing`](https://councilof.ai/pricing) | Buyer posture — free measure/verify, artefacts not seats | **200** (~71 KB) | Live on fat apex |
+| [`/start`](https://councilof.ai/start) | Enterprise intake | **200** (~63 KB) | Live |
+| [`/enterprise`](https://councilof.ai/enterprise) | Enterprise landing | **200** (~122 KB) | Live |
+| [`/payg/`](https://councilof.ai/payg/) | Agent PAYG rail | **200** | Pricing ruling pending (051) |
+| [`/eunomia-data/`](https://councilof.ai/eunomia-data/) | x402 DATA product | **200** | $0.02/query schema; settlement MCP pending (052) |
+| [`/government`](https://councilof.ai/government) | Public-sector landing | **404** when apex thin | Use `/for/regulator` **200** |
+| [`/regulators`](https://councilof.ai/regulators) | Regulator persona | **200** when fat | Also `/for/regulator` |
+| [`/insurers`](https://councilof.ai/insurers) | Insurer reliance path | **200** (~100 KB) | Evidence pack at `/api/evidence-pack` |
 | [`/api-docs`](https://councilof.ai/api-docs) | Human API docs hub | **404** when apex thin | Agents use `/api/gspc` + MCP today |
 | [`/gspc-verify`](https://councilof.ai/gspc-verify) | Verify (no slash) | **404** | Pretty URL missing |
 | [`/gspc-verify/`](https://councilof.ai/gspc-verify/) | Verify (slash) | **Live 200** | **Always demo this form** |
@@ -39,12 +41,10 @@
 
 | Condition | Symptom | Sales implication |
 |---|---|---|
-| **Fat apex** | Homepage ≳ 20 KB, CouncilLobby chunk present | Full ask → board → verify → arena demo |
-| **Thin apex** | ~7 KB shell; stranger routes 404 | Demo only `/api/gspc`, `/gspc-verify/`, MCP, arena if still 200 — **name the gap**, do not promise `/pricing` |
+| **Fat apex** | Homepage ≳ 200 KB, CouncilLobby chunk present | **CURRENT STATE** — full sales path live |
+| **Thin apex** | ~7 KB shell; stranger routes 404 | Demo only `/api/gspc`, `/gspc-verify/`, MCP — **re-run gated deploy if this returns** |
 
-Root cause pattern: Pages Git auto-deploy clobbers gated prerender / missing `place-end-user-aliases`. See `councilof-ai` `DEPLOY-LOCK.md`.
-
-When thin: treat `/pricing`, `/start`, `/enterprise`, `/government`, `/regulators`, `/insurers`, `/api-docs` as **coded, not sold**.
+Root cause pattern: Pages Git auto-deploy clobbers gated prerender. See `councilof-ai` `DEPLOY-LOCK.md`. Owner action: disable Pages Git auto-deploy (STEPS 121).
 
 ---
 
@@ -55,7 +55,7 @@ stranger
   → verify free          https://councilof.ai/gspc-verify/
   → lobby ask            https://councilof.ai/?lobby=home
   → scoreboard           https://councilof.ai/gspc-scoreboard
-  → enterprise           https://councilof.ai/start   (or lobby “start” ask while 404)
+  → enterprise           https://councilof.ai/start
 ```
 
 | Stage | Proof you show | Do not sell |
@@ -88,7 +88,8 @@ stranger
 ## Readiness gate
 
 ```bash
-node scripts/weekend-demo-smoke.mjs
+node scripts/batch-run-gates.mjs
+node scripts/e2e-revenue.mjs
 ```
 
-Sales-demo **PASS** requires living board API, verify slash route, MCP catalogue, and chat axis-ask grounded without overclaim drift. Stranger marketing routes may still FAIL independently — track them here, do not hide them.
+Sales-demo **PASS** requires living board API, verify slash route, MCP catalogue, and chat axis-ask grounded without overclaim drift.
