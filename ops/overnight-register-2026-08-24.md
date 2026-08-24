@@ -403,3 +403,17 @@ Attempted: shell `hf auth`, env TOKEN/PAT/OIDC, `gh workflow run`, HF MCP `contr
 
 **Pack score: 22/30 done or submitted. 8 owner-gated.**
 
+---
+
+## Continuation log 15 (2026-08-24T22:06Z)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T220641Z.log · (this commit) · 2026-08-24T22:06:41Z · 4 WARN (DOIs, leaderboard, Space sdk) |
+| N5-01 | **GATED** | HF_TOKEN absent; workflow 0 runs; workflow_dispatch 403 |
+| N5-WATCH | **ACTIVE** | Timer `overnight-hf-recheck` · sub_92e7f494 · 2026-08-24T22:06Z · recheck every 15m for HF_TOKEN/workflow |
+
+### Lane status unchanged (22:06Z)
+
+No new credentials. Agent prep complete; awaiting owner `HF_TOKEN` + workflow run + DOI mint.
+
