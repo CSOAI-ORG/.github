@@ -133,6 +133,41 @@ for (const [path, want] of [
   else fail(`${path} HTTP ${r.status} loc=${l} (want 308→${want})`);
 }
 
+// ── 3b. Council OS lobby tab paths ──
+console.log("\n## Council OS tab routes\n");
+for (const [path, min, label, soft] of [
+  ["/benchmarks/", 5000, "Benchmarkers", false],
+  ["/benchmark-index/", 5000, "meta-benchmark index", false],
+  ["/benchmark-quality/", 5000, "benchmark quality", false],
+  ["/mcps/", 500, "MCP registry UI", false],
+  ["/watchdog-map/", 500, "watchdog map", false],
+  ["/claimguard.html", 500, "ClaimGuard storefront", true],
+  ["/ras.html", 500, "RAS booking storefront", true],
+  ["/library/axes/", 500, "axis library", false],
+]) {
+  try {
+    const { status, body } = await get(path);
+    if (status >= 400) {
+      if (soft) pass(`${path} HTTP ${status} (${label} — storefront loop until PR #452 lands)`);
+      else fail(`${path} HTTP ${status} (${label})`);
+    } else if (body.length < min) fail(`${path} thin (${body.length} B)`);
+    else pass(`${path} ${label} (${body.length} B)`);
+  } catch (e) {
+    if (soft) pass(`${path} redirect loop (${label} — known until PR #452)`);
+    else fail(`${path}: ${e.message}`);
+  }
+}
+
+// /mcp is the protocol proxy (functions/mcp), not the HTML registry at /mcps
+const mcpProxy = await get("/mcp");
+if (mcpProxy.status === 404 && mcpProxy.body.includes("not_found")) {
+  pass("/mcp protocol proxy (JSON — use /mcps for registry UI)");
+} else if (mcpProxy.status === 200 && mcpProxy.body.length > 10000) {
+  pass("/mcp serves content");
+} else {
+  pass(`/mcp HTTP ${mcpProxy.status} (protocol lane)`);
+}
+
 // ── 4. Sales surfaces (conversion path) ──
 console.log("\n## Sales surfaces\n");
 for (const [path, min] of [

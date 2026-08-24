@@ -51,6 +51,13 @@ const ROUTES = [
   { path: "/api/cards", status: 200 },
   { path: "/api/axis-register", status: 200 },
   { path: "/.well-known/mcp.json", status: 200 },
+  { path: "/benchmarks/", status: 200, label: "Benchmarkers tab route" },
+  { path: "/benchmark-index/", status: 200, label: "meta-benchmark index" },
+  { path: "/mcps/", status: 200, label: "MCP registry UI" },
+  { path: "/watchdog-map/", status: 200 },
+  { path: "/library/axes/", status: 200, label: "14-axis library" },
+  { path: "/for/regulator/", status: 200, label: "regulator persona" },
+  { path: "/for/enterprise/", status: 200, label: "enterprise persona" },
 ];
 
 let fails = 0;

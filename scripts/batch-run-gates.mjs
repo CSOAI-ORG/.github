@@ -74,6 +74,10 @@ async function main() {
 
   if (await runE2EWithRetry()) fails++;
 
+  if (run("Lobby nav E2E", "node", ["scripts/e2e-lobby-nav.mjs", "--host", HOST])) {
+    fails++;
+  }
+
   if (run("Weekend demo smoke", "node", ["scripts/weekend-demo-smoke.mjs", "--host", HOST])) {
     fails++;
   }
