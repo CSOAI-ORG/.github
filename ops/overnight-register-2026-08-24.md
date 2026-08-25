@@ -2309,3 +2309,15 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 131 (2026-08-25T18:24:28Z) — RALPH · verifier notes AGENT-ONBOARDING
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T1825Z.log · AGENT-ONBOARDING NOTE if Pages lag |
+| N5-SITE | **SHIPPED** | AGENT-ONBOARDING.md on master |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+

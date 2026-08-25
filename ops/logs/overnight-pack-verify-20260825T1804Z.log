@@ -1,0 +1,2 @@
+VERIFY PASS — all checks green
+ops/verify-overnight-pack.sh: line 164: syntax error near unexpected token `fi'

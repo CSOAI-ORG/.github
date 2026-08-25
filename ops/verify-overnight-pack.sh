@@ -116,6 +116,8 @@ print(latest[0] if latest else 'none')
   done
   code=$(http_code "https://councilof.ai/openapi.json")
   if [[ "$code" == "200" ]]; then pass "openapi.json HTTP $code"; else warn "openapi.json HTTP $code"; fi
+  code=$(http_code "https://councilof.ai/AGENT-ONBOARDING.md")
+  if [[ "$code" == "200" ]]; then pass "AGENT-ONBOARDING.md HTTP $code"; else note "AGENT-ONBOARDING.md HTTP $code (shipped 711d1ee — await Pages if 404)"; fi
   feed=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/feed.xml" 2>/dev/null || true)
   if echo "$feed" | grep -q "14 measured of 14"; then
     pass "feed.xml cites 14 measured of 14"
