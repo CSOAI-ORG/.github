@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** b15c220 (continued 2026-08-25T00:44Z)  
+**Commit:** 2bb2115 (continued 2026-08-25T00:45Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1339,17 +1339,17 @@ Morning sheet on `main`. HF publish still owner-gated. Pack **22/30**.
 
 ---
 
-## Continuation log 66 (2026-08-25T00:44Z) — PR #61 merged + recheck
+## Continuation log 67 (2026-08-25T00:45Z) — timer recheck (overnight-hf-recheck)
 
 | Move | Status | Register line |
 |------|--------|---------------|
-| N5-REGISTER | **MERGED** | PR #61 · b15c220 · logs 63–65 on `main` · 2026-08-25T00:43:34Z |
-| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-25T00:44Z |
-| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; publish skipped |
-| N5-01 | **MCP** | OAuth `contribute-repos` scope present; **Contribute Repos MCP tool not exposed** in Cursor (only read-only `hf_fs`) |
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #12 · 2026-08-25T00:45Z |
+| N5-REGISTER | **PR OPEN** | PR #62 · cursor/overnight-register-log66-ff6e · log 66 |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; **publish skipped** |
+| N5-01 | **GATED** | Latest `overnight-hf-publish` run 32788615051 (push, OIDC fail) |
 | N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z) |
-| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004415Z.log · 2026-08-25T00:44:15Z |
-| N5-07/21 | **PASS** | claimguard-20260825T004415Z.log · ClaimGuard PASS |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004522Z.log · 2026-08-25T00:45:22Z |
+| N5-07/21 | **PASS** | claimguard-20260825T004521Z.log · ClaimGuard PASS |
 
-Morning sheet on `main`. HF publish still owner-gated. Pack **22/30**.
+No change. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
 
