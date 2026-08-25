@@ -2781,3 +2781,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token + Pages lag |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 166 (2026-08-25T23:33:44Z) — RALPH · RECEIPT_INTEROP 14-slot + methodology CDN status
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `e1a0934` — RECEIPT_INTEROP cites 14-slot / live public_count (drop 16-axis) |
+| N5-SITE | **SHIPPED** | methodology `9601613` on master — CDN live=False |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

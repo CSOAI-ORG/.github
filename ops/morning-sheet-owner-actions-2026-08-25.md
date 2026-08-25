@@ -37,5 +37,7 @@ Lane stopped at free polish. Everything below needs Nick.
 - councilof-ai `9be2ac9` scrollworld doctrine 14/TIE
 - councilof-ai `c447433` e2e homepage asserts 14 measured of 14
 - councilof-ai `9e19871` evidenceRail + `bde6f12` StoryWorld — jail TIE / 14 of 14
+- councilof-ai `9601613` methodology API 14/TIE (CDN may lag)
+- councilof-ai `e1a0934` RECEIPT_INTEROP 14-slot
 - axis-universe WARNING + 14/TIE already on master (raw CDN may lag)
 - Apify 23:17Z: Glama 404 · PulseMCP 0 · Smithery LIVE · artinet signup 404 · agentcards empty (sticky-335 storm may still flap unrelated card_index)
