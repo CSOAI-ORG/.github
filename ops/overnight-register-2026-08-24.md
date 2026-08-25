@@ -2753,3 +2753,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token — csoai.org honesty CDN still stale FAQ "13 measured"; tip 14/TIE |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 164 (2026-08-25T23:29:49Z) — RALPH · homepage/deck copy jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai  evidenceRail ·  StoryWorld — jail **TIE** / 14 of 14 (not untested) |
+| N5-SITE | **SHIPPED** | prior this hour:  gspcAxes.test ·  scrollworld ·  e2e |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token — SPA/Pages may need deploy for StoryWorld CDN |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
