@@ -2284,3 +2284,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 129 (2026-08-25T18:20:47Z) — RALPH · STRICT recheck + master TIE copy confirmed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T182032Z.log |
+| N5-SITE | **ON MASTER** | pricingRisk/Honesty/CityPanel TIE copy present on master tip (CDN lag from deploy storm) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
