@@ -2076,3 +2076,16 @@ No DOI remint · no paid spend.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend. ~17:51 BST — continues to 04:00 London.
+
+## Continuation log 114 (2026-08-25T16:54:00Z) — RALPH · canon.json + chatCanon → live 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CANON | **LIVE** | councilof-ai `canon.json` → measured_axes=14 · public_count_contains `14 measured of 14 quotable` · `aa417f5` |
+| N5-CHAT | **LIVE** | `_chatCanon.ts` prefers live totals; jail MEASURED/TIE language; refuse keeps 12/15/16 only · `31fadf1` |
+| N5-SITE | **LIVE** | llms.txt CDN already 14/14 (`0a61d80`) |
+| N5-NOTE | **FACT** | Live jail: MEASURED · separation **TIE** · n=71 · `untested_separations=0` |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~17:54 BST — continues to 04:00 London.
