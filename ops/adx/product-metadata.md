@@ -32,7 +32,7 @@ Signed GSPC governance measurement board export: 14 measured of 14 axes, determi
 
 Council of AI publishes the GSPC (Governance · Safety · Provenance · Continuity) 14-slot measurement instrument. This ADX product delivers the board export with frozen item-bank metadata, per-axis results, and verification instructions.
 
-**Coverage:** 14 quotable slots; 13 measured as of 2026-08-18 sitting. Jail axis quotable with separation UNTESTED.
+**Coverage:** 14 quotable slots; live ruling **14 measured of 14 quotable** (cite `/api/gspc`). Historical 2026-08-18 sitting was 13/14.
 
 **Update frequency:** On board sitting rulings and quarterly provision re-verification.
 
