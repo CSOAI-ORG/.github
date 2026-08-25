@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 0bc8900 (continued 2026-08-25T00:07Z)  
+**Commit:** 60a88cd (continued 2026-08-25T00:16Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (00:07Z) — **22/30**
+## Current status snapshot (00:16Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; 1 cron @ 23:48Z; no 2nd run through 00:07Z (GH delay) |
+| N5-01 | GATED | HF_TOKEN unset; **1 cron total** (23:48Z); 00:00Z and 00:15Z boundaries missed |
 | N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | export ready; live refresh pending |
@@ -25,11 +25,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-19 | DEFERRED | no GCP |
 | N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
 
-**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos. Next cron nominal ~00:15Z.
+**Owner unblock:** `HF_TOKEN` + manual workflow run (cron unreliable on `.github` repo). OR Trusted Publishers.
 
 ---
 
-## Current status snapshot (00:04Z) — superseded
+## Current status snapshot (00:07Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1151,4 +1151,20 @@ No change. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260825T000529Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Owner: HF_TOKEN or Trusted Publishers.
+
+---
+
+## Continuation log 61 (2026-08-25T00:16Z) — 00:15Z cron watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 00:15Z cron boundary · 2026-08-25T00:16Z |
+| N5-REGISTER | **MERGED** | PR #58 · 60a88cd · log 60 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; local publish skipped |
+| N5-01 | **CRON** | workflow state=active; still **1 run** (32791004769); 00:15Z missed |
+| N5-01 | **NOTE** | Cron `*/15` unreliable on CSOAI-ORG/.github — owner manual run preferred |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T000905Z.log · 2026-08-25T00:09:05Z |
+| N5-07/21 | **PASS** | claimguard-20260825T000905Z.log · ClaimGuard PASS |
+
+Cron unreliable. Auth blocked. Pack **22/30**.
 
