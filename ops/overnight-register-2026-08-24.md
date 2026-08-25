@@ -2207,3 +2207,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 123 (2026-08-25T18:01:11Z) — RALPH · signature_alg pytest green
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-P5 | **TESTED** | products/signature_alg/tests — 6 new + claimguard = **11 passed** · pytest-signature-alg-20260825T1801Z.log |
+| N5-BADGE | **LIVE** | both hosts 14 of 14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | runtime 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
