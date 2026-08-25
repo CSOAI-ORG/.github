@@ -1993,3 +1993,14 @@ No DOI remint · no paid spend. ~17:21 BST — continues to 04:00 London.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend.
+
+## Continuation log 107 (2026-08-25T16:25:00Z) — RALPH · HF wave-2 + Space card
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **POLISHED** | 12 more dataset README intended-use / deprecated locks → live 14/14 · ops/logs/hf-readme-stale13-wave2-20260825T1624Z.json |
+| N5-06 | **POLISHED** | Space `gspc-governance-leaderboard` README cites live 14/14 (runtime still PAUSED) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.

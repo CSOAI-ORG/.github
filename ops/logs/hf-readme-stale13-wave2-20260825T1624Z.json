@@ -1,0 +1,67 @@
+[
+  {
+    "repo": "csoai/provbench-manifest-survival",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/provbench-manifest-survival/commit/726e66ab6a450083a4efd45e589ddfadc16e631c"
+  },
+  {
+    "repo": "csoai/csoai-benchmarks",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/csoai-benchmarks/commit/7cf120dc2258fb7d3b2c1ea39b7303af6dd3c0c5"
+  },
+  {
+    "repo": "csoai/coai-bench",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/coai-bench/commit/e9d715b5a8869961f7f7cb7fe7fceacbf52062b0"
+  },
+  {
+    "repo": "csoai/compbench",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/compbench/commit/25e8347f00d5a46955392e8c2783acaa714472a7"
+  },
+  {
+    "repo": "csoai/arena-matrices",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/arena-matrices/commit/2e5402b7f3ba3d185f0eb5724df4401ae224d134"
+  },
+  {
+    "repo": "csoai/provbench-headline-2026-08-03",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/provbench-headline-2026-08-03/commit/f78cbe6149f592a9423f4671d410fb3323183eda"
+  },
+  {
+    "repo": "csoai/poai-bench",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/poai-bench/commit/ebf9c5cf2a22bf94554b701c172de299429e686d"
+  },
+  {
+    "repo": "csoai/gspc-airbench-eu-mandatory-run",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-airbench-eu-mandatory-run/commit/06cecb0332019d41aa82ba5b7b033ccb50a8700a"
+  },
+  {
+    "repo": "csoai/asisec-bench",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/asisec-bench/commit/6c1969a33fe01ead75c40b68968c18923926d97f"
+  },
+  {
+    "repo": "csoai/agisafe-bench",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/agisafe-bench/commit/3f2f008942fc590558c347ed99b68def6b3e6d9e"
+  },
+  {
+    "repo": "csoai/omai-bench",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/omai-bench/commit/ea6bdd801fb0ba3be775d9f07b11f6c98d6fbc49"
+  },
+  {
+    "repo": "csoai/sov-signal-leaderboard-v1",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov-signal-leaderboard-v1/commit/32041f40c8b2f489a671a2d61d3e6761a26934e5"
+  },
+  {
+    "repo": "csoai/gspc-governance-leaderboard",
+    "status": "SPACE_UPDATED",
+    "ref": "https://huggingface.co/spaces/csoai/gspc-governance-leaderboard/commit/7fce5e4853ad4f9ad52cb66c04e40b11ac4aa946"
+  }
+]
