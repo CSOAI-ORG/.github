@@ -2543,3 +2543,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-16 | **BLOCKED** | artinet |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 149 (2026-08-25T19:23:48Z) — RALPH · evidence-pack jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-20 | **SHIPPED** | `trust/evidence-pack/01-technical-system-description.md` — jail MEASURED + TIE + goldbank |
+| N5-VERIFY | **PASS** | ClaimGuard gate |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
