@@ -2481,3 +2481,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 144 (2026-08-25T19:10:39Z) — RALPH · deploy2 arenas 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | csoai-static-deploy2 `arenas.html` `7b0aa77` — cite **14 measured of 14** |
+| N5-SITE | **SHIPPED** | `honesty.html` `5ce429a` (await CDN) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
