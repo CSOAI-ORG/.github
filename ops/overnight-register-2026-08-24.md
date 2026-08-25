@@ -2507,3 +2507,15 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 146 (2026-08-25T19:20:35Z) — RALPH · deploy-static fail root-cause
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CF | **PREP+** | `deploy-static.yml` last success none recently — **4 failures** since 2026-08-16; explains csoai.org CDN lag for honesty/arenas on main |
+| N5-SITE | **SHIPPED** | honesty/arenas on deploy2 **main** tip correct; live CDN stale until CF restore |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

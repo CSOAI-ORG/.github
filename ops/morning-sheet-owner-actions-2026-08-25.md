@@ -7,7 +7,7 @@ Lane stopped at free polish. Everything below needs Nick.
 1. **Kaggle** — paste API token → `/tmp/csoai-secrets/kaggle.json` (chmod 600), then publish staged `export/kaggle-gspc-board/` (no DOI remint).
 2. **Discussion #97** — post with personal GH session (2FA): card URL already drafted in `connect/a2a/directory-submissions.md`.
 3. **artinet.io** — still login/signup 404; skip until venue works.
-4. **CF_API_TOKEN + CF_ACCOUNT_ID** — restore on `csoai-static-deploy2` per `ops/cf-api-token-restore.md` so MCP worker runtime matches registry **1.0.3**.
+4. **CF_API_TOKEN + CF_ACCOUNT_ID** — restore on `csoai-static-deploy2` per `ops/cf-api-token-restore.md` so MCP worker runtime matches registry **1.0.3**, and so `deploy-static.yml` can ship honesty/arenas 14/TIE already on main (`5ce429a` / `7b0aa77`).
 
 ## CONFIRM (spend)
 
