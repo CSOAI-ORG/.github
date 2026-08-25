@@ -1,7 +1,7 @@
 # Aggregator Propagation Watch-Note (N5-12)
 
 **Created:** 2026-08-24T17:30:00Z  
-**Last recheck: 2026-08-25T23:09Z (RALPH) — Glama 404; Smithery LIVE; PulseMCP q=gspc → **0 servers** (Apify fetch 200); submissions banner still “paused until mid-August”; awesome-a2a PR #157 14/14
+**Last recheck: 2026-08-25T23:17Z (RALPH) — Glama 404×2 (`@csoai/gspc` + `@CSOAI-ORG/gspc`); Smithery LIVE; PulseMCP q=gspc → **0 servers**; artinet signup 404; agentcards empty shell; awesome-a2a PR #157 14/14
 
 ## Status: WATCH (not a sales claim)
 
