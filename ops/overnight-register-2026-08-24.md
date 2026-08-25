@@ -2,14 +2,38 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T00:42Z)  
+**Commit:** 2bb2115 (continued 2026-08-25T00:45Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (00:41Z) — **22/30**
+## Current status snapshot (00:44Z) — **22/30**
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN unset; MCP Contribute Repos tool not exposed in Cursor |
+| N5-02 | LIVE (stale) | gspc-board README still EUNOMIA (export clean) |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | export ready; live refresh pending |
+| N5-05 | GATED | DOIs not minted (owner HF Settings) |
+| N5-06 | GATED | leaderboard-results HTTP 401; Space sdk=static |
+| N5-07/21 | PASS | ClaimGuard gate PASS |
+| N5-08–12 | LIVE | MCP registry 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card live at councilof.ai |
+| N5-15 | PREP | a2aagentlist email draft — owner decision |
+| N5-16 | BLOCKED | artinet.io no public registration API |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 OPEN (mergeable) |
+| N5-18 | GATED | Discussion #97 REST 404 / GraphQL FORBIDDEN |
+| N5-19 | DEFERRED | no GCP |
+| N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
+
+**Owner unblock:** Path A (`HF_TOKEN` + manual workflow) or Path B (Trusted Publishers). **Cron dead** — 1 run total.
+
+---
+
+## Current status snapshot (00:41Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1294,6 +1318,38 @@ Cron effectively dead (1 run in ~53 min). Browser lane blocked. Pack **22/30**.
 | N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z); 00:30Z boundary missed |
 | N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004212Z.log · 2026-08-25T00:42:12Z |
 | N5-07/21 | **PASS** | claimguard-20260825T004212Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
+
+---
+
+## Continuation log 66 (2026-08-25T00:44Z) — PR #61 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #61 · b15c220 · logs 63–65 on `main` · 2026-08-25T00:43:34Z |
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-25T00:44Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; publish skipped |
+| N5-01 | **MCP** | OAuth `contribute-repos` scope present; **Contribute Repos MCP tool not exposed** in Cursor (only read-only `hf_fs`) |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004415Z.log · 2026-08-25T00:44:15Z |
+| N5-07/21 | **PASS** | claimguard-20260825T004415Z.log · ClaimGuard PASS |
+
+Morning sheet on `main`. HF publish still owner-gated. Pack **22/30**.
+
+---
+
+## Continuation log 67 (2026-08-25T00:45Z) — timer recheck (overnight-hf-recheck)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #12 · 2026-08-25T00:45Z |
+| N5-REGISTER | **PR OPEN** | PR #62 · cursor/overnight-register-log66-ff6e · log 66 |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; **publish skipped** |
+| N5-01 | **GATED** | Latest `overnight-hf-publish` run 32788615051 (push, OIDC fail) |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004522Z.log · 2026-08-25T00:45:22Z |
+| N5-07/21 | **PASS** | claimguard-20260825T004521Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
 
