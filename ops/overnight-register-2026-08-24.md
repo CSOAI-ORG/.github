@@ -2400,3 +2400,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 138 (2026-08-25T18:53:10Z) — RALPH · measured_on + catalog CDN LIVE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `measured_on.note` jail **TIE (determined 2026-08-25)** on CDN |
+| N5-SITE | **LIVE** | `catalog.json` updated **2026-08-25** · board note **14 measured of 14** |
+| N5-VERIFY | **PASS** | re-run STRICT below |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
