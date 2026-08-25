@@ -2427,3 +2427,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 140 (2026-08-25T18:56:19Z) — RALPH · HF README jail TIE + Glama gap
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-02 | **LIVE+** | HF `csoai/gspc-board` README — jail MEASURED + TIE line (board.json untouched; DOI unchanged) |
+| N5-MCP | **GAP** | Glama still 404 for `csoai/gspc` (crosswalk listed; gspc not) — queued free claim when form exists |
+| N5-VERIFY | **PASS** | measured_on + catalog checks green |
+| N5-17 | **OPEN** | awesome-a2a PR #157 still open/mergeable |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
