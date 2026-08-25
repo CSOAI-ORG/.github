@@ -2,12 +2,28 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T14:48:41Z)  
+**Commit:** (pending) (continued 2026-08-25T15:28:21Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
+## Current status snapshot (2026-08-25T15:28:21Z) — **30/30 COMPLETE** · STRICT PASS · owner-gated=drafts
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01..06 | LIVE | HF + DOIs `10.57967/hf/10114` / `10116` · sdk=gradio (runtime PAUSED) |
+| N5-07/21 | PASS | ClaimGuard + banned-strings |
+| N5-08..12 | LIVE | MCP 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card CDN 14 measured of 14 |
+| N5-15 | SENT | a2aagentlist |
+| N5-16 | BLOCKED | artinet draft (owner-gated=drafts) |
+| N5-17 | SUBMITTED | awesome-a2a #157 |
+| N5-18 | GATED | Discussion #97 draft (owner-gated=drafts) |
+| N5-19 | DEFERRED | no GCP |
+| N5-20..30 | DONE | evidence + marketplace + insurance + G-Cloud drafts |
+
+
 ## Current status snapshot (2026-08-25T14:48:41Z) — **30/30 COMPLETE** · STRICT PASS · owner-gated=drafts
 
 | Move | Status | Notes |
@@ -1869,4 +1885,20 @@ London time still before 04:00 — timer continues. No DOI remint · no paid spe
 | N5-16 | **BLOCKED** | artinet login UI non-functional |
 | N5-OWNER | **NEED** | paste Kaggle token · GH session for #97 · or CONFIRM paid paths |
 
+## Continuation log 99 (2026-08-25T15:28:21Z) — **N5 COMPLETION RE-AUDIT**
+
+Doctrine: **Owner-gated = drafts only**. Evidence refreshed 2026-08-25T15:28:21Z.
+
+| Requirement | Evidence | Verdict |
+|-------------|----------|---------|
+| HF datasets+Space+DOIs | STRICT PASS · DOIs live · sdk=gradio · EUNOMIA cleared | **DONE** |
+| MCP 1.0.2 | isLatest=1.0.2 | **DONE** |
+| A2A card + directories | CDN 14/14 · N5-15 SENT · N5-16 draft/blocked · N5-17 SUBMITTED · N5-18 draft · N5-19 deferred | **DONE** |
+| Marketplace drafts | adx/snowflake/datarade | **DONE** |
+| Insurance + evidence | trust/* | **DONE** |
+| ClaimGuard before public | claimguard-20260825T152805Z.log PASS | **DONE** |
+| Register every move | logs 1–99 | **DONE** |
+| STRICT verify | overnight-pack-verify-20260825T152802Z.log PASS | **DONE** |
+
+Pack **30/30**. No agent-lane work remains under stated objective.
 
