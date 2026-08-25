@@ -2,18 +2,42 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 766d1f6 (continued 2026-08-25T00:18Z)  
+**Commit:** (pending) (continued 2026-08-25T00:21Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (00:18Z) — **22/30**
+## Current status snapshot (00:21Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; 1 cron @ 23:48Z; 00:15Z timer fired — no new run |
+| N5-01 | GATED | HF_TOKEN unset; MCP OAuth has contribute-repos but hf_fs read-only |
+| N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | export ready; live refresh pending |
+| N5-05 | GATED | DOIs not minted (owner HF Settings) |
+| N5-06 | GATED | leaderboard-results HTTP 401; Space sdk=static |
+| N5-07/21 | PASS | ClaimGuard gate PASS |
+| N5-08–12 | LIVE | MCP registry 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card 10/10 validator PASS |
+| N5-15 | PREP | a2aagentlist email draft — owner decision |
+| N5-16 | BLOCKED | artinet.io no public registration API |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 OPEN (mergeable) |
+| N5-18 | GATED | Discussion #97 REST 404 / GraphQL FORBIDDEN |
+| N5-19 | DEFERRED | no GCP |
+| N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
+
+**Owner unblock:** see updated morning sheet below (Path A HF_TOKEN or Path B Trusted Publishers).
+
+---
+
+## Current status snapshot (00:19Z) — superseded
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN unset; cron unreliable (1 run total); manual workflow required |
 | N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | export ready; live refresh pending |
@@ -25,11 +49,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-19 | DEFERRED | no GCP |
 | N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
 
-**Owner unblock:** `HF_TOKEN` + manual workflow run. Cron unreliable.
+**Owner unblock:** see updated morning sheet below (Path A HF_TOKEN or Path B Trusted Publishers).
 
 ---
 
-## Current status snapshot (00:16Z) — superseded
+## Current status snapshot (00:18Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -346,13 +370,21 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 
 **Pack score: 22/30 moves done or submitted; 8 owner-gated.**
 
-### Owner morning — unblock HF (only remaining critical path)
+### Owner morning — unblock HF (only remaining critical path) — **updated 00:19Z**
+
+**Do not rely on cron:** `overnight-hf-cron` has fired **once** (23:48Z); `*/15` schedule unreliable on this repo. **Manual workflow run required.**
 
 | Step | Action | Evidence when done |
 |------|--------|-------------------|
-| 1 | Repo Settings → Secrets → `HF_TOKEN` (write, org csoai) | secret listed |
-| 2 | Actions → **overnight-hf-publish** → Run workflow | leaderboard-results HTTP 200; Space sdk=gradio |
-| 3 | HF Settings → Generate DOI for gspc-board + gspc-bench-results | DOI URLs in register |
+| **A1** | Repo Settings → Secrets → `HF_TOKEN` (write, org csoai) | secret listed |
+| **A2** | Actions → **overnight-hf-publish** → Run workflow manually | leaderboard-results HTTP 200; Space sdk=gradio; board README no EUNOMIA |
+| **A3** | HF Settings → Generate DOI for gspc-board + gspc-bench-results | DOI URLs in register |
+| **B** | OR configure Trusted Publishers on each HF repo (GitHub Actions, `CSOAI-ORG/.github`, `main`, `overnight-hf-publish.yml`): | OIDC probe PASS in workflow logs |
+| | • https://huggingface.co/datasets/csoai/gspc-board/settings/trusted-publishers | |
+| | • https://huggingface.co/datasets/csoai/gspc-bench-results/settings/trusted-publishers | |
+| | • https://huggingface.co/datasets/csoai/gspc-leaderboard-results/settings/trusted-publishers | |
+| | • https://huggingface.co/spaces/csoai/gspc-governance-leaderboard/settings/trusted-publishers | |
+| **V** | `STRICT=1 bash ops/verify-overnight-pack.sh` | VERIFY PASS |
 | 4 | Optional: a2aagentlist email; Discussion #97 comment manually | register lines N5-15, N5-18 |
 
 ---
@@ -1183,4 +1215,26 @@ Cron unreliable. Auth blocked. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260825T001819Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
+
+---
+
+## Continuation log 63 (2026-08-25T00:21Z) — morning sheet + MCP OAuth recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DOCS | **UPDATED** | Owner morning sheet · Path A (HF_TOKEN) + Path B (Trusted Publishers URLs) + cron unreliable warning · 2026-08-25T00:19Z |
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-25T00:21Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; `hf auth list` → no stored tokens |
+| N5-01 | **MCP** | hf_whoami → Nicholastempleman, csoai **admin**, OAuth scopes include `contribute-repos` (expires 02:57Z) |
+| N5-01 | **BLOCKED** | HF MCP `hf_fs` is read-only (ls/cat/stat/find/search) — no upload/commit tool exposed to agent shell |
+| N5-01 | **GATED** | `gh workflow run overnight-hf-publish` → 403; `gh secret list` → 403 |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z); no 2nd cron through 00:21Z |
+| N5-02 | **STALE** | Live gspc-board README still EUNOMIA-era (export has GSPC branding) |
+| N5-06 | **GATED** | leaderboard-results HTTP 401; Space sdk=static |
+| N5-13/14 | **PASS** | A2A validator 10/10 · ops/logs/a2a-validator-local.json · 2026-08-25T00:20:57Z |
+| N5-17 | **PR OPEN** | awesome-a2a PR #157 · mergeable_state=clean |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T002055Z.log · 2026-08-25T00:20:55Z |
+| N5-07/21 | **PASS** | claimguard-20260825T002051Z.log · ClaimGuard PASS |
+
+Morning sheet merged into register. MCP OAuth cannot bridge to shell publish. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
 
