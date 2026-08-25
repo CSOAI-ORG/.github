@@ -2683,3 +2683,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 159 (2026-08-25T23:10:00Z) — RALPH · HANDOFF 14/14 + Glama 404 confirmed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **SHIPPED** | councilof-ai `369d6d9` — HANDOFF binding grammar 14/TIE |
+| N5-12 | **WATCH** | Glama `csoai/gspc` **404** (Apify); PulseMCP 0 hits |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
