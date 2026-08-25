@@ -2697,3 +2697,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 160 (2026-08-25T23:10:50Z) — RALPH · export attestation notes + directory watches
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **SHIPPED** | export + kaggle README attestation notes (do not edit signed board.json notes) |
+| N5-12 | **WATCH** | Glama @CSOAI-ORG/gspc **404**; cursor.directory no CSOAI hit for gspc |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token — package README ready |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

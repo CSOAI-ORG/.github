@@ -32,3 +32,7 @@ Independent AI-governance measurement board. **Source of truth:** [councilof.ai/
 Do **not** invent “22 axes.” Quotable board = **14**. In-lane honesty probes (`slot15`, `human-vs-ai`) are not board-quotable.
 
 Measurement only — not certification.
+
+## Attestation note
+
+`board.json` is Ed25519-attested. Do **not** edit axis `note` fields in-place (breaks ClaimGuard). Live narrative for jail TIE / 14 of 14 is on HF README + https://councilof.ai/api/gspc (`totals.public_count`, per-axis status).
