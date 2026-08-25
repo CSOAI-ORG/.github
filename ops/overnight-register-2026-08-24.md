@@ -2148,3 +2148,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend · no board score remint. Continues to 04:00 London.
 
+## Continuation log 119 (2026-08-25T17:39:13Z) — RALPH · openapi apex + P7 schema draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OPENAPI | **SHIPPED** | councilof-ai `public/openapi.json` `8bb42b0` (apex was 404; await Pages deploy) |
+| N5-P7 | **DRAFTED** | ops/evidence-registry-schema-draft.sql — Postgres schema + REST sketch (no infra / no spend) |
+| N5-10 | **FACT** | MCP worker runtime still **1.0.0** on councilof.ai/mcp + workers.dev (registry 1.0.3); needs CF_API_TOKEN |
+| N5-FEED | **LIVE** | feed still shows 14/14 item |
+| N5-P5 | **DRAFTED** | signature_alg pack + deploy2 wire |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
