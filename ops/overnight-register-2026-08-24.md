@@ -2259,3 +2259,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 127 (2026-08-25T18:16:01Z) — RALPH · CityPanel jail TIE + deploy wait
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED+** | CityPanel.tsx jail MEASURED/TIE · `a498c6a` |
+| N5-SITE | **SHIPPED** | pricingRisk/livingLedger/verifiableTrust/LivingStages/Honesty · prior SHAs |
+| N5-NOTE | **WAIT** | Pages deploy queue busy — CDN may lag until Build+deploy succeeds |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
