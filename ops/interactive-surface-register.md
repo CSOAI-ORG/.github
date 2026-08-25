@@ -14,7 +14,7 @@
 | A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated 10/10 | N5-13/14 |
 | Evidence pack | trust/evidence-pack/ | **DONE** | N5-20 |
 | awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED** awaiting review | N5-17 |
-| a2aagentlist | — | PREP (email — not sent) | N5-15 |
+| a2aagentlist | Gmail draft | PREP (draft ready — owner send) | N5-15 |
 | artinet.io | — | BLOCKED (placeholder) | N5-16 |
 | Datarade | providers.datarade.ai/apply | PREP drafted | N5-25 |
 

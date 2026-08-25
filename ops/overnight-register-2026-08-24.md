@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T02:20Z)  
+**Commit:** (pending) (continued 2026-08-25T02:24Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1537,3 +1537,17 @@ Agent lane still blocked on HF write. Pack **22/30**. Owner: Path A or Path B (s
 | N5-07/21 | **PASS** | claimguard-20260825T022030Z.log · ClaimGuard PASS |
 
 No publish path. Pack **22/30**. Owner: Path A or Path B (Gmail drafts from log 78).
+
+## Continuation log 80 (2026-08-25T02:24Z) — owner-notify drafts (Slack + GitHub Issue)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **PREP+** | Slack DM draft `Dr0BSB9B4P5K` → nicholastempleman (Path A/B unblock) · not auto-sent |
+| N5-OWNER | **OPEN** | GitHub Issue #75 · https://github.com/CSOAI-ORG/.github/issues/75 · owner HF unblock checklist |
+| N5-01 | **GATED** | HF_TOKEN unset; browser logged out; MCP write tools absent |
+| N5-CRON | **IDLE** | Still 2 cron runs (latest 32798301940 @ 01:38Z); no 3rd through 02:24Z |
+| N5-15 | **PREP** | Gmail draft exists (log 78); Slack/Issue now escalate owner attention |
+| N5-VERIFY | **FAIL (STRICT)** | unchanged vs log 79 · overnight-pack-verify-20260825T022030Z.log |
+
+Escalated owner unblock surfaces. Pack **22/30**.
+
