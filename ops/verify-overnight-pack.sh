@@ -162,6 +162,13 @@ print(latest[0] if latest else 'none')
   else
     note "ras.html stale (master aaa8386 — await Pages if still 13 measured axes)"
   fi
+  meas=$(curl -sL -A "CSOAI-overnight-verify/1.0" "https://councilof.ai/signed/gspc-measurement.json" 2>/dev/null || true)
+  meas_n=$(echo "$meas" | python3 -c "import sys,json; print(len(json.load(sys.stdin).get('axes') or []))" 2>/dev/null || true)
+  if [[ "$meas_n" == "14" ]] && echo "$meas" | grep -q "14 measured of 14" && ! echo "$meas" | grep -q "public count stays 13"; then
+    pass "signed/gspc-measurement.json 14 axes + 14/TIE narrative"
+  else
+    note "signed/gspc-measurement.json axes=${meas_n:-empty} (master 882fa61 — await Pages if truncated/stale)"
+  fi
   mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
     -H 'content-type: application/json' \
     -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \

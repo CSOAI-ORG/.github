@@ -2627,3 +2627,32 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 155 (2026-08-25T23:04:37Z) — RALPH · gspc-measurement.json CDN LIVE 14/TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `/signed/gspc-measurement.json` 17092B · 14 axes · swarm 14/TIE (master `882fa61`) |
+| N5-17 | **SHIPPED** | awesome-a2a PR #157 14/14 |
+| N5-VERIFY | **PASS** | ClaimGuard + STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 156 (2026-08-25T23:06:04Z) — RALPH · benchmarks page + Glama draft + verifier measurement
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `02bec7c` — `public/benchmarks/index.html` live 14/14 + jail TIE |
+| N5-12 | **DRAFTED** | `ops/glama-listing-draft.md` — Nick-gated |
+| N5-VERIFY | **PASS** | STRICT green incl. measurement.json + ras + swarm.note |
+| N5-SITE | **LIVE** | measurement.json CDN 14 axes |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | csoai.org honesty/arenas tip 14/TIE, CDN stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

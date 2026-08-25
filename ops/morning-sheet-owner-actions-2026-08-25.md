@@ -20,11 +20,14 @@ Lane stopped at free polish. Everything below needs Nick.
 - Invent 22 axes — cite live `totals.public_count`
 - Merge spend without CONFIRM
 
-## Already LIVE (no action) — refreshed 2026-08-25T19:32Z
+## Already LIVE (no action) — refreshed 2026-08-25T23:06Z
 
 - HF board + bench + DOIs · MCP registry 1.0.3 · A2A card 14/14 · Smithery · RSS · openapi · badge 14/14
 - `/api/axis-register` **14** + jail TIE · `measured_on.note` TIE · `catalog.json` 14/14 · mcp.json 1.0.3 · AGENT-ONBOARDING · server-card 14/14
 - Ask SOV chatGrounded jail MEASURED/TIE (`78627ff`) · ApiDocs lists jail
-- Swarm axis note + RAS → 14/TIE on master (`aaa8386`) — await Pages CDN
+- Swarm axis note + RAS → 14/TIE **CDN LIVE** (`aaa8386`)
+- `signed/gspc-measurement.json` full 14-axis snapshot **CDN LIVE** (`882fa61`)
+- awesome-a2a PR #157 title/body **14 of 14**
+- benchmarks static page master `02bec7c` (await Pages)
 - ClaimGuard board-dynamic · STRICT overnight-pack green
 - Site copy on master: jail MEASURED + TIE (sticky-335 storm may still flap unrelated card_index)
