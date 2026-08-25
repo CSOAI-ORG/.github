@@ -3,7 +3,7 @@
 ## N5-15: a2aagentlist.com
 
 **URL:** https://a2aagentlist.com/submit  
-**Status:** PREP — submit via web form (compliance review before listing)
+**Status:** PREP — **Gmail draft created** (owner-gated; not sent). Draft id `r-8600767036973835528` → `gal6111@gmail.com` (2026-08-25T02:07Z).
 
 | Field | Value |
 |-------|-------|
@@ -36,7 +36,7 @@
 ## N5-18: Discussion #97 reply
 
 **Repo:** a2aproject/A2A Discussion #97  
-**Status:** GATED — GraphQL `addDiscussionComment` → FORBIDDEN for integration (retried 2026-08-24T21:58Z); post manually  
+**Status:** GATED — GraphQL `addDiscussionComment` → FORBIDDEN for integration (retried 2026-08-24T21:58Z; again 2026-08-25T02:07Z with discussion id `D_kwDOOOo1wM4AfP8J`); REST comments 404; post manually  
 **Comment (one line + link):**
 
 > Council of AI — independent GSPC governance measurement (13 of 14 axes): https://councilof.ai/.well-known/agent-card.json

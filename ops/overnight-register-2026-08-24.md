@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T02:01Z)  
+**Commit:** (pending) (continued 2026-08-25T02:08Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1503,3 +1503,22 @@ Cron alive but sparse (~110 min between runs). Auth still blocked. Pack **22/30*
 
 No change. Pack **22/30**. Owner: Path A or Path B.
 
+
+## Continuation log 78 (2026-08-25T02:08Z) — goal wake + drafts + Discussion retry
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation @ 2026-08-25T02:06Z · timer last delivery #17 @ 02:00Z · sub_92e7f494 |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; shell publish skipped |
+| N5-01 | **GATED** | HF MCP OAuth as Nicholastempleman (csoai admin, `contribute-repos`) but Cursor tools read-only `hf_fs` only; OAuth expires **2026-08-25T02:57:32Z** |
+| N5-02 | **LIVE (stale)** | MCP `cat` gspc-board README still **EUNOMIA** (736 B); export clean GSPC |
+| N5-06 | **GATED** | MCP `stat` gspc-leaderboard-results → **missing**; Space sdk=**static** (index.html); HTTP 401 / 200 |
+| N5-15 | **PREP+** | Gmail draft `r-8600767036973835528` → gal6111@gmail.com (owner-gated; **not sent**) |
+| N5-OWNER | **PREP+** | Gmail draft `r427904398603563616` → nicholastempleman@gmail.com (Path A/B unblock) |
+| N5-18 | **GATED** | GraphQL `addDiscussionComment` on `D_kwDOOOo1wM4AfP8J` → FORBIDDEN (retry); REST 404 |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 still OPEN / MERGEABLE |
+| N5-CRON | **IDLE** | Still **2** cron runs (latest 32798301940 @ 01:38Z); no 3rd through 02:08Z |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T020610Z.log · 2026-08-25T02:06:10Z |
+| N5-07/21 | **PASS** | claimguard-20260825T020610Z.log · ClaimGuard PASS |
+
+Agent lane still blocked on HF write. Pack **22/30**. Owner: Path A or Path B (see Gmail draft).
