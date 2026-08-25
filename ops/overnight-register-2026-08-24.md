@@ -2494,3 +2494,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 145 (2026-08-25T19:20:12Z) — RALPH · deploy2 _site/arenas + honesty await CDN
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `_site/arenas.html` `f774f58` · `arenas.html` `7b0aa77` · `honesty.html` `5ce429a` (main tip correct; csoai.org CDN lag) |
+| N5-VERIFY | **PASS** | councilof.ai STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
