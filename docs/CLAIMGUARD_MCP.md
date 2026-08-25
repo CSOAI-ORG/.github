@@ -30,15 +30,33 @@
 
 ```json
 {
+  "ok": true,
+  "board_axes": 14,
+  "measured_axes": 14,
+  "public_count": "14 measured of 14 quotable",
+  "findings": [
+    {
+      "status": "PASS",
+      "code": "claim.public_count_match",
+      "message": "claim matches live totals.public_count (14 measured of 14 quotable)"
+    }
+  ]
+}
+```
+
+Example overclaim (still FAIL):
+
+```json
+{
   "ok": false,
   "board_axes": 14,
-  "measured_axes": 13,
-  "public_count": "13 measured of 14 (SITTING 1, 2026-08-18)",
+  "measured_axes": 14,
+  "public_count": "14 measured of 14 quotable",
   "findings": [
     {
       "status": "FAIL",
-      "code": "AXIS_COUNT_OVERCLAIM",
-      "message": "Claim implies 16 measured board axes; live board has 14 quotable slots, 13 measured."
+      "code": "claim.sixteen_axes",
+      "message": "Board is 14 quotable slots (+2 in-lane honesty-only). Never claim 16 measured axes."
     }
   ]
 }

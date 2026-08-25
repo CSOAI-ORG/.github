@@ -2,7 +2,7 @@
 
 **Audit date:** 2026-08-23  
 **Host under test:** `https://councilof.ai`  
-**Truth rail:** [`/api/gspc`](https://councilof.ai/api/gspc) — 14 axes, 13 measured of 14  
+**Truth rail:** [`/api/gspc`](https://councilof.ai/api/gspc) — 14 quotable axes; **live ruling is `totals.public_count`** (as of 2026-08-25: 14 measured of 14 quotable). This checklist’s 2026-08-23 rows below recorded the then-current 13/14 sitting.  
 **Canon:** [`GSPC_AXIS_CANON.md`](GSPC_AXIS_CANON.md) · **Plan:** [`MASTER_PLAN.md`](MASTER_PLAN.md)
 
 Run locally: `node scripts/run-frontend-audit.mjs` (from this repo).

@@ -2014,3 +2014,13 @@ No DOI remint · no paid spend.
 | N5-VERIFY | **PASS** | overnight-pack-verify-20260825T162308Z.log |
 
 No DOI remint · no paid spend. ~17:26 BST — timer continues to 04:00 London.
+
+## Continuation log 109 (2026-08-25T16:27:00Z) — RALPH · living docs cite public_count
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DOCS | **POLISHED** | CLAIMGUARD_MCP · FRONTEND_AUDIT header · CANNON_FIRE footnote → live `public_count` |
+| N5-DB | **QUEUED** | CF API token restore gap indexed |
+| N5-VERIFY | **PASS** | prior STRICT green |
+
+No DOI remint · no paid spend.
