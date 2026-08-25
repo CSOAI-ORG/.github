@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T00:41Z)  
+**Commit:** (pending) (continued 2026-08-25T00:42Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1280,4 +1280,20 @@ Morning sheet merged into register. MCP OAuth cannot bridge to shell publish. Pa
 | N5-07/21 | **PASS** | claimguard-20260825T004114Z.log · ClaimGuard PASS |
 
 Cron effectively dead (1 run in ~53 min). Browser lane blocked. Pack **22/30**.
+
+---
+
+## Continuation log 65 (2026-08-25T00:42Z) — timer recheck (overnight-hf-recheck)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #11 · 2026-08-25T00:30Z |
+| N5-REGISTER | **PR OPEN** | PR #61 · 57e9afa · logs 63–64 ready for review |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; **publish skipped** |
+| N5-01 | **GATED** | Latest `overnight-hf-publish` run 32788615051 (push, OIDC fail) |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z); 00:30Z boundary missed |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004212Z.log · 2026-08-25T00:42:12Z |
+| N5-07/21 | **PASS** | claimguard-20260825T004212Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
 
