@@ -2,14 +2,38 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T00:21Z)  
+**Commit:** (pending) (continued 2026-08-25T00:41Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (00:21Z) — **22/30**
+## Current status snapshot (00:41Z) — **22/30**
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01 | GATED | HF_TOKEN unset; browser not logged in; MCP hf_fs read-only |
+| N5-02 | LIVE (stale) | gspc-board README still EUNOMIA (export clean) |
+| N5-03 | LIVE | gspc-bench-results HTTP 200 |
+| N5-04 | LIVE | export ready; live refresh pending |
+| N5-05 | GATED | DOIs not minted (owner HF Settings) |
+| N5-06 | GATED | leaderboard-results HTTP 401; Space sdk=static |
+| N5-07/21 | PASS | ClaimGuard gate PASS |
+| N5-08–12 | LIVE | MCP registry 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card live at councilof.ai |
+| N5-15 | PREP | a2aagentlist email draft — owner decision |
+| N5-16 | BLOCKED | artinet.io no public registration API |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 OPEN (mergeable) |
+| N5-18 | GATED | Discussion #97 REST 404 / GraphQL FORBIDDEN |
+| N5-19 | DEFERRED | no GCP |
+| N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
+
+**Owner unblock:** Path A (`HF_TOKEN` + manual workflow) or Path B (Trusted Publishers). **Cron dead** — 1 run total through 00:41Z.
+
+---
+
+## Current status snapshot (00:21Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1237,4 +1261,23 @@ No change. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
 | N5-07/21 | **PASS** | claimguard-20260825T002051Z.log · ClaimGuard PASS |
 
 Morning sheet merged into register. MCP OAuth cannot bridge to shell publish. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
+
+---
+
+## Continuation log 64 (2026-08-25T00:41Z) — 00:30Z cron watch + browser recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 00:30Z cron boundary · 2026-08-25T00:41Z |
+| N5-REGISTER | **PR OPEN** | PR #61 · cursor/overnight-morning-sheet-ff6e · log 63 draft |
+| N5-01 | **GATED** | HF_TOKEN unset; `TOKEN` env → HF 401; `hf auth list` → no tokens |
+| N5-01 | **BROWSER** | computerUse → huggingface.co **not logged in**; no shell token bridge |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z); **00:30Z boundary missed** |
+| N5-02 | **STALE** | Live README title still "EUNOMIA measurement"; export clean |
+| N5-06 | **GATED** | leaderboard-results HTTP 401; Space sdk=static (export has gradio) |
+| N5-17 | **PR OPEN** | awesome-a2a PR #157 · mergeable_state=clean |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T004114Z.log · 2026-08-25T00:41:14Z |
+| N5-07/21 | **PASS** | claimguard-20260825T004114Z.log · ClaimGuard PASS |
+
+Cron effectively dead (1 run in ~53 min). Browser lane blocked. Pack **22/30**.
 
