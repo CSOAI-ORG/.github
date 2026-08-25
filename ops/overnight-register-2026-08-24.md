@@ -2711,3 +2711,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 161 (2026-08-25T23:11:29Z) — RALPH · livingLedger comment + directory watches logged
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | livingLedger comment `7ab1380` |
+| N5-12 | **WATCH** | Glama both paths 404 · cursor.directory no hit · PulseMCP 0 |
+| N5-VERIFY | **PASS** | STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
