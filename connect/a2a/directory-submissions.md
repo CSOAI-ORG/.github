@@ -14,7 +14,7 @@
 ## N5-16: artinet.io
 
 **URL:** https://artinet.io (community registry, WIP)  
-**Status:** **BLOCKED** — login/signup UI non-functional (404 / unresponsive controls, 2026-08-25T11:55Z); no public registration API; waitlist-era venue.
+**Status:** **BLOCKED** — login/signup still 404 (rechecked curl+Apify 2026-08-25T23:17Z); no public registration API; waitlist-era venue.
 
 | Field | Value |
 |-------|-------|
@@ -49,7 +49,7 @@ No GCP account available to lane. **Explicit deferral:** no GCP account — defe
 ## N5-20: agentcards.io — DRAFT (free probe 2026-08-25T16:33Z)
 
 **URL:** https://agentcards.io  
-**Status:** **PREP** — site HTTP 200; no public submit API found from lane; no authenticated session. Ready fields below for owner paste if UI exposes “add card”.
+**Status:** **PREP** — site HTTP 200; Apify 2026-08-25T23:17Z: empty page shell, **no public submit/register form**; no authenticated session. Ready fields below for owner paste if UI exposes “add card”.
 
 | Field | Value |
 |-------|-------|
@@ -63,7 +63,7 @@ No GCP account available to lane. **Explicit deferral:** no GCP account — defe
 **URL:** https://a2a.dev  
 **Status:** **PREP** — site HTTP 200; treat as docs/portal, not a confirmed open directory. Do not invent a submission. Owner: confirm if a registry form exists.
 
-## Aggregator watch (N5-12) — 2026-08-25T23:12Z
+## Aggregator watch (N5-12) — 2026-08-25T23:19Z
 
 | Venue | Status |
 |-------|--------|

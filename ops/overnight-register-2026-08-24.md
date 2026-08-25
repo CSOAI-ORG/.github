@@ -2739,3 +2739,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 163 (2026-08-25T23:19:06Z) — RALPH · free polish + aggregator recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `cbd9bbe` gspcAxes.test · `9be2ac9` scrollworld · `c447433` e2e → **14 of 14** |
+| N5-12 | **WATCH** | Apify: Glama 404×2 · PulseMCP 0 · Smithery LIVE · agentcards empty · artinet signup 404 |
+| N5-VERIFY | **PASS** | STRICT=1 green · agent-card 14/14 · api `public_count` 14 · ClaimGuard PASS |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet signup still 404 |
+| N5-CF | **PREP** | CF token — csoai.org honesty CDN still stale FAQ "13 measured"; tip 14/TIE |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

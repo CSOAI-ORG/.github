@@ -20,7 +20,7 @@ Lane stopped at free polish. Everything below needs Nick.
 - Invent 22 axes — cite live `totals.public_count`
 - Merge spend without CONFIRM
 
-## Already LIVE (no action) — refreshed 2026-08-25T23:12Z
+## Already LIVE (no action) — refreshed 2026-08-25T23:19Z
 
 - HF board + bench + DOIs · MCP registry 1.0.3 · A2A card 14/14 · Smithery · RSS · openapi · badge 14/14
 - `/api/axis-register` **14** + jail TIE · `measured_on.note` TIE · `catalog.json` 14/14 · mcp.json 1.0.3 · AGENT-ONBOARDING · server-card 14/14
@@ -32,4 +32,9 @@ Lane stopped at free polish. Everything below needs Nick.
 - HONEST_REGISTER + HANDOFF + livingLedger comments → 14/TIE
 - PulseMCP/Glama still absent (Apify); Smithery LIVE
 - ClaimGuard board-dynamic · STRICT overnight-pack green
-- Site copy on master: jail MEASURED + TIE (sticky-335 storm may still flap unrelated card_index)
+- Site copy on master: jail MEASURED + TIE
+- councilof-ai `cbd9bbe` gspcAxes.test primary fixtures 14/14
+- councilof-ai `9be2ac9` scrollworld doctrine 14/TIE
+- councilof-ai `c447433` e2e homepage asserts 14 measured of 14
+- axis-universe WARNING + 14/TIE already on master (raw CDN may lag)
+- Apify 23:17Z: Glama 404 · PulseMCP 0 · Smithery LIVE · artinet signup 404 · agentcards empty (sticky-335 storm may still flap unrelated card_index)
