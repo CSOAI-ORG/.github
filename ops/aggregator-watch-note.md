@@ -1,14 +1,14 @@
 # Aggregator Propagation Watch-Note (N5-12)
 
 **Created:** 2026-08-24T17:30:00Z  
-**Last recheck: 2026-08-25T19:35Z (RALPH) — Glama still 404; Smithery LIVE; awesome-a2a PR #157 line now 14/14 on fork branch
+**Last recheck: 2026-08-25T23:09Z (RALPH) — Glama 404; Smithery LIVE; PulseMCP q=gspc → **0 servers** (Apify fetch 200); submissions banner still “paused until mid-August”; awesome-a2a PR #157 14/14
 
 ## Status: WATCH (not a sales claim)
 
 | Aggregator | Mechanism | Expected lag | Status 2026-08-25T17:12Z |
 |------------|-----------|--------------|--------------------------|
 | Official MCP registry | OIDC publish | Immediate | **LIVE** `io.github.CSOAI-ORG/gspc` **1.0.3** isLatest · `board (14 of 14)` |
-| PulseMCP | `updated_since` ETL | ~24h | Search UI 200: other `csoai-*` servers indexed; **gspc not listed yet** (recheck 2026-08-25T18:02Z) |
+| PulseMCP | `updated_since` ETL | ~24h | Search UI 200: other `csoai-*` servers indexed; **gspc still 0 hits** (Apify recheck 2026-08-25T23:09Z) |
 | Glama | Auto-index GitHub + official registry | Minutes–unknown | `glama.ai/mcp/servers/@CSOAI-ORG/gspc` still **404** · `glama.json` on deploy2 |
 | Smithery | listing page | — | **LIVE** https://smithery.ai/servers/csoai/gspc |
 | GitHub MCP Registry curation | Discussion thread | Manual | Draft only (below) |
