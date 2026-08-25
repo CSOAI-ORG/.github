@@ -50,17 +50,17 @@ http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
 
   echo "--- N5-05 HF DOIs"
   for repo in csoai/gspc-board csoai/gspc-bench-results; do
-    doi=$(curl -s "https://huggingface.co/api/datasets/$repo" | python3 -c "
+    doi=$(curl -s "https://huggingface.co/api/datasets/$repo" | python3 -c '
 import sys, json
 d = json.load(sys.stdin)
-doi = d.get('doi')
+doi = d.get("doi")
 if not doi:
-    for t in d.get('tags') or []:
-        if isinstance(t, str) and t.startswith('doi:'):
-            doi = t.split('doi:', 1)[1]
+    for t in d.get("tags") or []:
+        if isinstance(t, str) and t.startswith("doi:"):
+            doi = t[4:]
             break
-print(doi or 'none')
-" 2>/dev/null || echo "none")
+print(doi or "none")
+' 2>/dev/null || echo "none")
     if [[ "$doi" != "none" && -n "$doi" ]]; then pass "$repo DOI=$doi"; else warn "$repo DOI not minted"; fi
   done
 

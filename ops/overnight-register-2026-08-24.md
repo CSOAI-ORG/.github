@@ -1639,3 +1639,13 @@ Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GAT
 | N5-07/21 | **PASS** | claimguard-20260825T102508Z.log · ClaimGuard PASS |
 
 Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GATED, N5-19 DEFERRED.
+
+## Continuation log 87 (2026-08-25T10:25Z) — STRICT PASS confirmed after verifier fix
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T102545Z.log · 2026-08-25T10:25Z · DOIs detected via tags |
+| N5-05 | **LIVE** | board `10.57967/hf/10114` · bench `10.57967/hf/10116` |
+| N5-07/21 | **PASS** | claimguard-20260825T102545Z.log · ClaimGuard PASS |
+
+Pack **25/30**. STRICT green. Remaining directories/GCP owner-gated.
