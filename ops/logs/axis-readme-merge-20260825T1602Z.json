@@ -1,0 +1,89 @@
+{
+  "at": "2026-08-25T16:02:00Z",
+  "results": [
+    {
+      "hf": "csoai/gspc-gov",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-agi",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-prv",
+      "num": 2,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-asi",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-mcp",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-oss",
+      "num": 2,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-mach",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-care",
+      "num": 2,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-xr",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-det",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-art5",
+      "num": 2,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-swarm",
+      "num": 1,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-affect",
+      "num": 2,
+      "status": "MERGED",
+      "detail": "None"
+    },
+    {
+      "hf": "csoai/gspc-jail",
+      "num": 2,
+      "status": "MERGED",
+      "detail": "None"
+    }
+  ]
+}

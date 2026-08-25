@@ -1,6 +1,6 @@
 {
   "schema": "csoai.outreach-registry/0.1",
-  "updated_at": "2026-08-25T15:26:49Z",
+  "updated_at": "2026-08-25T16:13:07Z",
   "source_of_truth_notes": [
     "GSPC quotable board = 14 slots; live public_count from /api/gspc",
     "EUNOMIA board (PR #645 UNMEASURED indices) is a SEPARATE surface \u2014 do not mix counts",
@@ -95,7 +95,9 @@
       "doi": "10.57967/hf/10114",
       "owner_gate": false,
       "verified": "2026-08-25T15:24:46Z",
-      "do_not": "remint DOI"
+      "do_not": "remint DOI",
+      "notes": "DOI LIVE \u2014 never remint",
+      "verified_at": "2026-08-25T16:08:36Z"
     },
     {
       "id": "hf-gspc-bench",
@@ -105,7 +107,9 @@
       "doi": "10.57967/hf/10116",
       "owner_gate": false,
       "verified": "2026-08-25T15:24:46Z",
-      "do_not": "remint DOI"
+      "do_not": "remint DOI",
+      "notes": "DOI LIVE \u2014 never remint",
+      "verified_at": "2026-08-25T16:08:36Z"
     },
     {
       "id": "hf-leaderboard-results",
@@ -129,10 +133,11 @@
       "kind": "mcp",
       "url": "https://registry.modelcontextprotocol.io",
       "status": "LIVE",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "owner_gate": false,
       "verified": "2026-08-25T15:24:46Z",
-      "notes": "1.0.2 isLatest \u2014 audit claiming unpublished is STALE"
+      "notes": "1.0.3 isLatest \u2014 board (14 of 14)",
+      "verified_at": "2026-08-25T16:13:07Z"
     },
     {
       "id": "a2a-card",
@@ -193,7 +198,8 @@
     {
       "id": "mcp-server-json",
       "status": "LIVE",
-      "notes": "csoai-static-deploy2 main + registry 1.0.2"
+      "notes": "csoai-static-deploy2 main + registry 1.0.3",
+      "verified_at": "2026-08-25T16:13:07Z"
     },
     {
       "id": "a2a-well-known",

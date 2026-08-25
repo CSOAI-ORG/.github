@@ -2,7 +2,7 @@
   "schema": "csoai.gspc-axes/0.5",
   "issuer": "Council of AI",
   "served_from": "https://councilof.ai/api/gspc",
-  "gspc_registry_axes": 13,
+  "gspc_registry_axes": 14,
   "of_14": true,
   "counting_rule": "14 quotable board slots; public ruling from live totals.public_count",
   "axes": [

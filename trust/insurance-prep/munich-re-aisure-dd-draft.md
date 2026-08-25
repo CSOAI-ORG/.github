@@ -17,7 +17,7 @@ See `trust/evidence-pack/01-technical-system-description.md`
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Measured axes | 13/14 | Board totals |
+| Measured axes | 14/14 (live `totals.public_count`) | https://councilof.ai/api/gspc |
 | Mean accuracy (leaders) | 0.7318 | Board |
 | Separated leads | 4 | Board |
 | Hallucination-rate | N/A — not an LLM-output benchmark | — |

@@ -8,19 +8,19 @@
 
 ---
 
-## Problem (live, 2026-08-24)
+## Problem (living board)
 
 Axis ask:
 
 > How many GSPC axes are on the public board?
 
-`POST /api/chat` returns grounded copy that can say **“14 are MEASURED”** while `GET /api/gspc` publishes:
+`POST /api/chat` must cite live `GET /api/gspc` totals — never invent counts. As of 2026-08-25 the signed board publishes:
 
 - `totals.axes` = **14**  
-- `totals.measured_axes` = **13**  
-- `totals.public_count` ≈ `13 measured of 14 quotable (…)`  
+- `totals.measured_axes` = **14**  
+- `totals.public_count` = `14 measured of 14 quotable`  
 
-Sales demos must not speak over the signed board. ClaimGuard is the refuse gate.
+(Historical 2026-08-18 sitting was 13/14.) ClaimGuard refuses overclaims (12/15/16 axes, certification, Elo-as-grade) and allows claims that match living `public_count`.
 
 ---
 
@@ -58,7 +58,7 @@ python3 products/claimguard/claimguard.py check --live --claim "14 quotable axes
 
 | Finding code (ClaimGuard) | Chat must |
 |---|---|
-| `claim.sixteen_axes` / fifteen | Refuse; state **14 quotable**, **13 measured**, +2 in-lane not quotable |
+| `claim.sixteen_axes` / fifteen | Refuse; state **14 quotable**, cite live `public_count`, +2 in-lane not quotable |
 | Elo / league as public GSPC | Refuse; Wilson + McNemar only; Elo is not on `/api/gspc` |
 | `claim.certification` | Refuse; “measurement, not certification” |
 | Jail separation resolved while UNTESTED | Refuse; jail measured, separation UNTESTED |
@@ -79,16 +79,16 @@ Set `state` to a refused / grounded-refuse variant consistent with existing chat
 
 ---
 
-## Map “twelve axes” → correct 14 / 13 language
+## Map “twelve axes” → correct living language
 
-Legacy and verbal slips still say “twelve axes” (older suite folklore). Chat must **not** echo twelve as current board truth.
+Legacy and verbal slips still say “twelve axes” (older suite folklore). Chat must **not** echo twelve as current board truth. Always prefer quoting live `totals.public_count`.
 
 | User says | Correct language |
 |---|---|
-| “twelve axes” / “12 axes” | The public board is **14** quotable slots; ruling is **13 measured of 14**. Twelve is not the living count. |
+| “twelve axes” / “12 axes” | The public board is **14** quotable slots; cite live `public_count` (currently **14 measured of 14**). Twelve is not the living count. |
 | “sixteen axes” / “16 measured” | **Refuse.** 14 board + 2 in-lane honesty — never “16 measured.” |
-| “fifteen axes” | **Refuse.** Not 15; public measured ruling is 13 of 14. |
-| “all axes measured” | Only if `measured_axes === axes`; today answer with **13 of 14**. |
+| “fifteen axes” | **Refuse.** Not 15; cite live `public_count`. |
+| “all axes measured” | Only if `measured_axes === axes`; otherwise quote `public_count`. |
 | “what’s the Elo” (as GSPC grade) | **Refuse** as board grade; point to Wilson / McNemar fields. |
 
 Normalization helper (suggested):
@@ -96,7 +96,7 @@ Normalization helper (suggested):
 ```ts
 function normalizeAxisCountTalk(q: string): string | null {
   if (/\b(twelve|12)\s+axes?\b/i.test(q)) {
-    return "User referred to twelve axes — correct to 14 quotable / 13 measured of 14.";
+    return "User referred to twelve axes — correct to live totals.public_count (14 quotable).";
   }
   if (/\b(sixteen|16)\s+(measured\s+)?axes?\b/i.test(q)) {
     return "OVERCLAIM: 16 axes — ClaimGuard must FAIL.";
@@ -153,9 +153,9 @@ If Python is unavailable in the Pages function runtime, **port the claim regex +
 
 ## Acceptance
 
-1. Ask “16 measured axes?” → refused with 14/13 language; no Elo; no certification.  
-2. Ask “twelve axes?” → corrected to 14 quotable / 13 measured — never affirms 12.  
-3. Ask “How many GSPC axes are on the public board?” → answer consistent with `totals.public_count` (must not say “14 are MEASURED” while measured_axes is 13).  
+1. Ask “16 measured axes?” → refused with 14-quotable language; no Elo; no certification.  
+2. Ask “twelve axes?” → corrected to live `public_count` (14 quotable) — never affirms 12.  
+3. Ask “How many GSPC axes are on the public board?” → answer consistent with `totals.public_count` (currently **14 measured of 14 quotable**).  
 4. `node scripts/weekend-demo-smoke.mjs` → `api.chat.canon` **PASS**.  
 5. ClaimGuard `--self-test` still green in `batch-run-gates.mjs`.
 

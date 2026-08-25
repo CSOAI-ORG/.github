@@ -75,11 +75,17 @@ print(doi or "none")
   echo "--- N5-10/11 MCP registry"
   mcp=$(curl -s "https://registry.modelcontextprotocol.io/v0.1/servers?search=gspc" | python3 -c "
 import sys,json
+from packaging.version import Version
 d=json.load(sys.stdin)
 latest=[x['server']['version'] for x in d.get('servers',[]) if x.get('_meta',{}).get('io.modelcontextprotocol.registry/official',{}).get('isLatest')]
 print(latest[0] if latest else 'none')
 " 2>/dev/null || echo "none")
-  if [[ "$mcp" == "1.0.2" ]]; then pass "MCP latest=$mcp"; else fail "MCP latest=$mcp (expected 1.0.2)"; fi
+  # Accept 1.0.2+ (1.0.3 = free polish: board 14 of 14 description)
+  if python3 -c "from packaging.version import Version; import sys; sys.exit(0 if Version(sys.argv[1]) >= Version('1.0.2') else 1)" "$mcp" 2>/dev/null; then
+    pass "MCP latest=$mcp"
+  else
+    fail "MCP latest=$mcp (expected >=1.0.2)"
+  fi
 
   echo "--- N5-13/14 A2A agent card"
   curl -s "https://councilof.ai/.well-known/agent-card.json" -o "/tmp/overnight-agent-card-$TS.json"

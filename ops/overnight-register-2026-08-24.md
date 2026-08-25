@@ -1917,3 +1917,22 @@ Pack **30/30**. No agent-lane work remains under stated objective.
 
 No DOI remint · no paid spend. Timer continues to 04:00 London.
 
+
+## Continuation log 101 (2026-08-25T16:13:00Z) — RALPH 16:00Z · free polish (HF merge + MCP 1.0.3 + ClaimGuard)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | overnight-pack-verify after verifier ≥1.0.2 |
+| N5-07/21 | **PASS** | claimguard-20260825T161239Z.log · `claim.public_count_match` (no WARN) |
+| N5-13/14 | **LIVE** | agent-card CDN still 14 measured of 14 |
+| N5-AXIS | **MERGED** | 14 open HF axis README PRs → main (14/14 live) · ops/logs/axis-readme-merge-20260825T1602Z.json |
+| N5-10/11 | **LIVE+** | MCP `io.github.CSOAI-ORG/gspc` **1.0.3** isLatest · desc board (14 of 14) · deploy2 `9879a84` · Actions run 32869860056 |
+| N5-CG | **UPDATED** | ClaimGuard board-dynamic: allow 14 measured when `measured_axes==14`; exact `public_count` PASS |
+| N5-DRAFTS | **POLISHED** | munich-re + claimguard-chat patch notes → live 14/14 |
+| N5-DB | **CLEAN** | mining_gaps INDEXED deduped 40→10 · P5/P6/P7 queued · surfaces DOI notes fixed |
+| N5-06 | **PAUSED** | Space still cpu-basic limit=0 (no spend) |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-16 | **BLOCKED** | artinet unchanged |
+
+No DOI remint · no paid spend. London ~17:13 BST — timer continues to 04:00.
