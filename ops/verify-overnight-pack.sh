@@ -169,6 +169,12 @@ print(latest[0] if latest else 'none')
   else
     note "signed/gspc-measurement.json axes=${meas_n:-empty} (master 882fa61 — await Pages if truncated/stale)"
   fi
+  meth=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/methodology" 2>/dev/null || true)
+  if echo "$meth" | grep -q "jail MEASURED with living-board separation TIE" && ! echo "$meth" | grep -q "16-axis" && ! echo "$meth" | grep -q "jail separation untested"; then
+    pass "api/methodology jail TIE + 14-slot (no 16-axis / untested)"
+  else
+    note "api/methodology CDN lag (master 9601613 — await Pages if still untested/16-axis)"
+  fi
   mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
     -H 'content-type: application/json' \
     -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \

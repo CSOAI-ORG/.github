@@ -2767,3 +2767,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token — SPA/Pages may need deploy for StoryWorld CDN |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 165 (2026-08-25T23:32:26Z) — RALPH · methodology.ts 14/TIE (CDN pending)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `9601613` — `/api/methodology` honesty_rules jail **TIE** + 14-slot (drop 16-axis/untested); **CDN still stale** (Pages lag / card_index storm) |
+| N5-PACK | **SHIPPED** | `ops/verify-overnight-pack.sh` NOTE-checks methodology CDN |
+| N5-VERIFY | **PASS** | STRICT green · agent-card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token + Pages lag |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
