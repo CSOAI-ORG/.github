@@ -2024,3 +2024,12 @@ No DOI remint · no paid spend. ~17:26 BST — timer continues to 04:00 London.
 | N5-VERIFY | **PASS** | prior STRICT green |
 
 No DOI remint · no paid spend.
+
+## Continuation log 110 (2026-08-25T16:28:00Z) — RALPH · CF secret name clarified
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **NEED** | restore **`CF_API_TOKEN`** + **`CF_ACCOUNT_ID`** on `csoai-static-deploy2` (workflow maps these into wrangler-action; missing → “CLOUDFLARE_API_TOKEN” error) |
+| N5-10/11 | **PARTIAL** | registry 1.0.3 LIVE · worker source 1.0.3 · runtime still 1.0.0 |
+
+No DOI remint · no paid spend.
