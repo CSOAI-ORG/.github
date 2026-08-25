@@ -11,12 +11,14 @@
     "governance",
     "benchmark",
     "gspc",
-    "evaluation"
+    "evaluation",
+    "doi-10.57967/hf/10114",
+    "14-measured-of-14"
   ],
   "collaborators": [],
   "data": [
     {
-      "description": "Signed/quotable GSPC board export mirrored from councilof.ai"
+      "description": "Signed GSPC board export mirrored from councilof.ai — live ruling 14 measured of 14 quotable (cite /api/gspc). DOI 10.57967/hf/10114 on Hugging Face csoai/gspc-board."
     }
   ]
 }

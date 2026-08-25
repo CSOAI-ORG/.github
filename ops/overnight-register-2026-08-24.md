@@ -2052,3 +2052,15 @@ No DOI remint · no paid spend.
 | N5-16 | **BLOCKED** | artinet unchanged |
 
 No DOI remint · no paid spend. ~17:34 BST — continues to 04:00 London.
+
+## Continuation log 112 (2026-08-25T16:35:00Z) — RALPH · ClaimGuard README + Kaggle meta polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CG | **POLISHED** | products/claimguard/README.md documents live public_count PASS |
+| N5-KAGGLE | **STAGED+** | dataset-metadata.json keywords + DOI/14-of-14 description (still waiting token) |
+| N5-P6 | **DONE** | confirmed corpus-watch.yml |
+| N5-P5 | **QUEUED** | Continuity signature_alg grader — code-lane / possible RunPod |
+| N5-17 | **OPEN** | awesome-a2a #157 still MERGEABLE |
+
+No DOI remint · no paid spend.
