@@ -2276,7 +2276,7 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 | Move | Status | Register line |
 |------|--------|---------------|
-| N5-CG | **POLISHED** | claimguard: “jail separation resolved” **FAIL**s when board is TIE (not a separated leader) · pytest 13 passed |
+| N5-CG | **POLISHED** | claimguard: “jail separation resolved” **FAIL**s when board is TIE (not a separated leader) · pytest **13 passed** |
 | N5-SITE | **SHIPPED** | jail TIE copy on master (await Pages) |
 | N5-KAGGLE | **STAGED** | no token |
 | N5-18 | **GATED** | Discussion #97 |
