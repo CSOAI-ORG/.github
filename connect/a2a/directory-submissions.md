@@ -62,3 +62,13 @@ No GCP account available to lane. **Explicit deferral:** no GCP account — defe
 
 **URL:** https://a2a.dev  
 **Status:** **PREP** — site HTTP 200; treat as docs/portal, not a confirmed open directory. Do not invent a submission. Owner: confirm if a registry form exists.
+
+## Aggregator watch (N5-12) — 2026-08-25T23:12Z
+
+| Venue | Status |
+|-------|--------|
+| Smithery | **LIVE** https://smithery.ai/servers/csoai/gspc |
+| Official MCP registry | **LIVE** 1.0.3 board (14 of 14) |
+| PulseMCP | **ABSENT** — `q=gspc` → 0 servers (Apify) |
+| Glama | **404** — `csoai/gspc` and `@CSOAI-ORG/gspc` (draft: `ops/glama-listing-draft.md`) |
+

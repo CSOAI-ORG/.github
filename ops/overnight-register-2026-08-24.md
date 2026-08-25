@@ -2725,3 +2725,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 162 (2026-08-25T23:11:45Z) — RALPH · connect aggregator watch table
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-12 | **DOC** | `connect/a2a/directory-submissions.md` aggregator watch table |
+| N5-TIMER | **LIVE** | ralph-overnight-until-4am · deliveryCount 17 · next ~30m |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
