@@ -45,3 +45,20 @@
 ## N5-19: Google Cloud Agent Registry — DEFERRED
 
 No GCP account available to lane. **Explicit deferral:** no GCP account — deferred to Nick's morning sheet.
+
+## N5-20: agentcards.io — DRAFT (free probe 2026-08-25T16:33Z)
+
+**URL:** https://agentcards.io  
+**Status:** **PREP** — site HTTP 200; no public submit API found from lane; no authenticated session. Ready fields below for owner paste if UI exposes “add card”.
+
+| Field | Value |
+|-------|-------|
+| Name | Council of AI — Measurement Agent |
+| Card URL | https://councilof.ai/.well-known/agent-card.json |
+| Protocol | A2A v1.0.0 |
+| Description | Independent AI-governance measurement — GSPC 14 measured of 14 quotable, Ed25519-signed board, stranger verify |
+
+## N5-21: a2a.dev — DRAFT (free probe 2026-08-25T16:33Z)
+
+**URL:** https://a2a.dev  
+**Status:** **PREP** — site HTTP 200; treat as docs/portal, not a confirmed open directory. Do not invent a submission. Owner: confirm if a registry form exists.

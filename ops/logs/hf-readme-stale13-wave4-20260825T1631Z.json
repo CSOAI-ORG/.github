@@ -1,0 +1,102 @@
+[
+  {
+    "repo": "csoai/aiact-frozen-split-harness",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/aiact-frozen-split-harness/commit/40b37edca821443d5812823abacefc8259b9e153"
+  },
+  {
+    "repo": "csoai/ai-act-flywheel-master-corpus",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/ai-act-flywheel-master-corpus/commit/ed7012fa740058aa5648d6af08af5c79d3e0c4a4"
+  },
+  {
+    "repo": "csoai/sov33-pod-top-down-2026-08-03",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov33-pod-top-down-2026-08-03/commit/076d4cf721633bb1b013373351f9cae62b78d848"
+  },
+  {
+    "repo": "csoai/sov34-training-corpus",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov34-training-corpus/commit/dff69a2765893b7bf9fe5bc49fb6d7ba7acbe9d5"
+  },
+  {
+    "repo": "csoai/hellaswag-pod-top-down-2026-08-03",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/hellaswag-pod-top-down-2026-08-03/commit/9be43f669821e57f65878193e36c886389a1805c"
+  },
+  {
+    "repo": "csoai/arc-easy-family-sweep-2026-08-03",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/arc-easy-family-sweep-2026-08-03/commit/84cd8e0071692a9741c07c52dffbf063de082094"
+  },
+  {
+    "repo": "csoai/lmeval-official-format",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/lmeval-official-format/commit/0b632a9b2e2f2768f8fcfb61b6244e371d76b12e"
+  },
+  {
+    "repo": "csoai/oowm-ground-truth-v2",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-ground-truth-v2/commit/c342b4c0805155128b526760b1381a1bc979eb69"
+  },
+  {
+    "repo": "csoai/oowm-ground-truth-v3",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-ground-truth-v3/commit/d697eaefecf19294d7fb8bd360011189d202ab31"
+  },
+  {
+    "repo": "csoai/oowm-runtime",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-runtime/commit/2f4a534ba6c44d195a08d727011bb8a810d4deaf"
+  },
+  {
+    "repo": "csoai/sov34-1p5b-vs-baseline",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov34-1p5b-vs-baseline/commit/30f4ae90b09392369e919950d59ba57813994d7f"
+  },
+  {
+    "repo": "csoai/oowm-substrate-v4",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-substrate-v4/commit/283af056e07666bec571c58199934bf7a1fd5a5d"
+  },
+  {
+    "repo": "csoai/oowm-ground-truth-v7",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-ground-truth-v7/commit/8133b2a6f35fd6741fdc12d8846897b3af5e5d1d"
+  },
+  {
+    "repo": "csoai/oowm-sov-signal-v8",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-sov-signal-v8/commit/6d9954c82df128ac0824ad458fdb43b600b16063"
+  },
+  {
+    "repo": "csoai/oowm-substrate-v5",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-substrate-v5/commit/a7db68f40f8da765c2326517830ef558e07034be"
+  },
+  {
+    "repo": "csoai/oowm-ground-truth-v9",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/oowm-ground-truth-v9/commit/1b3354bbff419d29628bc7139890f9e37e305635"
+  },
+  {
+    "repo": "csoai/sov-signal-ground-truth-v8",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov-signal-ground-truth-v8/commit/ff1b0f1071ed6a20f0379e98c6449b0d89549dd9"
+  },
+  {
+    "repo": "csoai/sov-signal-ground-truth-v10",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov-signal-ground-truth-v10/commit/d17b8ae333f4da3b12d04130ab109680ca04d75c"
+  },
+  {
+    "repo": "csoai/sov33-v12-results",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/sov33-v12-results/commit/634bc6f3da0a56e23949eaece427d4b34a0740e2"
+  },
+  {
+    "repo": "csoai/gspc-xr",
+    "status": "SPACE_UPDATED",
+    "ref": "https://huggingface.co/spaces/csoai/gspc-xr/commit/0927f38cd115776a0d67ecfc56fd055224fa8055"
+  }
+]

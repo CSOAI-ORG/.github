@@ -2033,3 +2033,22 @@ No DOI remint · no paid spend.
 | N5-10/11 | **PARTIAL** | registry 1.0.3 LIVE · worker source 1.0.3 · runtime still 1.0.0 |
 
 No DOI remint · no paid spend.
+
+## Continuation log 111 (2026-08-25T16:34:00Z) — RALPH 16:30Z cycle
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T163047Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T163049Z.log · public_count_match |
+| N5-13/14 | **LIVE** | agent-card CDN 14 measured of 14 |
+| N5-10/11 | **LIVE** | MCP 1.0.3 isLatest · board (14 of 14) |
+| N5-HF | **POLISHED** | wave-4: 19 more dataset READMEs + Space `gspc-xr` → live 14/14 · ops/logs/hf-readme-stale13-wave4-20260825T1631Z.json · **0 remaining** stale “13 measured of 14” boilerplate on csoai datasets |
+| N5-12 | **WATCH** | aggregator-watch-note refreshed for 1.0.3 · Glama still 404 · PulseMCP 403 |
+| N5-DIR | **PREP** | agentcards.io + a2a.dev draft rows in directory-submissions.md |
+| N5-P6 | **DONE** | corpus-watch.yml already LIVE on deploy2 |
+| N5-06 | **PAUSED** | Space cpu-basic limit=0 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-16 | **BLOCKED** | artinet unchanged |
+
+No DOI remint · no paid spend. ~17:34 BST — continues to 04:00 London.
