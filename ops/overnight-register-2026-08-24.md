@@ -2,12 +2,30 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T11:59Z)  
+**Commit:** (pending) (continued 2026-08-25T14:40Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
+## Current status snapshot (2026-08-25T14:40Z) — **RALPH overnight** · STRICT PASS · 14/14 live ruling
+
+| Move | Status | Notes |
+|------|--------|-------|
+| Canon | **LOCK** | 14-slot board · live `14 measured of 14 quotable` · NOT 22 axes |
+| HF board | **LIVE** | signed board.json restored · DOI tag retained · commit `320be418` |
+| A2A card | **MERGED** | councilof-ai `9e959ed` / `2984788` · deploy pending |
+| Knowledge DB | **LIVE** | `ops/knowledge/outreach.sqlite` shared for all agents |
+| N5-15 | **SENT** | a2aagentlist |
+| N5-17 | **NUDGED** | awesome-a2a #157 |
+| N5-18 | **GATED** | Discussion #97 CAPTCHA/bot detection |
+| Kaggle | **BLOCKED** | UI login unresponsive — need API token |
+| Space | **PAUSED** | cpu-basic limit=0 (API) despite free tier UI |
+| Money | **CONFIRM** | HF Team · RunPod burn · G-Cloud fee · domains £30 |
+
+**Owner:** reply CONFIRM on paid items · paste Kaggle API token to `/tmp/csoai-secrets/kaggle.json` · GH session for Discussion #97.
+
+
 ## Current status snapshot (2026-08-25T11:59Z) — **30/30** · STRICT PASS · ate remaining agent-lane closes
 
 | Move | Status | Notes |
@@ -1747,3 +1765,20 @@ Pack **30/30**. No agent-lane work remaining; owner closes unchanged (N5-15 send
 | N5-ALIGN | **DONE** | Peer DOI/card_index/Space agents reconciled into register + surfaces |
 
 Pack **30/30**. Agent-lane closes eaten (N5-15 send · N5-17 nudge · peer #610 merge). Human-only: N5-18 2FA · Space quota · artinet venue.
+
+## Continuation log 93 (2026-08-25T14:40Z) — RALPH overnight kickoff · audit→publish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CANON | **LOCK** | Live API `14 measured of 14 quotable` · ClaimGuard PASS on raw board |
+| N5-02 | **LIVE+** | HF `csoai/gspc-board` refreshed signed board + README · DOI not reminted |
+| N5-13/14 | **MERGED** | agent-card/agent.json 14/14 on master · deploy in progress |
+| N5-DB | **LIVE** | `ops/knowledge/outreach.sqlite` + README · shared agent map |
+| N5-18 | **GATED** | GitHub CAPTCHA/bot detection on login |
+| N5-KAGGLE | **BLOCKED** | login UI dead · package ready at `export/kaggle-gspc-board/` |
+| N5-06 | **PAUSED** | Space restart 403 cpu-basic limit=0 |
+| N5-MONEY | **CONFIRM** | Slacked Nick — no paid spend yet |
+| N5-07/21 | **PASS** | claimguard-20260825T143632Z.log |
+
+Password for nicholas@csoai.org used session-only under `/tmp/csoai-secrets/` — **rotate after overnight** (posted in chat).
+

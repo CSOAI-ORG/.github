@@ -9,7 +9,7 @@
 |-------|-------|
 | Name | Council of AI — Measurement Agent |
 | Card URL | https://councilof.ai/.well-known/agent-card.json |
-| Description | Independent AI-governance measurement — GSPC 13 measured of 14, signed board, stranger verify |
+| Description | Independent AI-governance measurement — GSPC 14 measured of 14, signed board, stranger verify |
 
 ## N5-16: artinet.io
 
@@ -29,7 +29,7 @@
 **Edit:** README.md only (English)
 
 ```markdown
-- ✨ Add: [Council of AI](https://councilof.ai) — GSPC governance measurement agent (13 measured of 14 axes, Ed25519-signed board, stranger verify at /gspc-verify). [Agent card](https://councilof.ai/.well-known/agent-card.json)
+- ✨ Add: [Council of AI](https://councilof.ai) — GSPC governance measurement agent (14 measured of 14 axes, Ed25519-signed board, stranger verify at /gspc-verify). [Agent card](https://councilof.ai/.well-known/agent-card.json)
 ```
 
 **Rationale:** Independent measurement body publishing A2A v1.0 agent card with governance, crosswalk, and benchmark-quality skills. Measurement only — not certification.

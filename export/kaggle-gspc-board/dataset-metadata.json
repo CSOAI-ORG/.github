@@ -1,0 +1,22 @@
+{
+  "title": "GSPC Board \u2014 Council of AI (14-slot governance measurement)",
+  "id": "nicholastempleman/gspc-board",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "ai",
+    "governance",
+    "benchmark",
+    "gspc",
+    "evaluation"
+  ],
+  "collaborators": [],
+  "data": [
+    {
+      "description": "Signed/quotable GSPC board export mirrored from councilof.ai"
+    }
+  ]
+}

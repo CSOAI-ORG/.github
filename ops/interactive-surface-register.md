@@ -18,6 +18,7 @@
 | a2aagentlist | gal6111@gmail.com | **SENT** 2026-08-25T11:56Z | N5-15 |
 | artinet.io | — | BLOCKED (login UI broken / no API) | N5-16 |
 | honest card_index 150 | councilof-ai#610 merged `a2b7b33` | **LIVE** on master (34171B / sha 5bb93de) | peer-align |
+| Shared knowledge DB | ops/knowledge/outreach.sqlite | **LIVE** agent map | overnight |
 | Datarade | providers.datarade.ai/apply | PREP drafted | N5-25 |
 
 **Pending labels:** GATED · LIVE · PARTIAL · SUBMITTED · BLOCKED · DONE

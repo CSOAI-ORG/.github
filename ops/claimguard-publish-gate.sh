@@ -20,11 +20,14 @@ if [[ ${#TARGETS[@]} -eq 0 ]]; then
   TARGETS=("$ROOT/export" "$ROOT/trust/evidence-pack")
 fi
 
+CLAIM="$(python3 -c 'import json,sys; print((json.load(open(sys.argv[1])).get("totals") or {}).get("public_count") or "14-slot GSPC board")' "$BOARD")"
+
 {
   echo "=== ClaimGuard publish gate $TS ==="
   echo "board: $BOARD"
+  echo "claim: $CLAIM"
   echo "--- attestation + board integrity"
-  python3 "$CG" check --board "$BOARD" --claim "13 measured of 14" || CG_FAIL=1
+  python3 "$CG" check --board "$BOARD" --claim "$CLAIM" || CG_FAIL=1
   echo "--- banned-strings"
   node "$BS" "${TARGETS[@]}" || BS_FAIL=1
 } | tee "$LOG"

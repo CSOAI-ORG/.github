@@ -1,3 +1,10 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# session secrets
+/tmp/
+**/.kaggle/
+kaggle.json
+**/csoai-secrets/
+
