@@ -1,6 +1,6 @@
 {
   "schema": "csoai.outreach-registry/0.1",
-  "updated_at": "2026-08-25T15:24:46Z",
+  "updated_at": "2026-08-25T15:26:49Z",
   "source_of_truth_notes": [
     "GSPC quotable board = 14 slots; live public_count from /api/gspc",
     "EUNOMIA board (PR #645 UNMEASURED indices) is a SEPARATE surface \u2014 do not mix counts",
@@ -176,16 +176,17 @@
       "url": "https://github.com/a2aproject/A2A/discussions/97",
       "status": "GATED",
       "owner_gate": true,
-      "verified": "2026-08-25T15:24:46Z",
-      "notes": "CAPTCHA/2FA"
+      "verified": "2026-08-25T15:26:49Z",
+      "notes": "browser clicks non-functional; CAPTCHA/2FA"
     },
     {
       "id": "kaggle-gspc-board",
       "kind": "kaggle",
       "status": "STAGED",
       "owner_gate": true,
-      "verified": "2026-08-25T15:24:46Z",
-      "path": "export/kaggle-gspc-board"
+      "verified": "2026-08-25T15:26:49Z",
+      "path": "export/kaggle-gspc-board",
+      "notes": "browser UI dead; owner paste /tmp/csoai-secrets/kaggle.json"
     }
   ],
   "integrations": [

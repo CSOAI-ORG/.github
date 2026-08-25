@@ -1860,3 +1860,13 @@ Peer fire-book `d1e3e12` / `registry/` was **not** in this workspace; rebuilt fr
 
 London time still before 04:00 — timer continues. No DOI remint · no paid spend.
 
+## Continuation log 98 (2026-08-25T15:26:49Z) — browser gate subagent returned BLOCKED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-KAGGLE | **BLOCKED** | no kaggle.json · browser sign-in UI non-functional |
+| N5-18 | **GATED** | Discussion #97 unposted · same UI/auth block |
+| N5-16 | **BLOCKED** | artinet login UI non-functional |
+| N5-OWNER | **NEED** | paste Kaggle token · GH session for #97 · or CONFIRM paid paths |
+
+
