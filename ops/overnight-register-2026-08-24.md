@@ -2836,3 +2836,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 170 (2026-08-25T23:36:58Z) — RALPH · CDN still serves pre-StoryWorld NewHome chunk
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CDN | **WATCH** | live `NewHome-v3.r2-*.js` still embeds StoryWorld “separation untested”; master `bde6f12` is TIE — await Pages rebuild |
+| N5-CDN | **WATCH** | `/api/methodology` still 16-axis/untested vs master `9601613` |
+| N5-12 | **WATCH** | awesome-a2a PR #157 OPEN mergeable=clean · 14 of 14 |
+| N5-VERIFY | **PASS** | agent-card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF / Pages |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
