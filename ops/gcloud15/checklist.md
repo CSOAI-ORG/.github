@@ -27,7 +27,7 @@ Minimum for SaaS/Support lots.
 ## Service definition skeleton
 
 **Service name:** Council of AI GSPC Measurement  
-**Description:** Independent AI governance measurement instrument — 13 measured of 14 axes. Free regulator tier. Evidence packs for qualified buyers.  
+**Description:** Independent AI governance measurement instrument — live ruling **14 measured of 14 quotable** (cite `/api/gspc`). Free regulator tier. Evidence packs for qualified buyers.  
 **Lot fit:** SaaS, Support and Hosting (pending lot structure on reopen)
 
 ## FTS monitoring alert
