@@ -40,7 +40,7 @@
 **Status:** **GATED** — GraphQL FORBIDDEN for integration; browser GitHub has no session / hardware 2FA (rechecked 2026-08-25T11:55Z); post manually  
 **Comment (one line + link):**
 
-> Council of AI — independent GSPC governance measurement (13 of 14 axes): https://councilof.ai/.well-known/agent-card.json
+> Council of AI — independent GSPC governance measurement (14 of 14 axes): https://councilof.ai/.well-known/agent-card.json
 
 ## N5-19: Google Cloud Agent Registry — DEFERRED
 

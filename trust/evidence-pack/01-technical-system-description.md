@@ -7,7 +7,7 @@
 
 ## 1. What the system does
 
-CSOAI operates an independent AI-governance **measurement** instrument called GSPC (Governance · Safety · Provenance · Continuity). The instrument comprises 14 quotable slots on a public board; **13 measured of 14** as of the 2026-08-18 sitting. Each measured axis carries a frozen item bank, deterministic grading predicates (never LLM-as-judge), fleet run results, Wilson confidence intervals where n≥30, and McNemar separation tests where applicable.
+CSOAI operates an independent AI-governance **measurement** instrument called GSPC (Governance · Safety · Provenance · Continuity). The instrument comprises 14 quotable slots on a public board; live ruling from https://councilof.ai/api/gspc is **14 measured of 14 quotable** (earlier 2026-08-18 sitting was 13 measured of 14). Each measured axis carries a frozen item bank, deterministic grading predicates (never LLM-as-judge), fleet run results, Wilson confidence intervals where n≥30, and McNemar separation tests where applicable.
 
 The system publishes:
 

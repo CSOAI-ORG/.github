@@ -5,7 +5,7 @@
     "axes": 14,
     "measured_axes": 13,
     "quotable_axes": 14,
-    "public_count": "13 measured of 14 quotable (GSPC ruling 2026-08-18)",
+    "public_count": "14 measured of 14 quotable",
     "license": "CC-BY-4.0",
     "license_note": "Board data is CC-BY-4.0 (attribute: Council of AI, CSOAI Ltd 16939677, councilof.ai). Our own valve-2 bench-card flagged the payload's missing licence field \u2014 fixed same day.",
     "items": 887,

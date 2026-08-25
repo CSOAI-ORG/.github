@@ -24,7 +24,7 @@ echo "s3: $S3_PREFIX"
 DATA_SET_ID=$(aws dataexchange create-data-set \
   --name "$DATA_SET_NAME" \
   --asset-type "$ASSET_TYPE" \
-  --description "GSPC board export — 13 measured of 14. Measurement only, not certification." \
+  --description "GSPC board export — 14 measured of 14. Measurement only, not certification." \
   --region "$REGION" \
   --query 'Id' --output text)
 echo "create-data-set: $DATA_SET_ID"

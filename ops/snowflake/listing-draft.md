@@ -27,7 +27,7 @@ ORDER BY axis;
 Provider Studio draft:
 
 - Title: CSOAI GSPC Board Export
-- Description: Signed governance measurement board — 13 measured of 14. Measurement only.
+- Description: Signed governance measurement board — 14 measured of 14. Measurement only.
 - Tags: governance, ai-safety, compliance, measurement
 - Profile approval (~1 business day) required before public listing
 

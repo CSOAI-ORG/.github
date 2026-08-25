@@ -26,7 +26,7 @@ measurement@csoai.org (role email — not personal)
 
 ## Short description
 
-Signed GSPC governance measurement board export: 13 measured of 14 axes, deterministic grading, Ed25519-verifiable. Measurement only — not certification.
+Signed GSPC governance measurement board export: 14 measured of 14 axes, deterministic grading, Ed25519-verifiable. Measurement only — not certification.
 
 ## Long description
 

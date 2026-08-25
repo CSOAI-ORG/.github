@@ -38,7 +38,7 @@ Per-axis bench-room result rows from the Council of AI GSPC measurement instrume
 
 ## Summary
 
-- **13 measured of 14** axes on the public board
+- **14 measured of 14** axes on the public board
 - 4 separated leads, 9 ties, 1 untested separation (jail)
 - Measurement only — not certification
 
