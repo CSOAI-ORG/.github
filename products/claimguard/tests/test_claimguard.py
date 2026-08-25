@@ -61,6 +61,35 @@ def test_fail_jail_separation_claim():
     assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r.findings)
 
 
+def test_fail_jail_separation_when_tie():
+    b = _signed_board(
+        totals={
+            "axes": 14,
+            "measured_axes": 14,
+            "quotable_axes": 14,
+            "public_count": "14 measured of 14 quotable",
+        },
+        axes=[
+            {"axis": "governance", "status": "MEASURED", "accuracy": 0.7, "n": 10},
+            {"axis": "jail", "status": "MEASURED", "separation": "TIE", "n": 71},
+        ],
+    )
+    r = audit(b, ["jail separation resolved"])
+    assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r.findings)
+    assert "TIE" in next(f.message for f in r.findings if f.code == "claim.jail_separation")
+
+
+def test_pass_jail_separation_when_separated():
+    b = _signed_board(
+        axes=[
+            {"axis": "governance", "status": "MEASURED", "accuracy": 0.7, "n": 10},
+            {"axis": "jail", "status": "MEASURED", "separation": "SEPARATED", "n": 71},
+        ],
+    )
+    r = audit(b, ["jail separation resolved"])
+    assert any(f.code == "claim.jail_separation_ok" and f.status == Status.PASS for f in r.findings)
+
+
 def test_fail_empty_axes():
     b = _signed_board()
     # resign would be needed for sig; skip_sig to isolate payload rule

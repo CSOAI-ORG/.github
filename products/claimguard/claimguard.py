@@ -209,9 +209,9 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
         "GSPC public ranking is Wilson+McNemar, not Elo. Elo league is not on /api/gspc.",
     ),
     (
-        re.compile(r"jail.{0,40}separat(ion|ed).{0,20}(resolved|pass|done)", re.I),
+        re.compile(r"jail.{0,40}separat(ion|ed).{0,20}(resolved|pass|done|SEPARATED)", re.I),
         "claim.jail_separation",
-        "jail separation is UNTESTED on the living board until McNemar runs.",
+        "Jail separation claims must match the living board (cite /api/gspc). A TIE is not a separated leader.",
     ),
     (
         re.compile(r"\bcertif(y|ied|ication)\b", re.I),
@@ -248,17 +248,40 @@ def check_claims(board: dict[str, Any], claims: list[str]) -> list[Finding]:
         for pat, code, msg in CLAIM_RULES:
             if pat.search(text):
                 matched = True
-                # jail separation special-case: only FAIL if board says UNTESTED
+                # jail separation: FAIL unless living board reports SEPARATED
                 if code == "claim.jail_separation":
                     jail = axes_by_id.get("jail") or {}
-                    if jail.get("separation") == "UNTESTED":
-                        out.append(Finding(Status.FAIL, code, f"{msg} Claim: {text!r}"))
+                    sep = jail.get("separation")
+                    if sep == "SEPARATED":
+                        out.append(
+                            Finding(
+                                Status.PASS,
+                                "claim.jail_separation_ok",
+                                f"board jail.separation=SEPARATED; claim allowed: {text!r}",
+                            )
+                        )
+                    elif sep == "TIE":
+                        out.append(
+                            Finding(
+                                Status.FAIL,
+                                code,
+                                f"jail separation is TIE on the living board — a TIE is not a separated leader. Claim: {text!r}",
+                            )
+                        )
+                    elif sep == "UNTESTED":
+                        out.append(
+                            Finding(
+                                Status.FAIL,
+                                code,
+                                f"jail separation is UNTESTED on the living board. Claim: {text!r}",
+                            )
+                        )
                     else:
                         out.append(
                             Finding(
                                 Status.WARN,
                                 code,
-                                f"jail separation is {jail.get('separation')}; still review claim: {text!r}",
+                                f"jail separation is {sep!r}; still review claim: {text!r}",
                             )
                         )
                 elif code == "claim.fourteen_measured":
