@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T02:26Z)  
+**Commit:** (pending) (continued 2026-08-25T06:51Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1564,4 +1564,20 @@ Escalated owner unblock surfaces. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260825T022618Z.log · ClaimGuard PASS |
 
 Pack **22/30**. Owner: Path A or Path B (Issue #75).
+
+## Continuation log 82 (2026-08-25T06:51Z) — **HF publish LIVE** (N5-01/02/04/06)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **LIVE** | Browser login as Nicholastempleman; ClaimGuard PASS; uploaded via HF PRs then **merged** |
+| N5-02 | **LIVE** | gspc-board README **EUNOMIA cleared** · GSPC Board Export live |
+| N5-03 | **LIVE** | gspc-bench-results refreshed via merged PR |
+| N5-04 | **LIVE** | cards refreshed with export |
+| N5-06 | **LIVE** | gspc-leaderboard-results HTTP **200**; Space sdk=**gradio** (was static) |
+| N5-05 | **GATED** | DOIs not minted (owner Settings; irreversible) |
+| N5-PR | **MERGED** | HF discussions: board #1+#2, bench #1, leaderboard-results #1, Space #1 |
+| N5-VERIFY | **FAIL (STRICT)** | only remaining STRICT fails: DOI ×2 · overnight-pack-verify-20260825T065040Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T065040Z.log · ClaimGuard PASS |
+
+Pack **24/30** (was 22). Remaining gated: DOI (N5-05), a2aagentlist (N5-15), artinet (N5-16), Discussion #97 (N5-18), GCP (N5-19).
 
