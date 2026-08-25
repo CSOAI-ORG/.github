@@ -1,0 +1,32 @@
+[
+  {
+    "repo": "csoai/gspc-leaderboard-results",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-leaderboard-results/commit/3f07d20144e143441f76cbf5ad4c6ae099afa036"
+  },
+  {
+    "repo": "csoai/gspc-boards",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-boards/commit/92ffecc7a26e4fb23467962099defd97ca6e0007"
+  },
+  {
+    "repo": "csoai/gspc-papers",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-papers/commit/fa6ee859bbfa56cde826d209e3895689fcfcf027"
+  },
+  {
+    "repo": "csoai/gspc-normalized",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-normalized/commit/0fa19a5238516f64569677e17d835c3a1bb86b92"
+  },
+  {
+    "repo": "csoai/gspc-arena-results",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-arena-results/commit/cb9fc6ae5bdf4c74e750f8353188fcff1869dd1b"
+  },
+  {
+    "repo": "csoai/mcp-scoreboard",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/mcp-scoreboard/commit/9e426d6cc3a24a76c029bf1d882377a258e1e90d"
+  }
+]

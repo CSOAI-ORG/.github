@@ -1981,3 +1981,15 @@ Live worker `initialize` still reports 1.0.0 until token restored. No DOI remint
 | N5-VERIFY | **PASS** | overnight-pack-verify-20260825T161957Z.log |
 
 No DOI remint · no paid spend. ~17:21 BST — continues to 04:00 London.
+
+## Continuation log 106 (2026-08-25T16:23:00Z) — RALPH · more HF README 14/14 polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **POLISHED** | 6 more datasets: leaderboard-results, boards, papers, normalized, arena-results, mcp-scoreboard → live 14/14 language · ops/logs/hf-readme-stale13-polish-20260825T1622Z.json |
+| N5-HF | **CORRECTED** | arena-results + mcp-scoreboard: historical 13/14 vs live 14/14 clarified |
+| N5-VERIFY | **PASS** | prior STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
