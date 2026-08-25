@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 6a913a9 (continued 2026-08-25T01:01Z)  
+**Commit:** 6c0691a (continued 2026-08-25T01:02Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1409,4 +1409,20 @@ Probe confirms Path B URLs required (see morning sheet). Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260825T010124Z.log · ClaimGuard PASS |
 
 Cron dead (~73 min since only run). Use push trigger or manual workflow after auth. Pack **22/30**.
+
+---
+
+## Continuation log 72 (2026-08-25T01:02Z) — timer recheck (overnight-hf-recheck)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #13 · 2026-08-25T01:00Z |
+| N5-REGISTER | **MERGED** | PR #67 · 6c0691a · log 71 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; **publish skipped** |
+| N5-01 | **GATED** | Latest `overnight-hf-publish` run 32795397767 (probe, OIDC fail @ 00:53Z) |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T010233Z.log · 2026-08-25T01:02:33Z |
+| N5-07/21 | **PASS** | claimguard-20260825T010233Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: Path A or Path B + push trigger or manual workflow.
 
