@@ -2100,3 +2100,14 @@ No DOI remint · no paid spend. ~17:54 BST — continues to 04:00 London.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend. ~17:56 BST — continues to 04:00 London.
+
+## Continuation log 116 (2026-08-25T17:00:00Z) — RALPH · deploy2 public chrome 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE+** | deploy2 `AGENT-ONBOARDING.md` `33f585a` · `ag-ui.html` restored `396620b` · `index.html` `6994a8b` cite live 14/14 |
+| N5-NOTE | **FIXED** | brief PLACEHOLDER accident on ag-ui.html immediately restored |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~18:00 BST — continues to 04:00 London.
