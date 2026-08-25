@@ -2570,3 +2570,46 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 151 (2026-08-25T19:33:15Z) — RALPH · STRICT recheck + swarm note fix shipped
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | STRICT=1 green · agent-card 14/14 · public_count 14 · jail MEASURED/TIE |
+| N5-SITE | **SHIPPED** | councilof-ai `aaa8386` — swarm.note no longer claims jail UNTESTED/13; RAS cites 14/TIE |
+| N5-CDN | **AWAIT** | Pages lag after protect-335 storm; tip has fix |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker runtime 1.0.0; csoai.org honesty/arenas still stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 152 (2026-08-25T22:10:31Z) — RALPH · CDN LIVE swarm/RAS + awesome-a2a 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `/api/gspc` swarm.note cites jail TIE + 14 of 14 · `/ras` 14/TIE |
+| N5-17 | **SHIPPED** | awesome-a2a branch `8902183`/`1a6f0bb` — PR #157 line now 14 measured of 14 |
+| N5-VERIFY | **PASS** | prior STRICT; CDN recheck green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 · csoai.org Pages stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 153 (2026-08-25T22:11:24Z) — RALPH · verifier swarm/RAS + measurement snapshot patch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **SHIPPED** | `ops/verify-overnight-pack.sh` checks swarm.note + ras.html 14/14 |
+| N5-SITE | **SHIPPED** | `public/signed/gspc-measurement.json` narrative → 14/TIE (unsigned snapshot; living board untouched) |
+| N5-17 | **SHIPPED** | awesome-a2a 14/14 on PR branch |
+| N5-CDN | **LIVE** | swarm.note + ras already green on councilof.ai |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

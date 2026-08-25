@@ -1,7 +1,7 @@
 # Aggregator Propagation Watch-Note (N5-12)
 
 **Created:** 2026-08-24T17:30:00Z  
-**Last recheck:** 2026-08-25T17:12:00Z (RALPH)
+**Last recheck: 2026-08-25T19:35Z (RALPH) — Glama still 404; Smithery LIVE; awesome-a2a PR #157 line now 14/14 on fork branch
 
 ## Status: WATCH (not a sales claim)
 

@@ -150,6 +150,18 @@ print(latest[0] if latest else 'none')
   else
     note "catalog.json stale (master 0a49168/f277606 — await Pages if still 13 measured axes)"
   fi
+  swarm_note=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/gspc" | python3 -c "import sys,json; print(next((a.get('note') or '') for a in json.load(sys.stdin).get('axes') or [] if a.get('axis')=='swarm'))" 2>/dev/null || true)
+  if echo "$swarm_note" | grep -q "14 measured of 14" && ! echo "$swarm_note" | grep -q "public count stays 13"; then
+    pass "swarm.note cites 14 measured of 14 (no stale UNTESTED jail clause)"
+  else
+    note "swarm.note stale or empty (master aaa8386 — await Pages if still 13/UNTESTED)"
+  fi
+  ras=$(curl -sL -A "CSOAI-overnight-verify/1.0" "https://councilof.ai/ras" 2>/dev/null || true)
+  if echo "$ras" | grep -q "14 measured of 14 quotable"; then
+    pass "ras.html cites 14 measured of 14"
+  else
+    note "ras.html stale (master aaa8386 — await Pages if still 13 measured axes)"
+  fi
   mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
     -H 'content-type: application/json' \
     -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \
