@@ -2132,3 +2132,19 @@ No DOI remint · no paid spend. ~18:00 BST — continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 118 (2026-08-25T17:37:28Z) — RALPH · feed LIVE + P5 signature_alg draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T173719Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T1735Z.log |
+| N5-FEED | **LIVE** | https://councilof.ai/api/feed.xml · 14/14 + jail MEASURED/TIE item · source `52da112` |
+| N5-P5 | **DRAFTED** | `products/signature_alg/` selftest PASS · deploy2 `signature_alg.py` + `sov_instrument.py` Continuity grader=`signature_alg` · commits `e2a0f91` / `a510922` |
+| N5-NOTE | **FIXED** | brief PLACEHOLDER on deploy2 signature_alg.py immediately restored (`e2a0f91`) |
+| N5-12 | **WATCH** | Smithery LIVE · Glama 404 · PulseMCP 403 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend · no board score remint. Continues to 04:00 London.
+
