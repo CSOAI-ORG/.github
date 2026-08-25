@@ -1960,3 +1960,13 @@ No DOI remint · no paid spend.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend.
+
+## Continuation log 104 (2026-08-25T16:20:00Z) — MCP worker deploy BLOCKED (no CF token)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-10/11 | **PARTIAL** | registry **1.0.3 LIVE**; worker source on main is 1.0.3 but deploy failed — missing `CLOUDFLARE_API_TOKEN` (Actions runs 32870914239 / 32870916387) |
+| N5-OWNER | **NEED** | restore CF API token secret on `csoai-static-deploy2` for worker redeploy (free; not spend) |
+| N5-VERIFY | **PASS** | STRICT still green (registry check, not worker version) |
+
+Live worker `initialize` still reports 1.0.0 until token restored. No DOI remint · no paid spend.
