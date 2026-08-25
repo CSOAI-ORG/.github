@@ -461,7 +461,7 @@
         }
       },
       "status": "MEASURED",
-      "dataset": "pending publication (gold bank, 3090 pod gold_run2.py)",
+      "dataset": "published: csoai/gspc-jail-goldbank (frozen 71-cell gold bank, HF 2026-08-25)",
       "colour": "#64748b",
       "hue": 215,
       "note": "The jail floor is no longer empty: measured 2026-08-17/18 on a 71-cell gold bank, separation determined 2026-08-25 (TIE). Best zero-FP detector: qwen2.5:0.5b-instruct (precision 1.0, recall 0.237). Fleet mean accuracy 0.5455 (7 models, usable n 68-71). Our own council-inhouse-ft fine-tune detected ZERO escapes (tp=0) — published, not hidden. Recall is the honest weakness: the best detector still misses 76% of escapes."
@@ -590,7 +590,7 @@
   ],
   "limitations": [
     "4 of the 14 canonical axes show a statistically separated leader (McNemar p<0.05 on discordant items): governance, care, swarm, affect. 10 are statistical ties — a point-estimate lead is not a measured advantage.",
-    "Jail (slot 14) separation determination 2026-08-25: TIE — the leader's Wilson 95% interval [0.475, 0.698] contains the fleet mean 0.5455, so the point-estimate lead is not a measured advantage. Measured on a 7-model gold-bank fleet (all models n≥30 usable, 68–71), not the 19-model board fleet; the gold bank dataset itself is pending publication.",
+    "Jail (slot 14) separation determination 2026-08-25: TIE — the leader's Wilson 95% interval [0.475, 0.698] contains the fleet mean 0.5455, so the point-estimate lead is not a measured advantage. Measured on a 7-model gold-bank fleet (all models n≥30 usable, 68–71), not the 19-model board fleet; the gold bank is published (csoai/gspc-jail-goldbank, HF 2026-08-25).",
     "jail's fleet accuracy 0.5455 is the mean of per-model accuracies across 7 models x 71 gold cells (usable n 68–71); the leader accuracy 0.5915 is the best zero-false-positive detector's (tp+tn)/71. Best precision 1.0, best recall 0.237 — the best detector still misses 3 of 4 escapes.",
     "measured_in_lane (slot15 instrument-honesty, human-vs-ai) is the internal 16-slot living-board convention: 6-model fleet, no separation test, served for honesty only. NOT board-quotable until the reconciliation gate opens (owner-gated); never counted in totals.",
     "care is separated from base models but NOT clear of the majority-class baseline; detector-interop and swarm leaders are also not clear of baseline. Quote accordingly.",
@@ -603,7 +603,7 @@
     "attests": "integrity of this board snapshot as published by the site (NOT a re-measurement)",
     "signer": "did:web:csoai.org#board-attestation-1",
     "alg": "Ed25519",
-    "sig": "978b02bfeacc6aa96e00e00294af6bb430b7e40ec4a8f441899207c014a24938169b54f961932c51e7d0def1a289a1607bb772ed7ab373650a32fb3163c91e08",
+    "sig": "4845562bdde538c7280919a825031f85518093d9af86b78fa43a6eff5b658911dd8ad64e2d082b4bb47eeb211f9a515cf6a939733c0b2d8d8cf8b2a93e71040a",
     "public_key_x": "k2fPWb6ctyu8l5at8FYgHsHFit_qoT-DssW3VNbCAXA",
     "sig_input": "canonical JSON (recursively sorted keys, no whitespace) of this payload with the site_attestation field removed",
     "verify": "fetch /.well-known/did.json → #board-attestation-1 public key → verify sig over canonical(payload minus site_attestation)"

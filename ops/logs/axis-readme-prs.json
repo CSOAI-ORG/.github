@@ -1,0 +1,75 @@
+{
+  "at": "2026-08-25T15:25:42.302899+00:00",
+  "results": [
+    {
+      "hf": "csoai/gspc-gov",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-gov/commit/fbdb8fe349bcf62840c3706f6cfe6ed8954da380"
+    },
+    {
+      "hf": "csoai/gspc-agi",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-agi/commit/1b632b68afe09396af24e1cfb28479f38b4d41e7"
+    },
+    {
+      "hf": "csoai/gspc-prv",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-prv/commit/b7d74a96c582fc78d8227409303f2f370d19cc10"
+    },
+    {
+      "hf": "csoai/gspc-asi",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-asi/commit/4f64365f0b977ca03d76bef9e65190f4f7a38039"
+    },
+    {
+      "hf": "csoai/gspc-mcp",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-mcp/commit/4847467facdb7d0538693dedcfdef885d67ea674"
+    },
+    {
+      "hf": "csoai/gspc-oss",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-oss/commit/a89bff442925bed5ec2ebd86b0f314426b7266b0"
+    },
+    {
+      "hf": "csoai/gspc-mach",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-mach/commit/f4c1e0e38bf95570d39637426d6007dc2c1aacb1"
+    },
+    {
+      "hf": "csoai/gspc-care",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-care/commit/82b2fec84480e0a83988433a8ca8a9e99eb7897e"
+    },
+    {
+      "hf": "csoai/gspc-xr",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-xr/commit/bc55edeaaf5148f2926f6ae4d04be45b70075d7a"
+    },
+    {
+      "hf": "csoai/gspc-det",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-det/commit/03dd02ecfce1aa758b3eb8a64320038167c73785"
+    },
+    {
+      "hf": "csoai/gspc-art5",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-art5/commit/93324834826a5e2abeea6289b561db8c0d9a9e67"
+    },
+    {
+      "hf": "csoai/gspc-swarm",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-swarm/commit/b7d4218e642bcf6eeccc1d049addb4bfe04b47d4"
+    },
+    {
+      "hf": "csoai/gspc-affect",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-affect/commit/698a854f6d9b861e4e433765a15ef27a3fcfedab"
+    },
+    {
+      "hf": "csoai/gspc-jail",
+      "status": "PR",
+      "ref": "https://huggingface.co/datasets/csoai/gspc-jail/commit/985f98b3d9fa409399fc2f5d9d70b7f85772c038"
+    }
+  ]
+}

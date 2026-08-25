@@ -1844,3 +1844,19 @@ Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated direct
 
 Peer fire-book `d1e3e12` / `registry/` was **not** in this workspace; rebuilt from verified live state. PR #645 is EUNOMIA UNMEASURED (separate from GSPC 14).
 
+## Continuation log 97 (2026-08-25T15:26:01Z) — RALPH 15:24Z cycle
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T152417Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T152419Z.log · attestation.valid |
+| N5-13/14 | **LIVE** | agent-card CDN still 14 measured of 14 |
+| N5-AXIS | **LIVE+** | polished READMEs on all 14 HF axis datasets (direct commits) · ops/logs/axis-readme-prs.json |
+| N5-DB | **CLEAN** | surfaces deduped to 12 · mining_gaps indexed (45) |
+| N5-06 | **PAUSED** | Space restart still 403 cpu-basic limit=0 (no spend) |
+| N5-KAGGLE | **STAGED** | no token yet |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-REG | **BUMPED** | registry verified timestamps refreshed |
+
+London time still before 04:00 — timer continues. No DOI remint · no paid spend.
+

@@ -1,6 +1,6 @@
 {
   "schema": "csoai.outreach-registry/0.1",
-  "updated_at": "2026-08-25T15:22:20Z",
+  "updated_at": "2026-08-25T15:24:46Z",
   "source_of_truth_notes": [
     "GSPC quotable board = 14 slots; live public_count from /api/gspc",
     "EUNOMIA board (PR #645 UNMEASURED indices) is a SEPARATE surface \u2014 do not mix counts",
@@ -94,7 +94,7 @@
       "status": "LIVE",
       "doi": "10.57967/hf/10114",
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "do_not": "remint DOI"
     },
     {
@@ -104,7 +104,7 @@
       "status": "LIVE",
       "doi": "10.57967/hf/10116",
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "do_not": "remint DOI"
     },
     {
@@ -113,7 +113,7 @@
       "url": "https://huggingface.co/datasets/csoai/gspc-leaderboard-results",
       "status": "LIVE",
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z"
+      "verified": "2026-08-25T15:24:46Z"
     },
     {
       "id": "hf-space",
@@ -121,7 +121,7 @@
       "url": "https://huggingface.co/spaces/csoai/gspc-governance-leaderboard",
       "status": "PARTIAL",
       "owner_gate": true,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "notes": "sdk=gradio; runtime PAUSED cpu-basic limit=0 \u2014 ONLY real $ item for Gradio run"
     },
     {
@@ -131,7 +131,7 @@
       "status": "LIVE",
       "version": "1.0.2",
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "notes": "1.0.2 isLatest \u2014 audit claiming unpublished is STALE"
     },
     {
@@ -141,7 +141,7 @@
       "status": "LIVE",
       "http": 200,
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "notes": "14 measured of 14 on CDN"
     },
     {
@@ -151,7 +151,7 @@
       "status": "LIVE",
       "http": 200,
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "public_count": "14 measured of 14 quotable"
     },
     {
@@ -160,14 +160,14 @@
       "url": "https://github.com/ai-boost/awesome-a2a/pull/157",
       "status": "SUBMITTED",
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z"
+      "verified": "2026-08-25T15:24:46Z"
     },
     {
       "id": "a2aagentlist",
       "kind": "directory",
       "status": "SENT",
       "owner_gate": false,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "notes": "gmail 1a038c704b0704c1"
     },
     {
@@ -176,7 +176,7 @@
       "url": "https://github.com/a2aproject/A2A/discussions/97",
       "status": "GATED",
       "owner_gate": true,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "notes": "CAPTCHA/2FA"
     },
     {
@@ -184,7 +184,7 @@
       "kind": "kaggle",
       "status": "STAGED",
       "owner_gate": true,
-      "verified": "2026-08-25T15:22:20Z",
+      "verified": "2026-08-25T15:24:46Z",
       "path": "export/kaggle-gspc-board"
     }
   ],
