@@ -2851,3 +2851,31 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF / Pages |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 171 (2026-08-25T23:41:22Z) — RALPH · HF gspc-boards historical stamp
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `csoai/gspc-boards` README `5dc79b9` — Historical stamp (12 Aug); live quote **14/14** via `/api/gspc` |
+| N5-VERIFY | **PASS** | STRICT=1 VERIFY PASS · ClaimGuard PASS · agent-card 14/14 · public_count 14 |
+| N5-CDN | **WATCH** | methodology still 16-axis/untested; NewHome still “separation untested”; deploy runs `32911415498`/`32911581568` in flight |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet `/signup/` → 404 |
+| N5-CF | **PREP** | CF token — honesty tip `5ce429a` already 14/TIE; CDN stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 172 (2026-08-25T23:41:22Z) — RALPH · Space README jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Space `gspc-governance-leaderboard` README — jail MEASURED/TIE beside 14/14 |
+| N5-PACK | **DOC** | interactive-surface / aggregator / glama recheck stamps |
+| N5-DB | **INDEXED** | mining_gaps + agent_moves for gspc-boards + deploy watch |
+| N5-VERIFY | **PASS** | prior cycle |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
