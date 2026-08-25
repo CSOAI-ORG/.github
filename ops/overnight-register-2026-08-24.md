@@ -2,12 +2,29 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T09:58Z)  
+**Commit:** (pending) (continued 2026-08-25T10:44Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
+## Current status snapshot (2026-08-25T10:44Z) — **25/30** · STRICT PASS
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01..06 | LIVE | HF datasets+Space+DOIs · board `10.57967/hf/10114` · bench `10.57967/hf/10116` |
+| N5-07/21 | PASS | ClaimGuard + banned-strings |
+| N5-08..12 | LIVE | MCP registry 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card councilof.ai validated |
+| N5-15 | PREP | a2aagentlist Gmail draft ready (owner send) |
+| N5-16 | BLOCKED | artinet.io waitlist only |
+| N5-17 | SUBMITTED | awesome-a2a PR #157 OPEN/mergeable |
+| N5-18 | GATED | Discussion #97 — GitHub hardware 2FA |
+| N5-19 | DEFERRED | no GCP |
+| N5-20..30 | DONE/PREP | evidence + marketplace + insurance + G-Cloud drafts |
+
+**Owner closes:** Discussion #97 comment · send a2aagentlist draft · (optional) nudge awesome-a2a #157.
+
 
 ## Current status snapshot (00:44Z) — **22/30**
 
@@ -1662,3 +1679,17 @@ Pack **25/30**. STRICT green. Remaining directories/GCP owner-gated.
 | N5-WATCH | **RETARGET** | Timer shifted to remaining N5-15..19 (HF track done) |
 
 Pack **25/30**. HF STRICT green. Remaining owner/manual directories + GCP.
+
+## Continuation log 89 (2026-08-25T10:44Z) — remaining-pack escalation to owner
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T104416Z.log · 2026-08-25T10:44Z |
+| N5-OWNER | **SENT** | Slack DM to Nick · remaining closes: Discussion #97 (2FA), a2aagentlist draft send, awesome-a2a #157 |
+| N5-15 | **PREP** | Gmail draft ready — owner send |
+| N5-16 | **BLOCKED** | artinet waitlist |
+| N5-17 | **SUBMITTED** | PR #157 OPEN |
+| N5-18 | **GATED** | hardware 2FA |
+| N5-19 | **DEFERRED** | no GCP |
+
+Pack **25/30**. HF track complete. Agent lane exhausted on remaining directory/GCP items.
