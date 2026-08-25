@@ -5,7 +5,7 @@ Canon: [`../GSPC_AXIS_CANON.md`](../GSPC_AXIS_CANON.md).
 
 **Living numbers:** [https://councilof.ai/api/gspc](https://councilof.ai/api/gspc) — never freeze scores on cards.  
 **Method DOI:** [https://doi.org/10.5281/zenodo.21991104](https://doi.org/10.5281/zenodo.21991104)  
-**Public ruling:** 13 measured of 14 quotable; `jail` is floor with separation **UNTESTED**.
+**Public ruling:** 14 measured of 14 quotable; `jail` is floor with separation **UNTESTED**.
 
 | # | Axis id | Bench | HF dataset | Patch README |
 |---|---|---|---|---|

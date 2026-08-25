@@ -1936,3 +1936,15 @@ No DOI remint · no paid spend. Timer continues to 04:00 London.
 | N5-16 | **BLOCKED** | artinet unchanged |
 
 No DOI remint · no paid spend. London ~17:13 BST — timer continues to 04:00.
+
+## Continuation log 102 (2026-08-25T16:14:00Z) — RALPH follow-on free polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-02 | **LIVE+** | HF `csoai/gspc-board` axis-register.json → `gspc_registry_axes=14` · commit `3cfe961` |
+| N5-PATCHES | **POLISHED** | `docs/hf-patches/**` templates aligned to live 14/14 (18 files) |
+| N5-10/11 | **LIVE** | MCP 1.0.3 still isLatest (rechecked) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
