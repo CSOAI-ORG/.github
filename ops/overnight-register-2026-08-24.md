@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 4df7ff4 (continued 2026-08-25T01:32Z)  
+**Commit:** (pending) (continued 2026-08-25T01:45Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1471,4 +1471,20 @@ Cron dead (~102 min since only run). Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260825T013240Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Owner: Path A or Path B + push trigger or manual workflow.
+
+---
+
+## Continuation log 76 (2026-08-25T01:45Z) — timer recheck + **2nd cron fired**
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #16 · 2026-08-25T01:45Z |
+| N5-01 | **CRON** | **2nd schedule run** 32798301940 @ 2026-08-25T01:38:00Z (first was 32791004769 @ 23:48Z) |
+| N5-WF | **FAIL** | N5-WF · run 32798301940 · 2026-08-25T01:38Z · overnight-hf-cron · HF_TOKEN empty |
+| N5-01 | **GATED** | OIDC `invalid_grant: No trusted publisher configured on datasets/csoai/gspc-board` |
+| N5-01 | **GATED** | Local HF_TOKEN unset; publish skipped |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T014530Z.log · 2026-08-25T01:45:30Z |
+| N5-07/21 | **PASS** | claimguard-20260825T014530Z.log · ClaimGuard PASS |
+
+Cron alive but sparse (~110 min between runs). Auth still blocked. Pack **22/30**.
 
