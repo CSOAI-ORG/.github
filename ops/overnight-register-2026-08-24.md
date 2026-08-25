@@ -2822,3 +2822,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-16 | **BLOCKED** | artinet |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 169 (2026-08-25T23:36:28Z) — RALPH · morning CF blurb + knowledge DB
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **DOC** | morning sheet CF item mentions methodology CDN lag (`9601613`) |
+| N5-DB | **INDEXED** | mining_gaps QUEUED methodology CDN; agent_moves AXIS/RECEIPT/methodology |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
