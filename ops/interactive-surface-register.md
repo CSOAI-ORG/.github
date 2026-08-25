@@ -12,9 +12,10 @@
 | HF leaderboard-results | https://huggingface.co/datasets/csoai/gspc-leaderboard-results | **LIVE** HTTP 200 | N5-06 |
 | MCP server.json | csoai-static-deploy2 `registry/gspc.json` | **MERGED** v1.0.3 (9879a84) | N5-08/09 |
 | MCP registry live | registry.modelcontextprotocol.io | **LIVE** v1.0.3 isLatest · board (14 of 14) | N5-10/11 |
-| MCP aggregators | Glama / PulseMCP / Smithery | **WATCH** registry 1.0.3 live; Smithery **LIVE**; Glama 404; PulseMCP 403 | N5-12 |
+| MCP aggregators | Glama / PulseMCP / Smithery | **WATCH** registry 1.0.3 live; Smithery **LIVE**; Glama 404×2; PulseMCP q=gspc → 0 (Apify 23:17Z) | N5-12 |
 | AGENT-ONBOARDING.md | https://councilof.ai/AGENT-ONBOARDING.md | **SHIPPED** master `711d1ee` (await Pages if 404) | overnight |
 | A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated · 14 measured of 14 LIVE | N5-13/14 |
+| api/methodology | https://councilof.ai/api/methodology | **SHIPPED** master `9601613` 14/TIE · CDN may lag | overnight |
 | Evidence pack | trust/evidence-pack/ | **DONE** | N5-20 |
 | awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED+NUDGED** awaiting review | N5-17 |
 | a2aagentlist | gal6111@gmail.com | **SENT** 2026-08-25T11:56Z | N5-15 |

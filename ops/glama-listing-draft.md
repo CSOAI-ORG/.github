@@ -1,6 +1,6 @@
 # Glama listing draft — csoai/gspc (N5-12)
 
-**Status:** DRAFT only — do not submit/spend without Nick. Live URL still **404** as of 2026-08-25T23:05Z.
+**Status:** DRAFT only — do not submit/spend without Nick. Live URL still **404** as of 2026-08-25T23:35Z (Apify + curl).
 
 ## Desired listing
 

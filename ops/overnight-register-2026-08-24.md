@@ -2795,3 +2795,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 167 (2026-08-25T23:35:11Z) — RALPH · AXIS_MAPPING 14-lock
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `5477ef6` — AXIS_MAPPING locks public board at **14** (no 16/22 invent) |
+| N5-PACK | **DOC** | interactive-surface-register + glama draft recheck stamp |
+| N5-VERIFY | **PASS** | prior STRICT · methodology CDN still lag |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
