@@ -2321,3 +2321,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 132 (2026-08-25T18:25:24Z) — RALPH · well-known mcp.json → 1.0.3 + 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-MCP | **SHIPPED** | councilof-ai `public/.well-known/mcp.json` cites registry **1.0.3** + live 14/14 · `f2e5e16` |
+| N5-SITE | **SHIPPED** | AGENT-ONBOARDING.md `711d1ee` |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker runtime still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
