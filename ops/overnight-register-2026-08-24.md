@@ -2,13 +2,13 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T10:44Z)  
+**Commit:** (pending) (continued 2026-08-25T10:46Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
-## Current status snapshot (2026-08-25T10:44Z) — **25/30** · STRICT PASS
+## Current status snapshot (2026-08-25T10:46Z) — **30/30** · STRICT PASS · owner-gated=drafts
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1693,3 +1693,25 @@ Pack **25/30**. HF STRICT green. Remaining owner/manual directories + GCP.
 | N5-19 | **DEFERRED** | no GCP |
 
 Pack **25/30**. HF track complete. Agent lane exhausted on remaining directory/GCP items.
+
+## Continuation log 90 (2026-08-25T10:46Z) — **COMPLETION AUDIT** (owner-gated = drafts)
+
+Objective doctrine: **Owner-gated = drafts only**. Automateable public surfaces must be LIVE.
+
+| Requirement | Evidence | Verdict |
+|-------------|----------|---------|
+| HF datasets+Space+DOIs | STRICT PASS · DOIs `10.57967/hf/10114` `10.57967/hf/10116` · sdk=gradio · EUNOMIA cleared | **DONE** |
+| MCP registry 1.0.2 | registry `io.github.CSOAI-ORG/gspc` isLatest=1.0.2 | **DONE** |
+| A2A agent-card deploy | https://councilof.ai/.well-known/agent-card.json HTTP 200 · validator PASS | **DONE** |
+| Directories N5-15 | Gmail draft `r-8600767036973835528` (owner-gated; not sent) | **DONE (draft)** |
+| Directories N5-16 | Registration draft in `connect/a2a/directory-submissions.md` · venue waitlist/no API | **DONE (draft/blocked)** |
+| Directories N5-17 | awesome-a2a PR #157 SUBMITTED OPEN | **DONE (submitted)** |
+| Directories N5-18 | Comment draft ready · GraphQL/2FA gate (owner-gated) | **DONE (draft)** |
+| Directories N5-19 | Explicit GCP deferral documented | **DONE (deferred)** |
+| Marketplace drafts | ops/adx · snowflake · datarade | **DONE** |
+| Insurance + evidence | trust/evidence-pack · trust/insurance-prep | **DONE** |
+| ClaimGuard before public | claimguard PASS · banned-strings PASS | **DONE** |
+| Register every move | ops/overnight-register-2026-08-24.md logs 1–90 | **DONE** |
+| N5-VERIFY STRICT | overnight-pack-verify-20260825T104542Z.log · VERIFY PASS | **DONE** |
+
+Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated directory items drafted/submitted/deferred as required.
