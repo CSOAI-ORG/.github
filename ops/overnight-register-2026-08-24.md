@@ -2442,3 +2442,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 141 (2026-08-25T18:57:22Z) — RALPH · functions-guard 14-axis comment
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `scripts/functions-guard.mjs` `097f624` — comment 14-axis registry |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
