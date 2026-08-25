@@ -2385,3 +2385,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker still 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 137 (2026-08-25T18:48:06Z) — RALPH · Pages nudge for measured_on + catalog
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | nudge `f277606` — `_gspc_types` + `catalog.json` (master already TIE/14; CDN lag under sticky-335 storm) |
+| N5-SITE | **SHIPPED** | gspc.ts comment `8eb007a` |
+| N5-SITE | **LIVE** | axis-register 14 · mcp.json 1.0.3 · AGENT-ONBOARDING · server-card 14 · counters 14 |
+| N5-SITE | **AWAIT** | `measured_on.note` + `catalog.json` CDN still pre-nudge until Pages catches tip |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
