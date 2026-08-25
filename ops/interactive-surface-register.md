@@ -5,8 +5,9 @@
 
 | Surface | URL | Status | Move |
 |---------|-----|--------|------|
-| HF gspc-board | https://huggingface.co/datasets/csoai/gspc-board | **LIVE** HTTP 200 · GSPC (EUNOMIA cleared) | N5-02 |
-| HF gspc-bench-results | https://huggingface.co/datasets/csoai/gspc-bench-results | **LIVE** HTTP 200 | N5-03 |
+| HF gspc-board | https://huggingface.co/datasets/csoai/gspc-board | **LIVE** HTTP 200 · GSPC · DOI 10.57967/hf/10114 | N5-02 |
+| HF gspc-bench-results | https://huggingface.co/datasets/csoai/gspc-bench-results | **LIVE** HTTP 200 · DOI 10.57967/hf/10116 | N5-03 |
+| HF DOIs | board 10.57967/hf/10114 · bench 10.57967/hf/10116 | **LIVE** | N5-05 |
 | HF governance leaderboard | https://huggingface.co/spaces/csoai/gspc-governance-leaderboard | **LIVE** sdk=gradio (runtime PAUSED — cpu-basic quota limit=0) | N5-06 |
 | HF leaderboard-results | https://huggingface.co/datasets/csoai/gspc-leaderboard-results | **LIVE** HTTP 200 | N5-06 |
 | MCP server.json | csoai-static-deploy2 main | **MERGED** v1.0.2 (aab76f4 + c9fc14b) | N5-08/09 |

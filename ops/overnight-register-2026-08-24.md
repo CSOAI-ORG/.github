@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T07:53Z)  
+**Commit:** (pending) (continued 2026-08-25T09:58Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1615,3 +1615,15 @@ Pack **24/30**. Owner: mint DOIs; optional Space quota/restart; optional directo
 | N5-07/21 | **PASS** | claimguard-20260825T084121Z.log · ClaimGuard PASS |
 
 Pack **24/30**. Owner: mint DOIs; optional Team for Space runtime; optional Discussion #97 / a2aagentlist.
+
+## Continuation log 85 (2026-08-25T09:58Z) — **N5-05 DOIs MINTED** · STRICT PASS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-05 | **LIVE** | `csoai/gspc-board` DOI `10.57967/hf/10114` |
+| N5-05 | **LIVE** | `csoai/gspc-bench-results` DOI `10.57967/hf/10116` |
+| N5-01/02/03/04/06 | **LIVE** | publish still live (EUNOMIA-free; leaderboard 200; sdk=gradio) |
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T095830Z.log · 2026-08-25T09:58Z |
+| N5-07/21 | **PASS** | claimguard-20260825T095830Z.log · ClaimGuard PASS |
+
+Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GATED, N5-19 DEFERRED.
