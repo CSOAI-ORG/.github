@@ -25,7 +25,7 @@
 
 **Fork:** ai-boost/awesome-a2a  
 **Branch:** add-council-of-ai  
-**Status:** **SUBMITTED + NUDGED** — https://github.com/ai-boost/awesome-a2a/pull/157 OPEN/mergeable · nudge comment https://github.com/ai-boost/awesome-a2a/pull/157#issuecomment-5410013048 (2026-08-25T11:56Z)  
+**Status:** **SUBMITTED + NUDGED** — https://github.com/ai-boost/awesome-a2a/pull/157 OPEN · README + title/body cite **14 of 14** (2026-08-25T22:17Z) · head `1a6f0bb`  
 **Edit:** README.md only (English)
 
 ```markdown

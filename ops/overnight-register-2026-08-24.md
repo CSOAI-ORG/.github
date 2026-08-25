@@ -2613,3 +2613,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 154 (2026-08-25T22:21:31Z) — RALPH · PR #157 body 14/14 + measurement CDN await + ClaimGuard
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-17 | **SHIPPED+** | awesome-a2a PR #157 title/body → 14 of 14; README already 14 |
+| N5-SITE | **AWAIT** | `gspc-measurement.json` on master `786a396` + Pages nudge `38fb2e0` — CDN may lag |
+| N5-VERIFY | **PASS** | ClaimGuard GATE PASS · STRICT prior green (swarm.note LIVE) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
