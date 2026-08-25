@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 62e64ec (continued 2026-08-25T01:15Z)  
+**Commit:** f2b38b3 (continued 2026-08-25T01:31Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1441,4 +1441,18 @@ No change. Pack **22/30**. Owner: Path A or Path B + push trigger or manual work
 | N5-07/21 | **PASS** | claimguard-20260825T011548Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Owner: Path A or Path B + push trigger or manual workflow.
+
+---
+
+## Continuation log 74 (2026-08-25T01:31Z) — 01:30Z cron watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 01:30Z cron boundary · 2026-08-25T01:31Z |
+| N5-01 | **GATED** | HF_TOKEN unset; publish skipped |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z); **01:30Z boundary missed** |
+| N5-WF | **NOTE** | Latest publish 32795397767 (OIDC fail @ 00:53Z) |
+| N5-07/21 | **PASS** | claimguard-20260825T013101Z.log · ClaimGuard PASS |
+
+Cron dead (~102 min since only run). Pack **22/30**.
 
