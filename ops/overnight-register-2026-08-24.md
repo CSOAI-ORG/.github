@@ -1627,3 +1627,15 @@ Pack **24/30**. Owner: mint DOIs; optional Team for Space runtime; optional Disc
 | N5-07/21 | **PASS** | claimguard-20260825T095830Z.log · ClaimGuard PASS |
 
 Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GATED, N5-19 DEFERRED.
+
+## Continuation log 86 (2026-08-25T10:25Z) — DOI tags verified; verifier fixed; STRICT PASS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-05 | **LIVE** | DOIs in Hub tags: board `10.57967/hf/10114` · bench `10.57967/hf/10116` (doi.org 302) |
+| N5-05 | **NOTE** | Hub API top-level `doi` null; present as `tags[]` `doi:…` + Settings Locked by DOI |
+| N5-VERIFY | **PREP+** | `ops/verify-overnight-pack.sh` accepts DOI from tags |
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T102508Z.log · 2026-08-25T10:25Z |
+| N5-07/21 | **PASS** | claimguard-20260825T102508Z.log · ClaimGuard PASS |
+
+Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GATED, N5-19 DEFERRED.
