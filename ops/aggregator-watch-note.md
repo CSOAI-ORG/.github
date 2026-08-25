@@ -33,7 +33,13 @@ Committed at repo root + on `csoai-static-deploy2` with maintainers block (manda
 - [ ] PulseMCP shows gspc ≥1.0.3
 - [ ] Glama indexes full metadata (repository, title)
 - [ ] Worker runtime `initialize.serverInfo.version` = 1.0.3 (needs `CF_API_TOKEN` restore)
+  - Recheck 2026-08-25T17:37Z: both `csoai-gspc-mcp.nicholastempleman.workers.dev/mcp` and `councilof.ai/mcp` still report **1.0.0**
 
 ## Site llms.txt
 
 CDN updated 2026-08-25T16:50Z via councilof-ai `0a61d80` — cites live 14 measured of 14 quotable.
+
+## Site openapi.json
+
+Apex `https://councilof.ai/openapi.json` was 404; shipped `public/openapi.json` on councilof-ai master `8bb42b0` (2026-08-25T17:38Z) — await Pages deploy (deploy queue busy).
+
