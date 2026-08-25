@@ -2656,3 +2656,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | csoai.org honesty/arenas tip 14/TIE, CDN stale |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 157 (2026-08-25T23:09:18Z) — RALPH · HONEST_REGISTER 14/14 + PulseMCP watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-20 | **SHIPPED** | councilof-ai `8696a66` — HONEST_REGISTER board row LIVE 14/TIE + CF gates |
+| N5-12 | **WATCH** | PulseMCP fetch via Apify (egress 403 locally) |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
