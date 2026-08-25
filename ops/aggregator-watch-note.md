@@ -43,3 +43,6 @@ CDN updated 2026-08-25T16:50Z via councilof-ai `0a61d80` — cites live 14 measu
 
 **LIVE** https://councilof.ai/openapi.json (HTTP 200, 2026-08-25T17:49Z) — shipped councilof-ai `8bb42b0`.
 
+## Badge
+
+**LIVE** `/badge/axes.json` → message **14 of 14** on councilof.ai + csoai.org (2026-08-25T17:59Z).

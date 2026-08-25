@@ -2192,3 +2192,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 122 (2026-08-25T18:00:12Z) — RALPH · badges LIVE 14/14 both hosts
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-BADGE | **LIVE** | https://councilof.ai/badge/axes.json · https://csoai.org/badge/axes.json → **14 of 14** |
+| N5-VERIFY | **PASS** | prior STRICT green |
+| N5-FEED | **LIVE** | feed 14/14 |
+| N5-OPENAPI | **LIVE** | openapi.json |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker runtime still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
