@@ -2519,3 +2519,15 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-16 | **BLOCKED** | artinet |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 147 (2026-08-25T19:21:43Z) — RALPH · CF restore runbook covers Pages too
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CF | **PREP** | `ops/cf-api-token-restore.md` — Workers **and** Pages; honesty/arenas tip SHAs |
+| N5-VERIFY | **PASS** | STRICT green (MCP worker NOTE only) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
