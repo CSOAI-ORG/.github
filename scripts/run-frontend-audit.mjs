@@ -27,7 +27,7 @@ const PERSONAS = [
   // Honesty page discloses Elo as non-GSPC; literal "council-oowm" retired from copy.
   { who: "auditor", path: "/honesty", mustAny: ["Elo", "honesty", "MEASURED"] },
   { who: "researcher", path: "/library", mustAny: ["reference", "Library", "library"] },
-  { who: "api-agent", path: "/api/gspc", must: ['"axes": 14', '"measured_axes": 13', "13 measured of 14"], json: true },
+  { who: "api-agent", path: "/api/gspc", must: ['"axes": 14', '"measured_axes": 14', "14 measured of 14"], json: true },
   { who: "a2a-agent", path: "/.well-known/agent-card.json", must: ['"doi"', "CSOAI Ltd"], json: true },
   { who: "regulator", path: "/regulators", must: [] },
   { who: "enterprise", path: "/start", must: [] },
@@ -121,9 +121,9 @@ try {
     else pass(`schema csoai.gspc-axes/0.5`);
     if (j?.totals?.axes !== 14) fail(`totals.axes ${j?.totals?.axes}`);
     else pass(`totals.axes 14`);
-    if (j?.totals?.measured_axes !== 13) fail(`totals.measured_axes ${j?.totals?.measured_axes}`);
-    else pass(`totals.measured_axes 13`);
-    if (!String(j?.totals?.public_count || "").includes("13 measured of 14")) fail(`public_count drift`);
+    if (j?.totals?.measured_axes !== 14) fail(`totals.measured_axes ${j?.totals?.measured_axes}`);
+    else pass(`totals.measured_axes 14`);
+    if (!String(j?.totals?.public_count || "").includes("14 measured of 14")) fail(`public_count drift`);
     else pass(`public_count carries ruling`);
   }
 } catch (e) {

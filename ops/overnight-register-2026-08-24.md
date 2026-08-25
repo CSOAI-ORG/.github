@@ -2111,3 +2111,24 @@ No DOI remint · no paid spend. ~17:56 BST — continues to 04:00 London.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend. ~18:00 BST — continues to 04:00 London.
+
+## Continuation log 117 (2026-08-25T17:12:28Z) — RALPH 16:30Z · RSS 14/14 + pack script canon
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T170807Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T1710Z.log · public_count_match · fourteen_measured_ok |
+| N5-13/14 | **LIVE** | agent-card CDN 14 measured of 14 |
+| N5-10/11 | **LIVE** | MCP 1.0.3 isLatest · board (14 of 14) |
+| N5-FEED | **SHIPPED** | councilof-ai `functions/api/feed.xml.ts` append 14/14 item · commit `52da112` · deploy in flight |
+| N5-SCRIPTS | **POLISHED** | live-audit scripts → measured_axes=14 · jail MEASURED/TIE (weekend-demo, frontend-audit, e2e-*, mine-live-drifts) |
+| N5-DOCS | **POLISHED** | hf-patches jail TIE · AXIS_CARD_INDEX · FRONTEND_AUDIT · WEEKEND_DEMO · STEPS_200 · REVENUE · mcp baseline 1.0.3 |
+| N5-12 | **WATCH** | aggregator note refreshed · Smithery LIVE · Glama 404 · PulseMCP 403 |
+| N5-06 | **PAUSED** | Space cpu-basic limit=0 |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-16 | **BLOCKED** | artinet login/signup 404 |
+| N5-17 | **OPEN** | awesome-a2a #157 MERGEABLE |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+

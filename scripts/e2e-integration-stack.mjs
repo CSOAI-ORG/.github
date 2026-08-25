@@ -55,9 +55,9 @@ else {
     const j = JSON.parse(gspc.body);
     if (j.totals?.axes !== 14) fail(`axes count ${j.totals?.axes}`);
     else pass("GET /api/gspc — 14 axes");
-    if (j.totals?.measured_axes !== 13) fail(`measured ${j.totals?.measured_axes}`);
-    else pass("GET /api/gspc — 13 measured of 14");
-    if (!String(j.totals?.public_count || "").includes("13 measured")) fail("public_count drift");
+    if (j.totals?.measured_axes !== 14) fail(`measured ${j.totals?.measured_axes}`);
+    else pass("GET /api/gspc — 14 measured of 14");
+    if (!String(j.totals?.public_count || "").includes("14 measured")) fail("public_count drift");
     else pass("public_count honest");
   } catch { fail("/api/gspc invalid JSON"); }
 }
@@ -77,8 +77,10 @@ try {
   const j = JSON.parse(gspc.body);
   const jail = (j.axes || []).find((a) => a?.axis === "jail");
   if (!jail) fail("axes[] missing jail (14th quotable slot)");
-  else if (jail.separation !== "UNTESTED") fail(`jail.separation=${jail.separation} (want UNTESTED)`);
-  else pass("jail on board · separation UNTESTED");
+  else if (jail.separation !== "TIE" && jail.separation !== "SEPARATED") fail(`jail.separation=${jail.separation} (want TIE|SEPARATED)`);
+  else pass(`jail on board · separation ${jail.separation}`);
+  if (jail.status && jail.status !== "MEASURED") fail(`jail.status=${jail.status} (want MEASURED)`);
+  else if (jail.status) pass("jail status MEASURED");
   if (!j.site_attestation) fail("site_attestation missing");
   else pass("site_attestation present");
 } catch { /* already failed JSON above */ }

@@ -61,7 +61,7 @@ python3 products/claimguard/claimguard.py check --live --claim "14 quotable axes
 | `claim.sixteen_axes` / fifteen | Refuse; state **14 quotable**, cite live `public_count`, +2 in-lane not quotable |
 | Elo / league as public GSPC | Refuse; Wilson + McNemar only; Elo is not on `/api/gspc` |
 | `claim.certification` | Refuse; “measurement, not certification” |
-| Jail separation resolved while UNTESTED | Refuse; jail measured, separation UNTESTED |
+| Jail separation claimed SEPARATED while board says TIE | Refuse; cite live jail.separation |
 | Quotable count ≠ `totals.quotable_axes` | Refuse; cite live totals |
 
 Refusal shape (cream/ink, no apology theatre):

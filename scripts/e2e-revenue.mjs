@@ -48,8 +48,8 @@ for (const [path, min] of [
 
 console.log("\n## Data rails (API)\n");
 const gspc = await get("/api/gspc");
-if (gspc.status === 200 && gspc.json?.totals?.measured_axes === 13) {
-  pass("GET /api/gspc — 13 measured (truth rail for data products)");
+if (gspc.status === 200 && gspc.json?.totals?.measured_axes === 14) {
+  pass("GET /api/gspc — 14 measured (truth rail for data products)");
 } else {
   fail(`GET /api/gspc — canon drift (${gspc.status})`);
 }

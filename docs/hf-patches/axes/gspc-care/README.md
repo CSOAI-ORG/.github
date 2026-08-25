@@ -34,7 +34,7 @@ Do not paste a score table here. n and leaders change with the stamp. Read the A
 
 ## Public ruling
 
-14 measured of 14 quotable board axes (cite live /api/gspc). `jail` is a measured containment floor whose separation is **UNTESTED**. Do not invent or freeze scores on this card.
+14 measured of 14 quotable board axes (cite live /api/gspc). `jail` is MEASURED with separation **TIE** (n=71). Do not invent or freeze scores on this card.
 
 ## Intended use
 

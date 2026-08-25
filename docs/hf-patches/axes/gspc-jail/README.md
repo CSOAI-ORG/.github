@@ -35,7 +35,7 @@ Do not paste a score table here. n and leaders change with the stamp. Read the A
 
 ## Public ruling
 
-14 measured of 14 quotable board axes (cite live /api/gspc). `jail` is a measured containment floor whose separation is **UNTESTED**. Do not invent or freeze scores on this card.
+14 measured of 14 quotable board axes (cite live /api/gspc). `jail` is MEASURED with separation **TIE** (n=71). Do not invent or freeze scores on this card.
 
 ## Intended use
 
@@ -43,7 +43,7 @@ Measurement item bank for the GSPC 14-slot board (live: 14 measured of 14 quotab
 
 ## Limitations
 
-7-model jail fleet (not the 19-model board fleet). Separation UNTESTED. Bank scope and n are stated on the living board; unmeasured cells are stated, never interpolated. Scores are point-in-time.
+7-model jail fleet (not the 19-model board fleet). Separation **TIE** (measured 2026-08-25). Bank scope and n are stated on the living board; unmeasured cells are stated, never interpolated. Scores are point-in-time.
 
 ## Footer
 

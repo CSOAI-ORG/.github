@@ -36,7 +36,7 @@ Run locally: `node scripts/run-frontend-audit.mjs` (from this repo).
 | **Buyer** | `/pricing` | 404 | free | **FAIL** |
 | **Auditor** | `/honesty` | 404 | council-oowm | **FAIL** |
 | **Researcher** | `/library` | 404 | reference pages across | **FAIL** |
-| **API agent** | `/api/gspc` | 200 | axes:14, measured_axes:13 | **PASS** |
+| **API agent** | `/api/gspc` | 200 | axes:14, measured_axes:14 | **PASS** |
 | **A2A agent** | `/.well-known/agent-card.json` | 200 | doi, CSOAI Ltd | **PASS** |
 | **Regulator** | `/regulators` | 404 | — | **FAIL** |
 | **Enterprise** | `/start` | 404 | — | **FAIL** |

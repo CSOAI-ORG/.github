@@ -1,11 +1,11 @@
 # Aggregator Propagation Watch-Note (N5-12)
 
 **Created:** 2026-08-24T17:30:00Z  
-**Last recheck:** 2026-08-25T16:33:00Z (RALPH)
+**Last recheck:** 2026-08-25T17:12:00Z (RALPH)
 
 ## Status: WATCH (not a sales claim)
 
-| Aggregator | Mechanism | Expected lag | Status 2026-08-25T16:33Z |
+| Aggregator | Mechanism | Expected lag | Status 2026-08-25T17:12Z |
 |------------|-----------|--------------|--------------------------|
 | Official MCP registry | OIDC publish | Immediate | **LIVE** `io.github.CSOAI-ORG/gspc` **1.0.3** isLatest · `board (14 of 14)` |
 | PulseMCP | `updated_since` ETL | ~24h | Probe 403/API-key — recheck later |
