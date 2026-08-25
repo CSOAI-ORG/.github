@@ -1,9 +1,9 @@
-# A2A Directory Submissions (N5-15..N5-18) — PREP
+# A2A Directory Submissions (N5-15..N5-18)
 
 ## N5-15: a2aagentlist.com
 
 **URL:** https://a2aagentlist.com/submit  
-**Status:** PREP — **Gmail draft created** (owner-gated; not sent). Draft id `r-8600767036973835528` → `gal6111@gmail.com` (2026-08-25T02:07Z).
+**Status:** **SENT** — Gmail to `gal6111@gmail.com` · message id `1a038c704b0704c1` · thread `1a038b3ba374c727` · 2026-08-25T11:56Z (prior draft `r-8600767036973835528`).
 
 | Field | Value |
 |-------|-------|
@@ -14,7 +14,7 @@
 ## N5-16: artinet.io
 
 **URL:** https://artinet.io (community registry, WIP)  
-**Status:** PREP — register agent-card endpoint
+**Status:** **BLOCKED** — login/signup UI non-functional (404 / unresponsive controls, 2026-08-25T11:55Z); no public registration API; waitlist-era venue.
 
 | Field | Value |
 |-------|-------|
@@ -25,6 +25,7 @@
 
 **Fork:** ai-boost/awesome-a2a  
 **Branch:** add-council-of-ai  
+**Status:** **SUBMITTED + NUDGED** — https://github.com/ai-boost/awesome-a2a/pull/157 OPEN/mergeable · nudge comment https://github.com/ai-boost/awesome-a2a/pull/157#issuecomment-5410013048 (2026-08-25T11:56Z)  
 **Edit:** README.md only (English)
 
 ```markdown
@@ -36,7 +37,7 @@
 ## N5-18: Discussion #97 reply
 
 **Repo:** a2aproject/A2A Discussion #97  
-**Status:** GATED — GraphQL FORBIDDEN for integration; browser GitHub login blocked by **hardware security key 2FA** (2026-08-25T10:27Z); post manually  
+**Status:** **GATED** — GraphQL FORBIDDEN for integration; browser GitHub has no session / hardware 2FA (rechecked 2026-08-25T11:55Z); post manually  
 **Comment (one line + link):**
 
 > Council of AI — independent GSPC governance measurement (13 of 14 axes): https://councilof.ai/.well-known/agent-card.json

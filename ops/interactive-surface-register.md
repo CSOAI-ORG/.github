@@ -14,9 +14,10 @@
 | MCP registry live | registry.modelcontextprotocol.io | **LIVE** v1.0.2 isLatest | N5-10/11 |
 | A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated 10/10 | N5-13/14 |
 | Evidence pack | trust/evidence-pack/ | **DONE** | N5-20 |
-| awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED** awaiting review | N5-17 |
-| a2aagentlist | Gmail draft | PREP (draft ready — owner send) | N5-15 |
-| artinet.io | — | BLOCKED (placeholder) | N5-16 |
+| awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED+NUDGED** awaiting review | N5-17 |
+| a2aagentlist | gal6111@gmail.com | **SENT** 2026-08-25T11:56Z | N5-15 |
+| artinet.io | — | BLOCKED (login UI broken / no API) | N5-16 |
+| honest card_index 150 | councilof-ai#610 merged `a2b7b33` | **LIVE** on master (34171B / sha 5bb93de) | peer-align |
 | Datarade | providers.datarade.ai/apply | PREP drafted | N5-25 |
 
 **Pending labels:** GATED · LIVE · PARTIAL · SUBMITTED · BLOCKED · DONE

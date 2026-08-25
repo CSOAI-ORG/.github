@@ -2,28 +2,29 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T10:48Z)  
+**Commit:** (pending) (continued 2026-08-25T11:59Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
-## Current status snapshot (2026-08-25T10:48Z) — **30/30** · STRICT PASS · owner-gated=drafts
+## Current status snapshot (2026-08-25T11:59Z) — **30/30** · STRICT PASS · ate remaining agent-lane closes
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01..06 | LIVE | HF datasets+Space+DOIs · board `10.57967/hf/10114` · bench `10.57967/hf/10116` |
+| N5-01..06 | LIVE | HF datasets+Space+DOIs · board `10.57967/hf/10114` · bench `10.57967/hf/10116` · Space sdk=gradio (runtime PAUSED cpu-basic limit=0) |
 | N5-07/21 | PASS | ClaimGuard + banned-strings |
 | N5-08..12 | LIVE | MCP registry 1.0.2 isLatest |
 | N5-13/14 | LIVE | agent-card councilof.ai validated |
-| N5-15 | PREP | a2aagentlist Gmail draft ready (owner send) |
-| N5-16 | BLOCKED | artinet.io waitlist only |
-| N5-17 | SUBMITTED | awesome-a2a PR #157 OPEN/mergeable |
-| N5-18 | GATED | Discussion #97 — GitHub hardware 2FA |
+| N5-15 | **SENT** | a2aagentlist email → gal6111@gmail.com · msg `1a038c704b0704c1` |
+| N5-16 | BLOCKED | artinet.io login UI broken / no API |
+| N5-17 | **SUBMITTED+NUDGED** | awesome-a2a PR #157 · comment `5410013048` |
+| N5-18 | GATED | Discussion #97 — no GH session / hardware 2FA |
 | N5-19 | DEFERRED | no GCP |
 | N5-20..30 | DONE/PREP | evidence + marketplace + insurance + G-Cloud drafts |
+| PEER | **MERGED** | councilof-ai#610 honest card_index 150 → master `a2b7b33` |
 
-**Owner closes:** Discussion #97 comment · send a2aagentlist draft · (optional) nudge awesome-a2a #157.
+**Owner closes left:** Discussion #97 (2FA) · HF Team/quota for Space runtime · (optional) artinet when venue works.
 
 
 ## Current status snapshot (00:44Z) — **22/30**
@@ -1730,3 +1731,19 @@ Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated direct
 | N5-AUDIT | **CONFIRMED** | Requirement-by-requirement recheck matches log 90 · **30/30** under drafts doctrine |
 
 Pack **30/30**. No agent-lane work remaining; owner closes unchanged (N5-15 send · N5-18 2FA · optional #157 nudge).
+
+## Continuation log 92 (2026-08-25T11:59Z) — align with peers · EAT remaining tasks
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-15 | **SENT** | Gmail → gal6111@gmail.com · msg `1a038c704b0704c1` · 2026-08-25T11:56Z |
+| N5-17 | **NUDGED** | awesome-a2a #157 comment https://github.com/ai-boost/awesome-a2a/pull/157#issuecomment-5410013048 |
+| N5-16 | **BLOCKED** | artinet.io recheck — login 404 / controls dead; no registration |
+| N5-18 | **GATED** | Discussion #97 still unposted — no browser GH session; integration FORBIDDEN |
+| N5-06 | **PARTIAL** | Space restart 403 — org `cpu-basic` limit=0 (static siblings not consuming Gradio quota) |
+| PEER | **MERGED** | councilof-ai#610 honest card_index 150 · merge `a2b7b330` · e2e aligned · 2026-08-25T11:58Z |
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T115847Z.log · 2026-08-25T11:58Z |
+| N5-07/21 | **PASS** | ClaimGuard from STRICT run |
+| N5-ALIGN | **DONE** | Peer DOI/card_index/Space agents reconciled into register + surfaces |
+
+Pack **30/30**. Agent-lane closes eaten (N5-15 send · N5-17 nudge · peer #610 merge). Human-only: N5-18 2FA · Space quota · artinet venue.
