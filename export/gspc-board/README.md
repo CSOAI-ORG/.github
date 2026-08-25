@@ -14,6 +14,7 @@ Independent AI-governance measurement board. **Source of truth:** [councilof.ai/
 
 - **Board slots:** 14 quotable axes  
 - **Public ruling (live):** 14 measured of 14 quotable  
+- **Jail (slot 14):** MEASURED; living-board separation **TIE** (a TIE is not a separated leader)  
 - **DOI:** [10.57967/hf/10114](https://doi.org/10.57967/hf/10114) (dataset `csoai/gspc-board`)  
 - **License:** CC-BY-4.0 — attribute Council of AI / CSOAI Ltd  
 - **Attestation:** Ed25519 site attestation included in `board.json` (`site_attestation`)

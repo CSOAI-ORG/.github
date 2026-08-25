@@ -2531,3 +2531,15 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-16 | **BLOCKED** | artinet |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 148 (2026-08-25T19:22:14Z) — RALPH · export README jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **SHIPPED** | `export/*/README.md` jail MEASURED + TIE (board.json untouched) |
+| N5-CF | **PREP** | runbook covers Pages + Workers |
+| N5-KAGGLE | **STAGED** | no token — package README ready |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
