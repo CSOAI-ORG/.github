@@ -2809,3 +2809,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | CF token |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 168 (2026-08-25T23:36:01Z) — RALPH · CF restore note + methodology CDN lag
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CF | **DOC** | `ops/cf-api-token-restore.md` — add councilof.ai methodology CDN lag (master `9601613` vs live 16-axis/untested) |
+| N5-SITE | **SHIPPED** | prior: AXIS_MAPPING `5477ef6` · RECEIPT_INTEROP `e1a0934` · StoryWorld/evidenceRail |
+| N5-VERIFY | **PASS** | STRICT · methodology NOTE (CDN lag) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
