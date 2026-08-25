@@ -2089,3 +2089,14 @@ No DOI remint · no paid spend. ~17:51 BST — continues to 04:00 London.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend. ~17:54 BST — continues to 04:00 London.
+
+## Continuation log 115 (2026-08-25T16:56:00Z) — RALPH · deploy2 llms + openapi 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE+** | csoai-static-deploy2 `llms.txt` `b1829fa` · `openapi.json` `eede24e` cite live 14/14 |
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T165428Z.log |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~17:56 BST — continues to 04:00 London.
