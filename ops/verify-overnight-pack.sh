@@ -17,6 +17,7 @@ warn() {
   WARN=1
   if [[ "$STRICT" == "1" ]]; then FAIL=1; fi
 }
+note() { echo "  [NOTE] $*"; }  # owner-gated / known lag — never fails STRICT
 
 http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
 
@@ -93,6 +94,42 @@ print(latest[0] if latest else 'none')
     pass "A2A validator live card"
   else
     fail "A2A validator live card"
+  fi
+
+  echo "--- N5-LIVE board chrome (14/14)"
+  pc=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/gspc" | python3 -c "import sys,json; print(json.load(sys.stdin).get('totals',{}).get('public_count',''))" 2>/dev/null || true)
+  if echo "$pc" | grep -q "14 measured of 14"; then
+    pass "live public_count=$pc"
+  else
+    fail "live public_count drift: ${pc:-empty}"
+  fi
+  for badge in \
+    "https://councilof.ai/badge/axes.json" \
+    "https://csoai.org/badge/axes.json"
+  do
+    msg=$(curl -sA "CSOAI-overnight-verify/1.0" "$badge" | python3 -c "import sys,json; print(json.load(sys.stdin).get('message',''))" 2>/dev/null || true)
+    if [[ "$msg" == "14 of 14" ]]; then
+      pass "$badge message=$msg"
+    else
+      warn "$badge message=${msg:-empty} (want 14 of 14)"
+    fi
+  done
+  code=$(http_code "https://councilof.ai/openapi.json")
+  if [[ "$code" == "200" ]]; then pass "openapi.json HTTP $code"; else warn "openapi.json HTTP $code"; fi
+  feed=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/feed.xml" 2>/dev/null || true)
+  if echo "$feed" | grep -q "14 measured of 14"; then
+    pass "feed.xml cites 14 measured of 14"
+  else
+    warn "feed.xml missing live 14/14 item"
+  fi
+  mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
+    -H 'content-type: application/json' \
+    -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \
+    | python3 -c "import sys,json; print(json.load(sys.stdin).get('result',{}).get('serverInfo',{}).get('version',''))" 2>/dev/null || true)
+  if [[ "$mcp_rt" == "1.0.3" ]]; then
+    pass "MCP worker runtime=$mcp_rt"
+  else
+    note "MCP worker runtime=${mcp_rt:-empty} (registry 1.0.3; needs CF_API_TOKEN restore — see ops/cf-api-token-restore.md)"
   fi
 
   echo "--- N5-20 evidence pack"

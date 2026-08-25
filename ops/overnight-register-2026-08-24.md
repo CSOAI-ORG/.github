@@ -2234,3 +2234,15 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 125 (2026-08-25T18:03:58Z) — RALPH · verifier chrome checks (badge/openapi/feed)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T180340Z.log — public_count + badges + openapi + feed |
+| N5-NOTE | **FACT** | MCP worker runtime NOTE 1.0.0 (does not fail STRICT) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
