@@ -1831,3 +1831,16 @@ Objective: FIVE-VENUE OVERNIGHT PACK (N5-01..N5-30). Doctrine: **Owner-gated = d
 
 Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated directory items drafted/sent/submitted/deferred as required.
 
+## Continuation log 96 (2026-08-25T15:23:17Z) — corrected living registry (anti-dupe fire-book)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REG | **LIVE** | `registry/outreach-registry.json` + md + activation-pack · corrected vs stale peer audit |
+| N5-05 | **LIVE** | DOIs already minted — fire-book rank-1 DOI mint **SKIPPED** (anti-dupe) |
+| N5-10/11 | **LIVE** | MCP 1.0.2 — peer “unpublished” claim marked STALE |
+| N5-13/14 | **LIVE** | A2A card 14/14 CDN |
+| N5-NEXT | **READY** | £0: Kaggle token / Discussion #97 · paid: CONFIRM RunPod or HF Team |
+| N5-VERIFY | **PASS** | live API 14/14 · DOIs present · MCP isLatest 1.0.2 |
+
+Peer fire-book `d1e3e12` / `registry/` was **not** in this workspace; rebuilt from verified live state. PR #645 is EUNOMIA UNMEASURED (separate from GSPC 14).
+

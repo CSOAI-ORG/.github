@@ -1,0 +1,325 @@
+{
+  "schema": "csoai.outreach-registry/0.1",
+  "updated_at": "2026-08-25T15:22:20Z",
+  "source_of_truth_notes": [
+    "GSPC quotable board = 14 slots; live public_count from /api/gspc",
+    "EUNOMIA board (PR #645 UNMEASURED indices) is a SEPARATE surface \u2014 do not mix counts",
+    "HF DOIs already minted \u2014 NEVER remint",
+    "ops/knowledge/outreach.sqlite is agent-shared SQLite companion"
+  ],
+  "accounts": [
+    {
+      "id": "hf-nick",
+      "service": "huggingface",
+      "email": "nicholastempleman@gmail.com",
+      "username": "Nicholastempleman",
+      "status": "ACTIVE",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "admin on csoai"
+    },
+    {
+      "id": "hf-org-csoai",
+      "service": "huggingface-org",
+      "username": "csoai",
+      "status": "ACTIVE",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z"
+    },
+    {
+      "id": "github-csoai",
+      "service": "github",
+      "email": "nicholas@csoai.org",
+      "status": "ACTIVE_API",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "browser login CAPTCHA/2FA gated"
+    },
+    {
+      "id": "gmail-nick",
+      "service": "gmail",
+      "email": "nicholastempleman@gmail.com",
+      "status": "ACTIVE",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z"
+    },
+    {
+      "id": "mail-csoai",
+      "service": "email",
+      "email": "nicholas@csoai.org",
+      "status": "READY",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "rotate password after chat paste"
+    },
+    {
+      "id": "kaggle",
+      "service": "kaggle",
+      "email": "nicholas@csoai.org",
+      "status": "MISSING_TOKEN",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "package staged export/kaggle-gspc-board"
+    },
+    {
+      "id": "artinet",
+      "service": "artinet",
+      "status": "BLOCKED",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "UI broken"
+    },
+    {
+      "id": "gcp",
+      "service": "google-cloud",
+      "status": "DEFERRED",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "no account"
+    },
+    {
+      "id": "runpod",
+      "service": "runpod",
+      "status": "CONFIRM_SPEND",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "pods documented; confirm burn before overnight"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "hf-gspc-board",
+      "kind": "hf_dataset",
+      "url": "https://huggingface.co/datasets/csoai/gspc-board",
+      "status": "LIVE",
+      "doi": "10.57967/hf/10114",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "do_not": "remint DOI"
+    },
+    {
+      "id": "hf-gspc-bench",
+      "kind": "hf_dataset",
+      "url": "https://huggingface.co/datasets/csoai/gspc-bench-results",
+      "status": "LIVE",
+      "doi": "10.57967/hf/10116",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "do_not": "remint DOI"
+    },
+    {
+      "id": "hf-leaderboard-results",
+      "kind": "hf_dataset",
+      "url": "https://huggingface.co/datasets/csoai/gspc-leaderboard-results",
+      "status": "LIVE",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z"
+    },
+    {
+      "id": "hf-space",
+      "kind": "hf_space",
+      "url": "https://huggingface.co/spaces/csoai/gspc-governance-leaderboard",
+      "status": "PARTIAL",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "sdk=gradio; runtime PAUSED cpu-basic limit=0 \u2014 ONLY real $ item for Gradio run"
+    },
+    {
+      "id": "mcp-gspc",
+      "kind": "mcp",
+      "url": "https://registry.modelcontextprotocol.io",
+      "status": "LIVE",
+      "version": "1.0.2",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "1.0.2 isLatest \u2014 audit claiming unpublished is STALE"
+    },
+    {
+      "id": "a2a-card",
+      "kind": "a2a",
+      "url": "https://councilof.ai/.well-known/agent-card.json",
+      "status": "LIVE",
+      "http": 200,
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "14 measured of 14 on CDN"
+    },
+    {
+      "id": "gspc-api",
+      "kind": "api",
+      "url": "https://councilof.ai/api/gspc",
+      "status": "LIVE",
+      "http": 200,
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "public_count": "14 measured of 14 quotable"
+    },
+    {
+      "id": "awesome-a2a",
+      "kind": "directory",
+      "url": "https://github.com/ai-boost/awesome-a2a/pull/157",
+      "status": "SUBMITTED",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z"
+    },
+    {
+      "id": "a2aagentlist",
+      "kind": "directory",
+      "status": "SENT",
+      "owner_gate": false,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "gmail 1a038c704b0704c1"
+    },
+    {
+      "id": "discussion97",
+      "kind": "directory",
+      "url": "https://github.com/a2aproject/A2A/discussions/97",
+      "status": "GATED",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "notes": "CAPTCHA/2FA"
+    },
+    {
+      "id": "kaggle-gspc-board",
+      "kind": "kaggle",
+      "status": "STAGED",
+      "owner_gate": true,
+      "verified": "2026-08-25T15:22:20Z",
+      "path": "export/kaggle-gspc-board"
+    }
+  ],
+  "integrations": [
+    {
+      "id": "mcp-server-json",
+      "status": "LIVE",
+      "notes": "csoai-static-deploy2 main + registry 1.0.2"
+    },
+    {
+      "id": "a2a-well-known",
+      "status": "LIVE"
+    },
+    {
+      "id": "layer0",
+      "status": "SITE_ROUTE",
+      "url": "https://councilof.ai/layer0",
+      "owner_gate": false
+    },
+    {
+      "id": "x402",
+      "status": "SEPARATE",
+      "notes": "payment flow \u2014 do not conflate with GSPC board"
+    },
+    {
+      "id": "knowledge-sqlite",
+      "status": "LIVE",
+      "path": "ops/knowledge/outreach.sqlite"
+    },
+    {
+      "id": "claimguard",
+      "status": "LIVE",
+      "path": "ops/claimguard-publish-gate.sh"
+    }
+  ],
+  "outreach_contacts": [
+    {
+      "id": "aiuc-1",
+      "channel": "draft",
+      "path": "trust/insurance-prep/aiuc-1-scoping-draft.md",
+      "status": "DRAFT_NOT_SENT",
+      "owner_gate": true
+    },
+    {
+      "id": "armilla",
+      "channel": "draft",
+      "path": "trust/insurance-prep/armilla-governance-draft.md",
+      "status": "DRAFT_NOT_SENT",
+      "owner_gate": true
+    },
+    {
+      "id": "aisure",
+      "channel": "draft",
+      "path": "trust/insurance-prep/munich-re-aisure-dd-draft.md",
+      "status": "DRAFT_NOT_SENT",
+      "owner_gate": true
+    },
+    {
+      "id": "testudo",
+      "channel": "draft",
+      "path": "trust/insurance-prep/testudo-one-pager.md",
+      "status": "DRAFT_NOT_SENT",
+      "owner_gate": true
+    }
+  ],
+  "boards": [
+    {
+      "id": "gspc-14",
+      "name": "GSPC quotable board",
+      "slots": 14,
+      "public_count": "14 measured of 14 quotable",
+      "status": "LIVE",
+      "do_not": "call this 22 axes"
+    },
+    {
+      "id": "eunomia",
+      "name": "EUNOMIA living board",
+      "status": "SEPARATE",
+      "pr": "https://github.com/CSOAI-ORG/councilof-ai/pull/645",
+      "notes": "PR #645 adds 3 UNMEASURED index axes \u2014 not GSPC 14"
+    }
+  ],
+  "money": [
+    {
+      "id": "hf-team",
+      "item": "HF Team/Enterprise for Gradio Space runtime",
+      "cost": "paid",
+      "status": "CONFIRM",
+      "only_real_money_for_space": true
+    },
+    {
+      "id": "runpod-a100",
+      "item": "RunPod A100/3090 overnight burn",
+      "cost": "paid",
+      "status": "CONFIRM",
+      "notes": "unlocks measurement volume"
+    },
+    {
+      "id": "gcloud-ce",
+      "item": "G-Cloud Cyber Essentials fee",
+      "cost": "paid",
+      "status": "CONFIRM"
+    },
+    {
+      "id": "domains",
+      "item": "cibola domains",
+      "cost": "~\u00a330",
+      "status": "CONFIRM"
+    }
+  ],
+  "fire_order_corrected": [
+    {
+      "rank": 1,
+      "action": "SKIP DOI mint \u2014 ALREADY LIVE",
+      "why": "board 10.57967/hf/10114 \u00b7 bench 10.57967/hf/10116"
+    },
+    {
+      "rank": 2,
+      "action": "\u00a30: Kaggle publish when token present",
+      "why": "mirror board; staged package ready"
+    },
+    {
+      "rank": 3,
+      "action": "\u00a30: Discussion #97 with your GH session",
+      "why": "directory close"
+    },
+    {
+      "rank": 4,
+      "action": "CONFIRM then A100/RunPod restart",
+      "why": "measurement volume for any UNMEASURED work \u2014 costs money"
+    },
+    {
+      "rank": 5,
+      "action": "CONFIRM then HF Team if Space must RUN",
+      "why": "only $ item for Gradio runtime"
+    }
+  ]
+}
