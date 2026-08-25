@@ -14,7 +14,7 @@
 ## N5-16: artinet.io
 
 **URL:** https://artinet.io (community registry, WIP)  
-**Status:** **BLOCKED** — login/signup still 404 (rechecked curl+Apify 2026-08-25T23:17Z); no public registration API; waitlist-era venue.
+**Status:** **BLOCKED** — login/signup still 404 (rechecked curl+Apify 2026-08-25T23:58Z); no public registration API; waitlist-era venue.
 
 | Field | Value |
 |-------|-------|
@@ -49,7 +49,7 @@ No GCP account available to lane. **Explicit deferral:** no GCP account — defe
 ## N5-20: agentcards.io — DRAFT (free probe 2026-08-25T16:33Z)
 
 **URL:** https://agentcards.io  
-**Status:** **PREP** — site HTTP 200; Apify 2026-08-25T23:17Z: empty page shell, **no public submit/register form**; no authenticated session. Ready fields below for owner paste if UI exposes “add card”.
+**Status:** **PREP** — Apify 2026-08-25T23:58Z: agentcards.ai is a **parked GoDaddy lander** (HTTP 200 → `/lander`); **no usable submit form**. Fields below kept for owner if a real registry appears.
 
 | Field | Value |
 |-------|-------|
@@ -63,12 +63,14 @@ No GCP account available to lane. **Explicit deferral:** no GCP account — defe
 **URL:** https://a2a.dev  
 **Status:** **PREP** — site HTTP 200; treat as docs/portal, not a confirmed open directory. Do not invent a submission. Owner: confirm if a registry form exists.
 
-## Aggregator watch (N5-12) — 2026-08-25T23:19Z
+## Aggregator watch (N5-12) — 2026-08-25T23:59:24Z
 
 | Venue | Status |
 |-------|--------|
 | Smithery | **LIVE** https://smithery.ai/servers/csoai/gspc |
 | Official MCP registry | **LIVE** 1.0.3 board (14 of 14) |
-| PulseMCP | **ABSENT** — `q=gspc` → 0 servers (Apify) |
+| PulseMCP | **ABSENT** — `q=gspc` → 0 servers (Apify 23:58Z) |
 | Glama | **404** — `csoai/gspc` and `@CSOAI-ORG/gspc` (draft: `ops/glama-listing-draft.md`) |
+| artinet | **BLOCKED** — signup/login 404 |
+| agentcards.ai | **PARKED** — GoDaddy lander, no submit form |
 
