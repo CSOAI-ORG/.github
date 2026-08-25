@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 35784d3 (continued 2026-08-25T00:04Z)  
+**Commit:** 0bc8900 (continued 2026-08-25T00:07Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (00:04Z) — **22/30**
+## Current status snapshot (00:07Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; 1 cron run @ 23:48Z; no 2nd run through 00:04Z |
+| N5-01 | GATED | HF_TOKEN unset; 1 cron @ 23:48Z; no 2nd run through 00:07Z (GH delay) |
 | N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | export ready; live refresh pending |
@@ -29,7 +29,7 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 
 ---
 
-## Current status snapshot (00:02Z) — superseded
+## Current status snapshot (00:04Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1136,4 +1136,19 @@ No change. Pack **22/30**. Owner: HF_TOKEN or Trusted Publishers.
 | N5-07/21 | **PASS** | claimguard-20260825T000409Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**.
+
+---
+
+## Continuation log 60 (2026-08-25T00:07Z) — cron delay watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched through 00:07Z · 2026-08-25T00:07Z |
+| N5-REGISTER | **MERGED** | PR #57 · 0bc8900 · log 59 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; local publish skipped |
+| N5-01 | **CRON** | Still 1 run (32791004769); 00:00Z boundary missed; next ~00:15Z |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T000529Z.log · 2026-08-25T00:05:29Z |
+| N5-07/21 | **PASS** | claimguard-20260825T000529Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: HF_TOKEN or Trusted Publishers.
 
