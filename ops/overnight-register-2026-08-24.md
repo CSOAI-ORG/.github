@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** c3de020 (continued 2026-08-25T00:47Z)  
+**Commit:** ba94549 (continued 2026-08-25T00:49Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1366,4 +1366,19 @@ No change. Pack **22/30**. Owner: Path A or Path B + manual workflow run.
 | N5-07/21 | **PASS** | claimguard-20260825T004652Z.log · ClaimGuard PASS |
 
 Register current through log 67 on `main`. HF publish owner-gated. Pack **22/30**.
+
+---
+
+## Continuation log 69 (2026-08-25T00:49Z) — PR #63 merged + recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REGISTER | **MERGED** | PR #63 · ba94549 · log 68 on `main` · 2026-08-25T00:48:15Z |
+| N5-WATCH | **RECHECK** | Goal continuation · 2026-08-25T00:49Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; publish skipped |
+| N5-01 | **GATED** | `gh workflow run` → 403; latest publish run 32788615051 (OIDC fail) |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z) |
+| N5-07/21 | **PASS** | claimguard-20260825T004921Z.log · ClaimGuard PASS |
+
+Register through log 68 on `main`. No HF auth change. Pack **22/30**.
 
