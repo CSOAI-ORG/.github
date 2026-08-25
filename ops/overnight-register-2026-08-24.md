@@ -1522,3 +1522,18 @@ No change. Pack **22/30**. Owner: Path A or Path B.
 | N5-07/21 | **PASS** | claimguard-20260825T020610Z.log · ClaimGuard PASS |
 
 Agent lane still blocked on HF write. Pack **22/30**. Owner: Path A or Path B (see Gmail draft).
+
+## Continuation log 79 (2026-08-25T0220Z) — timer/goal recheck + browser + MCP confirm
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery ~#18 · 2026-08-25T02:20:33Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; browser huggingface.co **logged out** (no Settings tab) |
+| N5-01 | **GATED** | HF MCP OAuth still live (`contribute-repos`) but `hf_jobs` tool **not exposed**; no HF_* in proc environ |
+| N5-08–12 | **LIVE** | MCP registry `io.github.CSOAI-ORG/gspc` **1.0.2 isLatest=true** (reconfirmed) |
+| N5-13/14 | **LIVE** | agent-card HTTP 200 at councilof.ai |
+| N5-06 | **GATED** | leaderboard-results HTTP 401; Space sdk=static |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T022030Z.log · 2026-08-25T02:20:33Z |
+| N5-07/21 | **PASS** | claimguard-20260825T022030Z.log · ClaimGuard PASS |
+
+No publish path. Pack **22/30**. Owner: Path A or Path B (Gmail drafts from log 78).
