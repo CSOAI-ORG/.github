@@ -1,0 +1,10 @@
+=== ClaimGuard publish gate 20260825T183638Z ===
+board: /workspace/export/gspc-board/board.json
+claim: 14 measured of 14 quotable
+--- attestation + board integrity
+ClaimGuard FAIL · axes=14 measured=14 · 14 measured of 14 quotable
+  [FAIL] attestation.invalid: Ed25519 verify failed over RFC8785 canonical payload: 
+  [PASS] payload.axes_present: axes[] has 14 rows
+  [PASS] claim.public_count_match: claim matches live totals.public_count (14 measured of 14 quotable)
+--- banned-strings
+PASS: zero banned-string hits

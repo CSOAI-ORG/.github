@@ -124,6 +124,20 @@ print(latest[0] if latest else 'none')
   else
     warn "feed.xml missing live 14/14 item"
   fi
+  # axis-register + server-card — shipped on master (660d67e / 1ce12b0); NOTE while Pages lags
+  ar=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/axis-register" 2>/dev/null || true)
+  ar_n=$(echo "$ar" | python3 -c "import sys,json; print(json.load(sys.stdin).get('registry_axis_count',''))" 2>/dev/null || true)
+  if [[ "$ar_n" == "14" ]] && ! echo "$ar" | grep -q "UNTESTED"; then
+    pass "axis-register registry_axis_count=14 (no UNTESTED)"
+  else
+    note "axis-register count=${ar_n:-empty} (master 660d67e — await Pages if still 13/UNTESTED)"
+  fi
+  sc=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/.well-known/mcp/server-card.json" 2>/dev/null || true)
+  if echo "$sc" | grep -q "14 measured of 14"; then
+    pass "mcp/server-card.json cites 14 measured of 14"
+  else
+    note "mcp/server-card.json stale (master 1ce12b0 — await Pages if still 13 measured)"
+  fi
   mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
     -H 'content-type: application/json' \
     -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \

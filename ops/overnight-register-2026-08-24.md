@@ -2334,3 +2334,37 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+
+## Continuation log 133 (2026-08-25T18:36:19Z) — RALPH · axis-register 14 + jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `functions/api/axis-register.ts` `660d67e` — registry_axis_count **14**, jail MEASURED + separation **TIE** (was 13/UNTESTED) |
+| N5-MCP | **SHIPPED** | `public/.well-known/mcp/server-card.json` `1ce12b0` — cites **14 measured of 14** + jail TIE |
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T182836Z.log · agent-card 14/14 |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 (viewerCanUpdate false / gh 401) |
+| N5-16 | **BLOCKED** | artinet login/signup still broken |
+| N5-CF | **PREP** | MCP worker runtime still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 134 (2026-08-25T18:36:19Z) — RALPH · measured_on.note + catalog
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `_gspc_types.ts` `c97a8a1` — `measured_on.note` jail **TIE** (axes already TIE; note lagged) |
+| N5-SITE | **SHIPPED** | `public/catalog.json` `0a49168` — board note **14 measured of 14** |
+| N5-VERIFY | **NOTE** | CDN still serves axis-register 13 / AGENT-ONBOARDING 404 flapping — Pages storm (protect-verified-335) |
+| N5-PACK | **SHIPPED** | verifier NOTES for axis-register + server-card; export board notes → TIE |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 135 (2026-08-25T18:36:51Z) — RALPH · keep signed export board.json intact
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **REVERT** | Restored `export/*/board.json` — note polish broke Ed25519 attestation; Kaggle must use HF/live raw bytes |
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T183624Z.log |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
