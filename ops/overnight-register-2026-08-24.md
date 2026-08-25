@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 60a88cd (continued 2026-08-25T00:16Z)  
+**Commit:** 766d1f6 (continued 2026-08-25T00:18Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (00:16Z) — **22/30**
+## Current status snapshot (00:18Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; **1 cron total** (23:48Z); 00:00Z and 00:15Z boundaries missed |
+| N5-01 | GATED | HF_TOKEN unset; 1 cron @ 23:48Z; 00:15Z timer fired — no new run |
 | N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | export ready; live refresh pending |
@@ -25,11 +25,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-19 | DEFERRED | no GCP |
 | N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
 
-**Owner unblock:** `HF_TOKEN` + manual workflow run (cron unreliable on `.github` repo). OR Trusted Publishers.
+**Owner unblock:** `HF_TOKEN` + manual workflow run. Cron unreliable.
 
 ---
 
-## Current status snapshot (00:07Z) — superseded
+## Current status snapshot (00:16Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1167,4 +1167,20 @@ No change. Pack **22/30**. Owner: HF_TOKEN or Trusted Publishers.
 | N5-07/21 | **PASS** | claimguard-20260825T000905Z.log · ClaimGuard PASS |
 
 Cron unreliable. Auth blocked. Pack **22/30**.
+
+---
+
+## Continuation log 62 (2026-08-25T00:18Z) — timer recheck (overnight-hf-recheck)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #10 · 2026-08-25T00:15Z |
+| N5-REGISTER | **MERGED** | PR #59 · 766d1f6 · log 61 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; local publish skipped |
+| N5-01 | **GATED** | Latest `overnight-hf-publish` run 32788615051 (push, OIDC fail) |
+| N5-01 | **CRON** | Still 1 run (32791004769); no 2nd cron after 00:15Z timer |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T001819Z.log · 2026-08-25T00:18:19Z |
+| N5-07/21 | **PASS** | claimguard-20260825T001819Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: HF_TOKEN + manual workflow run.
 
