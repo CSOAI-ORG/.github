@@ -2004,3 +2004,13 @@ No DOI remint · no paid spend.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend.
+
+## Continuation log 108 (2026-08-25T16:26:00Z) — RALPH · HF wave-3 (legacy / in-lane names)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **POLISHED** | 9 more READMEs (safety/continuity + legacy transparency/accountability/creativity/efficiency/fairness + in-lane human-vs-ai/sovereignty) · ops/logs/hf-readme-stale13-wave3-20260825T1625Z.json |
+| N5-NOTE | **CANON** | Quotable board remains **14** — these cards cite live public_count; do not invent 22 axes |
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T162308Z.log |
+
+No DOI remint · no paid spend. ~17:26 BST — timer continues to 04:00 London.
