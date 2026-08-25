@@ -2879,3 +2879,33 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-16 | **BLOCKED** | artinet |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 173 (2026-08-25T23:57:08Z) — RALPH · methodology + NewHome CDN LIVE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CDN | **LIVE** | councilof.ai deploy `32911581568` (`d01f8c4`) — `/api/methodology` **14-slot + TIE**; NewHome `CJJKDFOf` jail TIE (no “separation untested”) |
+| N5-CDN | **FAIL→SKIP** | prior run `32911415498` blocked by signed-json-guard `card_index` (n_cards lie) — do not join 335 fight |
+| N5-VERIFY | **PASS** | STRICT=1 · methodology **PASS** (was NOTE) · ClaimGuard PASS · agent-card 14/14 |
+| N5-HF | **SHIPPED** | `gspc-kernel-results` `0c33db3` · `gspc-jail-goldbank` `2134ba5` · Space `ac8a708` · boards `5dc79b9` |
+| N5-ORG | **WATCH** | `csoai.org/honesty` CDN still 13/untested (tip `5ce429a` 14/TIE) — CF token |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet signup 404 |
+| N5-CF | **PREP** | MCP worker 1.0.0 + honesty CDN only |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 174 (2026-08-25T23:57:08Z) — RALPH · more HF 14/14 pointers + pack docs
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `measured-vs-reported` + `rwa-attest` README live 14/14 pointers |
+| N5-PACK | **DOC** | morning sheet / CF restore / interactive-surface — methodology CDN marked LIVE |
+| N5-DB | **INDEXED** | mining_gaps 81/83 DONE; honesty CDN still QUEUED |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

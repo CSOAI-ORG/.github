@@ -32,4 +32,5 @@
 - [ ] https://glama.ai/mcp/servers/@CSOAI-ORG/gspc HTTP 200
 - [ ] Metadata shows 1.0.3 + 14 of 14
 
-<!-- ralph-recheck 2026-08-25T23:41:22Z: agent-card 14/14 · gspc-boards README historical · Space jail TIE · methodology CDN watch -->
+
+<!-- ralph-recheck 2026-08-25T23:57:08Z: methodology+NewHome LIVE · honesty CDN stale · Glama/Pulse still absent -->

@@ -6,7 +6,7 @@
    - `https://councilof.ai/mcp`
    - `https://csoai-gspc-mcp.nicholastempleman.workers.dev/mcp`
 2. `csoai.org` chrome lags `csoai-static-deploy2` **main** (honesty/arenas already cite **14 measured of 14** + jail **TIE** on tip: `5ce429a` / `7b0aa77`). Historical **Deploy static site** runs failed at “Deploy to Cloudflare Pages” (last seen 2026-08-16) — empty/missing CF secrets are the likely cause.
-3. `councilof.ai` Pages Functions can lag master during card_index / protect-335 storms — e.g. `functions/api/methodology.ts` tip `9601613` is **14-slot + jail TIE**, while live `GET /api/methodology` may still serve the old “16-axis / jail separation untested” payload until a clean Pages deploy lands.
+3. `councilof.ai` Pages can stall on `card_index` / protect-335 storms (signed-json-guard). After clean deploy `32911581568` (`d01f8c4`, 2026-08-25T23:55Z) live `GET /api/methodology` and NewHome again match tip **14-slot + jail TIE** (no more CDN “16-axis / untested”). Future card_index flaps can re-block deploys — do not invent 335.
 
 Source on `csoai-static-deploy2` already says MCP **1.0.3** (`workers/csoai-gspc-mcp/src/index.js` + `package.json`). Deploy workflow:
 

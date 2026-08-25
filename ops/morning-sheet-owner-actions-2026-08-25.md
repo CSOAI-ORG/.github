@@ -7,7 +7,7 @@ Lane stopped at free polish. Everything below needs Nick.
 1. **Kaggle** — paste API token → `/tmp/csoai-secrets/kaggle.json` (chmod 600), then publish staged `export/kaggle-gspc-board/` (no DOI remint).
 2. **Discussion #97** — post with personal GH session (2FA): card URL already drafted in `connect/a2a/directory-submissions.md`.
 3. **artinet.io** — still login/signup 404; skip until venue works.
-4. **CF_API_TOKEN + CF_ACCOUNT_ID** — restore on `csoai-static-deploy2` per `ops/cf-api-token-restore.md` so MCP worker runtime matches registry **1.0.3**, so `deploy-static.yml` can ship honesty/arenas 14/TIE already on main (`5ce429a` / `7b0aa77`), and so councilof.ai Pages can pick up `functions/api/methodology.ts` tip `9601613` (live CDN still “16-axis / untested”).
+4. **CF_API_TOKEN + CF_ACCOUNT_ID** — restore on `csoai-static-deploy2` per `ops/cf-api-token-restore.md` so MCP worker runtime matches registry **1.0.3**, and so `deploy-static.yml` can ship honesty/arenas 14/TIE already on main (`5ce429a` / `7b0aa77`). Note: councilof.ai methodology + NewHome CDN caught up after deploy `32911581568` (`d01f8c4`) — no longer a CF blocker for those two.
 
 ## CONFIRM (spend)
 
@@ -20,7 +20,7 @@ Lane stopped at free polish. Everything below needs Nick.
 - Invent 22 axes — cite live `totals.public_count`
 - Merge spend without CONFIRM
 
-## Already LIVE (no action) — refreshed 2026-08-25T23:19Z
+## Already LIVE (no action) — refreshed 2026-08-25T23:56Z
 
 - HF board + bench + DOIs · MCP registry 1.0.3 · A2A card 14/14 · Smithery · RSS · openapi · badge 14/14
 - `/api/axis-register` **14** + jail TIE · `measured_on.note` TIE · `catalog.json` 14/14 · mcp.json 1.0.3 · AGENT-ONBOARDING · server-card 14/14
@@ -37,7 +37,9 @@ Lane stopped at free polish. Everything below needs Nick.
 - councilof-ai `9be2ac9` scrollworld doctrine 14/TIE
 - councilof-ai `c447433` e2e homepage asserts 14 measured of 14
 - councilof-ai `9e19871` evidenceRail + `bde6f12` StoryWorld — jail TIE / 14 of 14
-- councilof-ai `9601613` methodology API 14/TIE (CDN may lag)
+- councilof-ai `9601613` methodology API 14/TIE — **CDN LIVE** after deploy `32911581568`
+- NewHome `NewHome-v3.r2-CJJKDFOf.js` — jail measured + separation TIE (no “separation untested”)
+- HF `gspc-boards` historical stamp · Space README jail TIE · `gspc-kernel-results` + `gspc-jail-goldbank` 14/14 pointers
 - councilof-ai `e1a0934` RECEIPT_INTEROP 14-slot
 - councilof-ai `5477ef6` AXIS_MAPPING 14-lock (no 16/22 invent)
 - axis-universe WARNING + 14/TIE already on master (raw CDN may lag)

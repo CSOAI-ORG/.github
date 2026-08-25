@@ -47,4 +47,5 @@ CDN updated 2026-08-25T16:50Z via councilof-ai `0a61d80` — cites live 14 measu
 
 **LIVE** `/badge/axes.json` → message **14 of 14** on councilof.ai + csoai.org (2026-08-25T17:59Z).
 
-<!-- ralph-recheck 2026-08-25T23:41:22Z: agent-card 14/14 · gspc-boards README historical · Space jail TIE · methodology CDN watch -->
+
+<!-- ralph-recheck 2026-08-25T23:57:08Z: methodology+NewHome LIVE · honesty CDN stale · Glama/Pulse still absent -->
