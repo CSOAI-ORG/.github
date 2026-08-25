@@ -2414,3 +2414,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | worker 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 139 (2026-08-25T18:54:29Z) — RALPH · verifier covers measured_on + catalog
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | verifier now checks `measured_on.note` TIE + `catalog.json` 14/14 |
+| N5-SITE | **LIVE** | measured_on + catalog confirmed on CDN |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

@@ -20,10 +20,10 @@ Lane stopped at free polish. Everything below needs Nick.
 - Invent 22 axes — cite live `totals.public_count`
 - Merge spend without CONFIRM
 
-## Already LIVE (no action)
+## Already LIVE (no action) — refreshed 2026-08-25T18:53Z
 
-- HF board + bench + DOIs · MCP registry 1.0.3 · A2A card 14/14 · Smithery · RSS feed · openapi.json · badge 14/14 · ClaimGuard board-dynamic
-- Site copy on master: jail MEASURED + TIE (CDN may lag during Pages storm)
-- `public/AGENT-ONBOARDING.md` + `.well-known/mcp.json` registry 1.0.3 pointers (await Pages if 404/stale)
-- `/api/axis-register` + `server-card` + `catalog.json` + `measured_on.note` shipped on master (660d67e / 1ce12b0 / 0a49168 / c97a8a1) — await Pages if CDN still stale
-- Ask SOV chatGrounded jail MEASURED/TIE (`78627ff`) — await Pages if chat still says UNTESTED
+- HF board + bench + DOIs · MCP registry 1.0.3 · A2A card 14/14 · Smithery · RSS · openapi · badge 14/14
+- `/api/axis-register` **14** + jail TIE · `measured_on.note` TIE · `catalog.json` 14/14 · mcp.json 1.0.3 · AGENT-ONBOARDING · server-card 14/14
+- Ask SOV chatGrounded jail MEASURED/TIE (`78627ff`) · ApiDocs lists jail
+- ClaimGuard board-dynamic · STRICT overnight-pack green
+- Site copy on master: jail MEASURED + TIE (sticky-335 storm may still flap unrelated card_index)

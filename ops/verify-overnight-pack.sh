@@ -138,6 +138,18 @@ print(latest[0] if latest else 'none')
   else
     note "mcp/server-card.json stale (master 1ce12b0 — await Pages if still 13 measured)"
   fi
+  mo_note=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/gspc" | python3 -c "import sys,json; print(json.load(sys.stdin).get('measured_on',{}).get('note',''))" 2>/dev/null || true)
+  if echo "$mo_note" | grep -q "TIE (determined" && ! echo "$mo_note" | grep -q "separation is UNTESTED"; then
+    pass "measured_on.note jail TIE (determined)"
+  else
+    note "measured_on.note lag (master c97a8a1/f277606 — await Pages if still UNTESTED)"
+  fi
+  cat_note=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/catalog.json" 2>/dev/null || true)
+  if echo "$cat_note" | grep -q "14 measured of 14"; then
+    pass "catalog.json cites 14 measured of 14"
+  else
+    note "catalog.json stale (master 0a49168/f277606 — await Pages if still 13 measured axes)"
+  fi
   mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
     -H 'content-type: application/json' \
     -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \
