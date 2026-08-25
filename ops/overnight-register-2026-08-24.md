@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T06:51Z)  
+**Commit:** (pending) (continued 2026-08-25T07:53Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1580,4 +1580,20 @@ Pack **22/30**. Owner: Path A or Path B (Issue #75).
 | N5-07/21 | **PASS** | claimguard-20260825T065040Z.log · ClaimGuard PASS |
 
 Pack **24/30** (was 22). Remaining gated: DOI (N5-05), a2aagentlist (N5-15), artinet (N5-16), Discussion #97 (N5-18), GCP (N5-19).
+
+## Continuation log 83 (2026-08-25T07:53Z) — morning timer backlog catch-up (02:30–07:15Z deliveries)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer backlog coalesced · deliveries ~#18–#37 · catch-up @ 2026-08-25T07:53Z |
+| N5-01/02/06 | **LIVE** | Publish remains live: board EUNOMIA-free; leaderboard-results 200; Space sdk=gradio |
+| N5-06 | **PARTIAL** | Space runtime **PAUSED** — org **CPU Basic quota limit**; restart blocked without upgrade/wait |
+| N5-05 | **GATED** | DOIs still `null` on gspc-board + gspc-bench-results (owner mint) |
+| N5-CRON | **FAIL** | overnight-hf-cron still failing on `main` (no repo `HF_TOKEN` secret; OIDC publishers unset) — live already published via browser PRs |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 still OPEN |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T072648Z.log · DOI ×2 only |
+| N5-07/21 | **PASS** | claimguard from same verify run · ClaimGuard PASS |
+| N5-WATCH | **RETARGET** | Timer prompt updated: DOI/STRICT focus (publish gate cleared) |
+
+Pack **24/30**. Owner: mint DOIs; optional Space quota/restart; optional directories.
 
