@@ -2368,3 +2368,20 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T183624Z.log |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 136 (2026-08-25T18:42:29Z) — RALPH · CDN confirms + chatGrounded
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `/api/axis-register` CDN **14** + jail · counters `axis_register_rows=14` |
+| N5-MCP | **LIVE** | `.well-known/mcp.json` cites registry **1.0.3** + board 14/14 |
+| N5-SITE | **LIVE** | `AGENT-ONBOARDING.md` HTTP **200** |
+| N5-MCP | **LIVE** | `server-card.json` cites 14 measured of 14 |
+| N5-SITE | **SHIPPED** | ApiDocs+badge `93b009f` · chatGrounded `78627ff` (jail MEASURED/TIE) |
+| N5-VERIFY | **PASS** | prior STRICT; ClaimGuard PASS |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

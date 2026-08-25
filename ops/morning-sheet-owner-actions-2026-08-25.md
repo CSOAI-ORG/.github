@@ -26,3 +26,4 @@ Lane stopped at free polish. Everything below needs Nick.
 - Site copy on master: jail MEASURED + TIE (CDN may lag during Pages storm)
 - `public/AGENT-ONBOARDING.md` + `.well-known/mcp.json` registry 1.0.3 pointers (await Pages if 404/stale)
 - `/api/axis-register` + `server-card` + `catalog.json` + `measured_on.note` shipped on master (660d67e / 1ce12b0 / 0a49168 / c97a8a1) — await Pages if CDN still stale
+- Ask SOV chatGrounded jail MEASURED/TIE (`78627ff`) — await Pages if chat still says UNTESTED
