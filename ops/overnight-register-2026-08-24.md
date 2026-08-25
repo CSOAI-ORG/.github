@@ -2246,3 +2246,16 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 126 (2026-08-25T18:14:26Z) — RALPH · site copy jail TIE (insurers/honesty decks)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai deck/Honesty/LivingStages copy → jail MEASURED + separation **TIE** · commits `70b93ef` `ce6c47a` `c140304` `86da8ce` `f9d0de0` (+ CityPanel follow-up) |
+| N5-NOTE | **FACT** | /pricing + /ag-ui “13 measured” hits are **historical changelog** about old grid (kept) |
+| N5-VERIFY | **PASS** | prior STRICT with chrome checks |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
