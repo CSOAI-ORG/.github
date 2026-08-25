@@ -2163,3 +2163,18 @@ No DOI remint · no paid spend · no board score remint. Continues to 04:00 Lond
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 120 (2026-08-25T17:50:24Z) — RALPH · openapi LIVE + CF restore runbook
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OPENAPI | **LIVE** | https://councilof.ai/openapi.json HTTP 200 · `8bb42b0` |
+| N5-FEED | **LIVE** | feed still 14/14 |
+| N5-CF | **PREP** | ops/cf-api-token-restore.md — worker source 1.0.3, runtime 1.0.0 until secrets restored |
+| N5-P5 | **DRAFTED** | signature_alg |
+| N5-P7 | **DRAFTED** | evidence-registry schema |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+

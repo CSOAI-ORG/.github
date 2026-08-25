@@ -41,5 +41,5 @@ CDN updated 2026-08-25T16:50Z via councilof-ai `0a61d80` — cites live 14 measu
 
 ## Site openapi.json
 
-Apex `https://councilof.ai/openapi.json` was 404; shipped `public/openapi.json` on councilof-ai master `8bb42b0` (2026-08-25T17:38Z) — await Pages deploy (deploy queue busy).
+**LIVE** https://councilof.ai/openapi.json (HTTP 200, 2026-08-25T17:49Z) — shipped councilof-ai `8bb42b0`.
 
