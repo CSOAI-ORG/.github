@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 5f3aa26 (continued 2026-08-25T00:54Z)  
+**Commit:** 6a913a9 (continued 2026-08-25T01:01Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1395,4 +1395,18 @@ Register through log 68 on `main`. No HF auth change. Pack **22/30**.
 | N5-06 | **GATED** | Publish step failed before upload; leaderboard-results/Space unchanged |
 
 Probe confirms Path B URLs required (see morning sheet). Pack **22/30**.
+
+---
+
+## Continuation log 71 (2026-08-25T01:01Z) — 01:00Z cron watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 01:00Z cron boundary · 2026-08-25T01:01Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in |
+| N5-01 | **CRON** | Still **1 run** (32791004769 @ 23:48Z); **01:00Z boundary missed** |
+| N5-WF | **NOTE** | Latest publish run 32795397767 (probe, OIDC fail @ 00:53Z) — push path confirmed |
+| N5-07/21 | **PASS** | claimguard-20260825T010124Z.log · ClaimGuard PASS |
+
+Cron dead (~73 min since only run). Use push trigger or manual workflow after auth. Pack **22/30**.
 
