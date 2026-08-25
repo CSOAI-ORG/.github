@@ -1948,3 +1948,15 @@ No DOI remint · no paid spend. London ~17:13 BST — timer continues to 04:00.
 | N5-18 | **GATED** | Discussion #97 unchanged |
 
 No DOI remint · no paid spend.
+
+## Continuation log 103 (2026-08-25T16:16:00Z) — RALPH · bench README + MCP worker 1.0.3
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-03 | **LIVE+** | HF `csoai/gspc-bench-results` README → 14/14 + DOI tag · `46aae30` |
+| N5-10/11 | **LIVE+** | MCP worker `serverInfo`/`package` → **1.0.3** · deploy2 `cf84ed5` / `b45ed43` |
+| N5-VERIFY | **PASS** | prior STRICT green; MCP registry still 1.0.3 isLatest |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
