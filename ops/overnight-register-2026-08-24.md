@@ -2220,3 +2220,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 124 (2026-08-25T18:02:16Z) — RALPH · morning sheet + PulseMCP recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **PREP** | ops/morning-sheet-owner-actions-2026-08-25.md |
+| N5-12 | **WATCH** | PulseMCP search UI lists other csoai-* servers; **gspc still absent** · Glama 404 · Smithery LIVE |
+| N5-BADGE | **LIVE** | 14 of 14 |
+| N5-P5 | **TESTED** | pytest 11 passed |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+

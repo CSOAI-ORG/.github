@@ -8,7 +8,7 @@
 | Aggregator | Mechanism | Expected lag | Status 2026-08-25T17:12Z |
 |------------|-----------|--------------|--------------------------|
 | Official MCP registry | OIDC publish | Immediate | **LIVE** `io.github.CSOAI-ORG/gspc` **1.0.3** isLatest · `board (14 of 14)` |
-| PulseMCP | `updated_since` ETL | ~24h | Probe 403/API-key — recheck later |
+| PulseMCP | `updated_since` ETL | ~24h | Search UI 200: other `csoai-*` servers indexed; **gspc not listed yet** (recheck 2026-08-25T18:02Z) |
 | Glama | Auto-index GitHub + official registry | Minutes–unknown | `glama.ai/mcp/servers/@CSOAI-ORG/gspc` still **404** · `glama.json` on deploy2 |
 | Smithery | listing page | — | **LIVE** https://smithery.ai/servers/csoai/gspc |
 | GitHub MCP Registry curation | Discussion thread | Manual | Draft only (below) |
@@ -30,7 +30,7 @@ Committed at repo root + on `csoai-static-deploy2` with maintainers block (manda
 ## Recheck checklist
 
 - [x] Official registry **1.0.3** isLatest with 14-of-14 description
-- [ ] PulseMCP shows gspc ≥1.0.3
+- [ ] PulseMCP shows gspc ≥1.0.3 (other CSOAI servers visible; gspc absent)
 - [ ] Glama indexes full metadata (repository, title)
 - [ ] Worker runtime `initialize.serverInfo.version` = 1.0.3 (needs `CF_API_TOKEN` restore)
   - Recheck 2026-08-25T17:37Z: both `csoai-gspc-mcp.nicholastempleman.workers.dev/mcp` and `councilof.ai/mcp` still report **1.0.0**
