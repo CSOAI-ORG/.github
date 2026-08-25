@@ -38,6 +38,15 @@ http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
     code=$(http_code "$url")
     if [[ "$code" == "200" ]]; then pass "$url HTTP $code"; else fail "$url HTTP $code"; fi
   done
+  # N5-02/04: live board must reflect GSPC export (not stale EUNOMIA branding)
+  board_readme="$(curl -sL "https://huggingface.co/datasets/csoai/gspc-board/raw/main/README.md" 2>/dev/null || true)"
+  if echo "$board_readme" | grep -qi eunomia; then
+    warn "gspc-board README still contains EUNOMIA (stale; export is GSPC — publish pending)"
+  elif [[ -n "$board_readme" ]]; then
+    pass "gspc-board README free of EUNOMIA branding"
+  else
+    warn "gspc-board README could not be fetched for branding check"
+  fi
 
   echo "--- N5-05 HF DOIs"
   for repo in csoai/gspc-board csoai/gspc-bench-results; do
@@ -84,6 +93,9 @@ print(latest[0] if latest else 'none')
   for f in aiuc-1-scoping-draft.md armilla-governance-draft.md munich-re-aisure-dd-draft.md testudo-one-pager.md; do
     if [[ -f "$ROOT/trust/insurance-prep/$f" ]]; then pass "insurance-prep/$f"; else fail "insurance-prep/$f missing"; fi
   done
+
+  echo "--- N5-30 G-Cloud prep"
+  if [[ -f "$ROOT/ops/gcloud15/checklist.md" ]]; then pass "ops/gcloud15/checklist.md"; else fail "ops/gcloud15/checklist.md missing"; fi
 
   echo "--- Summary (STRICT=$STRICT)"
   if [[ "$FAIL" -eq 0 ]]; then

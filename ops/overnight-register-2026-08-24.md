@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T02:24Z)  
+**Commit:** (pending) (continued 2026-08-25T02:26Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1550,4 +1550,18 @@ No publish path. Pack **22/30**. Owner: Path A or Path B (Gmail drafts from log 
 | N5-VERIFY | **FAIL (STRICT)** | unchanged vs log 79 · overnight-pack-verify-20260825T022030Z.log |
 
 Escalated owner unblock surfaces. Pack **22/30**.
+
+## Continuation log 81 (2026-08-25T02:26Z) — verify hardening + Slack self-DM
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **SENT** | Slack self-DM reminder · https://council-of-ai.slack.com/archives/D0BQHCGAC4D/p1787624753420149 |
+| N5-OWNER | **OPEN** | Issue #75 still open, 0 comments |
+| N5-VERIFY | **PREP+** | `ops/verify-overnight-pack.sh` now STRICT-fails on live EUNOMIA branding + checks N5-30 gcloud checklist |
+| N5-02 | **WARN** | Live gspc-board README still EUNOMIA (caught by new verify check) |
+| N5-01 | **GATED** | HF_TOKEN unset; no new publish/cron runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T022618Z.log · see latest log |
+| N5-07/21 | **PASS** | claimguard-20260825T022618Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Owner: Path A or Path B (Issue #75).
 
