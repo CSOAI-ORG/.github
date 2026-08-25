@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ops/mcp-publish-gspc.sh — MCP registry 1.0.2 publish helper (N5-10/11)
+# ops/mcp-publish-gspc.sh — MCP registry 1.0.3+ publish helper (N5-10/11)
 # Owner-gated: requires mcp-publisher login github (device OAuth).
 set -euo pipefail
 

@@ -1970,3 +1970,14 @@ No DOI remint · no paid spend.
 | N5-VERIFY | **PASS** | STRICT still green (registry check, not worker version) |
 
 Live worker `initialize` still reports 1.0.0 until token restored. No DOI remint · no paid spend.
+
+## Continuation log 105 (2026-08-25T16:21:00Z) — RALPH · registry mirror + ClaimGuard tests
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-08/09 | **SYNCED** | `registry/gspc.json` mirror = server.json **1.0.3** |
+| N5-CG | **PASS** | `pytest products/claimguard/tests` · 5 passed |
+| N5-ACT | **UPDATED** | activation-pack notes MCP 1.0.3 + CF token restore |
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T161957Z.log |
+
+No DOI remint · no paid spend. ~17:21 BST — continues to 04:00 London.
