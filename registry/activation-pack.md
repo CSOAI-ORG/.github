@@ -6,7 +6,7 @@ You open sessions / confirm spend. Agents prepare + verify + update the living r
 
 | # | Action | Pre-check | You do | Agent verifies |
 |---|--------|-----------|--------|----------------|
-| 0a | MCP registry already **1.0.3** (14 of 14 desc) | Registry isLatest | Optional: restore `CLOUDFLARE_API_TOKEN` on deploy2 to redeploy worker 1.0.3 | Worker `initialize` reports 1.0.3 |
+| 0a | MCP registry already **1.0.3** (14 of 14 desc) | Registry isLatest | Optional: restore ``CF_API_TOKEN` (+ `CF_ACCOUNT_ID`)` on deploy2 to redeploy worker 1.0.3 | Worker `initialize` reports 1.0.3 |
 | 0 | **DO NOT mint HF DOIs** | Registry shows DOIs LIVE | — | Already `10.57967/hf/10114` + `10116` |
 | 1 | Kaggle mirror of GSPC board | `export/kaggle-gspc-board/` exists; no LIVE kaggle row | Paste API token to `/tmp/csoai-secrets/kaggle.json` | Dataset page 200 · registry → LIVE |
 | 2 | Discussion #97 one-liner | status GATED | Post with your GH session (2FA) | Comment URL · registry → LIVE |
