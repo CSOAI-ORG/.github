@@ -2064,3 +2064,15 @@ No DOI remint · no paid spend. ~17:34 BST — continues to 04:00 London.
 | N5-17 | **OPEN** | awesome-a2a #157 still MERGEABLE |
 
 No DOI remint · no paid spend.
+
+## Continuation log 113 (2026-08-25T16:51:00Z) — RALPH · live llms.txt 14/14 + Smithery LIVE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `public/llms.txt` on councilof-ai master `0a61d80` · CDN https://councilof.ai/llms.txt cites **14 measured of 14 quotable** |
+| N5-12 | **LIVE+** | Smithery listing already LIVE https://smithery.ai/servers/csoai/gspc (was “deferred”) |
+| N5-VERIFY | **PASS** | prior STRICT green this cycle |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~17:51 BST — continues to 04:00 London.
