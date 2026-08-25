@@ -7,7 +7,7 @@
 |---------|-----|--------|------|
 | HF gspc-board | https://huggingface.co/datasets/csoai/gspc-board | **LIVE** HTTP 200 · GSPC (EUNOMIA cleared) | N5-02 |
 | HF gspc-bench-results | https://huggingface.co/datasets/csoai/gspc-bench-results | **LIVE** HTTP 200 | N5-03 |
-| HF governance leaderboard | https://huggingface.co/spaces/csoai/gspc-governance-leaderboard | **LIVE** HTTP 200 sdk=gradio | N5-06 |
+| HF governance leaderboard | https://huggingface.co/spaces/csoai/gspc-governance-leaderboard | **LIVE** sdk=gradio (runtime PAUSED — cpu-basic quota limit=0) | N5-06 |
 | HF leaderboard-results | https://huggingface.co/datasets/csoai/gspc-leaderboard-results | **LIVE** HTTP 200 | N5-06 |
 | MCP server.json | csoai-static-deploy2 main | **MERGED** v1.0.2 (aab76f4 + c9fc14b) | N5-08/09 |
 | MCP registry live | registry.modelcontextprotocol.io | **LIVE** v1.0.2 isLatest | N5-10/11 |

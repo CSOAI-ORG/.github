@@ -1597,3 +1597,21 @@ Pack **24/30** (was 22). Remaining gated: DOI (N5-05), a2aagentlist (N5-15), art
 
 Pack **24/30**. Owner: mint DOIs; optional Space quota/restart; optional directories.
 
+
+## Continuation log 84 (2026-08-25T08:41Z) — DOI button confirmed; Space quota hard-block; N5-18 still gated
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01/02/03/04/06 | **LIVE** | Publish still live; EUNOMIA-free; leaderboard-results 200; sdk=gradio |
+| N5-05 | **GATED** | Settings shows **Generate DOI** on gspc-board (not clicked — irreversible) |
+| N5-06 | **PARTIAL** | Space PAUSED · org `cpu-basic` **limit=0** · ZeroGPU needs Team billing |
+| N5-18 | **GATED** | Browser GitHub not logged in; GraphQL FORBIDDEN |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 OPEN/mergeable |
+| N5-15 | **PREP** | Gmail draft ready (not sent) |
+| N5-16 | **BLOCKED** | artinet.io no registration API |
+| N5-19 | **DEFERRED** | no GCP |
+| N5-AUTH | **PREP+** | Classic Write token `overnightclassic4` in local session only (not committed) |
+| N5-VERIFY | **FAIL (STRICT)** | DOI ×2 only · overnight-pack-verify-20260825T084121Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T084121Z.log · ClaimGuard PASS |
+
+Pack **24/30**. Owner: mint DOIs; optional Team for Space runtime; optional Discussion #97 / a2aagentlist.
