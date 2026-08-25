@@ -1649,3 +1649,16 @@ Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GAT
 | N5-07/21 | **PASS** | claimguard-20260825T102545Z.log · ClaimGuard PASS |
 
 Pack **25/30**. STRICT green. Remaining directories/GCP owner-gated.
+
+## Continuation log 88 (2026-08-25T10:42Z) — timer catch-up; N5-18 2FA block; STRICT still PASS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T104217Z.log · 2026-08-25T10:42Z · still green post-DOI |
+| N5-05 | **LIVE** | DOIs stable: `10.57967/hf/10114` · `10.57967/hf/10116` |
+| N5-18 | **GATED** | GitHub Google login → **hardware security key 2FA** required — cannot post Discussion #97 |
+| N5-16 | **BLOCKED** | artinet.io still waitlist-only (`evolving...`; /api 404) |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 still OPEN/mergeable |
+| N5-WATCH | **RETARGET** | Timer shifted to remaining N5-15..19 (HF track done) |
+
+Pack **25/30**. HF STRICT green. Remaining owner/manual directories + GCP.
