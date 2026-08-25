@@ -1782,3 +1782,12 @@ Pack **30/30**. Agent-lane closes eaten (N5-15 send · N5-17 nudge · peer #610 
 
 Password for nicholas@csoai.org used session-only under `/tmp/csoai-secrets/` — **rotate after overnight** (posted in chat).
 
+## Continuation log 94 (2026-08-25T14:46:45Z) — live agent-card 14/14 on CDN
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-13/14 | **LIVE** | https://councilof.ai/.well-known/agent-card.json · 14 measured of 14 · verified 2026-08-25T14:46:45Z |
+| N5-02 | **LIVE** | HF signed board retained · ClaimGuard PASS |
+| N5-DB | **LIVE** | outreach.sqlite updated |
+| N5-WATCH | **ARMED** | timer `ralph-overnight-until-4am` every 30m |
+

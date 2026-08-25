@@ -12,7 +12,7 @@
 | HF leaderboard-results | https://huggingface.co/datasets/csoai/gspc-leaderboard-results | **LIVE** HTTP 200 | N5-06 |
 | MCP server.json | csoai-static-deploy2 main | **MERGED** v1.0.2 (aab76f4 + c9fc14b) | N5-08/09 |
 | MCP registry live | registry.modelcontextprotocol.io | **LIVE** v1.0.2 isLatest | N5-10/11 |
-| A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated 10/10 | N5-13/14 |
+| A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated · 14 measured of 14 LIVE | N5-13/14 |
 | Evidence pack | trust/evidence-pack/ | **DONE** | N5-20 |
 | awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED+NUDGED** awaiting review | N5-17 |
 | a2aagentlist | gal6111@gmail.com | **SENT** 2026-08-25T11:56Z | N5-15 |
