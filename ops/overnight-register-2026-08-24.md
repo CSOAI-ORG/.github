@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T01:45Z)  
+**Commit:** (pending) (continued 2026-08-25T02:01Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1487,4 +1487,19 @@ No change. Pack **22/30**. Owner: Path A or Path B + push trigger or manual work
 | N5-07/21 | **PASS** | claimguard-20260825T014530Z.log · ClaimGuard PASS |
 
 Cron alive but sparse (~110 min between runs). Auth still blocked. Pack **22/30**.
+
+---
+
+## Continuation log 77 (2026-08-25T02:01Z) — timer recheck (overnight-hf-recheck)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery #17 · 2026-08-25T02:00Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; **publish skipped** |
+| N5-01 | **GATED** | Latest publish run 32795397767 (probe); latest cron 32798301940 (OIDC fail @ 01:38Z) |
+| N5-01 | **CRON** | Still **2 runs**; no 3rd through 02:01Z (02:00 boundary not yet) |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T020136Z.log · 2026-08-25T02:01:36Z |
+| N5-07/21 | **PASS** | claimguard-20260825T020136Z.log · ClaimGuard PASS |
+
+No change. Pack **22/30**. Owner: Path A or Path B.
 
