@@ -2758,8 +2758,8 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 | Move | Status | Register line |
 |------|--------|---------------|
-| N5-SITE | **SHIPPED** | councilof-ai  evidenceRail ·  StoryWorld — jail **TIE** / 14 of 14 (not untested) |
-| N5-SITE | **SHIPPED** | prior this hour:  gspcAxes.test ·  scrollworld ·  e2e |
+| N5-SITE | **SHIPPED** | councilof-ai `9e19871` evidenceRail · `bde6f12` StoryWorld — jail **TIE** / 14 of 14 (not untested) |
+| N5-SITE | **SHIPPED** | prior this hour: `cbd9bbe` gspcAxes.test · `9be2ac9` scrollworld · `c447433` e2e |
 | N5-VERIFY | **PASS** | prior STRICT |
 | N5-KAGGLE | **STAGED** | no token |
 | N5-18 | **GATED** | Discussion #97 |
