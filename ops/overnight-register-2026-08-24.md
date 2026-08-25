@@ -2,13 +2,13 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T10:46Z)  
+**Commit:** (pending) (continued 2026-08-25T10:48Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
-## Current status snapshot (2026-08-25T10:46Z) — **30/30** · STRICT PASS · owner-gated=drafts
+## Current status snapshot (2026-08-25T10:48Z) — **30/30** · STRICT PASS · owner-gated=drafts
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1715,3 +1715,18 @@ Objective doctrine: **Owner-gated = drafts only**. Automateable public surfaces 
 | N5-VERIFY STRICT | overnight-pack-verify-20260825T104542Z.log · VERIFY PASS | **DONE** |
 
 Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated directory items drafted/submitted/deferred as required.
+
+## Continuation log 91 (2026-08-25T10:48Z) — goal re-audit (continuation turn)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T104700Z.log · 2026-08-25T10:47Z |
+| N5-05 | **LIVE** | DOIs reconfirmed via Hub tags · board `10.57967/hf/10114` · bench `10.57967/hf/10116` |
+| N5-06 | **LIVE** | Space sdk=gradio · runtime PAUSED (org cpu-basic limit=0) · leaderboard-results 200 |
+| N5-10/11 | **LIVE** | MCP `io.github.CSOAI-ORG/gspc` 1.0.2 isLatest=True |
+| N5-13/14 | **LIVE** | agent-card HTTP 200 · name Council of AI — Measurement Agent · skills=4 |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 OPEN/mergeable |
+| N5-07/21 | **PASS** | claimguard-20260825T104723Z.log · ClaimGuard PASS · banned-strings PASS |
+| N5-AUDIT | **CONFIRMED** | Requirement-by-requirement recheck matches log 90 · **30/30** under drafts doctrine |
+
+Pack **30/30**. No agent-lane work remaining; owner closes unchanged (N5-15 send · N5-18 2FA · optional #157 nudge).
