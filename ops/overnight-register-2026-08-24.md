@@ -2178,3 +2178,17 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 
 No DOI remint · no paid spend. Continues to 04:00 London.
 
+## Continuation log 121 (2026-08-25T17:53:45Z) — RALPH · badge 14 of 14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-BADGE | **SHIPPED** | deploy2 `badge/axes.json` → **14 of 14** `64764dc` · councilof-ai `public/badge/axes.json` `82ef9d6` (await Pages) |
+| N5-DOCS | **POLISHED** | docs/E2E_MINE_LOG.md jail MEASURED/TIE |
+| N5-OPENAPI | **LIVE** | openapi.json |
+| N5-FEED | **LIVE** | feed 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
