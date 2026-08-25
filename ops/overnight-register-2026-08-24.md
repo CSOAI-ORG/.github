@@ -2,7 +2,7 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** ba94549 (continued 2026-08-25T00:49Z)  
+**Commit:** 5f3aa26 (continued 2026-08-25T00:54Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
@@ -1381,4 +1381,18 @@ Register current through log 67 on `main`. HF publish owner-gated. Pack **22/30*
 | N5-07/21 | **PASS** | claimguard-20260825T004921Z.log · ClaimGuard PASS |
 
 Register through log 68 on `main`. No HF auth change. Pack **22/30**.
+
+---
+
+## Continuation log 70 (2026-08-25T00:54Z) — HF publish probe (push trigger)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PROBE | **TRIGGERED** | PR #65 · 5f3aa26 · export/.overnight-publish-probe · 2026-08-25T00:53Z |
+| N5-WF | **FAIL** | N5-WF · run 32795397767 · 5f3aa26 · 2026-08-25T00:53:18Z · overnight-hf-publish push trigger |
+| N5-01 | **GATED** | GHA `HF_TOKEN` empty; OIDC `invalid_grant: No trusted publisher configured on datasets/csoai/gspc-board` |
+| N5-01 | **CONFIRMED** | Push trigger works; auth still blocked — owner must add HF_TOKEN or configure Trusted Publishers |
+| N5-06 | **GATED** | Publish step failed before upload; leaderboard-results/Space unchanged |
+
+Probe confirms Path B URLs required (see morning sheet). Pack **22/30**.
 
