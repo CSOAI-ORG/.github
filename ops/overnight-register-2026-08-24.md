@@ -2,18 +2,18 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** 96976f1 (continued 2026-08-24T23:56Z)  
+**Commit:** ef64f9d (continued 2026-08-25T00:01Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
 
-## Current status snapshot (23:56Z) — **22/30**
+## Current status snapshot (00:01Z) — **22/30**
 
 | Move | Status | Notes |
 |------|--------|-------|
-| N5-01 | GATED | HF_TOKEN unset; 1 cron run @ 23:48Z; next cron ~00:03Z |
+| N5-01 | GATED | HF_TOKEN unset; 1 cron run @ 23:48Z; 00:00Z boundary passed — no 2nd run yet (GH delay) |
 | N5-02 | LIVE (stale) | gspc-board README still EUNOMIA |
 | N5-03 | LIVE | gspc-bench-results HTTP 200 |
 | N5-04 | LIVE | export ready; live refresh pending |
@@ -25,11 +25,11 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-19 | DEFERRED | no GCP |
 | N5-22–30 | PREP | marketplace/insurance/G-Cloud drafts |
 
-**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos.
+**Owner unblock:** `HF_TOKEN` OR Trusted Publishers on 4 HF repos. Cron schedule `*/15` (GH may delay).
 
 ---
 
-## Current status snapshot (23:54Z) — superseded
+## Current status snapshot (23:56Z) — superseded
 
 | Move | Status | Notes |
 |------|--------|-------|
@@ -1090,4 +1090,19 @@ No change. Pack **22/30**.
 | N5-07/21 | **PASS** | claimguard-20260824T235619Z.log · ClaimGuard PASS |
 
 No change. Pack **22/30**. Awaiting cron + owner auth.
+
+---
+
+## Continuation log 57 (2026-08-25T00:01Z) — 00:00Z cron watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Watched 00:00Z cron boundary · 2026-08-25T00:01Z |
+| N5-REGISTER | **MERGED** | PR #54 · ef64f9d · log 56 on `main` |
+| N5-01 | **GATED** | HF_TOKEN unset; local publish skipped |
+| N5-01 | **CRON** | Still 1 run (32791004769 @ 23:48Z); no 2nd run through 00:01Z |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260824T235751Z.log · 2026-08-24T23:57:51Z |
+| N5-07/21 | **PASS** | claimguard-20260824T235751Z.log · ClaimGuard PASS |
+
+Cron delayed past 00:00Z. Auth still blocked. Pack **22/30**.
 
