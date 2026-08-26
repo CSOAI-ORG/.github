@@ -3440,3 +3440,15 @@ No DOI remint · no paid spend · did not invent 22-axis quotable claim from thi
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no 22-axis invention · owner reconcile verify canon.
+
+## Continuation log 212 (2026-08-26T14:00:55Z) — RALPH · drift persists (+11h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | STRICT 20260826T140034Z — still `22 axes · 15 measured` |
+| N5-DRIFT | **ALERT** | gspc 14/14 · export ClaimGuard PASS |
+| N5-CARD | **WATCH** | agent-card 14 measured of 14 |
+| N5-CLOSE | **DONE** | +11h past cutoff; owner reconcile |
+| N5-KAGGLE | **STAGED** | no token |
+
+No DOI remint · no 22-axis invention.
