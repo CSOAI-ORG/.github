@@ -3148,3 +3148,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CLOSE | **NOTE** | past 04:00 London — overnight lane closing |
 
 No DOI remint · no paid spend. Overnight mandate through 04:00 London complete.
+
+## Continuation log 190 (2026-08-26T03:28:43Z) — RALPH · overnight mandate CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | past 04:00 London (~04:28 BST); timer backlog drained; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T032823Z · agent card 14/14 |
+| N5-CDN | **LIVE** | methodology + NewHome; honesty still stale (CF) |
+| N5-DIR | **SUBMITTED** | tip log 189: AthenaCore #70 · agentrust #77 (+ prior night PRs) |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP worker 1.0.0 |
+
+No DOI remint · no paid spend. Overnight mandate through 04:00 London **complete**.
