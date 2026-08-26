@@ -3410,3 +3410,18 @@ No DOI remint · no paid spend. Overnight mandate remains **complete**.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 210 (2026-08-26T13:00:42Z) — RALPH · live API drift ALERT
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | STRICT 20260826T130015Z — live `public_count=22 axes · 15 measured` (was 14/14) |
+| N5-DRIFT | **ALERT** | ADR-001 sweep on councilof.ai/api/gspc · gspc family still 14/14 · export ClaimGuard PASS |
+| N5-CARD | **STALE?** | agent-card.json still cites 14 measured of 14 (GSPC instrument) |
+| N5-CLOSE | **DONE** | +10h past 04:00 London; no repo redeploy — owner reconcile verify canon |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend · did not invent 22-axis quotable claim from this lane.

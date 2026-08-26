@@ -16,6 +16,8 @@ Lane stopped at free polish. Everything below needs Nick.
 5. **CONFIRM HF Team** — if Space `gspc-governance-leaderboard` must RUN (cpu-basic quota limit=0).
 6. **CONFIRM RunPod** — only if new measurement volume needed (board is already 14/14).
 
+- **NEW 2026-08-26 ~13:00Z** — live `/api/gspc` now reports `22 axes · 15 measured` (ADR-001 sweep); STRICT verify FAIL; export board still 14/14; reconcile verify script + agent-card + directory copy with owner.
+
 ## Do not
 
 - Remint DOIs (`10.57967/hf/10114`, `10116`)
