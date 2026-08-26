@@ -2988,3 +2988,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | MCP worker + honesty |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 180 (2026-08-26T00:04:18Z) — RALPH · collection metadata actually landed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Collection description updated (≤150 chars) to live **14/14** + jail TIE; items board/bench/jail-goldbank/swarm/affect added |
+| N5-NOTE | **CORR** | log 179 claimed ship before API 400 (description too long) — corrected here |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
