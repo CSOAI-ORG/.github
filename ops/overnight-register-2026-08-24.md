@@ -3452,3 +3452,12 @@ No DOI remint · no 22-axis invention · owner reconcile verify canon.
 | N5-KAGGLE | **STAGED** | no token |
 
 No DOI remint · no 22-axis invention.
+
+## Continuation log 213 (2026-08-26T14:30:46Z) — RALPH · drift persists (+11.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · ClaimGuard export 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile · no fix this lane |
+
+No DOI remint · no 22-axis invention.
