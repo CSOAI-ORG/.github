@@ -3131,3 +3131,20 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 189 (2026-08-26T03:26:59Z) — RALPH · AthenaCore #70 + agentrust #77
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/AthenaCore/AwesomeResponsibleAI/pull/70 — Frameworks GSPC 14/14 |
+| N5-DIR | **SUBMITTED** | https://github.com/agentrust-io/awesome-ai-governance/pull/77 — Security Testing GSPC 14/14 |
+| N5-DIR | **SUBMITTED** | prior: eu-ai-act #43 · ai-leaderboard #98 · EthicalML #76 · visenger #13 · getprobo #56 |
+| N5-CDN | **LIVE** | methodology + NewHome; honesty still stale |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T021827Z |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+| N5-CLOSE | **NOTE** | past 04:00 London — overnight lane closing |
+
+No DOI remint · no paid spend. Overnight mandate through 04:00 London complete.

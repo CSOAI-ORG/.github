@@ -74,3 +74,8 @@ No GCP account available to lane. **Explicit deferral:** no GCP account — defe
 | artinet | **BLOCKED** — signup/login 404 |
 | agentcards.ai | **PARKED** — GoDaddy lander, no submit form |
 
+## Overnight directory PRs (2026-08-26T03:26Z)
+
+- AthenaCore AwesomeResponsibleAI #70 — Frameworks GSPC 14/14
+- agentrust-io awesome-ai-governance #77 — Security Testing GSPC 14/14
+- Prior this night: morganrcu #43 · SAILResearch #98 · EthicalML #76 · visenger #13 · getprobo #56

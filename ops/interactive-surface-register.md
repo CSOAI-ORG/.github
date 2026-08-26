@@ -27,6 +27,8 @@
 | EthicalML awesome-ai-regulation | https://github.com/EthicalML/awesome-artificial-intelligence-regulation/pull/76 | **SUBMITTED** PR #76 | overnight |
 | Awesome-ML-Model-Governance | https://github.com/visenger/Awesome-ML-Model-Governance/pull/13 | **SUBMITTED** PR #13 | overnight |
 | awesome-compliance | https://github.com/getprobo/awesome-compliance/pull/56 | **SUBMITTED** PR #56 | overnight |
+| AwesomeResponsibleAI | https://github.com/AthenaCore/AwesomeResponsibleAI/pull/70 | **SUBMITTED** PR #70 | overnight |
+| awesome-ai-governance | https://github.com/agentrust-io/awesome-ai-governance/pull/77 | **SUBMITTED** PR #77 | overnight |
 | Datarade | providers.datarade.ai/apply | PREP drafted | N5-25 |
 
 **Pending labels:** GATED · LIVE · PARTIAL · SUBMITTED · BLOCKED · DONE

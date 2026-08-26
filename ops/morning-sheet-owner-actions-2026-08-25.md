@@ -51,3 +51,5 @@ Lane stopped at free polish. Everything below needs Nick.
 - EthicalML awesome-ai-regulation PR #76 SUBMITTED — Interactive Tools GSPC
 - visenger Awesome-ML-Model-Governance PR #13 SUBMITTED
 - getprobo awesome-compliance PR #56 SUBMITTED
+- AthenaCore AwesomeResponsibleAI PR #70 SUBMITTED — Frameworks GSPC 14/14
+- agentrust-io awesome-ai-governance PR #77 SUBMITTED — Security Testing GSPC 14/14
