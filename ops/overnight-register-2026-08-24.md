@@ -3115,3 +3115,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 188 (2026-08-26T02:17:27Z) — RALPH · visenger #13 + getprobo #56
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/visenger/Awesome-ML-Model-Governance/pull/13 |
+| N5-DIR | **SUBMITTED** | https://github.com/getprobo/awesome-compliance/pull/56 |
+| N5-DIR | **SUBMITTED** | prior: eu-ai-act #43 · ai-leaderboard #98 · EthicalML #76 |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

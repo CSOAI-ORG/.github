@@ -22,6 +22,11 @@
 | artinet.io | — | BLOCKED (login UI broken / no API) | N5-16 |
 | honest card_index 150 | councilof-ai#610 merged `a2b7b33` | **LIVE** on master (34171B / sha 5bb93de) | peer-align |
 | Shared knowledge DB | ops/knowledge/outreach.sqlite | **LIVE** agent map | overnight |
+| awesome-eu-ai-act | https://github.com/morganrcu/awesome-eu-ai-act/pull/43 | **SUBMITTED** PR #43 | overnight |
+| awesome-ai-leaderboard | https://github.com/SAILResearch/awesome-ai-leaderboard/pull/98 | **SUBMITTED** PR #98 | overnight |
+| EthicalML awesome-ai-regulation | https://github.com/EthicalML/awesome-artificial-intelligence-regulation/pull/76 | **SUBMITTED** PR #76 | overnight |
+| Awesome-ML-Model-Governance | https://github.com/visenger/Awesome-ML-Model-Governance/pull/13 | **SUBMITTED** PR #13 | overnight |
+| awesome-compliance | https://github.com/getprobo/awesome-compliance/pull/56 | **SUBMITTED** PR #56 | overnight |
 | Datarade | providers.datarade.ai/apply | PREP drafted | N5-25 |
 
 **Pending labels:** GATED · LIVE · PARTIAL · SUBMITTED · BLOCKED · DONE

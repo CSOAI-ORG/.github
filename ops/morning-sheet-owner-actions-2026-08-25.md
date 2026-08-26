@@ -49,3 +49,5 @@ Lane stopped at free polish. Everything below needs Nick.
 - awesome-eu-ai-act PR #43 SUBMITTED (morganrcu) — GSPC 14/14 Testing & Red-Teaming
 - awesome-ai-leaderboard PR #98 SUBMITTED (SAILResearch) — GSPC under Safety
 - EthicalML awesome-ai-regulation PR #76 SUBMITTED — Interactive Tools GSPC
+- visenger Awesome-ML-Model-Governance PR #13 SUBMITTED
+- getprobo awesome-compliance PR #56 SUBMITTED
