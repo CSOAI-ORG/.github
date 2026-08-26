@@ -2956,3 +2956,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 178 (2026-08-26T00:03:11Z) — RALPH · fleet-v2 + aidirectory draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `signed-fleet-boards-v2` README `1cb95c6` — archive sweep; live quote **14/14** |
+| N5-DIR | **DRAFT** | `connect/directories/aidirectory-draft.md` — free form + reCAPTCHA (owner) |
+| N5-PACK | **DOC** | morning sheet 3b aidirectory |
+| N5-CDN | **LIVE** | methodology + NewHome 14/TIE |
+| N5-VERIFY | **PASS** | STRICT green · MCP worker NOTE only |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
