@@ -2925,3 +2925,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty CDN + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 176 (2026-08-26T00:00:30Z) — RALPH · HF Space wave 14/14 pointers
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Axis Spaces (`gov`/`agi`/`prv`/`asi`/`mcp`/`oss`/`mach`/`care`/`det`/`art5`/`swarm`) + `csoai-measurement-ledger` + `gspc-governance-leaderboard-spc` — live **14/14** + jail TIE; swarm “planned” → measured |
+| N5-HF | **SHIPPED** | prior: drift / kernel / goldbank / mvr / rwa / boards / Space leaderboard |
+| N5-CDN | **LIVE** | methodology + NewHome still 14/TIE |
+| N5-12 | **WATCH** | Apify 23:58Z unchanged |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
