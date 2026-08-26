@@ -3507,3 +3507,13 @@ No DOI remint · no 22-axis invention.
 | N5-MCP | **FAIL** | registry lookup returned none |
 
 No DOI remint · no 22-axis invention.
+
+## Continuation log 219 (2026-08-26T17:30:33Z) — RALPH · drift persists; MCP registry OK
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-MCP | **PASS** | registry 1.0.3 restored (log 218 flake) |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
