@@ -2972,3 +2972,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty CDN + MCP 1.0.0 |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 179 (2026-08-26T00:04:03Z) — RALPH · HF collection 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Collection `gspc-measurement-banks` description → live **14/14** + jail TIE; added board/bench/jail-goldbank/swarm/affect |
+| N5-DIR | **DRAFT** | prior aidirectory |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still 13/untested |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | MCP worker + honesty |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

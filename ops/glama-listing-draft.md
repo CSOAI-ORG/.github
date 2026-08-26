@@ -1,6 +1,6 @@
 # Glama listing draft — csoai/gspc (N5-12)
 
-**Status:** DRAFT only — do not submit/spend without Nick. Live URL still **404** as of 2026-08-25T23:35Z (Apify + curl).
+**Status:** DRAFT only — do not submit/spend without Nick. Live URL still **404** as of 2026-08-25T23:58Z (Apify + curl).
 
 ## Desired listing
 
@@ -33,4 +33,6 @@
 - [ ] Metadata shows 1.0.3 + 14 of 14
 
 
-<!-- ralph-recheck 2026-08-25T23:57:08Z: methodology+NewHome LIVE · honesty CDN stale · Glama/Pulse still absent -->
+
+
+<!-- ralph-recheck 2026-08-26T00:04:03Z: Glama still 404; collection 14/14; methodology LIVE -->
