@@ -47,3 +47,4 @@ Lane stopped at free polish. Everything below needs Nick.
 - axis-universe WARNING + 14/TIE already on master (raw CDN may lag)
 - Apify 23:17Z: Glama 404 · PulseMCP 0 · Smithery LIVE · artinet signup 404 · agentcards empty (sticky-335 storm may still flap unrelated card_index)
 - awesome-eu-ai-act PR #43 SUBMITTED (morganrcu) — GSPC 14/14 Testing & Red-Teaming
+- awesome-ai-leaderboard PR #98 SUBMITTED (SAILResearch) — GSPC under Safety

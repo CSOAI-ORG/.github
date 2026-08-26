@@ -3084,3 +3084,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-12 | **DRAFT** | punkpeye awesome-mcp still owner-push |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 186 (2026-08-26T01:29:55Z) — RALPH · awesome-ai-leaderboard PR #98
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/SAILResearch/awesome-ai-leaderboard/pull/98 — GSPC under Safety (14/14) |
+| N5-DIR | **SUBMITTED** | prior: awesome-eu-ai-act #43 |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
