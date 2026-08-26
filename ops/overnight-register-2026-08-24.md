@@ -3019,3 +3019,21 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | MCP worker + honesty |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 182 (2026-08-26T00:08:42Z) — RALPH · sim/axis-corpus + awesome-mcp draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `gspc-sim-cards` `f2111ab` · `gspc-axis-corpus` `6821d96` — live 14/14; corpus ≠ public_count |
+| N5-12 | **DRAFT** | `connect/mcp/awesome-mcp-servers-pr-draft.md` — punkpeye Research line; README>1MB blocks Contents API push |
+| N5-12 | **SKIP** | jaw9c remote list — OAuth2-only quality gate (our MCP not OAuth listing) |
+| N5-PACK | **DOC** | interactive-surface aggregator stamp |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still 13 |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | MCP worker 1.0.0 + honesty |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

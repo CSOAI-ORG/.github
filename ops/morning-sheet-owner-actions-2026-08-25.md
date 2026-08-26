@@ -8,6 +8,7 @@ Lane stopped at free polish. Everything below needs Nick.
 2. **Discussion #97** — post with personal GH session (2FA): card URL already drafted in `connect/a2a/directory-submissions.md`.
 3. **artinet.io** — still login/signup 404; skip until venue works.
 3b. **aidirectory.org** — optional free company listing; draft `connect/directories/aidirectory-draft.md` (reCAPTCHA + phone required).
+3c. **punkpeye/awesome-mcp-servers** — push fork branch `add-csoai-gspc` or open PR from draft `connect/mcp/awesome-mcp-servers-pr-draft.md` (README>1MB blocked overnight Contents API).
 4. **CF_API_TOKEN + CF_ACCOUNT_ID** — restore on `csoai-static-deploy2` per `ops/cf-api-token-restore.md` so MCP worker runtime matches registry **1.0.3**, and so `deploy-static.yml` can ship honesty/arenas 14/TIE already on main (`5ce429a` / `7b0aa77`). Note: councilof.ai methodology + NewHome CDN caught up after deploy `32911581568` (`d01f8c4`) — no longer a CF blocker for those two.
 
 ## CONFIRM (spend)
