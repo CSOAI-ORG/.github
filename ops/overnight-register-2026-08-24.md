@@ -3099,3 +3099,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 187 (2026-08-26T02:14:35Z) — RALPH · EthicalML awesome-ai-regulation PR #76
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/EthicalML/awesome-artificial-intelligence-regulation/pull/76 — Interactive Tools GSPC 14/14 |
+| N5-DIR | **SUBMITTED** | prior: eu-ai-act #43 · ai-leaderboard #98 |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still stale |
+| N5-VERIFY | **PASS** | recheck next |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
