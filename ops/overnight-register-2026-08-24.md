@@ -3003,3 +3003,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 181 (2026-08-26T00:04:54Z) — RALPH · model-card 14/14 pointers
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Model READMEs `sov33-unified` / `oowm-router` / `sov34-1p5b` — related live board 14/14 |
+| N5-HF | **SHIPPED** | Collection item note on `gspc-board` (DOI 10114) |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still stale |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | MCP worker + honesty |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
