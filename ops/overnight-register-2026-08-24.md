@@ -3037,3 +3037,18 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | MCP worker 1.0.0 + honesty |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 183 (2026-08-26T00:10:01Z) — RALPH · remaining model cards + awesome-mcp fork note
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Model READMEs `sov-gate-ft2` / `sov-compliance-art5` / `oowm-merge-v1` — live 14/14 pointers |
+| N5-12 | **DRAFT** | Fork `awesome-mcp-servers-csoai` + pending note; README>1MB still blocks automated PR body patch |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.

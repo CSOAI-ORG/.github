@@ -1,6 +1,6 @@
 # Draft PR — punkpeye/awesome-mcp-servers (Research)
 
-**Status:** DRAFT — fork `CSOAI-ORG/awesome-mcp-servers` exists; README >1MB so Contents API cannot patch from overnight lane (cursor[bot] push 403). Owner: push branch `add-csoai-gspc` or open PR manually.
+**Status:** DRAFT — fork `CSOAI-ORG/awesome-mcp-servers-csoai` exists (branch `add-csoai-gspc` + `CSOAI-GSPC-PENDING.md`); README >1MB so Contents API cannot patch from overnight lane (cursor[bot] push 403). Owner: push branch `add-csoai-gspc` or open PR manually.
 
 **Suggested title:** `Add CSOAI GSPC measurement MCP 🤖🤖🤖`
 
