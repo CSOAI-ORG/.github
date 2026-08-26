@@ -3068,3 +3068,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 185 (2026-08-26T00:15:07Z) — RALPH · awesome-eu-ai-act PR #43
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/morganrcu/awesome-eu-ai-act/pull/43 — GSPC under Testing & Red-Teaming (14/14) |
+| N5-HF | **SHIPPED** | prior model/dataset polish |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+| N5-12 | **DRAFT** | punkpeye awesome-mcp still owner-push |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
