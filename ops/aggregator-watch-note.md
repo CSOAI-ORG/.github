@@ -49,3 +49,9 @@ CDN updated 2026-08-25T16:50Z via councilof-ai `0a61d80` — cites live 14 measu
 
 
 <!-- ralph-recheck 2026-08-25T23:57:08Z: methodology+NewHome LIVE · honesty CDN stale · Glama/Pulse still absent -->
+
+## Awesome MCP (punkpeye) — 2026-08-26T00:10:29Z
+
+- Fork: `CSOAI-ORG/awesome-mcp-servers-csoai` branch `add-csoai-gspc`
+- Draft line in `connect/mcp/awesome-mcp-servers-pr-draft.md`
+- Blocker: upstream README >1MB (Contents API); owner push required

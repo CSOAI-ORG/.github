@@ -3052,3 +3052,19 @@ No DOI remint · no paid spend. Continues to 04:00 London.
 | N5-CF | **PREP** | honesty + MCP worker |
 
 No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 184 (2026-08-26T00:10:30Z) — RALPH · missing model READMEs
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `sov-refusal-lora` + `sov-ethics-art5` README created with live 14/14 |
+| N5-12 | **DRAFT** | awesome-mcp still owner-push |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still 13/untested |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
