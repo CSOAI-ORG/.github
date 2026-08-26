@@ -3470,3 +3470,12 @@ No DOI remint · no 22-axis invention.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 No DOI remint · no 22-axis invention.
+
+## Continuation log 215 (2026-08-26T15:30:43Z) — RALPH · drift persists (+12.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
