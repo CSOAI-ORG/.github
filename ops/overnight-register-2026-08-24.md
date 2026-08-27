@@ -3961,3 +3961,17 @@ Identical to log 257 except HF bench-results 503 blip.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 Identical to log 258; HF 503 cleared.
+
+## Continuation log 260 (2026-08-27T18:30:32Z) — RALPH · timer 18:30Z · SUPPRESSED duplicate
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +14.5h past 04:00 Europe/London |
+| N5-TIMER | **REC** | Disable `ralph-overnight-until-4am` |
+| N5-VERIFY | **FAIL** | STRICT 20260827T183025Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T183032Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+Identical to log 259.
