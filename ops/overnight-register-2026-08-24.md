@@ -3709,3 +3709,17 @@ No DOI remint · no 22-axis invention · no new free publishes.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 No DOI remint · no 22-axis invention.
+
+## Continuation log 241 (2026-08-27T04:33:17Z) — RALPH · timer +1.5h post-close · drift ALERT
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 04:00 Europe/London passed (log 238); timer fired 04:30Z |
+| N5-VERIFY | **FAIL** | STRICT 20260827T043303Z — `public_count=22 axes · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T043317Z.log · export 14/14 |
+| N5-A2A | **PASS** | agent-card validator green; description now read-don't-write (`quote totals.public_count`) — no typed 14/14 |
+| N5-CONNECT | **SHIPPED** | `connect/MASTER_CONNECT.md` on branch `cursor/master-connect-addendum-ff6e` · PR #76 |
+| N5-KAGGLE | **GATED** | `/tmp/csoai-secrets/kaggle.json` still absent |
+| N5-DRIFT | **ALERT** | ADR-001 · owner reconcile verify canon vs live API |
+
+No DOI remint · no 22-axis invention · no spend · no new free publishes (mandate closed).
