@@ -3879,3 +3879,14 @@ No DOI remint · no 22-axis invention · no spend · no new free publishes.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 No DOI remint · no 22-axis invention · no spend · no new free publishes.
+
+## Continuation log 254 (2026-08-27T15:30:45Z) — RALPH · timer still firing · SUPPRESSED duplicate
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | mandate closed log 238 |
+| N5-TIMER | **REC** | Timer still active at 15:30Z — disable per log 253 |
+| N5-VERIFY | **FAIL** | STRICT 20260827T153036Z — unchanged `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T153045Z.log · export 14/14 |
+
+Identical to log 253 — no full table repeat. Owner reconcile only path to green STRICT.
