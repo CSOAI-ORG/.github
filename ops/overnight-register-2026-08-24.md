@@ -4031,3 +4031,17 @@ Identical to log 262.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 Identical to log 263.
+
+## Continuation log 265 (2026-08-27T21:00:35Z) — RALPH · timer 21:00Z · SUPPRESSED duplicate
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +17h past 04:00 Europe/London |
+| N5-TIMER | **REC** | Disable `ralph-overnight-until-4am` |
+| N5-VERIFY | **FAIL** | STRICT 20260827T210019Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T210035Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+Identical to log 264.
