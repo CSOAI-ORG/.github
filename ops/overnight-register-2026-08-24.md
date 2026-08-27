@@ -3679,3 +3679,13 @@ No DOI remint · no 22-axis invention.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 No DOI remint · no 22-axis invention.
+
+## Continuation log 238 (2026-08-27T03:00:39Z) — RALPH · 04:00 London · drift ALERT CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 04:00 Europe/London reached; overnight mandate complete |
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | ADR-001 sweep · owner reconcile verify canon |
+
+No DOI remint · no 22-axis invention · no new free publishes.
