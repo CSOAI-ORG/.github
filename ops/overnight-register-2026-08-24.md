@@ -3867,3 +3867,15 @@ No DOI remint · no 22-axis invention · no spend · no new free publishes.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 No DOI remint · no 22-axis invention · no spend · no new free publishes.
+
+## Continuation log 253 (2026-08-27T15:00:31Z) — RALPH · timer 15:00Z · CLOSED · drift ALERT · disable timer
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +11h past 04:00 Europe/London |
+| N5-VERIFY | **FAIL** | STRICT 20260827T150026Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T150031Z.log · export 14/14 |
+| N5-TIMER | **REC** | Disable `ralph-overnight-until-4am` — logs 242–253 identical; no signal until owner reconcile |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention · no spend · no new free publishes.

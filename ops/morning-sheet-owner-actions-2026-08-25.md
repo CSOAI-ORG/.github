@@ -17,6 +17,7 @@ Lane stopped at free polish. Everything below needs Nick.
 6. **CONFIRM RunPod** — only if new measurement volume needed (board is already 14/14).
 
 - **NEW 2026-08-26 ~13:00Z** — live `/api/gspc` now reports `22 axes · 15 measured` (ADR-001 sweep); STRICT verify FAIL; export board still 14/14; reconcile verify script + agent-card + directory copy with owner.
+- **NEW 2026-08-27** — disable `ralph-overnight-until-4am` timer (mandate closed log 238); post-close logs 242–252 are identical reaffirms until ADR-001 reconcile.
 
 ## Do not
 
