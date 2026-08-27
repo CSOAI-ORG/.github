@@ -3891,3 +3891,17 @@ No DOI remint · no 22-axis invention · no spend · no new free publishes.
 | N5-A2A | **PASS** | read-don't-write agent-card (quote totals.public_count) |
 
 Identical to log 253 — no full table repeat. Owner reconcile only path to green STRICT.
+
+## Continuation log 255 (2026-08-27T16:00:29Z) — RALPH · timer 16:00Z · SUPPRESSED duplicate
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +12h past 04:00 Europe/London |
+| N5-TIMER | **REC** | Disable `ralph-overnight-until-4am` |
+| N5-VERIFY | **FAIL** | STRICT 20260827T160023Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T160029Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+Identical to log 254 — no further action until ADR-001 reconcile.
