@@ -3854,3 +3854,16 @@ No DOI remint · no 22-axis invention · no spend · no new free publishes.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 No DOI remint · no 22-axis invention · no spend · no new free publishes.
+
+## Continuation log 252 (2026-08-27T14:30:36Z) — RALPH · timer 14:30Z · CLOSED · drift ALERT
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +10.5h past 04:00 Europe/London |
+| N5-VERIFY | **FAIL** | STRICT 20260827T143028Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T143036Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention · no spend · no new free publishes.
