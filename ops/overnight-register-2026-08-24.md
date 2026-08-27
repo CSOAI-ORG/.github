@@ -3886,7 +3886,8 @@ No DOI remint · no 22-axis invention · no spend · no new free publishes.
 |------|--------|---------------|
 | N5-CLOSE | **DONE** | mandate closed log 238 |
 | N5-TIMER | **REC** | Timer still active at 15:30Z — disable per log 253 |
-| N5-VERIFY | **FAIL** | STRICT 20260827T153036Z — unchanged `22 axis · 15 measured` |
-| N5-CG | **PASS** | claimguard-20260827T153045Z.log · export 14/14 |
+| N5-VERIFY | **FAIL** | STRICT 20260827T153236Z — unchanged `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T153240Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card (quote totals.public_count) |
 
 Identical to log 253 — no full table repeat. Owner reconcile only path to green STRICT.
