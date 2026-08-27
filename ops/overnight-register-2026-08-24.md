@@ -3975,3 +3975,17 @@ Identical to log 258; HF 503 cleared.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 Identical to log 259.
+
+## Continuation log 261 (2026-08-27T19:00:34Z) — RALPH · timer 19:00Z · SUPPRESSED duplicate
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +15h past 04:00 Europe/London |
+| N5-TIMER | **REC** | Disable `ralph-overnight-until-4am` |
+| N5-VERIFY | **FAIL** | STRICT 20260827T190028Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260827T190034Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+Identical to log 260.
