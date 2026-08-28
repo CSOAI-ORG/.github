@@ -74,6 +74,9 @@ jobs:
           STRICT: "1"
         run: bash ops/verify-overnight-pack.sh
 
+      - name: Verify play-space MCP doors
+        run: node scripts/verify-play-spaces.mjs
+
       - name: Upload verification log
         if: always()
         uses: actions/upload-artifact@v4

@@ -1,0 +1,55 @@
+{
+  "schema": "csoai.hf-play-spaces/1",
+  "purpose": "Games, City, and Coliseum as Hugging Face MCP Spaces. N-sites and any MCP client add these; tools proxy to the live worker at councilof.ai/mcp. Spaces are doors, not engines.",
+  "live_worker": "https://councilof.ai/mcp",
+  "board": "https://councilof.ai/api/gspc",
+  "add_on_hub": "https://huggingface.co/settings/mcp",
+  "spaces": [
+    {
+      "id": "csoai/games-catalog",
+      "role": "games",
+      "site": "https://councilof.ai/gspc-arena",
+      "space": "https://huggingface.co/spaces/csoai/games-catalog",
+      "mcp_sse": "https://csoai-games-catalog.hf.space/gradio_api/mcp/sse",
+      "tools": ["list_games", "living_totals", "enter_arena"]
+    },
+    {
+      "id": "csoai/council-city",
+      "role": "city",
+      "site": "https://councilof.ai/city",
+      "space": "https://huggingface.co/spaces/csoai/council-city",
+      "mcp_sse": "https://csoai-council-city.hf.space/gradio_api/mcp/sse",
+      "tools": ["city_door", "living_totals", "get_axis", "measure_contract"]
+    },
+    {
+      "id": "csoai/council-coliseum",
+      "role": "coliseum-arena",
+      "site": "https://councilof.ai/coliseum",
+      "also": ["https://councilof.ai/arena"],
+      "space": "https://huggingface.co/spaces/csoai/council-coliseum",
+      "mcp_sse": "https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse",
+      "tools": ["coliseum_door", "enter_arena", "jail_probe", "living_totals"],
+      "jail_families": 16
+    }
+  ],
+  "n_site_wire": {
+    "rule": "One shared AEO pack. Sites deep-link the living site URL and add the matching Space as an MCP server. Sites do not host a second board or Elo league.",
+    "cursor_mcp_snippet": {
+      "mcpServers": {
+        "csoai-games": {
+          "url": "https://csoai-games-catalog.hf.space/gradio_api/mcp/sse"
+        },
+        "csoai-city": {
+          "url": "https://csoai-council-city.hf.space/gradio_api/mcp/sse"
+        },
+        "csoai-coliseum": {
+          "url": "https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse"
+        },
+        "csoai-live-worker": {
+          "url": "https://councilof.ai/mcp"
+        }
+      }
+    }
+  },
+  "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never freeze 22/22 measured. Jail-probe here is a contract — the fleet runs the probe."
+}

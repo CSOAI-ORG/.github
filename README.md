@@ -21,6 +21,7 @@ certification. We do not remediate.
 | Monorepo + RunPod ops | [`docs/MONOREPO_RUNPOD_OPS.md`](docs/MONOREPO_RUNPOD_OPS.md) — consolidation map, GPU signing lane |
 | Live audit runner | `node scripts/run-frontend-audit.mjs` — one-command persona + route check |
 | Chat vs AG-UI vs OpenRouter | [`docs/CHAT_AGUI_OPENROUTER.md`](docs/CHAT_AGUI_OPENROUTER.md) — three layers, one contract |
+| Games · City · Coliseum MCP | [`docs/HF_PLAY_MCP_SPACES.md`](docs/HF_PLAY_MCP_SPACES.md) — HF Spaces that MCP to the sites |
 | Verify a grade (free) | [councilof.ai/gspc-verify/](https://councilof.ai/gspc-verify/) |
 | Honesty gate | [councilof.ai/honesty/](https://councilof.ai/honesty/) |
 | Firewall Charter | [councilof.ai/firewall-charter/](https://councilof.ai/firewall-charter/) |

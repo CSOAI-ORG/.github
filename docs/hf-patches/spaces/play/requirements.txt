@@ -1,0 +1,2 @@
+# Gradio is platform-managed on Spaces — do not pin.
+# mcp_client uses stdlib urllib only.

@@ -97,6 +97,20 @@ nsite-aeo-pack/
 
 Sites may add **skills** and **sector copy**. Sites may not add a private Elo board or a second axis count.
 
+### Hugging Face MCP doors (Games · City · Coliseum)
+
+N-sites add the play Spaces as MCP servers — they do not embed a second arena engine.
+
+Directory: [`connect/mcp/hf-play-spaces.json`](../connect/mcp/hf-play-spaces.json) · runbook: [`HF_PLAY_MCP_SPACES.md`](HF_PLAY_MCP_SPACES.md)
+
+| Site surface | Space | Live URL |
+|---|---|---|
+| Games / Council Space | `csoai/games-catalog` | `https://councilof.ai/gspc-arena` |
+| City | `csoai/council-city` | `https://councilof.ai/city` |
+| Coliseum / Arena | `csoai/council-coliseum` | `https://councilof.ai/coliseum` |
+
+Clients: Hugging Face MCP badge, or the Space SSE URL, or the worker `https://councilof.ai/mcp`.
+
 ---
 
 ## Fail closed
