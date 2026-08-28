@@ -277,6 +277,20 @@ Register tip: `ops/overnight-register-2026-08-24.md`. Mining gaps: `ops/knowledg
 | Verify | https://councilof.ai/gspc-verify |
 | MCP | https://councilof.ai/mcp (registry `io.github.CSOAI-ORG/gspc`) |
 | DID | https://csoai.org/.well-known/did.json |
+| Compliance Training World | https://councilof.ai/compliance-training-world/catalog.html *(ships on councilof-ai #863)* |
+| Council OS | https://councilof.ai/os |
+
+### Agent pivot — 2026-08-28 (read this first if you just joined)
+
+| Do | Don't |
+|----|-------|
+| Align from **live master** + this file + JEEVES `docs/MASTER_RUNDOWN_NEXT100_2026-08-28.md` | Mine old overnight-register timer loops / post-FINAL SUPPRESSED logs |
+| Ship free site + Council OS gaps (training world, product doors, count honesty) | Reopen closed #819 `cursor/council-os-harmony-ff6e` |
+| Quote `totals.public_count` from `GET /api/gspc` (`22 axis · 15 measured` as of this note) | Invent / hardcode "22 measured" or remint DOIs |
+| Prefer product PRs on `councilof-ai` (e.g. **#863** training + doors) | Keep appending identical overnight register reaffirms on `.github` #74 |
+| **Owner:** disable Cursor automation `ralph-overnight-until-4am` | Wait for the timer to invent new work |
+
+Live board probe at this note: `public_count=22 axis · 15 measured` · ClaimGuard export still `14/14` GSPC family.
 
 ---
 
