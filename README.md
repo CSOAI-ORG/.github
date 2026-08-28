@@ -13,7 +13,7 @@ certification. We do not remediate.
 |---|---|
 | Public site | [councilof.ai](https://councilof.ai) |
 | Living board | [councilof.ai/api/gspc](https://councilof.ai/api/gspc) |
-| Axis name lock (agents) | [`docs/GSPC_AXIS_CANON.md`](docs/GSPC_AXIS_CANON.md) — 14 board + 2 in-lane; live API wins on counts |
+| Axis names (agents) | Axis names live on the API at [`councilof.ai/api/gspc`](https://councilof.ai/api/gspc); see `axes[]` |
 | Master plan | [`docs/MASTER_PLAN.md`](docs/MASTER_PLAN.md) — Moody’s × LM Arena × AG-UI one ask→does-it system |
 | Estate inventory | [`docs/ESTATE_INVENTORY.md`](docs/ESTATE_INVENTORY.md) — mined surfaces, gaps, track-loss |
 | 100-step execute list | [`docs/STEPS_100.md`](docs/STEPS_100.md) — status of the weekend plan |
