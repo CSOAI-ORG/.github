@@ -4254,3 +4254,14 @@ No DOI remint · no 22-axis invention · no spend · no new free publishes.
 | N5-CG | **PASS** | claimguard-20260828T043033Z.log · export 14/14 |
 
 Identical to log 279.
+
+## Continuation log 281 (2026-08-28T05:00:43Z) — RALPH · post-FINAL · SUPPRESSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 06:00 BST · +2h past 04:00 Europe/London |
+| N5-TIMER | **REC** | **DISABLE** |
+| N5-VERIFY | **FAIL** | STRICT 20260828T050030Z — unchanged |
+| N5-CG | **PASS** | claimguard-20260828T050043Z.log · export 14/14 |
+
+Identical to log 280.
