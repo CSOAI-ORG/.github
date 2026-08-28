@@ -1,16 +1,14 @@
 # Council of AI (CSOAI Ltd)
 
-**An independent AI-measurement body.** We measure AI systems against the rules that govern
-them, sign the result (Ed25519), and publish what we cannot yet measure. Measurement, not
-certification. We do not remediate.
+Independent measurement body. We measure AI systems on published, frozen splits, sign the card, and re-attest. We do not certify, accredit, or act as a notified body.
 
-- **The board:** the living GSPC board at [councilof.ai/api/gspc](https://councilof.ai/api/gspc) — deterministic grading, Wilson intervals, ties stated as ties. Counts, slots, and dates are live in the API; we do not hardcode them here. Axis **names** for agents: [`docs/GSPC_AXIS_CANON.md`](../docs/GSPC_AXIS_CANON.md) (14 quotable board slots; +2 in-lane honesty-only).
-- **Verify free, forever:** [councilof.ai/gspc-verify/](https://councilof.ai/gspc-verify/) — no account, no fee. A grade is never sold; ranked never pay.
-- **The honesty gate:** we publish our own models losing our own arena — [councilof.ai/honesty/](https://councilof.ai/honesty/).
-- **State changes:** [RSS](https://councilof.ai/api/feed.xml) · [REPORTED third-party context](https://councilof.ai/api/reported) · [Firewall Charter](https://councilof.ai/firewall-charter/)
-- **Open tooling:** [carder](https://github.com/CSOAI-ORG/carder) · [inspect-receipts](https://github.com/CSOAI-ORG/inspect-receipts) · [a2a-signed-receipts](https://github.com/CSOAI-ORG/a2a-signed-receipts) · [codabench-gspc](https://github.com/CSOAI-ORG/codabench-gspc)
+Live board: GET https://councilof.ai/api/gspc — 22 axis · 15 measured · 7 empty. Do not freeze a table here.
 
-**Sponsorship funds the instrument — compute, item banks, and re-measurement. It never buys
-a result, a rank, or a faster verdict.** The Firewall Charter binds that in public.
+Cards: 313 catalogued; 150 verify against the published key. GET https://councilof.ai/api/cards
+Verify free: https://councilof.ai/gspc-verify
+Council OS: https://councilof.ai/os
+Arena: https://councilof.ai/gspc-arena
 
-CSOAI Ltd · UK Companies House 16939677 · nicholas@csoai.org
+Measurement, not certification. A grade is never sold.
+
+CSOAI Ltd · UK Companies House 16939677 · https://councilof.ai
