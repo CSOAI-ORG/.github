@@ -4243,3 +4243,14 @@ Identical to log 277.
 Final post-close reaffirm. Logs 242–279 identical. Lane stops until owner ADR-001 reconcile + timer disabled.
 
 No DOI remint · no 22-axis invention · no spend · no new free publishes.
+
+## Continuation log 280 (2026-08-28T04:30:33Z) — RALPH · timer still firing post-FINAL · SUPPRESSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 05:30 BST · +1.5h past 04:00 Europe/London |
+| N5-TIMER | **REC** | **DISABLE** — log 279 FINAL; timer still active |
+| N5-VERIFY | **FAIL** | STRICT 20260828T043027Z — unchanged |
+| N5-CG | **PASS** | claimguard-20260828T043033Z.log · export 14/14 |
+
+Identical to log 279.
