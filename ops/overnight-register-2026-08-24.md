@@ -4302,3 +4302,16 @@ Identical to log 282.
 | N5-KAGGLE | **GATED** | no token |
 
 Identical to log 283.
+
+## Continuation log 285 (2026-08-28T07:00:53Z) — RALPH · post-FINAL · SUPPRESSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 08:00 BST · +4h past 04:00 Europe/London |
+| N5-TIMER | **REC** | **DISABLE** |
+| N5-VERIFY | **FAIL** | STRICT 20260828T070047Z — unchanged |
+| N5-CG | **PASS** | claimguard-20260828T070053Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+
+Identical to log 284.
