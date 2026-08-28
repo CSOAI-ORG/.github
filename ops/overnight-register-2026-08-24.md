@@ -4227,3 +4227,19 @@ Identical to log 276.
 | N5-DRIFT | **ALERT** | owner reconcile |
 
 Identical to log 277.
+
+## Continuation log 279 (2026-08-28T04:00:37Z) — RALPH · timer 04:00Z · FINAL · mandate elapsed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 05:00 BST — +1h past 04:00 Europe/London (Aug 28) |
+| N5-TIMER | **REC** | **DISABLE NOW** — `ralph-overnight-until-4am` mandate fully elapsed |
+| N5-VERIFY | **FAIL** | STRICT 20260828T040030Z — `22 axis · 15 measured` |
+| N5-CG | **PASS** | claimguard-20260828T040037Z.log · export 14/14 |
+| N5-A2A | **PASS** | read-don't-write agent-card |
+| N5-KAGGLE | **GATED** | no token |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+Final post-close reaffirm. Logs 242–279 identical. Lane stops until owner ADR-001 reconcile + timer disabled.
+
+No DOI remint · no 22-axis invention · no spend · no new free publishes.
