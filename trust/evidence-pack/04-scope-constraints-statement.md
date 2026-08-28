@@ -27,7 +27,7 @@
 
 ## 3. Measurement honesty rules
 
-- **Grammar locked:** "13 measured of 14" — jail axis quotable, separation UNTESTED
+- **Grammar locked:** cite live `totals.public_count` from `/api/gspc` (currently "14 measured of 14 quotable"); never invent 22 axes
 - **TIE means TIE:** Point-estimate lead without McNemar separation is not counted as a win
 - **Fleet vs leader:** `mean_accuracy` averages leaders; `mean_fleet_mean` averages fleets — difference is selection, not skill
 - **Reported vs measured:** Published aggregates in REPORTED state are never blended into MEASURED

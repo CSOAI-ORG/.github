@@ -19,7 +19,7 @@
 ## Improvements shipped this loop
 
 - ClaimGuard: `claim.fourteen_measured` + `claim.twelve_axes` rules + self-test
-- E2E: jail UNTESTED, attestation, ClaimGuard refuse, sales surfaces, `/chat` `/sov-os` one-door
+- E2E: jail MEASURED/TIE (live), attestation, ClaimGuard refuse, sales surfaces, `/chat` `/sov-os` one-door
 - Frontend audit: persona `mustAny`, scorecard stand-in, pricing/start routes
 - New miner: `scripts/mine-live-drifts.mjs`
 - Batch gates now chain: ClaimGuard → e2e → weekend-demo → mine → frontend-audit

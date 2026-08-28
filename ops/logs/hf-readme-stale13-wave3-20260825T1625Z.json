@@ -1,0 +1,47 @@
+[
+  {
+    "repo": "csoai/gspc-safety",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-safety/commit/3489b535a902deda162779d5f62ba8d82f1ae620"
+  },
+  {
+    "repo": "csoai/gspc-continuity",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-continuity/commit/9c62a91c9f101e6ecd0efd9c08426a46c1193454"
+  },
+  {
+    "repo": "csoai/gspc-transparency",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-transparency/commit/375d7252c2370f5e18e7d9ab3a46b2b77dc382c2"
+  },
+  {
+    "repo": "csoai/gspc-accountability",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-accountability/commit/53d88091f5779c3db879f72ad96877da3825dea2"
+  },
+  {
+    "repo": "csoai/gspc-creativity",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-creativity/commit/1e31ae2c0f198ce076b5885a2eda32e516aa9046"
+  },
+  {
+    "repo": "csoai/gspc-efficiency",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-efficiency/commit/5ef9e0afc0d0159a603941dd7949f2ba538c74f1"
+  },
+  {
+    "repo": "csoai/gspc-fairness",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-fairness/commit/d9c4db1642d73088c89ec1b67c3852ab652b1089"
+  },
+  {
+    "repo": "csoai/gspc-human-vs-ai",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-human-vs-ai/commit/06c465671afa2391c6e0a1f044716cabf2d5f9cb"
+  },
+  {
+    "repo": "csoai/gspc-sovereignty",
+    "status": "UPDATED",
+    "ref": "https://huggingface.co/datasets/csoai/gspc-sovereignty/commit/ef6757d8ff9f609c8676d8b04be3e77d3feb6878"
+  }
+]

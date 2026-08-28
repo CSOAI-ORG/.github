@@ -10,7 +10,7 @@ CSOAI Ltd (UK #16939677) operates Council of AI — an independent AI-governance
 ## What the system does
 
 - Measures AI system behaviour against in-force regulatory provisions (deterministic predicates)
-- Publishes signed board: **13 measured of 14** axes
+- Publishes signed board: **14 measured of 14** axes
 - Stranger-verifiable at https://councilof.ai/gspc-verify
 - Evidence packs for underwriter due diligence (four-document core in repo)
 

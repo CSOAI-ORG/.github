@@ -1,7 +1,7 @@
 # Next 100 steps (121–220) — batch execute order
 
 **Baseline:** 2026-08-23 · **Cannon fire:** 2026-08-24 — see [`CANNON_FIRE_2026-08-24.md`](CANNON_FIRE_2026-08-24.md)  
-**Truth rail:** `https://councilof.ai/api/gspc` (14 board, 13 measured)
+**Truth rail:** `https://councilof.ai/api/gspc` (14 board, 14 measured — cite live `public_count`)
 
 Status: ✅ done · 🔧 agent-ready · 👤 owner dashboard · ⏳ blocked on upstream
 

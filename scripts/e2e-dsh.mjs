@@ -84,7 +84,7 @@ if (stats.status === 404) {
     if (j.schema?.includes("dashboard.stats")) pass("dashboard.stats schema present");
     else warn(`unexpected schema: ${j.schema}`);
     if (j.source === "pages-functions") pass("source=pages-functions (not GCP/tRPC)");
-    if (j.gspc?.measured_axes === 13) pass("gspc.measured_axes 13 from live board");
+    if (j.gspc?.measured_axes === 14) pass("gspc.measured_axes 14 from live board");
     else if (typeof j.gspc?.measured_axes === "number") warn(`gspc.measured_axes=${j.gspc.measured_axes}`);
     if (j.complianceScore === null) pass("complianceScore null (honest — no fabricated score)");
     else warn(`complianceScore=${j.complianceScore} — expected null for public board`);

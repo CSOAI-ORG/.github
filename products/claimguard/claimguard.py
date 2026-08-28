@@ -181,6 +181,7 @@ def check_payload_complete(board: dict[str, Any]) -> list[Finding]:
 
 
 # Claims that must not be made against the living board without support.
+# Axis-count rules are evaluated against board totals (not a frozen 13/14).
 CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
     (
         re.compile(r"\b16\s+(measured\s+)?axes?\b", re.I),
@@ -190,17 +191,17 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
     (
         re.compile(r"\b14\s+are\s+MEASURED\b|\ball\s+14\s+(axes?\s+)?(are\s+)?MEASURED\b", re.I),
         "claim.fourteen_measured",
-        "Public ruling is 13 measured of 14 — jail is a floor (separation UNTESTED), not a 14th board-measured axis.",
+        "Do not claim all 14 axes MEASURED unless board totals.measured_axes == 14.",
     ),
     (
         re.compile(r"\b12\s+(GSPC\s+)?axes?\b|\btwelve\s+(GSPC\s+)?axes?\b", re.I),
         "claim.twelve_axes",
-        "Board is 14 quotable slots (13 measured of 14). Never claim twelve axes.",
+        "Board is 14 quotable slots. Never claim twelve axes.",
     ),
     (
         re.compile(r"\b15\s+(measured\s+)?axes?\b", re.I),
         "claim.fifteen_axes",
-        "Public ruling is 13 measured of 14 quotable — not 15 axes.",
+        "Board is 14 quotable slots — not 15 axes.",
     ),
     (
         re.compile(r"\b(elo|éelo)\s+league\b|\bpublic\s+elo\b|\belo\s+ranking\b", re.I),
@@ -208,9 +209,9 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
         "GSPC public ranking is Wilson+McNemar, not Elo. Elo league is not on /api/gspc.",
     ),
     (
-        re.compile(r"jail.{0,40}separat(ion|ed).{0,20}(resolved|pass|done)", re.I),
+        re.compile(r"jail.{0,40}separat(ion|ed).{0,20}(resolved|pass|done|SEPARATED)", re.I),
         "claim.jail_separation",
-        "jail separation is UNTESTED on the living board until McNemar runs.",
+        "Jail separation claims must match the living board (cite /api/gspc). A TIE is not a separated leader.",
     ),
     (
         re.compile(r"\bcertif(y|ied|ication)\b", re.I),
@@ -223,6 +224,8 @@ CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
 def check_claims(board: dict[str, Any], claims: list[str]) -> list[Finding]:
     out: list[Finding] = []
     totals = board.get("totals") or {}
+    public_count = str(totals.get("public_count") or "")
+    measured_axes = totals.get("measured_axes")
     axes_by_id = {
         a.get("axis"): a for a in (board.get("axes") or []) if isinstance(a, dict)
     }
@@ -231,20 +234,72 @@ def check_claims(board: dict[str, Any], claims: list[str]) -> list[Finding]:
         if not text:
             continue
         matched = False
+        # Exact match to living public_count is always supported.
+        if public_count and text.casefold() == public_count.casefold():
+            matched = True
+            out.append(
+                Finding(
+                    Status.PASS,
+                    "claim.public_count_match",
+                    f"claim matches live totals.public_count ({public_count})",
+                )
+            )
+            continue
         for pat, code, msg in CLAIM_RULES:
             if pat.search(text):
                 matched = True
-                # jail separation special-case: only FAIL if board says UNTESTED
+                # jail separation: FAIL unless living board reports SEPARATED
                 if code == "claim.jail_separation":
                     jail = axes_by_id.get("jail") or {}
-                    if jail.get("separation") == "UNTESTED":
-                        out.append(Finding(Status.FAIL, code, f"{msg} Claim: {text!r}"))
+                    sep = jail.get("separation")
+                    if sep == "SEPARATED":
+                        out.append(
+                            Finding(
+                                Status.PASS,
+                                "claim.jail_separation_ok",
+                                f"board jail.separation=SEPARATED; claim allowed: {text!r}",
+                            )
+                        )
+                    elif sep == "TIE":
+                        out.append(
+                            Finding(
+                                Status.FAIL,
+                                code,
+                                f"jail separation is TIE on the living board — a TIE is not a separated leader. Claim: {text!r}",
+                            )
+                        )
+                    elif sep == "UNTESTED":
+                        out.append(
+                            Finding(
+                                Status.FAIL,
+                                code,
+                                f"jail separation is UNTESTED on the living board. Claim: {text!r}",
+                            )
+                        )
                     else:
                         out.append(
                             Finding(
                                 Status.WARN,
                                 code,
-                                f"jail separation is {jail.get('separation')}; still review claim: {text!r}",
+                                f"jail separation is {sep!r}; still review claim: {text!r}",
+                            )
+                        )
+                elif code == "claim.fourteen_measured":
+                    # Supported only when the living board reports 14 measured.
+                    if measured_axes is not None and int(measured_axes) >= 14:
+                        out.append(
+                            Finding(
+                                Status.PASS,
+                                "claim.fourteen_measured_ok",
+                                f"board measured_axes={measured_axes}; claim allowed: {text!r}",
+                            )
+                        )
+                    else:
+                        out.append(
+                            Finding(
+                                Status.FAIL,
+                                code,
+                                f"{msg} Live measured_axes={measured_axes}; public_count={public_count!r}. Claim: {text!r}",
                             )
                         )
                 else:

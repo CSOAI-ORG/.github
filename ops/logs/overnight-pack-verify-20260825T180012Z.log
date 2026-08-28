@@ -1,0 +1,36 @@
+=== Overnight pack verification 20260825T180012Z ===
+--- N5-07/21 ClaimGuard + banned-strings
+  [PASS] ClaimGuard + banned-strings
+--- N5-02/03 HF datasets
+  [PASS] https://huggingface.co/datasets/csoai/gspc-board HTTP 200
+  [PASS] https://huggingface.co/datasets/csoai/gspc-bench-results HTTP 200
+  [PASS] gspc-board README free of EUNOMIA branding
+--- N5-05 HF DOIs
+  [PASS] csoai/gspc-board DOI=10.57967/hf/10114
+  [PASS] csoai/gspc-bench-results DOI=10.57967/hf/10116
+--- N5-06 HF Space + leaderboard-results
+  [PASS] leaderboard-results HTTP 200
+  [PASS] Space sdk=gradio
+  [PASS] Space HTTP 200
+--- N5-10/11 MCP registry
+  [PASS] MCP latest=1.0.3
+--- N5-13/14 A2A agent card
+  [PASS] A2A validator live card
+--- N5-20 evidence pack
+  [PASS] evidence-pack/01-technical-system-description.md
+  [PASS] evidence-pack/02-governance-oversight-record.md
+  [PASS] evidence-pack/03-monitoring-incident-log.md
+  [PASS] evidence-pack/04-scope-constraints-statement.md
+--- N5-22..25 marketplace drafts
+  [PASS] ops/adx/product-metadata.md
+  [PASS] ops/snowflake/listing-draft.md
+  [PASS] ops/datarade/listing-drafts.md
+--- N5-26..29 insurance prep
+  [PASS] insurance-prep/aiuc-1-scoping-draft.md
+  [PASS] insurance-prep/armilla-governance-draft.md
+  [PASS] insurance-prep/munich-re-aisure-dd-draft.md
+  [PASS] insurance-prep/testudo-one-pager.md
+--- N5-30 G-Cloud prep
+  [PASS] ops/gcloud15/checklist.md
+--- Summary (STRICT=1)
+VERIFY PASS — all checks green

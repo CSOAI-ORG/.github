@@ -6,7 +6,7 @@ Copy into the `councilof-ai` PR that wires `POST /api/chat`.
 - [ ] Load live `/api/gspc` (or request-scoped stamp)
 - [ ] Run ClaimGuard on draft answer (or extracted claim)
 - [ ] FAIL → refuse overclaim; cite `totals.public_count`
-- [ ] Map “twelve / 12 axes” → 14 quotable / 13 measured language
+- [ ] Map “twelve / 12 axes” → 14 quotable / cite live public_count (14 measured)
 - [ ] Never affirm 15, 16 measured, or Elo as GSPC public grade
 - [ ] Never use certification language
 - [ ] Keep cream/ink tone; measurement not certification

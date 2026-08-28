@@ -1,0 +1,10 @@
+=== ClaimGuard publish gate 20260825T160136Z ===
+board: /workspace/export/gspc-board/board.json
+claim: 14 measured of 14 quotable
+--- attestation + board integrity
+ClaimGuard PASS · axes=14 measured=14 · 14 measured of 14 quotable
+  [PASS] attestation.valid: site_attestation verified (did:web:csoai.org#board-attestation-1)
+  [PASS] payload.axes_present: axes[] has 14 rows
+  [WARN] claim.unchecked: No rule matched; human review: '14 measured of 14 quotable'
+--- banned-strings
+PASS: zero banned-string hits

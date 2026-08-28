@@ -17,6 +17,7 @@ warn() {
   WARN=1
   if [[ "$STRICT" == "1" ]]; then FAIL=1; fi
 }
+note() { echo "  [NOTE] $*"; }  # owner-gated / known lag — never fails STRICT
 
 http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
 
@@ -38,10 +39,29 @@ http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
     code=$(http_code "$url")
     if [[ "$code" == "200" ]]; then pass "$url HTTP $code"; else fail "$url HTTP $code"; fi
   done
+  # N5-02/04: live board must reflect GSPC export (not stale EUNOMIA branding)
+  board_readme="$(curl -sL "https://huggingface.co/datasets/csoai/gspc-board/raw/main/README.md" 2>/dev/null || true)"
+  if echo "$board_readme" | grep -qi eunomia; then
+    warn "gspc-board README still contains EUNOMIA (stale; export is GSPC — publish pending)"
+  elif [[ -n "$board_readme" ]]; then
+    pass "gspc-board README free of EUNOMIA branding"
+  else
+    warn "gspc-board README could not be fetched for branding check"
+  fi
 
   echo "--- N5-05 HF DOIs"
   for repo in csoai/gspc-board csoai/gspc-bench-results; do
-    doi=$(curl -s "https://huggingface.co/api/datasets/$repo" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('doi') or 'none')" 2>/dev/null || echo "none")
+    doi=$(curl -s "https://huggingface.co/api/datasets/$repo" | python3 -c '
+import sys, json
+d = json.load(sys.stdin)
+doi = d.get("doi")
+if not doi:
+    for t in d.get("tags") or []:
+        if isinstance(t, str) and t.startswith("doi:"):
+            doi = t[4:]
+            break
+print(doi or "none")
+' 2>/dev/null || echo "none")
     if [[ "$doi" != "none" && -n "$doi" ]]; then pass "$repo DOI=$doi"; else warn "$repo DOI not minted"; fi
   done
 
@@ -56,11 +76,17 @@ http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
   echo "--- N5-10/11 MCP registry"
   mcp=$(curl -s "https://registry.modelcontextprotocol.io/v0.1/servers?search=gspc" | python3 -c "
 import sys,json
+from packaging.version import Version
 d=json.load(sys.stdin)
 latest=[x['server']['version'] for x in d.get('servers',[]) if x.get('_meta',{}).get('io.modelcontextprotocol.registry/official',{}).get('isLatest')]
 print(latest[0] if latest else 'none')
 " 2>/dev/null || echo "none")
-  if [[ "$mcp" == "1.0.2" ]]; then pass "MCP latest=$mcp"; else fail "MCP latest=$mcp (expected 1.0.2)"; fi
+  # Accept 1.0.2+ (1.0.3 = free polish: board 14 of 14 description)
+  if python3 -c "from packaging.version import Version; import sys; sys.exit(0 if Version(sys.argv[1]) >= Version('1.0.2') else 1)" "$mcp" 2>/dev/null; then
+    pass "MCP latest=$mcp"
+  else
+    fail "MCP latest=$mcp (expected >=1.0.2)"
+  fi
 
   echo "--- N5-13/14 A2A agent card"
   curl -s "https://councilof.ai/.well-known/agent-card.json" -o "/tmp/overnight-agent-card-$TS.json"
@@ -68,6 +94,95 @@ print(latest[0] if latest else 'none')
     pass "A2A validator live card"
   else
     fail "A2A validator live card"
+  fi
+
+  echo "--- N5-LIVE board chrome (14/14)"
+  pc=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/gspc" | python3 -c "import sys,json; print(json.load(sys.stdin).get('totals',{}).get('public_count',''))" 2>/dev/null || true)
+  if echo "$pc" | grep -q "14 measured of 14"; then
+    pass "live public_count=$pc"
+  else
+    fail "live public_count drift: ${pc:-empty}"
+  fi
+  for badge in \
+    "https://councilof.ai/badge/axes.json" \
+    "https://csoai.org/badge/axes.json"
+  do
+    msg=$(curl -sA "CSOAI-overnight-verify/1.0" "$badge" | python3 -c "import sys,json; print(json.load(sys.stdin).get('message',''))" 2>/dev/null || true)
+    if [[ "$msg" == "14 of 14" ]]; then
+      pass "$badge message=$msg"
+    else
+      warn "$badge message=${msg:-empty} (want 14 of 14)"
+    fi
+  done
+  code=$(http_code "https://councilof.ai/openapi.json")
+  if [[ "$code" == "200" ]]; then pass "openapi.json HTTP $code"; else warn "openapi.json HTTP $code"; fi
+  code=$(http_code "https://councilof.ai/AGENT-ONBOARDING.md")
+  if [[ "$code" == "200" ]]; then pass "AGENT-ONBOARDING.md HTTP $code"; else note "AGENT-ONBOARDING.md HTTP $code (shipped 711d1ee — await Pages if 404)"; fi
+  feed=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/feed.xml" 2>/dev/null || true)
+  if echo "$feed" | grep -q "14 measured of 14"; then
+    pass "feed.xml cites 14 measured of 14"
+  else
+    warn "feed.xml missing live 14/14 item"
+  fi
+  # axis-register + server-card — shipped on master (660d67e / 1ce12b0); NOTE while Pages lags
+  ar=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/axis-register" 2>/dev/null || true)
+  ar_n=$(echo "$ar" | python3 -c "import sys,json; print(json.load(sys.stdin).get('registry_axis_count',''))" 2>/dev/null || true)
+  if [[ "$ar_n" == "14" ]] && ! echo "$ar" | grep -q "UNTESTED"; then
+    pass "axis-register registry_axis_count=14 (no UNTESTED)"
+  else
+    note "axis-register count=${ar_n:-empty} (master 660d67e — await Pages if still 13/UNTESTED)"
+  fi
+  sc=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/.well-known/mcp/server-card.json" 2>/dev/null || true)
+  if echo "$sc" | grep -q "14 measured of 14"; then
+    pass "mcp/server-card.json cites 14 measured of 14"
+  else
+    note "mcp/server-card.json stale (master 1ce12b0 — await Pages if still 13 measured)"
+  fi
+  mo_note=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/gspc" | python3 -c "import sys,json; print(json.load(sys.stdin).get('measured_on',{}).get('note',''))" 2>/dev/null || true)
+  if echo "$mo_note" | grep -q "TIE (determined" && ! echo "$mo_note" | grep -q "separation is UNTESTED"; then
+    pass "measured_on.note jail TIE (determined)"
+  else
+    note "measured_on.note lag (master c97a8a1/f277606 — await Pages if still UNTESTED)"
+  fi
+  cat_note=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/catalog.json" 2>/dev/null || true)
+  if echo "$cat_note" | grep -q "14 measured of 14"; then
+    pass "catalog.json cites 14 measured of 14"
+  else
+    note "catalog.json stale (master 0a49168/f277606 — await Pages if still 13 measured axes)"
+  fi
+  swarm_note=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/gspc" | python3 -c "import sys,json; print(next((a.get('note') or '') for a in json.load(sys.stdin).get('axes') or [] if a.get('axis')=='swarm'))" 2>/dev/null || true)
+  if echo "$swarm_note" | grep -q "14 measured of 14" && ! echo "$swarm_note" | grep -q "public count stays 13"; then
+    pass "swarm.note cites 14 measured of 14 (no stale UNTESTED jail clause)"
+  else
+    note "swarm.note stale or empty (master aaa8386 — await Pages if still 13/UNTESTED)"
+  fi
+  ras=$(curl -sL -A "CSOAI-overnight-verify/1.0" "https://councilof.ai/ras" 2>/dev/null || true)
+  if echo "$ras" | grep -q "14 measured of 14 quotable"; then
+    pass "ras.html cites 14 measured of 14"
+  else
+    note "ras.html stale (master aaa8386 — await Pages if still 13 measured axes)"
+  fi
+  meas=$(curl -sL -A "CSOAI-overnight-verify/1.0" "https://councilof.ai/signed/gspc-measurement.json" 2>/dev/null || true)
+  meas_n=$(echo "$meas" | python3 -c "import sys,json; print(len(json.load(sys.stdin).get('axes') or []))" 2>/dev/null || true)
+  if [[ "$meas_n" == "14" ]] && echo "$meas" | grep -q "14 measured of 14" && ! echo "$meas" | grep -q "public count stays 13"; then
+    pass "signed/gspc-measurement.json 14 axes + 14/TIE narrative"
+  else
+    note "signed/gspc-measurement.json axes=${meas_n:-empty} (master 882fa61 — await Pages if truncated/stale)"
+  fi
+  meth=$(curl -sA "CSOAI-overnight-verify/1.0" "https://councilof.ai/api/methodology" 2>/dev/null || true)
+  if echo "$meth" | grep -q "jail MEASURED with living-board separation TIE" && ! echo "$meth" | grep -q "16-axis" && ! echo "$meth" | grep -q "jail separation untested"; then
+    pass "api/methodology jail TIE + 14-slot (no 16-axis / untested)"
+  else
+    note "api/methodology CDN lag (master 9601613 — await Pages if still untested/16-axis)"
+  fi
+  mcp_rt=$(curl -sA "CSOAI-overnight-verify/1.0" -X POST "https://councilof.ai/mcp" \
+    -H 'content-type: application/json' \
+    -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"verify","version":"0"}}}' \
+    | python3 -c "import sys,json; print(json.load(sys.stdin).get('result',{}).get('serverInfo',{}).get('version',''))" 2>/dev/null || true)
+  if [[ "$mcp_rt" == "1.0.3" ]]; then
+    pass "MCP worker runtime=$mcp_rt"
+  else
+    note "MCP worker runtime=${mcp_rt:-empty} (registry 1.0.3; needs CF_API_TOKEN restore — see ops/cf-api-token-restore.md)"
   fi
 
   echo "--- N5-20 evidence pack"
@@ -84,6 +199,9 @@ print(latest[0] if latest else 'none')
   for f in aiuc-1-scoping-draft.md armilla-governance-draft.md munich-re-aisure-dd-draft.md testudo-one-pager.md; do
     if [[ -f "$ROOT/trust/insurance-prep/$f" ]]; then pass "insurance-prep/$f"; else fail "insurance-prep/$f missing"; fi
   done
+
+  echo "--- N5-30 G-Cloud prep"
+  if [[ -f "$ROOT/ops/gcloud15/checklist.md" ]]; then pass "ops/gcloud15/checklist.md"; else fail "ops/gcloud15/checklist.md missing"; fi
 
   echo "--- Summary (STRICT=$STRICT)"
   if [[ "$FAIL" -eq 0 ]]; then

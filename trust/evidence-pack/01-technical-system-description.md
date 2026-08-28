@@ -7,7 +7,7 @@
 
 ## 1. What the system does
 
-CSOAI operates an independent AI-governance **measurement** instrument called GSPC (Governance · Safety · Provenance · Continuity). The instrument comprises 14 quotable slots on a public board; **13 measured of 14** as of the 2026-08-18 sitting. Each measured axis carries a frozen item bank, deterministic grading predicates (never LLM-as-judge), fleet run results, Wilson confidence intervals where n≥30, and McNemar separation tests where applicable.
+CSOAI operates an independent AI-governance **measurement** instrument called GSPC (Governance · Safety · Provenance · Continuity). The instrument comprises 14 quotable slots on a public board; live ruling from https://councilof.ai/api/gspc is **14 measured of 14 quotable** (earlier 2026-08-18 sitting was 13 measured of 14). Each measured axis carries a frozen item bank, deterministic grading predicates (never LLM-as-judge), fleet run results, Wilson confidence intervals where n≥30, and McNemar separation tests where applicable.
 
 The system publishes:
 
@@ -22,7 +22,7 @@ The system publishes:
 | Component | Detail |
 |-----------|--------|
 | Board fleet | 19-model fleet (8 tuned council specialists + 6 base models + frontier cross-lab models) for 13 canonical axes |
-| Jail axis (slot 14) | Separate 7-model fleet; separation UNTESTED; bank pending full publication |
+| Jail axis (slot 14) | Separate 7-model fleet; MEASURED; living-board separation **TIE** (determined 2026-08-25); gold bank published as `csoai/gspc-jail-goldbank` |
 | Grading | Deterministic predicates on 15,580 per-item rows (0 transport errors) |
 | Reproducibility | Harness public in `csoai-static-deploy2` (commit bb15589c lineage) |
 | Signing | Ed25519 (`did:web:csoai.org#estate-chain-1` / `#board-attestation-1`) |

@@ -7,7 +7,7 @@
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Measured axes | 13 of 14 | `GET /api/gspc` |
+| Measured axes | 14 of 14 (live) | `GET /api/gspc` |
 | Total items (board) | 887 | Signed board totals |
 | Separated leads | 4 | McNemar p<0.05 |
 | Ties | 9 | Lead not statistically separated |

@@ -47,7 +47,7 @@ Point at the reply. If chat drifts from `totals.public_count` on `/api/gspc`, **
 Open `totals` on `/api/gspc` if they want receipts:
 
 - `totals.axes` → 14  
-- `totals.measured_axes` → 13  
+- `totals.measured_axes` → 14 (cite live `public_count`)
 - `totals.public_count` → live string (do not memorize)
 
 ### Verify

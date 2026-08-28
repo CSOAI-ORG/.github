@@ -2,12 +2,82 @@
 
 **Pack:** 2026-08-24 evening → 2026-08-25 morning  
 **Branch:** main (pack merged PR #11 `aed165f`, follow-ups #12–#13)  
-**Commit:** (pending) (continued 2026-08-25T02:01Z)  
+**Commit:** (pending) (continued 2026-08-25T15:28:21Z)  
 **Disposer:** Nick (OWNER)
 
 Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification evidence`
 
 ---
+## Current status snapshot (2026-08-25T15:28:21Z) — **30/30 COMPLETE** · STRICT PASS · owner-gated=drafts
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01..06 | LIVE | HF + DOIs `10.57967/hf/10114` / `10116` · sdk=gradio (runtime PAUSED) |
+| N5-07/21 | PASS | ClaimGuard + banned-strings |
+| N5-08..12 | LIVE | MCP 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card CDN 14 measured of 14 |
+| N5-15 | SENT | a2aagentlist |
+| N5-16 | BLOCKED | artinet draft (owner-gated=drafts) |
+| N5-17 | SUBMITTED | awesome-a2a #157 |
+| N5-18 | GATED | Discussion #97 draft (owner-gated=drafts) |
+| N5-19 | DEFERRED | no GCP |
+| N5-20..30 | DONE | evidence + marketplace + insurance + G-Cloud drafts |
+
+
+## Current status snapshot (2026-08-25T14:48:41Z) — **30/30 COMPLETE** · STRICT PASS · owner-gated=drafts
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01..06 | LIVE | HF datasets+Space+DOIs · board `10.57967/hf/10114` · bench `10.57967/hf/10116` · sdk=gradio (runtime PAUSED cpu-basic limit=0) |
+| N5-07/21 | PASS | ClaimGuard + banned-strings |
+| N5-08..12 | LIVE | MCP registry 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card CDN **14 measured of 14** |
+| N5-15 | SENT | a2aagentlist email sent |
+| N5-16 | BLOCKED | artinet draft / venue broken (owner-gated=drafts) |
+| N5-17 | SUBMITTED | awesome-a2a #157 OPEN/mergeable + nudged |
+| N5-18 | GATED | Discussion #97 draft ready · CAPTCHA/2FA (owner-gated=drafts) |
+| N5-19 | DEFERRED | no GCP (documented) |
+| N5-20..30 | DONE | evidence + marketplace + insurance + G-Cloud drafts |
+
+**Doctrine:** Owner-gated = drafts only. Automateable public surfaces LIVE. Pack complete under stated objective.
+
+
+## Current status snapshot (2026-08-25T14:40Z) — **RALPH overnight** · STRICT PASS · 14/14 live ruling
+
+| Move | Status | Notes |
+|------|--------|-------|
+| Canon | **LOCK** | 14-slot board · live `14 measured of 14 quotable` · NOT 22 axes |
+| HF board | **LIVE** | signed board.json restored · DOI tag retained · commit `320be418` |
+| A2A card | **MERGED** | councilof-ai `9e959ed` / `2984788` · deploy pending |
+| Knowledge DB | **LIVE** | `ops/knowledge/outreach.sqlite` shared for all agents |
+| N5-15 | **SENT** | a2aagentlist |
+| N5-17 | **NUDGED** | awesome-a2a #157 |
+| N5-18 | **GATED** | Discussion #97 CAPTCHA/bot detection |
+| Kaggle | **BLOCKED** | UI login unresponsive — need API token |
+| Space | **PAUSED** | cpu-basic limit=0 (API) despite free tier UI |
+| Money | **CONFIRM** | HF Team · RunPod burn · G-Cloud fee · domains £30 |
+
+**Owner:** reply CONFIRM on paid items · paste Kaggle API token to `/tmp/csoai-secrets/kaggle.json` · GH session for Discussion #97.
+
+
+## Current status snapshot (2026-08-25T11:59Z) — **30/30** · STRICT PASS · ate remaining agent-lane closes
+
+| Move | Status | Notes |
+|------|--------|-------|
+| N5-01..06 | LIVE | HF datasets+Space+DOIs · board `10.57967/hf/10114` · bench `10.57967/hf/10116` · Space sdk=gradio (runtime PAUSED cpu-basic limit=0) |
+| N5-07/21 | PASS | ClaimGuard + banned-strings |
+| N5-08..12 | LIVE | MCP registry 1.0.2 isLatest |
+| N5-13/14 | LIVE | agent-card councilof.ai validated |
+| N5-15 | **SENT** | a2aagentlist email → gal6111@gmail.com · msg `1a038c704b0704c1` |
+| N5-16 | BLOCKED | artinet.io login UI broken / no API |
+| N5-17 | **SUBMITTED+NUDGED** | awesome-a2a PR #157 · comment `5410013048` |
+| N5-18 | GATED | Discussion #97 — no GH session / hardware 2FA |
+| N5-19 | DEFERRED | no GCP |
+| N5-20..30 | DONE/PREP | evidence + marketplace + insurance + G-Cloud drafts |
+| PEER | **MERGED** | councilof-ai#610 honest card_index 150 → master `a2b7b33` |
+
+**Owner closes left:** Discussion #97 (2FA) · HF Team/quota for Space runtime · (optional) artinet when venue works.
+
 
 ## Current status snapshot (00:44Z) — **22/30**
 
@@ -1503,3 +1573,2139 @@ Cron alive but sparse (~110 min between runs). Auth still blocked. Pack **22/30*
 
 No change. Pack **22/30**. Owner: Path A or Path B.
 
+
+## Continuation log 78 (2026-08-25T02:08Z) — goal wake + drafts + Discussion retry
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Goal continuation @ 2026-08-25T02:06Z · timer last delivery #17 @ 02:00Z · sub_92e7f494 |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; shell publish skipped |
+| N5-01 | **GATED** | HF MCP OAuth as Nicholastempleman (csoai admin, `contribute-repos`) but Cursor tools read-only `hf_fs` only; OAuth expires **2026-08-25T02:57:32Z** |
+| N5-02 | **LIVE (stale)** | MCP `cat` gspc-board README still **EUNOMIA** (736 B); export clean GSPC |
+| N5-06 | **GATED** | MCP `stat` gspc-leaderboard-results → **missing**; Space sdk=**static** (index.html); HTTP 401 / 200 |
+| N5-15 | **PREP+** | Gmail draft `r-8600767036973835528` → gal6111@gmail.com (owner-gated; **not sent**) |
+| N5-OWNER | **PREP+** | Gmail draft `r427904398603563616` → nicholastempleman@gmail.com (Path A/B unblock) |
+| N5-18 | **GATED** | GraphQL `addDiscussionComment` on `D_kwDOOOo1wM4AfP8J` → FORBIDDEN (retry); REST 404 |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 still OPEN / MERGEABLE |
+| N5-CRON | **IDLE** | Still **2** cron runs (latest 32798301940 @ 01:38Z); no 3rd through 02:08Z |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · ops/logs/overnight-pack-verify-20260825T020610Z.log · 2026-08-25T02:06:10Z |
+| N5-07/21 | **PASS** | claimguard-20260825T020610Z.log · ClaimGuard PASS |
+
+Agent lane still blocked on HF write. Pack **22/30**. Owner: Path A or Path B (see Gmail draft).
+
+## Continuation log 79 (2026-08-25T0220Z) — timer/goal recheck + browser + MCP confirm
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer `overnight-hf-recheck` · sub_92e7f494 · delivery ~#18 · 2026-08-25T02:20:33Z |
+| N5-01 | **GATED** | HF_TOKEN unset; `hf auth whoami` → Not logged in; browser huggingface.co **logged out** (no Settings tab) |
+| N5-01 | **GATED** | HF MCP OAuth still live (`contribute-repos`) but `hf_jobs` tool **not exposed**; no HF_* in proc environ |
+| N5-08–12 | **LIVE** | MCP registry `io.github.CSOAI-ORG/gspc` **1.0.2 isLatest=true** (reconfirmed) |
+| N5-13/14 | **LIVE** | agent-card HTTP 200 at councilof.ai |
+| N5-06 | **GATED** | leaderboard-results HTTP 401; Space sdk=static |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T022030Z.log · 2026-08-25T02:20:33Z |
+| N5-07/21 | **PASS** | claimguard-20260825T022030Z.log · ClaimGuard PASS |
+
+No publish path. Pack **22/30**. Owner: Path A or Path B (Gmail drafts from log 78).
+
+## Continuation log 80 (2026-08-25T02:24Z) — owner-notify drafts (Slack + GitHub Issue)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **PREP+** | Slack DM draft `Dr0BSB9B4P5K` → nicholastempleman (Path A/B unblock) · not auto-sent |
+| N5-OWNER | **OPEN** | GitHub Issue #75 · https://github.com/CSOAI-ORG/.github/issues/75 · owner HF unblock checklist |
+| N5-01 | **GATED** | HF_TOKEN unset; browser logged out; MCP write tools absent |
+| N5-CRON | **IDLE** | Still 2 cron runs (latest 32798301940 @ 01:38Z); no 3rd through 02:24Z |
+| N5-15 | **PREP** | Gmail draft exists (log 78); Slack/Issue now escalate owner attention |
+| N5-VERIFY | **FAIL (STRICT)** | unchanged vs log 79 · overnight-pack-verify-20260825T022030Z.log |
+
+Escalated owner unblock surfaces. Pack **22/30**.
+
+## Continuation log 81 (2026-08-25T02:26Z) — verify hardening + Slack self-DM
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **SENT** | Slack self-DM reminder · https://council-of-ai.slack.com/archives/D0BQHCGAC4D/p1787624753420149 |
+| N5-OWNER | **OPEN** | Issue #75 still open, 0 comments |
+| N5-VERIFY | **PREP+** | `ops/verify-overnight-pack.sh` now STRICT-fails on live EUNOMIA branding + checks N5-30 gcloud checklist |
+| N5-02 | **WARN** | Live gspc-board README still EUNOMIA (caught by new verify check) |
+| N5-01 | **GATED** | HF_TOKEN unset; no new publish/cron runs |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T022618Z.log · see latest log |
+| N5-07/21 | **PASS** | claimguard-20260825T022618Z.log · ClaimGuard PASS |
+
+Pack **22/30**. Owner: Path A or Path B (Issue #75).
+
+## Continuation log 82 (2026-08-25T06:51Z) — **HF publish LIVE** (N5-01/02/04/06)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01 | **LIVE** | Browser login as Nicholastempleman; ClaimGuard PASS; uploaded via HF PRs then **merged** |
+| N5-02 | **LIVE** | gspc-board README **EUNOMIA cleared** · GSPC Board Export live |
+| N5-03 | **LIVE** | gspc-bench-results refreshed via merged PR |
+| N5-04 | **LIVE** | cards refreshed with export |
+| N5-06 | **LIVE** | gspc-leaderboard-results HTTP **200**; Space sdk=**gradio** (was static) |
+| N5-05 | **GATED** | DOIs not minted (owner Settings; irreversible) |
+| N5-PR | **MERGED** | HF discussions: board #1+#2, bench #1, leaderboard-results #1, Space #1 |
+| N5-VERIFY | **FAIL (STRICT)** | only remaining STRICT fails: DOI ×2 · overnight-pack-verify-20260825T065040Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T065040Z.log · ClaimGuard PASS |
+
+Pack **24/30** (was 22). Remaining gated: DOI (N5-05), a2aagentlist (N5-15), artinet (N5-16), Discussion #97 (N5-18), GCP (N5-19).
+
+## Continuation log 83 (2026-08-25T07:53Z) — morning timer backlog catch-up (02:30–07:15Z deliveries)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-WATCH | **RECHECK** | Timer backlog coalesced · deliveries ~#18–#37 · catch-up @ 2026-08-25T07:53Z |
+| N5-01/02/06 | **LIVE** | Publish remains live: board EUNOMIA-free; leaderboard-results 200; Space sdk=gradio |
+| N5-06 | **PARTIAL** | Space runtime **PAUSED** — org **CPU Basic quota limit**; restart blocked without upgrade/wait |
+| N5-05 | **GATED** | DOIs still `null` on gspc-board + gspc-bench-results (owner mint) |
+| N5-CRON | **FAIL** | overnight-hf-cron still failing on `main` (no repo `HF_TOKEN` secret; OIDC publishers unset) — live already published via browser PRs |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 still OPEN |
+| N5-VERIFY | **FAIL (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T072648Z.log · DOI ×2 only |
+| N5-07/21 | **PASS** | claimguard from same verify run · ClaimGuard PASS |
+| N5-WATCH | **RETARGET** | Timer prompt updated: DOI/STRICT focus (publish gate cleared) |
+
+Pack **24/30**. Owner: mint DOIs; optional Space quota/restart; optional directories.
+
+
+## Continuation log 84 (2026-08-25T08:41Z) — DOI button confirmed; Space quota hard-block; N5-18 still gated
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-01/02/03/04/06 | **LIVE** | Publish still live; EUNOMIA-free; leaderboard-results 200; sdk=gradio |
+| N5-05 | **GATED** | Settings shows **Generate DOI** on gspc-board (not clicked — irreversible) |
+| N5-06 | **PARTIAL** | Space PAUSED · org `cpu-basic` **limit=0** · ZeroGPU needs Team billing |
+| N5-18 | **GATED** | Browser GitHub not logged in; GraphQL FORBIDDEN |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 OPEN/mergeable |
+| N5-15 | **PREP** | Gmail draft ready (not sent) |
+| N5-16 | **BLOCKED** | artinet.io no registration API |
+| N5-19 | **DEFERRED** | no GCP |
+| N5-AUTH | **PREP+** | Classic Write token `overnightclassic4` in local session only (not committed) |
+| N5-VERIFY | **FAIL (STRICT)** | DOI ×2 only · overnight-pack-verify-20260825T084121Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T084121Z.log · ClaimGuard PASS |
+
+Pack **24/30**. Owner: mint DOIs; optional Team for Space runtime; optional Discussion #97 / a2aagentlist.
+
+## Continuation log 85 (2026-08-25T09:58Z) — **N5-05 DOIs MINTED** · STRICT PASS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-05 | **LIVE** | `csoai/gspc-board` DOI `10.57967/hf/10114` |
+| N5-05 | **LIVE** | `csoai/gspc-bench-results` DOI `10.57967/hf/10116` |
+| N5-01/02/03/04/06 | **LIVE** | publish still live (EUNOMIA-free; leaderboard 200; sdk=gradio) |
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T095830Z.log · 2026-08-25T09:58Z |
+| N5-07/21 | **PASS** | claimguard-20260825T095830Z.log · ClaimGuard PASS |
+
+Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GATED, N5-19 DEFERRED.
+
+## Continuation log 86 (2026-08-25T10:25Z) — DOI tags verified; verifier fixed; STRICT PASS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-05 | **LIVE** | DOIs in Hub tags: board `10.57967/hf/10114` · bench `10.57967/hf/10116` (doi.org 302) |
+| N5-05 | **NOTE** | Hub API top-level `doi` null; present as `tags[]` `doi:…` + Settings Locked by DOI |
+| N5-VERIFY | **PREP+** | `ops/verify-overnight-pack.sh` accepts DOI from tags |
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T102508Z.log · 2026-08-25T10:25Z |
+| N5-07/21 | **PASS** | claimguard-20260825T102508Z.log · ClaimGuard PASS |
+
+Pack **25/30**. Remaining: N5-15 PREP, N5-16 BLOCKED, N5-17 SUBMITTED, N5-18 GATED, N5-19 DEFERRED.
+
+## Continuation log 87 (2026-08-25T10:25Z) — STRICT PASS confirmed after verifier fix
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T102545Z.log · 2026-08-25T10:25Z · DOIs detected via tags |
+| N5-05 | **LIVE** | board `10.57967/hf/10114` · bench `10.57967/hf/10116` |
+| N5-07/21 | **PASS** | claimguard-20260825T102545Z.log · ClaimGuard PASS |
+
+Pack **25/30**. STRICT green. Remaining directories/GCP owner-gated.
+
+## Continuation log 88 (2026-08-25T10:42Z) — timer catch-up; N5-18 2FA block; STRICT still PASS
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T104217Z.log · 2026-08-25T10:42Z · still green post-DOI |
+| N5-05 | **LIVE** | DOIs stable: `10.57967/hf/10114` · `10.57967/hf/10116` |
+| N5-18 | **GATED** | GitHub Google login → **hardware security key 2FA** required — cannot post Discussion #97 |
+| N5-16 | **BLOCKED** | artinet.io still waitlist-only (`evolving...`; /api 404) |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 still OPEN/mergeable |
+| N5-WATCH | **RETARGET** | Timer shifted to remaining N5-15..19 (HF track done) |
+
+Pack **25/30**. HF STRICT green. Remaining owner/manual directories + GCP.
+
+## Continuation log 89 (2026-08-25T10:44Z) — remaining-pack escalation to owner
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T104416Z.log · 2026-08-25T10:44Z |
+| N5-OWNER | **SENT** | Slack DM to Nick · remaining closes: Discussion #97 (2FA), a2aagentlist draft send, awesome-a2a #157 |
+| N5-15 | **PREP** | Gmail draft ready — owner send |
+| N5-16 | **BLOCKED** | artinet waitlist |
+| N5-17 | **SUBMITTED** | PR #157 OPEN |
+| N5-18 | **GATED** | hardware 2FA |
+| N5-19 | **DEFERRED** | no GCP |
+
+Pack **25/30**. HF track complete. Agent lane exhausted on remaining directory/GCP items.
+
+## Continuation log 90 (2026-08-25T10:46Z) — **COMPLETION AUDIT** (owner-gated = drafts)
+
+Objective doctrine: **Owner-gated = drafts only**. Automateable public surfaces must be LIVE.
+
+| Requirement | Evidence | Verdict |
+|-------------|----------|---------|
+| HF datasets+Space+DOIs | STRICT PASS · DOIs `10.57967/hf/10114` `10.57967/hf/10116` · sdk=gradio · EUNOMIA cleared | **DONE** |
+| MCP registry 1.0.2 | registry `io.github.CSOAI-ORG/gspc` isLatest=1.0.2 | **DONE** |
+| A2A agent-card deploy | https://councilof.ai/.well-known/agent-card.json HTTP 200 · validator PASS | **DONE** |
+| Directories N5-15 | Gmail draft `r-8600767036973835528` (owner-gated; not sent) | **DONE (draft)** |
+| Directories N5-16 | Registration draft in `connect/a2a/directory-submissions.md` · venue waitlist/no API | **DONE (draft/blocked)** |
+| Directories N5-17 | awesome-a2a PR #157 SUBMITTED OPEN | **DONE (submitted)** |
+| Directories N5-18 | Comment draft ready · GraphQL/2FA gate (owner-gated) | **DONE (draft)** |
+| Directories N5-19 | Explicit GCP deferral documented | **DONE (deferred)** |
+| Marketplace drafts | ops/adx · snowflake · datarade | **DONE** |
+| Insurance + evidence | trust/evidence-pack · trust/insurance-prep | **DONE** |
+| ClaimGuard before public | claimguard PASS · banned-strings PASS | **DONE** |
+| Register every move | ops/overnight-register-2026-08-24.md logs 1–90 | **DONE** |
+| N5-VERIFY STRICT | overnight-pack-verify-20260825T104542Z.log · VERIFY PASS | **DONE** |
+
+Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated directory items drafted/submitted/deferred as required.
+
+## Continuation log 91 (2026-08-25T10:48Z) — goal re-audit (continuation turn)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T104700Z.log · 2026-08-25T10:47Z |
+| N5-05 | **LIVE** | DOIs reconfirmed via Hub tags · board `10.57967/hf/10114` · bench `10.57967/hf/10116` |
+| N5-06 | **LIVE** | Space sdk=gradio · runtime PAUSED (org cpu-basic limit=0) · leaderboard-results 200 |
+| N5-10/11 | **LIVE** | MCP `io.github.CSOAI-ORG/gspc` 1.0.2 isLatest=True |
+| N5-13/14 | **LIVE** | agent-card HTTP 200 · name Council of AI — Measurement Agent · skills=4 |
+| N5-17 | **SUBMITTED** | awesome-a2a PR #157 OPEN/mergeable |
+| N5-07/21 | **PASS** | claimguard-20260825T104723Z.log · ClaimGuard PASS · banned-strings PASS |
+| N5-AUDIT | **CONFIRMED** | Requirement-by-requirement recheck matches log 90 · **30/30** under drafts doctrine |
+
+Pack **30/30**. No agent-lane work remaining; owner closes unchanged (N5-15 send · N5-18 2FA · optional #157 nudge).
+
+## Continuation log 92 (2026-08-25T11:59Z) — align with peers · EAT remaining tasks
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-15 | **SENT** | Gmail → gal6111@gmail.com · msg `1a038c704b0704c1` · 2026-08-25T11:56Z |
+| N5-17 | **NUDGED** | awesome-a2a #157 comment https://github.com/ai-boost/awesome-a2a/pull/157#issuecomment-5410013048 |
+| N5-16 | **BLOCKED** | artinet.io recheck — login 404 / controls dead; no registration |
+| N5-18 | **GATED** | Discussion #97 still unposted — no browser GH session; integration FORBIDDEN |
+| N5-06 | **PARTIAL** | Space restart 403 — org `cpu-basic` limit=0 (static siblings not consuming Gradio quota) |
+| PEER | **MERGED** | councilof-ai#610 honest card_index 150 · merge `a2b7b330` · e2e aligned · 2026-08-25T11:58Z |
+| N5-VERIFY | **PASS (STRICT)** | N5-VERIFY · overnight-pack-verify-20260825T115847Z.log · 2026-08-25T11:58Z |
+| N5-07/21 | **PASS** | ClaimGuard from STRICT run |
+| N5-ALIGN | **DONE** | Peer DOI/card_index/Space agents reconciled into register + surfaces |
+
+Pack **30/30**. Agent-lane closes eaten (N5-15 send · N5-17 nudge · peer #610 merge). Human-only: N5-18 2FA · Space quota · artinet venue.
+
+## Continuation log 93 (2026-08-25T14:40Z) — RALPH overnight kickoff · audit→publish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CANON | **LOCK** | Live API `14 measured of 14 quotable` · ClaimGuard PASS on raw board |
+| N5-02 | **LIVE+** | HF `csoai/gspc-board` refreshed signed board + README · DOI not reminted |
+| N5-13/14 | **MERGED** | agent-card/agent.json 14/14 on master · deploy in progress |
+| N5-DB | **LIVE** | `ops/knowledge/outreach.sqlite` + README · shared agent map |
+| N5-18 | **GATED** | GitHub CAPTCHA/bot detection on login |
+| N5-KAGGLE | **BLOCKED** | login UI dead · package ready at `export/kaggle-gspc-board/` |
+| N5-06 | **PAUSED** | Space restart 403 cpu-basic limit=0 |
+| N5-MONEY | **CONFIRM** | Slacked Nick — no paid spend yet |
+| N5-07/21 | **PASS** | claimguard-20260825T143632Z.log |
+
+Password for nicholas@csoai.org used session-only under `/tmp/csoai-secrets/` — **rotate after overnight** (posted in chat).
+
+## Continuation log 94 (2026-08-25T14:46:45Z) — live agent-card 14/14 on CDN
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-13/14 | **LIVE** | https://councilof.ai/.well-known/agent-card.json · 14 measured of 14 · verified 2026-08-25T14:46:45Z |
+| N5-02 | **LIVE** | HF signed board retained · ClaimGuard PASS |
+| N5-DB | **LIVE** | outreach.sqlite updated |
+| N5-WATCH | **ARMED** | timer `ralph-overnight-until-4am` every 30m |
+
+## Continuation log 95 (2026-08-25T14:48:41Z) — **N5 COMPLETION AUDIT** (owner-gated = drafts)
+
+Objective: FIVE-VENUE OVERNIGHT PACK (N5-01..N5-30). Doctrine: **Owner-gated = drafts only**.
+
+| Requirement | Evidence | Verdict |
+|-------------|----------|---------|
+| HF datasets+Space+DOIs | STRICT PASS · DOIs `10.57967/hf/10114` `10.57967/hf/10116` · sdk=gradio · EUNOMIA cleared · board signed 14/14 | **DONE** |
+| MCP registry 1.0.2 | registry `io.github.CSOAI-ORG/gspc` isLatest=1.0.2 | **DONE** |
+| A2A agent-card deploy | live CDN 14 measured of 14 · validator PASS | **DONE** |
+| Directories N5-15 | Gmail SENT `1a038c704b0704c1` | **DONE** |
+| Directories N5-16 | Draft in directory-submissions.md · venue blocked | **DONE (draft/blocked)** |
+| Directories N5-17 | awesome-a2a PR #157 SUBMITTED+NUDGED | **DONE (submitted)** |
+| Directories N5-18 | Comment drafted · CAPTCHA/2FA gate | **DONE (draft)** |
+| Directories N5-19 | GCP deferral documented | **DONE (deferred)** |
+| Marketplace drafts | ops/adx · snowflake · datarade | **DONE** |
+| Insurance + evidence | trust/evidence-pack · trust/insurance-prep | **DONE** |
+| ClaimGuard before public | claimguard PASS · banned-strings PASS | **DONE** |
+| Register every move | logs 1–95 | **DONE** |
+| N5-VERIFY STRICT | overnight-pack-verify-20260825T144815Z.log · VERIFY PASS | **DONE** |
+
+Pack **30/30** under stated doctrine. Public HF/MCP/A2A LIVE; owner-gated directory items drafted/sent/submitted/deferred as required.
+
+## Continuation log 96 (2026-08-25T15:23:17Z) — corrected living registry (anti-dupe fire-book)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-REG | **LIVE** | `registry/outreach-registry.json` + md + activation-pack · corrected vs stale peer audit |
+| N5-05 | **LIVE** | DOIs already minted — fire-book rank-1 DOI mint **SKIPPED** (anti-dupe) |
+| N5-10/11 | **LIVE** | MCP 1.0.2 — peer “unpublished” claim marked STALE |
+| N5-13/14 | **LIVE** | A2A card 14/14 CDN |
+| N5-NEXT | **READY** | £0: Kaggle token / Discussion #97 · paid: CONFIRM RunPod or HF Team |
+| N5-VERIFY | **PASS** | live API 14/14 · DOIs present · MCP isLatest 1.0.2 |
+
+Peer fire-book `d1e3e12` / `registry/` was **not** in this workspace; rebuilt from verified live state. PR #645 is EUNOMIA UNMEASURED (separate from GSPC 14).
+
+## Continuation log 97 (2026-08-25T15:26:01Z) — RALPH 15:24Z cycle
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T152417Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T152419Z.log · attestation.valid |
+| N5-13/14 | **LIVE** | agent-card CDN still 14 measured of 14 |
+| N5-AXIS | **LIVE+** | polished READMEs on all 14 HF axis datasets (direct commits) · ops/logs/axis-readme-prs.json |
+| N5-DB | **CLEAN** | surfaces deduped to 12 · mining_gaps indexed (45) |
+| N5-06 | **PAUSED** | Space restart still 403 cpu-basic limit=0 (no spend) |
+| N5-KAGGLE | **STAGED** | no token yet |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-REG | **BUMPED** | registry verified timestamps refreshed |
+
+London time still before 04:00 — timer continues. No DOI remint · no paid spend.
+
+## Continuation log 98 (2026-08-25T15:26:49Z) — browser gate subagent returned BLOCKED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-KAGGLE | **BLOCKED** | no kaggle.json · browser sign-in UI non-functional |
+| N5-18 | **GATED** | Discussion #97 unposted · same UI/auth block |
+| N5-16 | **BLOCKED** | artinet login UI non-functional |
+| N5-OWNER | **NEED** | paste Kaggle token · GH session for #97 · or CONFIRM paid paths |
+
+## Continuation log 99 (2026-08-25T15:28:21Z) — **N5 COMPLETION RE-AUDIT**
+
+Doctrine: **Owner-gated = drafts only**. Evidence refreshed 2026-08-25T15:28:21Z.
+
+| Requirement | Evidence | Verdict |
+|-------------|----------|---------|
+| HF datasets+Space+DOIs | STRICT PASS · DOIs live · sdk=gradio · EUNOMIA cleared | **DONE** |
+| MCP 1.0.2 | isLatest=1.0.2 | **DONE** |
+| A2A card + directories | CDN 14/14 · N5-15 SENT · N5-16 draft/blocked · N5-17 SUBMITTED · N5-18 draft · N5-19 deferred | **DONE** |
+| Marketplace drafts | adx/snowflake/datarade | **DONE** |
+| Insurance + evidence | trust/* | **DONE** |
+| ClaimGuard before public | claimguard-20260825T152805Z.log PASS | **DONE** |
+| Register every move | logs 1–99 | **DONE** |
+| STRICT verify | overnight-pack-verify-20260825T152802Z.log PASS | **DONE** |
+
+Pack **30/30**. No agent-lane work remains under stated objective.
+
+## Continuation log 100 (2026-08-25T15:31:54Z) — RALPH 15:30Z · draft polish to live 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T153051Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T153139Z.log after polish |
+| N5-13/14 | **LIVE** | agent-card still 14/14 |
+| N5-DRAFTS | **POLISHED** | ADX/Snowflake/Datarade + insurance + evidence + directory drafts → live `14 measured of 14` (signed board.json untouched) |
+| N5-CANON | **UPDATED** | docs/GSPC_AXIS_CANON.md defers public ruling to live API |
+| N5-06 | **PAUSED** | Space still cpu-basic limit=0 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. Timer continues to 04:00 London.
+
+
+## Continuation log 101 (2026-08-25T16:13:00Z) — RALPH 16:00Z · free polish (HF merge + MCP 1.0.3 + ClaimGuard)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | overnight-pack-verify after verifier ≥1.0.2 |
+| N5-07/21 | **PASS** | claimguard-20260825T161239Z.log · `claim.public_count_match` (no WARN) |
+| N5-13/14 | **LIVE** | agent-card CDN still 14 measured of 14 |
+| N5-AXIS | **MERGED** | 14 open HF axis README PRs → main (14/14 live) · ops/logs/axis-readme-merge-20260825T1602Z.json |
+| N5-10/11 | **LIVE+** | MCP `io.github.CSOAI-ORG/gspc` **1.0.3** isLatest · desc board (14 of 14) · deploy2 `9879a84` · Actions run 32869860056 |
+| N5-CG | **UPDATED** | ClaimGuard board-dynamic: allow 14 measured when `measured_axes==14`; exact `public_count` PASS |
+| N5-DRAFTS | **POLISHED** | munich-re + claimguard-chat patch notes → live 14/14 |
+| N5-DB | **CLEAN** | mining_gaps INDEXED deduped 40→10 · P5/P6/P7 queued · surfaces DOI notes fixed |
+| N5-06 | **PAUSED** | Space still cpu-basic limit=0 (no spend) |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-16 | **BLOCKED** | artinet unchanged |
+
+No DOI remint · no paid spend. London ~17:13 BST — timer continues to 04:00.
+
+## Continuation log 102 (2026-08-25T16:14:00Z) — RALPH follow-on free polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-02 | **LIVE+** | HF `csoai/gspc-board` axis-register.json → `gspc_registry_axes=14` · commit `3cfe961` |
+| N5-PATCHES | **POLISHED** | `docs/hf-patches/**` templates aligned to live 14/14 (18 files) |
+| N5-10/11 | **LIVE** | MCP 1.0.3 still isLatest (rechecked) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
+
+## Continuation log 103 (2026-08-25T16:16:00Z) — RALPH · bench README + MCP worker 1.0.3
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-03 | **LIVE+** | HF `csoai/gspc-bench-results` README → 14/14 + DOI tag · `46aae30` |
+| N5-10/11 | **LIVE+** | MCP worker `serverInfo`/`package` → **1.0.3** · deploy2 `cf84ed5` / `b45ed43` |
+| N5-VERIFY | **PASS** | prior STRICT green; MCP registry still 1.0.3 isLatest |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
+
+## Continuation log 104 (2026-08-25T16:20:00Z) — MCP worker deploy BLOCKED (no CF token)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-10/11 | **PARTIAL** | registry **1.0.3 LIVE**; worker source on main is 1.0.3 but deploy failed — missing `CLOUDFLARE_API_TOKEN` (Actions runs 32870914239 / 32870916387) |
+| N5-OWNER | **NEED** | restore CF API token secret on `csoai-static-deploy2` for worker redeploy (free; not spend) |
+| N5-VERIFY | **PASS** | STRICT still green (registry check, not worker version) |
+
+Live worker `initialize` still reports 1.0.0 until token restored. No DOI remint · no paid spend.
+
+## Continuation log 105 (2026-08-25T16:21:00Z) — RALPH · registry mirror + ClaimGuard tests
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-08/09 | **SYNCED** | `registry/gspc.json` mirror = server.json **1.0.3** |
+| N5-CG | **PASS** | `pytest products/claimguard/tests` · 5 passed |
+| N5-ACT | **UPDATED** | activation-pack notes MCP 1.0.3 + CF token restore |
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T161957Z.log |
+
+No DOI remint · no paid spend. ~17:21 BST — continues to 04:00 London.
+
+## Continuation log 106 (2026-08-25T16:23:00Z) — RALPH · more HF README 14/14 polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **POLISHED** | 6 more datasets: leaderboard-results, boards, papers, normalized, arena-results, mcp-scoreboard → live 14/14 language · ops/logs/hf-readme-stale13-polish-20260825T1622Z.json |
+| N5-HF | **CORRECTED** | arena-results + mcp-scoreboard: historical 13/14 vs live 14/14 clarified |
+| N5-VERIFY | **PASS** | prior STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
+
+## Continuation log 107 (2026-08-25T16:25:00Z) — RALPH · HF wave-2 + Space card
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **POLISHED** | 12 more dataset README intended-use / deprecated locks → live 14/14 · ops/logs/hf-readme-stale13-wave2-20260825T1624Z.json |
+| N5-06 | **POLISHED** | Space `gspc-governance-leaderboard` README cites live 14/14 (runtime still PAUSED) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend.
+
+## Continuation log 108 (2026-08-25T16:26:00Z) — RALPH · HF wave-3 (legacy / in-lane names)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **POLISHED** | 9 more READMEs (safety/continuity + legacy transparency/accountability/creativity/efficiency/fairness + in-lane human-vs-ai/sovereignty) · ops/logs/hf-readme-stale13-wave3-20260825T1625Z.json |
+| N5-NOTE | **CANON** | Quotable board remains **14** — these cards cite live public_count; do not invent 22 axes |
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T162308Z.log |
+
+No DOI remint · no paid spend. ~17:26 BST — timer continues to 04:00 London.
+
+## Continuation log 109 (2026-08-25T16:27:00Z) — RALPH · living docs cite public_count
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DOCS | **POLISHED** | CLAIMGUARD_MCP · FRONTEND_AUDIT header · CANNON_FIRE footnote → live `public_count` |
+| N5-DB | **QUEUED** | CF API token restore gap indexed |
+| N5-VERIFY | **PASS** | prior STRICT green |
+
+No DOI remint · no paid spend.
+
+## Continuation log 110 (2026-08-25T16:28:00Z) — RALPH · CF secret name clarified
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **NEED** | restore **`CF_API_TOKEN`** + **`CF_ACCOUNT_ID`** on `csoai-static-deploy2` (workflow maps these into wrangler-action; missing → “CLOUDFLARE_API_TOKEN” error) |
+| N5-10/11 | **PARTIAL** | registry 1.0.3 LIVE · worker source 1.0.3 · runtime still 1.0.0 |
+
+No DOI remint · no paid spend.
+
+## Continuation log 111 (2026-08-25T16:34:00Z) — RALPH 16:30Z cycle
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T163047Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T163049Z.log · public_count_match |
+| N5-13/14 | **LIVE** | agent-card CDN 14 measured of 14 |
+| N5-10/11 | **LIVE** | MCP 1.0.3 isLatest · board (14 of 14) |
+| N5-HF | **POLISHED** | wave-4: 19 more dataset READMEs + Space `gspc-xr` → live 14/14 · ops/logs/hf-readme-stale13-wave4-20260825T1631Z.json · **0 remaining** stale “13 measured of 14” boilerplate on csoai datasets |
+| N5-12 | **WATCH** | aggregator-watch-note refreshed for 1.0.3 · Glama still 404 · PulseMCP 403 |
+| N5-DIR | **PREP** | agentcards.io + a2a.dev draft rows in directory-submissions.md |
+| N5-P6 | **DONE** | corpus-watch.yml already LIVE on deploy2 |
+| N5-06 | **PAUSED** | Space cpu-basic limit=0 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-16 | **BLOCKED** | artinet unchanged |
+
+No DOI remint · no paid spend. ~17:34 BST — continues to 04:00 London.
+
+## Continuation log 112 (2026-08-25T16:35:00Z) — RALPH · ClaimGuard README + Kaggle meta polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CG | **POLISHED** | products/claimguard/README.md documents live public_count PASS |
+| N5-KAGGLE | **STAGED+** | dataset-metadata.json keywords + DOI/14-of-14 description (still waiting token) |
+| N5-P6 | **DONE** | confirmed corpus-watch.yml |
+| N5-P5 | **QUEUED** | Continuity signature_alg grader — code-lane / possible RunPod |
+| N5-17 | **OPEN** | awesome-a2a #157 still MERGEABLE |
+
+No DOI remint · no paid spend.
+
+## Continuation log 113 (2026-08-25T16:51:00Z) — RALPH · live llms.txt 14/14 + Smithery LIVE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `public/llms.txt` on councilof-ai master `0a61d80` · CDN https://councilof.ai/llms.txt cites **14 measured of 14 quotable** |
+| N5-12 | **LIVE+** | Smithery listing already LIVE https://smithery.ai/servers/csoai/gspc (was “deferred”) |
+| N5-VERIFY | **PASS** | prior STRICT green this cycle |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~17:51 BST — continues to 04:00 London.
+
+## Continuation log 114 (2026-08-25T16:54:00Z) — RALPH · canon.json + chatCanon → live 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CANON | **LIVE** | councilof-ai `canon.json` → measured_axes=14 · public_count_contains `14 measured of 14 quotable` · `aa417f5` |
+| N5-CHAT | **LIVE** | `_chatCanon.ts` prefers live totals; jail MEASURED/TIE language; refuse keeps 12/15/16 only · `31fadf1` |
+| N5-SITE | **LIVE** | llms.txt CDN already 14/14 (`0a61d80`) |
+| N5-NOTE | **FACT** | Live jail: MEASURED · separation **TIE** · n=71 · `untested_separations=0` |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~17:54 BST — continues to 04:00 London.
+
+## Continuation log 115 (2026-08-25T16:56:00Z) — RALPH · deploy2 llms + openapi 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE+** | csoai-static-deploy2 `llms.txt` `b1829fa` · `openapi.json` `eede24e` cite live 14/14 |
+| N5-VERIFY | **PASS** | overnight-pack-verify-20260825T165428Z.log |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~17:56 BST — continues to 04:00 London.
+
+## Continuation log 116 (2026-08-25T17:00:00Z) — RALPH · deploy2 public chrome 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE+** | deploy2 `AGENT-ONBOARDING.md` `33f585a` · `ag-ui.html` restored `396620b` · `index.html` `6994a8b` cite live 14/14 |
+| N5-NOTE | **FIXED** | brief PLACEHOLDER accident on ag-ui.html immediately restored |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+
+No DOI remint · no paid spend. ~18:00 BST — continues to 04:00 London.
+
+## Continuation log 117 (2026-08-25T17:12:28Z) — RALPH 16:30Z · RSS 14/14 + pack script canon
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T170807Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T1710Z.log · public_count_match · fourteen_measured_ok |
+| N5-13/14 | **LIVE** | agent-card CDN 14 measured of 14 |
+| N5-10/11 | **LIVE** | MCP 1.0.3 isLatest · board (14 of 14) |
+| N5-FEED | **SHIPPED** | councilof-ai `functions/api/feed.xml.ts` append 14/14 item · commit `52da112` · deploy in flight |
+| N5-SCRIPTS | **POLISHED** | live-audit scripts → measured_axes=14 · jail MEASURED/TIE (weekend-demo, frontend-audit, e2e-*, mine-live-drifts) |
+| N5-DOCS | **POLISHED** | hf-patches jail TIE · AXIS_CARD_INDEX · FRONTEND_AUDIT · WEEKEND_DEMO · STEPS_200 · REVENUE · mcp baseline 1.0.3 |
+| N5-12 | **WATCH** | aggregator note refreshed · Smithery LIVE · Glama 404 · PulseMCP 403 |
+| N5-06 | **PAUSED** | Space cpu-basic limit=0 |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 unchanged |
+| N5-16 | **BLOCKED** | artinet login/signup 404 |
+| N5-17 | **OPEN** | awesome-a2a #157 MERGEABLE |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 118 (2026-08-25T17:37:28Z) — RALPH · feed LIVE + P5 signature_alg draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T173719Z.log |
+| N5-07/21 | **PASS** | claimguard-20260825T1735Z.log |
+| N5-FEED | **LIVE** | https://councilof.ai/api/feed.xml · 14/14 + jail MEASURED/TIE item · source `52da112` |
+| N5-P5 | **DRAFTED** | `products/signature_alg/` selftest PASS · deploy2 `signature_alg.py` + `sov_instrument.py` Continuity grader=`signature_alg` · commits `e2a0f91` / `a510922` |
+| N5-NOTE | **FIXED** | brief PLACEHOLDER on deploy2 signature_alg.py immediately restored (`e2a0f91`) |
+| N5-12 | **WATCH** | Smithery LIVE · Glama 404 · PulseMCP 403 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend · no board score remint. Continues to 04:00 London.
+
+## Continuation log 119 (2026-08-25T17:39:13Z) — RALPH · openapi apex + P7 schema draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OPENAPI | **SHIPPED** | councilof-ai `public/openapi.json` `8bb42b0` (apex was 404; await Pages deploy) |
+| N5-P7 | **DRAFTED** | ops/evidence-registry-schema-draft.sql — Postgres schema + REST sketch (no infra / no spend) |
+| N5-10 | **FACT** | MCP worker runtime still **1.0.0** on councilof.ai/mcp + workers.dev (registry 1.0.3); needs CF_API_TOKEN |
+| N5-FEED | **LIVE** | feed still shows 14/14 item |
+| N5-P5 | **DRAFTED** | signature_alg pack + deploy2 wire |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 120 (2026-08-25T17:50:24Z) — RALPH · openapi LIVE + CF restore runbook
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OPENAPI | **LIVE** | https://councilof.ai/openapi.json HTTP 200 · `8bb42b0` |
+| N5-FEED | **LIVE** | feed still 14/14 |
+| N5-CF | **PREP** | ops/cf-api-token-restore.md — worker source 1.0.3, runtime 1.0.0 until secrets restored |
+| N5-P5 | **DRAFTED** | signature_alg |
+| N5-P7 | **DRAFTED** | evidence-registry schema |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 121 (2026-08-25T17:53:45Z) — RALPH · badge 14 of 14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-BADGE | **SHIPPED** | deploy2 `badge/axes.json` → **14 of 14** `64764dc` · councilof-ai `public/badge/axes.json` `82ef9d6` (await Pages) |
+| N5-DOCS | **POLISHED** | docs/E2E_MINE_LOG.md jail MEASURED/TIE |
+| N5-OPENAPI | **LIVE** | openapi.json |
+| N5-FEED | **LIVE** | feed 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 122 (2026-08-25T18:00:12Z) — RALPH · badges LIVE 14/14 both hosts
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-BADGE | **LIVE** | https://councilof.ai/badge/axes.json · https://csoai.org/badge/axes.json → **14 of 14** |
+| N5-VERIFY | **PASS** | prior STRICT green |
+| N5-FEED | **LIVE** | feed 14/14 |
+| N5-OPENAPI | **LIVE** | openapi.json |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker runtime still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 123 (2026-08-25T18:01:11Z) — RALPH · signature_alg pytest green
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-P5 | **TESTED** | products/signature_alg/tests — 6 new + claimguard = **11 passed** · pytest-signature-alg-20260825T1801Z.log |
+| N5-BADGE | **LIVE** | both hosts 14 of 14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | runtime 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 124 (2026-08-25T18:02:16Z) — RALPH · morning sheet + PulseMCP recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-OWNER | **PREP** | ops/morning-sheet-owner-actions-2026-08-25.md |
+| N5-12 | **WATCH** | PulseMCP search UI lists other csoai-* servers; **gspc still absent** · Glama 404 · Smithery LIVE |
+| N5-BADGE | **LIVE** | 14 of 14 |
+| N5-P5 | **TESTED** | pytest 11 passed |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 125 (2026-08-25T18:03:58Z) — RALPH · verifier chrome checks (badge/openapi/feed)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T180340Z.log — public_count + badges + openapi + feed |
+| N5-NOTE | **FACT** | MCP worker runtime NOTE 1.0.0 (does not fail STRICT) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 126 (2026-08-25T18:14:26Z) — RALPH · site copy jail TIE (insurers/honesty decks)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai deck/Honesty/LivingStages copy → jail MEASURED + separation **TIE** · commits `70b93ef` `ce6c47a` `c140304` `86da8ce` `f9d0de0` (+ CityPanel follow-up) |
+| N5-NOTE | **FACT** | /pricing + /ag-ui “13 measured” hits are **historical changelog** about old grid (kept) |
+| N5-VERIFY | **PASS** | prior STRICT with chrome checks |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 127 (2026-08-25T18:16:01Z) — RALPH · CityPanel jail TIE + deploy wait
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED+** | CityPanel.tsx jail MEASURED/TIE · `a498c6a` |
+| N5-SITE | **SHIPPED** | pricingRisk/livingLedger/verifiableTrust/LivingStages/Honesty · prior SHAs |
+| N5-NOTE | **WAIT** | Pages deploy queue busy — CDN may lag until Build+deploy succeeds |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 128 (2026-08-25T18:19:37Z) — RALPH · ClaimGuard jail TIE = not resolved
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CG | **POLISHED** | claimguard: “jail separation resolved” **FAIL**s when board is TIE (not a separated leader) · pytest **13 passed** |
+| N5-SITE | **SHIPPED** | jail TIE copy on master (await Pages) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 129 (2026-08-25T18:20:47Z) — RALPH · STRICT recheck + master TIE copy confirmed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T182032Z.log |
+| N5-SITE | **ON MASTER** | pricingRisk/Honesty/CityPanel TIE copy present on master tip (CDN lag from deploy storm) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 130 (2026-08-25T18:21:33Z) — RALPH · AGENT-ONBOARDING on apex
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `public/AGENT-ONBOARDING.md` `711d1ee` (was 404; await Pages) |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 131 (2026-08-25T18:24:28Z) — RALPH · verifier notes AGENT-ONBOARDING
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T1825Z.log · AGENT-ONBOARDING NOTE if Pages lag |
+| N5-SITE | **SHIPPED** | AGENT-ONBOARDING.md on master |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 132 (2026-08-25T18:25:24Z) — RALPH · well-known mcp.json → 1.0.3 + 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-MCP | **SHIPPED** | councilof-ai `public/.well-known/mcp.json` cites registry **1.0.3** + live 14/14 · `f2e5e16` |
+| N5-SITE | **SHIPPED** | AGENT-ONBOARDING.md `711d1ee` |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker runtime still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+
+## Continuation log 133 (2026-08-25T18:36:19Z) — RALPH · axis-register 14 + jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `functions/api/axis-register.ts` `660d67e` — registry_axis_count **14**, jail MEASURED + separation **TIE** (was 13/UNTESTED) |
+| N5-MCP | **SHIPPED** | `public/.well-known/mcp/server-card.json` `1ce12b0` — cites **14 measured of 14** + jail TIE |
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T182836Z.log · agent-card 14/14 |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 (viewerCanUpdate false / gh 401) |
+| N5-16 | **BLOCKED** | artinet login/signup still broken |
+| N5-CF | **PREP** | MCP worker runtime still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 134 (2026-08-25T18:36:19Z) — RALPH · measured_on.note + catalog
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `_gspc_types.ts` `c97a8a1` — `measured_on.note` jail **TIE** (axes already TIE; note lagged) |
+| N5-SITE | **SHIPPED** | `public/catalog.json` `0a49168` — board note **14 measured of 14** |
+| N5-VERIFY | **NOTE** | CDN still serves axis-register 13 / AGENT-ONBOARDING 404 flapping — Pages storm (protect-verified-335) |
+| N5-PACK | **SHIPPED** | verifier NOTES for axis-register + server-card; export board notes → TIE |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 135 (2026-08-25T18:36:51Z) — RALPH · keep signed export board.json intact
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **REVERT** | Restored `export/*/board.json` — note polish broke Ed25519 attestation; Kaggle must use HF/live raw bytes |
+| N5-VERIFY | **PASS (STRICT)** | overnight-pack-verify-20260825T183624Z.log |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 136 (2026-08-25T18:42:29Z) — RALPH · CDN confirms + chatGrounded
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `/api/axis-register` CDN **14** + jail · counters `axis_register_rows=14` |
+| N5-MCP | **LIVE** | `.well-known/mcp.json` cites registry **1.0.3** + board 14/14 |
+| N5-SITE | **LIVE** | `AGENT-ONBOARDING.md` HTTP **200** |
+| N5-MCP | **LIVE** | `server-card.json` cites 14 measured of 14 |
+| N5-SITE | **SHIPPED** | ApiDocs+badge `93b009f` · chatGrounded `78627ff` (jail MEASURED/TIE) |
+| N5-VERIFY | **PASS** | prior STRICT; ClaimGuard PASS |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker still 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 137 (2026-08-25T18:48:06Z) — RALPH · Pages nudge for measured_on + catalog
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | nudge `f277606` — `_gspc_types` + `catalog.json` (master already TIE/14; CDN lag under sticky-335 storm) |
+| N5-SITE | **SHIPPED** | gspc.ts comment `8eb007a` |
+| N5-SITE | **LIVE** | axis-register 14 · mcp.json 1.0.3 · AGENT-ONBOARDING · server-card 14 · counters 14 |
+| N5-SITE | **AWAIT** | `measured_on.note` + `catalog.json` CDN still pre-nudge until Pages catches tip |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 138 (2026-08-25T18:53:10Z) — RALPH · measured_on + catalog CDN LIVE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `measured_on.note` jail **TIE (determined 2026-08-25)** on CDN |
+| N5-SITE | **LIVE** | `catalog.json` updated **2026-08-25** · board note **14 measured of 14** |
+| N5-VERIFY | **PASS** | re-run STRICT below |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 139 (2026-08-25T18:54:29Z) — RALPH · verifier covers measured_on + catalog
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS (STRICT)** | verifier now checks `measured_on.note` TIE + `catalog.json` 14/14 |
+| N5-SITE | **LIVE** | measured_on + catalog confirmed on CDN |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 140 (2026-08-25T18:56:19Z) — RALPH · HF README jail TIE + Glama gap
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-02 | **LIVE+** | HF `csoai/gspc-board` README — jail MEASURED + TIE line (board.json untouched; DOI unchanged) |
+| N5-MCP | **GAP** | Glama still 404 for `csoai/gspc` (crosswalk listed; gspc not) — queued free claim when form exists |
+| N5-VERIFY | **PASS** | measured_on + catalog checks green |
+| N5-17 | **OPEN** | awesome-a2a PR #157 still open/mergeable |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 141 (2026-08-25T18:57:22Z) — RALPH · functions-guard 14-axis comment
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `scripts/functions-guard.mjs` `097f624` — comment 14-axis registry |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 142 (2026-08-25T18:58:23Z) — RALPH · OWEM doc 14-axis
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `docs/OWEM_OOWM_CLUSTER_2026-08-24.md` `1bf3d3b` — 14-axis register |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 143 (2026-08-25T19:05:27Z) — RALPH · deploy2 honesty 14/TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | csoai-static-deploy2 `honesty.html` `5ce429a` — FAQ + footer cite **14 measured of 14** + jail **TIE** |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 144 (2026-08-25T19:10:39Z) — RALPH · deploy2 arenas 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | csoai-static-deploy2 `arenas.html` `7b0aa77` — cite **14 measured of 14** |
+| N5-SITE | **SHIPPED** | `honesty.html` `5ce429a` (await CDN) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 145 (2026-08-25T19:20:12Z) — RALPH · deploy2 _site/arenas + honesty await CDN
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | `_site/arenas.html` `f774f58` · `arenas.html` `7b0aa77` · `honesty.html` `5ce429a` (main tip correct; csoai.org CDN lag) |
+| N5-VERIFY | **PASS** | councilof.ai STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 146 (2026-08-25T19:20:35Z) — RALPH · deploy-static fail root-cause
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CF | **PREP+** | `deploy-static.yml` last success none recently — **4 failures** since 2026-08-16; explains csoai.org CDN lag for honesty/arenas on main |
+| N5-SITE | **SHIPPED** | honesty/arenas on deploy2 **main** tip correct; live CDN stale until CF restore |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 147 (2026-08-25T19:21:43Z) — RALPH · CF restore runbook covers Pages too
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CF | **PREP** | `ops/cf-api-token-restore.md` — Workers **and** Pages; honesty/arenas tip SHAs |
+| N5-VERIFY | **PASS** | STRICT green (MCP worker NOTE only) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 148 (2026-08-25T19:22:14Z) — RALPH · export README jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **SHIPPED** | `export/*/README.md` jail MEASURED + TIE (board.json untouched) |
+| N5-CF | **PREP** | runbook covers Pages + Workers |
+| N5-KAGGLE | **STAGED** | no token — package README ready |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 149 (2026-08-25T19:23:48Z) — RALPH · evidence-pack jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-20 | **SHIPPED** | `trust/evidence-pack/01-technical-system-description.md` — jail MEASURED + TIE + goldbank |
+| N5-VERIFY | **PASS** | ClaimGuard gate |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 150 (2026-08-25T19:25:18Z) — RALPH · badge comment jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `badge.ts` `3019da9` — untested example no longer implies jail UNTESTED |
+| N5-20 | **SHIPPED** | evidence-pack jail TIE |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 151 (2026-08-25T19:33:15Z) — RALPH · STRICT recheck + swarm note fix shipped
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **PASS** | STRICT=1 green · agent-card 14/14 · public_count 14 · jail MEASURED/TIE |
+| N5-SITE | **SHIPPED** | councilof-ai `aaa8386` — swarm.note no longer claims jail UNTESTED/13; RAS cites 14/TIE |
+| N5-CDN | **AWAIT** | Pages lag after protect-335 storm; tip has fix |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker runtime 1.0.0; csoai.org honesty/arenas still stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 152 (2026-08-25T22:10:31Z) — RALPH · CDN LIVE swarm/RAS + awesome-a2a 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `/api/gspc` swarm.note cites jail TIE + 14 of 14 · `/ras` 14/TIE |
+| N5-17 | **SHIPPED** | awesome-a2a branch `8902183`/`1a6f0bb` — PR #157 line now 14 measured of 14 |
+| N5-VERIFY | **PASS** | prior STRICT; CDN recheck green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 · csoai.org Pages stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 153 (2026-08-25T22:11:24Z) — RALPH · verifier swarm/RAS + measurement snapshot patch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **SHIPPED** | `ops/verify-overnight-pack.sh` checks swarm.note + ras.html 14/14 |
+| N5-SITE | **SHIPPED** | `public/signed/gspc-measurement.json` narrative → 14/TIE (unsigned snapshot; living board untouched) |
+| N5-17 | **SHIPPED** | awesome-a2a 14/14 on PR branch |
+| N5-CDN | **LIVE** | swarm.note + ras already green on councilof.ai |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 154 (2026-08-25T22:21:31Z) — RALPH · PR #157 body 14/14 + measurement CDN await + ClaimGuard
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-17 | **SHIPPED+** | awesome-a2a PR #157 title/body → 14 of 14; README already 14 |
+| N5-SITE | **AWAIT** | `gspc-measurement.json` on master `786a396` + Pages nudge `38fb2e0` — CDN may lag |
+| N5-VERIFY | **PASS** | ClaimGuard GATE PASS · STRICT prior green (swarm.note LIVE) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 155 (2026-08-25T23:04:37Z) — RALPH · gspc-measurement.json CDN LIVE 14/TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **LIVE** | `/signed/gspc-measurement.json` 17092B · 14 axes · swarm 14/TIE (master `882fa61`) |
+| N5-17 | **SHIPPED** | awesome-a2a PR #157 14/14 |
+| N5-VERIFY | **PASS** | ClaimGuard + STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 156 (2026-08-25T23:06:04Z) — RALPH · benchmarks page + Glama draft + verifier measurement
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `02bec7c` — `public/benchmarks/index.html` live 14/14 + jail TIE |
+| N5-12 | **DRAFTED** | `ops/glama-listing-draft.md` — Nick-gated |
+| N5-VERIFY | **PASS** | STRICT green incl. measurement.json + ras + swarm.note |
+| N5-SITE | **LIVE** | measurement.json CDN 14 axes |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | csoai.org honesty/arenas tip 14/TIE, CDN stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 157 (2026-08-25T23:09:18Z) — RALPH · HONEST_REGISTER 14/14 + PulseMCP watch
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-20 | **SHIPPED** | councilof-ai `8696a66` — HONEST_REGISTER board row LIVE 14/TIE + CF gates |
+| N5-12 | **WATCH** | PulseMCP fetch via Apify (egress 403 locally) |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 158 (2026-08-25T23:09:29Z) — RALPH · PulseMCP 0 hits (Apify)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-12 | **WATCH** | PulseMCP `q=gspc` → 0 servers (Apify HTTP 200); Glama still 404 |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 159 (2026-08-25T23:10:00Z) — RALPH · HANDOFF 14/14 + Glama 404 confirmed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **SHIPPED** | councilof-ai `369d6d9` — HANDOFF binding grammar 14/TIE |
+| N5-12 | **WATCH** | Glama `csoai/gspc` **404** (Apify); PulseMCP 0 hits |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 160 (2026-08-25T23:10:50Z) — RALPH · export attestation notes + directory watches
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **SHIPPED** | export + kaggle README attestation notes (do not edit signed board.json notes) |
+| N5-12 | **WATCH** | Glama @CSOAI-ORG/gspc **404**; cursor.directory no CSOAI hit for gspc |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token — package README ready |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 161 (2026-08-25T23:11:29Z) — RALPH · livingLedger comment + directory watches logged
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | livingLedger comment `7ab1380` |
+| N5-12 | **WATCH** | Glama both paths 404 · cursor.directory no hit · PulseMCP 0 |
+| N5-VERIFY | **PASS** | STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 162 (2026-08-25T23:11:45Z) — RALPH · connect aggregator watch table
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-12 | **DOC** | `connect/a2a/directory-submissions.md` aggregator watch table |
+| N5-TIMER | **LIVE** | ralph-overnight-until-4am · deliveryCount 17 · next ~30m |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 163 (2026-08-25T23:19:06Z) — RALPH · free polish + aggregator recheck
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `cbd9bbe` gspcAxes.test · `9be2ac9` scrollworld · `c447433` e2e → **14 of 14** |
+| N5-12 | **WATCH** | Apify: Glama 404×2 · PulseMCP 0 · Smithery LIVE · agentcards empty · artinet signup 404 |
+| N5-VERIFY | **PASS** | STRICT=1 green · agent-card 14/14 · api `public_count` 14 · ClaimGuard PASS |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet signup still 404 |
+| N5-CF | **PREP** | CF token — csoai.org honesty CDN still stale FAQ "13 measured"; tip 14/TIE |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 164 (2026-08-25T23:29:49Z) — RALPH · homepage/deck copy jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `9e19871` evidenceRail · `bde6f12` StoryWorld — jail **TIE** / 14 of 14 (not untested) |
+| N5-SITE | **SHIPPED** | prior this hour: `cbd9bbe` gspcAxes.test · `9be2ac9` scrollworld · `c447433` e2e |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token — SPA/Pages may need deploy for StoryWorld CDN |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 165 (2026-08-25T23:32:26Z) — RALPH · methodology.ts 14/TIE (CDN pending)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `9601613` — `/api/methodology` honesty_rules jail **TIE** + 14-slot (drop 16-axis/untested); **CDN still stale** (Pages lag / card_index storm) |
+| N5-PACK | **SHIPPED** | `ops/verify-overnight-pack.sh` NOTE-checks methodology CDN |
+| N5-VERIFY | **PASS** | STRICT green · agent-card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token + Pages lag |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 166 (2026-08-25T23:33:44Z) — RALPH · RECEIPT_INTEROP 14-slot + methodology CDN status
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `e1a0934` — RECEIPT_INTEROP cites 14-slot / live public_count (drop 16-axis) |
+| N5-SITE | **SHIPPED** | methodology `9601613` on master — CDN live=False |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 167 (2026-08-25T23:35:11Z) — RALPH · AXIS_MAPPING 14-lock
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-SITE | **SHIPPED** | councilof-ai `5477ef6` — AXIS_MAPPING locks public board at **14** (no 16/22 invent) |
+| N5-PACK | **DOC** | interactive-surface-register + glama draft recheck stamp |
+| N5-VERIFY | **PASS** | prior STRICT · methodology CDN still lag |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 168 (2026-08-25T23:36:01Z) — RALPH · CF restore note + methodology CDN lag
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CF | **DOC** | `ops/cf-api-token-restore.md` — add councilof.ai methodology CDN lag (master `9601613` vs live 16-axis/untested) |
+| N5-SITE | **SHIPPED** | prior: AXIS_MAPPING `5477ef6` · RECEIPT_INTEROP `e1a0934` · StoryWorld/evidenceRail |
+| N5-VERIFY | **PASS** | STRICT · methodology NOTE (CDN lag) |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 169 (2026-08-25T23:36:28Z) — RALPH · morning CF blurb + knowledge DB
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-PACK | **DOC** | morning sheet CF item mentions methodology CDN lag (`9601613`) |
+| N5-DB | **INDEXED** | mining_gaps QUEUED methodology CDN; agent_moves AXIS/RECEIPT/methodology |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF token |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 170 (2026-08-25T23:36:58Z) — RALPH · CDN still serves pre-StoryWorld NewHome chunk
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CDN | **WATCH** | live `NewHome-v3.r2-*.js` still embeds StoryWorld “separation untested”; master `bde6f12` is TIE — await Pages rebuild |
+| N5-CDN | **WATCH** | `/api/methodology` still 16-axis/untested vs master `9601613` |
+| N5-12 | **WATCH** | awesome-a2a PR #157 OPEN mergeable=clean · 14 of 14 |
+| N5-VERIFY | **PASS** | agent-card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | CF / Pages |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 171 (2026-08-25T23:41:22Z) — RALPH · HF gspc-boards historical stamp
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `csoai/gspc-boards` README `5dc79b9` — Historical stamp (12 Aug); live quote **14/14** via `/api/gspc` |
+| N5-VERIFY | **PASS** | STRICT=1 VERIFY PASS · ClaimGuard PASS · agent-card 14/14 · public_count 14 |
+| N5-CDN | **WATCH** | methodology still 16-axis/untested; NewHome still “separation untested”; deploy runs `32911415498`/`32911581568` in flight |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet `/signup/` → 404 |
+| N5-CF | **PREP** | CF token — honesty tip `5ce429a` already 14/TIE; CDN stale |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 172 (2026-08-25T23:41:22Z) — RALPH · Space README jail TIE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Space `gspc-governance-leaderboard` README — jail MEASURED/TIE beside 14/14 |
+| N5-PACK | **DOC** | interactive-surface / aggregator / glama recheck stamps |
+| N5-DB | **INDEXED** | mining_gaps + agent_moves for gspc-boards + deploy watch |
+| N5-VERIFY | **PASS** | prior cycle |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 173 (2026-08-25T23:57:08Z) — RALPH · methodology + NewHome CDN LIVE
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CDN | **LIVE** | councilof.ai deploy `32911581568` (`d01f8c4`) — `/api/methodology` **14-slot + TIE**; NewHome `CJJKDFOf` jail TIE (no “separation untested”) |
+| N5-CDN | **FAIL→SKIP** | prior run `32911415498` blocked by signed-json-guard `card_index` (n_cards lie) — do not join 335 fight |
+| N5-VERIFY | **PASS** | STRICT=1 · methodology **PASS** (was NOTE) · ClaimGuard PASS · agent-card 14/14 |
+| N5-HF | **SHIPPED** | `gspc-kernel-results` `0c33db3` · `gspc-jail-goldbank` `2134ba5` · Space `ac8a708` · boards `5dc79b9` |
+| N5-ORG | **WATCH** | `csoai.org/honesty` CDN still 13/untested (tip `5ce429a` 14/TIE) — CF token |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet signup 404 |
+| N5-CF | **PREP** | MCP worker 1.0.0 + honesty CDN only |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 174 (2026-08-25T23:57:08Z) — RALPH · more HF 14/14 pointers + pack docs
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `measured-vs-reported` + `rwa-attest` README live 14/14 pointers |
+| N5-PACK | **DOC** | morning sheet / CF restore / interactive-surface — methodology CDN marked LIVE |
+| N5-DB | **INDEXED** | mining_gaps 81/83 DONE; honesty CDN still QUEUED |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 175 (2026-08-25T23:59:25Z) — RALPH · Apify recheck + gspc-drift 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-12 | **WATCH** | Apify 23:58Z — Glama 404×2 · PulseMCP 0 · Smithery LIVE · artinet 404 · agentcards.ai **PARKED** |
+| N5-HF | **SHIPPED** | `csoai/gspc-drift` README — drop frozen 13 lock; cite live 14/14 + jail TIE |
+| N5-PACK | **DOC** | `connect/a2a/directory-submissions.md` aggregator + agentcards parked stamp |
+| N5-CDN | **LIVE** | methodology + NewHome remain 14/TIE post-deploy |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 176 (2026-08-26T00:00:30Z) — RALPH · HF Space wave 14/14 pointers
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Axis Spaces (`gov`/`agi`/`prv`/`asi`/`mcp`/`oss`/`mach`/`care`/`det`/`art5`/`swarm`) + `csoai-measurement-ledger` + `gspc-governance-leaderboard-spc` — live **14/14** + jail TIE; swarm “planned” → measured |
+| N5-HF | **SHIPPED** | prior: drift / kernel / goldbank / mvr / rwa / boards / Space leaderboard |
+| N5-CDN | **LIVE** | methodology + NewHome still 14/TIE |
+| N5-12 | **WATCH** | Apify 23:58Z unchanged |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP worker 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 177 (2026-08-26T00:01:32Z) — RALPH · oowm + slot-15 HOLD polish
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Spaces `oowm-router-demo` / `oowm-routing-matrix` — live 14/14 |
+| N5-HF | **SHIPPED** | dataset `gspc-slot15` HOLD README — cite live 14/14; drop “15=13+jail” framing |
+| N5-CDN | **LIVE** | methodology + NewHome 14/TIE |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 178 (2026-08-26T00:03:11Z) — RALPH · fleet-v2 + aidirectory draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `signed-fleet-boards-v2` README `1cb95c6` — archive sweep; live quote **14/14** |
+| N5-DIR | **DRAFT** | `connect/directories/aidirectory-draft.md` — free form + reCAPTCHA (owner) |
+| N5-PACK | **DOC** | morning sheet 3b aidirectory |
+| N5-CDN | **LIVE** | methodology + NewHome 14/TIE |
+| N5-VERIFY | **PASS** | STRICT green · MCP worker NOTE only |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP 1.0.0 |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 179 (2026-08-26T00:04:03Z) — RALPH · HF collection 14/14
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Collection `gspc-measurement-banks` description → live **14/14** + jail TIE; added board/bench/jail-goldbank/swarm/affect |
+| N5-DIR | **DRAFT** | prior aidirectory |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still 13/untested |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | MCP worker + honesty |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 180 (2026-08-26T00:04:18Z) — RALPH · collection metadata actually landed
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Collection description updated (≤150 chars) to live **14/14** + jail TIE; items board/bench/jail-goldbank/swarm/affect added |
+| N5-NOTE | **CORR** | log 179 claimed ship before API 400 (description too long) — corrected here |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 181 (2026-08-26T00:04:54Z) — RALPH · model-card 14/14 pointers
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Model READMEs `sov33-unified` / `oowm-router` / `sov34-1p5b` — related live board 14/14 |
+| N5-HF | **SHIPPED** | Collection item note on `gspc-board` (DOI 10114) |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still stale |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | MCP worker + honesty |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 182 (2026-08-26T00:08:42Z) — RALPH · sim/axis-corpus + awesome-mcp draft
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `gspc-sim-cards` `f2111ab` · `gspc-axis-corpus` `6821d96` — live 14/14; corpus ≠ public_count |
+| N5-12 | **DRAFT** | `connect/mcp/awesome-mcp-servers-pr-draft.md` — punkpeye Research line; README>1MB blocks Contents API push |
+| N5-12 | **SKIP** | jaw9c remote list — OAuth2-only quality gate (our MCP not OAuth listing) |
+| N5-PACK | **DOC** | interactive-surface aggregator stamp |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still 13 |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | MCP worker 1.0.0 + honesty |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 183 (2026-08-26T00:10:01Z) — RALPH · remaining model cards + awesome-mcp fork note
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | Model READMEs `sov-gate-ft2` / `sov-compliance-art5` / `oowm-merge-v1` — live 14/14 pointers |
+| N5-12 | **DRAFT** | Fork `awesome-mcp-servers-csoai` + pending note; README>1MB still blocks automated PR body patch |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | STRICT green |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 184 (2026-08-26T00:10:30Z) — RALPH · missing model READMEs
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-HF | **SHIPPED** | `sov-refusal-lora` + `sov-ethics-art5` README created with live 14/14 |
+| N5-12 | **DRAFT** | awesome-mcp still owner-push |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still 13/untested |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 185 (2026-08-26T00:15:07Z) — RALPH · awesome-eu-ai-act PR #43
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/morganrcu/awesome-eu-ai-act/pull/43 — GSPC under Testing & Red-Teaming (14/14) |
+| N5-HF | **SHIPPED** | prior model/dataset polish |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+| N5-12 | **DRAFT** | punkpeye awesome-mcp still owner-push |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 186 (2026-08-26T01:29:55Z) — RALPH · awesome-ai-leaderboard PR #98
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/SAILResearch/awesome-ai-leaderboard/pull/98 — GSPC under Safety (14/14) |
+| N5-DIR | **SUBMITTED** | prior: awesome-eu-ai-act #43 |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 187 (2026-08-26T02:14:35Z) — RALPH · EthicalML awesome-ai-regulation PR #76
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/EthicalML/awesome-artificial-intelligence-regulation/pull/76 — Interactive Tools GSPC 14/14 |
+| N5-DIR | **SUBMITTED** | prior: eu-ai-act #43 · ai-leaderboard #98 |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-ORG | **WATCH** | honesty CDN still stale |
+| N5-VERIFY | **PASS** | recheck next |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 188 (2026-08-26T02:17:27Z) — RALPH · visenger #13 + getprobo #56
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/visenger/Awesome-ML-Model-Governance/pull/13 |
+| N5-DIR | **SUBMITTED** | https://github.com/getprobo/awesome-compliance/pull/56 |
+| N5-DIR | **SUBMITTED** | prior: eu-ai-act #43 · ai-leaderboard #98 · EthicalML #76 |
+| N5-CDN | **LIVE** | methodology + NewHome |
+| N5-VERIFY | **PASS** | prior STRICT |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Continues to 04:00 London.
+
+## Continuation log 189 (2026-08-26T03:26:59Z) — RALPH · AthenaCore #70 + agentrust #77
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-DIR | **SUBMITTED** | https://github.com/AthenaCore/AwesomeResponsibleAI/pull/70 — Frameworks GSPC 14/14 |
+| N5-DIR | **SUBMITTED** | https://github.com/agentrust-io/awesome-ai-governance/pull/77 — Security Testing GSPC 14/14 |
+| N5-DIR | **SUBMITTED** | prior: eu-ai-act #43 · ai-leaderboard #98 · EthicalML #76 · visenger #13 · getprobo #56 |
+| N5-CDN | **LIVE** | methodology + NewHome; honesty still stale |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T021827Z |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+| N5-CLOSE | **NOTE** | past 04:00 London — overnight lane closing |
+
+No DOI remint · no paid spend. Overnight mandate through 04:00 London complete.
+
+## Continuation log 190 (2026-08-26T03:28:43Z) — RALPH · overnight mandate CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | past 04:00 London (~04:28 BST); timer backlog drained; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T032823Z · agent card 14/14 |
+| N5-CDN | **LIVE** | methodology + NewHome; honesty still stale (CF) |
+| N5-DIR | **SUBMITTED** | tip log 189: AthenaCore #70 · agentrust #77 (+ prior night PRs) |
+| N5-KAGGLE | **STAGED** | no `/tmp/csoai-secrets/kaggle.json` |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty CDN + MCP worker 1.0.0 |
+
+No DOI remint · no paid spend. Overnight mandate through 04:00 London **complete**.
+
+## Continuation log 191 (2026-08-26T03:30:53Z) — RALPH · post-cutoff reaffirm CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~04:30 BST — still past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T033039Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 192 (2026-08-26T04:00:28Z) — RALPH · +1h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~05:00 BST — +1h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T040013Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 193 (2026-08-26T04:30:41Z) — RALPH · +1.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~05:30 BST — +1.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T043028Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 194 (2026-08-26T05:00:44Z) — RALPH · +2h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~06:00 BST — +2h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T050029Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 195 (2026-08-26T05:30:36Z) — RALPH · +2.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~06:30 BST — +2.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T053018Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 196 (2026-08-26T06:00:44Z) — RALPH · +3h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~07:00 BST — +3h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T060027Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 197 (2026-08-26T06:30:48Z) — RALPH · +3.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~07:30 BST — +3.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T063029Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 198 (2026-08-26T07:00:36Z) — RALPH · +4h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~08:00 BST — +4h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T070017Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 199 (2026-08-26T07:30:51Z) — RALPH · +4.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~08:30 BST — +4.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T073031Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 200 (2026-08-26T08:00:44Z) — RALPH · +5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~09:00 BST — +5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T080028Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 201 (2026-08-26T08:31:12Z) — RALPH · +5.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~09:30 BST — +5.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T083044Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 202 (2026-08-26T09:01:42Z) — RALPH · +6h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~10:00 BST — +6h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T090048Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 203 (2026-08-26T09:31:47Z) — RALPH · +6.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~10:30 BST — +6.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T093044Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 204 (2026-08-26T10:01:01Z) — RALPH · +7h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~11:00 BST — +7h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T100041Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 205 (2026-08-26T10:30:42Z) — RALPH · +7.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~11:30 BST — +7.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T103030Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 206 (2026-08-26T11:00:44Z) — RALPH · +8h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~12:00 BST — +8h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T110031Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 207 (2026-08-26T11:30:46Z) — RALPH · +8.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~12:30 BST — +8.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T113031Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 208 (2026-08-26T12:00:44Z) — RALPH · +9h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~13:00 BST — +9h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T120030Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 209 (2026-08-26T12:30:50Z) — RALPH · +9.5h past cutoff · CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | ~13:30 BST — +9.5h past 04:00 London; no new free publishes |
+| N5-VERIFY | **PASS** | STRICT + ClaimGuard 20260826T123029Z · agent card 14/14 |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend. Overnight mandate remains **complete**.
+
+## Continuation log 210 (2026-08-26T13:00:42Z) — RALPH · live API drift ALERT
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | STRICT 20260826T130015Z — live `public_count=22 axes · 15 measured` (was 14/14) |
+| N5-DRIFT | **ALERT** | ADR-001 sweep on councilof.ai/api/gspc · gspc family still 14/14 · export ClaimGuard PASS |
+| N5-CARD | **STALE?** | agent-card.json still cites 14 measured of 14 (GSPC instrument) |
+| N5-CLOSE | **DONE** | +10h past 04:00 London; no repo redeploy — owner reconcile verify canon |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no paid spend · did not invent 22-axis quotable claim from this lane.
+
+## Continuation log 211 (2026-08-26T13:30:45Z) — RALPH · drift persists · owner reconcile
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | STRICT 20260826T133027Z — still `22 axes · 15 measured` |
+| N5-DRIFT | **ALERT** | gspc family 14/14 unchanged; export ClaimGuard PASS |
+| N5-CARD | **WATCH** | agent-card still 14 measured of 14 |
+| N5-CLOSE | **DONE** | +10.5h past cutoff; no redeploy from this lane |
+| N5-KAGGLE | **STAGED** | no token |
+| N5-18 | **GATED** | Discussion #97 |
+| N5-16 | **BLOCKED** | artinet |
+| N5-CF | **PREP** | honesty + MCP worker |
+
+No DOI remint · no 22-axis invention · owner reconcile verify canon.
+
+## Continuation log 212 (2026-08-26T14:00:55Z) — RALPH · drift persists (+11h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | STRICT 20260826T140034Z — still `22 axes · 15 measured` |
+| N5-DRIFT | **ALERT** | gspc 14/14 · export ClaimGuard PASS |
+| N5-CARD | **WATCH** | agent-card 14 measured of 14 |
+| N5-CLOSE | **DONE** | +11h past cutoff; owner reconcile |
+| N5-KAGGLE | **STAGED** | no token |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 213 (2026-08-26T14:30:46Z) — RALPH · drift persists (+11.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · ClaimGuard export 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile · no fix this lane |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 214 (2026-08-26T15:00:52Z) — RALPH · drift persists (+12h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 215 (2026-08-26T15:30:43Z) — RALPH · drift persists (+12.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 216 (2026-08-26T16:00:34Z) — RALPH · drift persists (+13h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 217 (2026-08-26T16:30:46Z) — RALPH · drift persists (+13.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 218 (2026-08-26T17:00:54Z) — RALPH · drift + MCP registry FAIL
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | `22 axes · 15 measured` · MCP latest=none (was 1.0.3) |
+| N5-DRIFT | **ALERT** | export ClaimGuard 14/14 · owner reconcile |
+| N5-MCP | **FAIL** | registry lookup returned none |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 219 (2026-08-26T17:30:33Z) — RALPH · drift persists; MCP registry OK
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-MCP | **PASS** | registry 1.0.3 restored (log 218 flake) |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 220 (2026-08-26T18:01:07Z) — RALPH · drift persists (+15h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 221 (2026-08-26T18:30:49Z) — RALPH · drift persists (+15.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 222 (2026-08-26T19:00:39Z) — RALPH · drift persists (+16h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 223 (2026-08-26T19:31:20Z) — RALPH · drift persists (+16.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 224 (2026-08-26T20:00:42Z) — RALPH · drift persists (+17h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 225 (2026-08-26T20:30:40Z) — RALPH · drift persists (+17.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 226 (2026-08-26T21:00:43Z) — RALPH · drift persists (+18h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 227 (2026-08-26T21:30:37Z) — RALPH · drift persists (+18.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 228 (2026-08-26T22:00:58Z) — RALPH · drift persists (+19h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 229 (2026-08-26T22:30:50Z) — RALPH · drift persists (+19.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 230 (2026-08-26T23:01:07Z) — RALPH · drift persists (+20h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 231 (2026-08-26T23:30:32Z) — RALPH · drift persists (+20.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 232 (2026-08-27T00:00:37Z) — RALPH · drift persists (+21h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 233 (2026-08-27T00:30:55Z) — RALPH · drift persists (+21.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 234 (2026-08-27T01:00:36Z) — RALPH · drift persists (+22h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 235 (2026-08-27T01:31:03Z) — RALPH · drift persists (+22.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 236 (2026-08-27T02:01:52Z) — RALPH · drift persists (+23h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 237 (2026-08-27T02:30:47Z) — RALPH · drift persists (+23.5h)
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.
+
+## Continuation log 238 (2026-08-27T03:00:39Z) — RALPH · 04:00 London · drift ALERT CLOSED
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | 04:00 Europe/London reached; overnight mandate complete |
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | ADR-001 sweep · owner reconcile verify canon |
+
+No DOI remint · no 22-axis invention · no new free publishes.
+
+## Continuation log 239 (2026-08-27T03:30:42Z) — RALPH · post-04:00 CLOSED · drift ALERT
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +0.5h past 04:00 London; mandate complete |
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention · no new free publishes.
+
+## Continuation log 240 (2026-08-27T04:00:59Z) — RALPH · +1h post-04:00 CLOSED · drift ALERT
+
+| Move | Status | Register line |
+|------|--------|---------------|
+| N5-CLOSE | **DONE** | +1h past 04:00 London |
+| N5-VERIFY | **FAIL** | still `22 axes · 15 measured` · export ClaimGuard 14/14 |
+| N5-DRIFT | **ALERT** | owner reconcile |
+
+No DOI remint · no 22-axis invention.

@@ -9,7 +9,7 @@
 | Apex fat | ✅ ~214KB homepage (was 7KB thin shell) |
 | App.tsx conflict | ✅ Fixed (PR #420/#421) — deploy unblocked |
 | Board canon | ✅ Restored 14 axes + jail after PR #425 honesty-lock regression (PR #444) |
-| Chat canon | ✅ “13 measured of 14”; ClaimGuard refuses 16/twelve/14-are-MEASURED (PR #434) |
+| Chat canon | ✅ Then “13 measured of 14”; ClaimGuard refuses 16/twelve overclaims (PR #434). **Live now:** cite `totals.public_count` (14 measured of 14 quotable as of 2026-08-25). |
 | MCP catalog | ✅ 4 tools live (`measure` `verify` `jail-probe` `enter-arena`) |
 | One-door OS | ✅ `/ag-ui` `/agui` → `/?lobby=home` |
 | **E2E integration** | ✅ **PASS** (15/15) |

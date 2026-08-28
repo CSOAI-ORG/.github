@@ -18,7 +18,7 @@
 ## Listing draft 1: GSPC Board Export
 
 **Title:** GSPC Governance Measurement Board Export  
-**Description:** 14-slot AI governance instrument — 13 measured of 14. Signed, verifiable, deterministic grading. Measurement only.  
+**Description:** 14-slot AI governance instrument — 14 measured of 14. Signed, verifiable, deterministic grading. Measurement only.  
 **Sample:** `board.json` excerpt  
 **Media:** Council of AI logo
 

@@ -63,7 +63,7 @@ stranger
 | Stranger | Brand home, “we measure” | Certification, Elo league |
 | Verify free | Browser recompute + `did:web:csoai.org` | Account wall, fee for grade |
 | Lobby ask | Axis question → grounded reply aligned to `/api/gspc` | Invented axis counts (“16”, “12”) |
-| Scoreboard | 14 slots, 13 measured ruling | Preference Elo as public grade |
+| Scoreboard | 14 slots, 14 measured (live `public_count`) | Preference Elo as public grade |
 | Enterprise | Intake `/start` + signed assessment | Per-seat SaaS tiers |
 
 **Money language (allowed):** signed evidence artefacts, assessment runs, enterprise onboarding — priced as artefacts / work, never as ranking placement.  

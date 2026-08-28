@@ -13,7 +13,7 @@ This file names the axes so agents stop inventing “14 / 15 / 16” from chat.
 | Set name | Count | What you may say |
 |---|---|---|
 | Quotable **board** slots | **14** | “14-slot GSPC board” |
-| Public measured ruling | **13 of 14** | “13 measured of 14 quotable (ruling 2026-08-18)” — jail is measured but separation **UNTESTED** |
+| Public measured ruling | **live `totals.public_count`** | Cite https://councilof.ai/api/gspc only (as of 2026-08-25: “14 measured of 14 quotable”). Historical 2026-08-18 sitting was 13/14. |
 | Registry v2 canonical (code names, 2026-08-13) | **13** | The 13 bank axes before jail joined the living board |
 | Living-board **in-lane** (honesty only) | **+2** | `slot15` / instrument-honesty + `human-vs-ai` — **not** board-quotable |
 | Living-board convention people call “16” | **14 + 2 = 16** | Internal living board only. Never sell “16 measured axes.” |

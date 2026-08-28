@@ -44,7 +44,7 @@ This follows the retired Open-LLM-Leaderboard triad pattern (Space + harness + r
 
 - Measurement only — not certification
 - Signed evidence or reproducible harness link required
-- Grammar: state measured-axis count honestly (e.g. "13 measured of 14")
+- Grammar: state measured-axis count honestly (e.g. "14 measured of 14")
 - No ranked scores for money — this leaderboard renders signed measurement state
 
 ## Schema (results.jsonl)

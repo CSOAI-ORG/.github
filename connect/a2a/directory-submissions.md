@@ -1,20 +1,20 @@
-# A2A Directory Submissions (N5-15..N5-18) — PREP
+# A2A Directory Submissions (N5-15..N5-18)
 
 ## N5-15: a2aagentlist.com
 
 **URL:** https://a2aagentlist.com/submit  
-**Status:** PREP — submit via web form (compliance review before listing)
+**Status:** **SENT** — Gmail to `gal6111@gmail.com` · message id `1a038c704b0704c1` · thread `1a038b3ba374c727` · 2026-08-25T11:56Z (prior draft `r-8600767036973835528`).
 
 | Field | Value |
 |-------|-------|
 | Name | Council of AI — Measurement Agent |
 | Card URL | https://councilof.ai/.well-known/agent-card.json |
-| Description | Independent AI-governance measurement — GSPC 13 measured of 14, signed board, stranger verify |
+| Description | Independent AI-governance measurement — GSPC 14 measured of 14, signed board, stranger verify |
 
 ## N5-16: artinet.io
 
 **URL:** https://artinet.io (community registry, WIP)  
-**Status:** PREP — register agent-card endpoint
+**Status:** **BLOCKED** — login/signup still 404 (rechecked curl+Apify 2026-08-25T23:58Z); no public registration API; waitlist-era venue.
 
 | Field | Value |
 |-------|-------|
@@ -25,10 +25,11 @@
 
 **Fork:** ai-boost/awesome-a2a  
 **Branch:** add-council-of-ai  
+**Status:** **SUBMITTED + NUDGED** — https://github.com/ai-boost/awesome-a2a/pull/157 OPEN · README + title/body cite **14 of 14** (2026-08-25T22:17Z) · head `1a6f0bb`  
 **Edit:** README.md only (English)
 
 ```markdown
-- ✨ Add: [Council of AI](https://councilof.ai) — GSPC governance measurement agent (13 measured of 14 axes, Ed25519-signed board, stranger verify at /gspc-verify). [Agent card](https://councilof.ai/.well-known/agent-card.json)
+- ✨ Add: [Council of AI](https://councilof.ai) — GSPC governance measurement agent (14 measured of 14 axes, Ed25519-signed board, stranger verify at /gspc-verify). [Agent card](https://councilof.ai/.well-known/agent-card.json)
 ```
 
 **Rationale:** Independent measurement body publishing A2A v1.0 agent card with governance, crosswalk, and benchmark-quality skills. Measurement only — not certification.
@@ -36,11 +37,45 @@
 ## N5-18: Discussion #97 reply
 
 **Repo:** a2aproject/A2A Discussion #97  
-**Status:** GATED — GraphQL `addDiscussionComment` → FORBIDDEN for integration (retried 2026-08-24T21:58Z); post manually  
+**Status:** **GATED** — GraphQL FORBIDDEN for integration; browser GitHub has no session / hardware 2FA (rechecked 2026-08-25T11:55Z); post manually  
 **Comment (one line + link):**
 
-> Council of AI — independent GSPC governance measurement (13 of 14 axes): https://councilof.ai/.well-known/agent-card.json
+> Council of AI — independent GSPC governance measurement (14 of 14 axes): https://councilof.ai/.well-known/agent-card.json
 
 ## N5-19: Google Cloud Agent Registry — DEFERRED
 
 No GCP account available to lane. **Explicit deferral:** no GCP account — deferred to Nick's morning sheet.
+
+## N5-20: agentcards.io — DRAFT (free probe 2026-08-25T16:33Z)
+
+**URL:** https://agentcards.io  
+**Status:** **PREP** — Apify 2026-08-25T23:58Z: agentcards.ai is a **parked GoDaddy lander** (HTTP 200 → `/lander`); **no usable submit form**. Fields below kept for owner if a real registry appears.
+
+| Field | Value |
+|-------|-------|
+| Name | Council of AI — Measurement Agent |
+| Card URL | https://councilof.ai/.well-known/agent-card.json |
+| Protocol | A2A v1.0.0 |
+| Description | Independent AI-governance measurement — GSPC 14 measured of 14 quotable, Ed25519-signed board, stranger verify |
+
+## N5-21: a2a.dev — DRAFT (free probe 2026-08-25T16:33Z)
+
+**URL:** https://a2a.dev  
+**Status:** **PREP** — site HTTP 200; treat as docs/portal, not a confirmed open directory. Do not invent a submission. Owner: confirm if a registry form exists.
+
+## Aggregator watch (N5-12) — 2026-08-25T23:59:24Z
+
+| Venue | Status |
+|-------|--------|
+| Smithery | **LIVE** https://smithery.ai/servers/csoai/gspc |
+| Official MCP registry | **LIVE** 1.0.3 board (14 of 14) |
+| PulseMCP | **ABSENT** — `q=gspc` → 0 servers (Apify 23:58Z) |
+| Glama | **404** — `csoai/gspc` and `@CSOAI-ORG/gspc` (draft: `ops/glama-listing-draft.md`) |
+| artinet | **BLOCKED** — signup/login 404 |
+| agentcards.ai | **PARKED** — GoDaddy lander, no submit form |
+
+## Overnight directory PRs (2026-08-26T03:26Z)
+
+- AthenaCore AwesomeResponsibleAI #70 — Frameworks GSPC 14/14
+- agentrust-io awesome-ai-governance #77 — Security Testing GSPC 14/14
+- Prior this night: morganrcu #43 · SAILResearch #98 · EthicalML #76 · visenger #13 · getprobo #56

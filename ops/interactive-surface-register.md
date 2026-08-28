@@ -5,17 +5,33 @@
 
 | Surface | URL | Status | Move |
 |---------|-----|--------|------|
-| HF gspc-board | https://huggingface.co/datasets/csoai/gspc-board | **LIVE** HTTP 200 | N5-02 |
-| HF gspc-bench-results | https://huggingface.co/datasets/csoai/gspc-bench-results | **LIVE** HTTP 200 | N5-03 |
-| HF governance leaderboard | https://huggingface.co/spaces/csoai/gspc-governance-leaderboard | **PARTIAL** HTTP 200 RUNNING (sdk=static) | N5-06 |
-| HF leaderboard-results | https://huggingface.co/datasets/csoai/gspc-leaderboard-results | GATED HTTP 401 | N5-06 |
-| MCP server.json | csoai-static-deploy2 main | **MERGED** v1.0.2 (aab76f4 + c9fc14b) | N5-08/09 |
-| MCP registry live | registry.modelcontextprotocol.io | **LIVE** v1.0.2 isLatest | N5-10/11 |
-| A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated 10/10 | N5-13/14 |
+| HF gspc-board | https://huggingface.co/datasets/csoai/gspc-board | **LIVE** HTTP 200 · GSPC · DOI 10.57967/hf/10114 | N5-02 |
+| HF gspc-bench-results | https://huggingface.co/datasets/csoai/gspc-bench-results | **LIVE** HTTP 200 · DOI 10.57967/hf/10116 | N5-03 |
+| HF DOIs | board 10.57967/hf/10114 · bench 10.57967/hf/10116 | **LIVE** | N5-05 |
+| HF governance leaderboard | https://huggingface.co/spaces/csoai/gspc-governance-leaderboard | **LIVE** sdk=gradio (runtime PAUSED — cpu-basic quota limit=0) | N5-06 |
+| HF leaderboard-results | https://huggingface.co/datasets/csoai/gspc-leaderboard-results | **LIVE** HTTP 200 | N5-06 |
+| MCP server.json | csoai-static-deploy2 `registry/gspc.json` | **MERGED** v1.0.3 (9879a84) | N5-08/09 |
+| MCP registry live | registry.modelcontextprotocol.io | **LIVE** v1.0.3 isLatest · board (14 of 14) | N5-10/11 |
+| MCP aggregators | Glama / PulseMCP / Smithery | **WATCH** registry 1.0.3 live; Smithery **LIVE**; Glama 404×2; PulseMCP q=gspc → 0 (Apify 23:58Z); aidirectory draft | N5-12 |
+| AGENT-ONBOARDING.md | https://councilof.ai/AGENT-ONBOARDING.md | **SHIPPED** master `711d1ee` (await Pages if 404) | overnight |
+| A2A agent card | https://councilof.ai/.well-known/agent-card.json | **LIVE** GSPC card validated · 14 measured of 14 LIVE | N5-13/14 |
+| api/methodology | https://councilof.ai/api/methodology | **LIVE** 14-slot + jail TIE (deploy `32911581568` / tip `9601613`) | overnight |
 | Evidence pack | trust/evidence-pack/ | **DONE** | N5-20 |
-| awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED** awaiting review | N5-17 |
-| a2aagentlist | — | PREP (email — not sent) | N5-15 |
-| artinet.io | — | BLOCKED (placeholder) | N5-16 |
+| awesome-a2a PR | https://github.com/ai-boost/awesome-a2a/pull/157 | **SUBMITTED+NUDGED** awaiting review | N5-17 |
+| a2aagentlist | gal6111@gmail.com | **SENT** 2026-08-25T11:56Z | N5-15 |
+| artinet.io | — | BLOCKED (login UI broken / no API) | N5-16 |
+| honest card_index 150 | councilof-ai#610 merged `a2b7b33` | **LIVE** on master (34171B / sha 5bb93de) | peer-align |
+| Shared knowledge DB | ops/knowledge/outreach.sqlite | **LIVE** agent map | overnight |
+| awesome-eu-ai-act | https://github.com/morganrcu/awesome-eu-ai-act/pull/43 | **SUBMITTED** PR #43 | overnight |
+| awesome-ai-leaderboard | https://github.com/SAILResearch/awesome-ai-leaderboard/pull/98 | **SUBMITTED** PR #98 | overnight |
+| EthicalML awesome-ai-regulation | https://github.com/EthicalML/awesome-artificial-intelligence-regulation/pull/76 | **SUBMITTED** PR #76 | overnight |
+| Awesome-ML-Model-Governance | https://github.com/visenger/Awesome-ML-Model-Governance/pull/13 | **SUBMITTED** PR #13 | overnight |
+| awesome-compliance | https://github.com/getprobo/awesome-compliance/pull/56 | **SUBMITTED** PR #56 | overnight |
+| AwesomeResponsibleAI | https://github.com/AthenaCore/AwesomeResponsibleAI/pull/70 | **SUBMITTED** PR #70 | overnight |
+| awesome-ai-governance | https://github.com/agentrust-io/awesome-ai-governance/pull/77 | **SUBMITTED** PR #77 | overnight |
 | Datarade | providers.datarade.ai/apply | PREP drafted | N5-25 |
 
 **Pending labels:** GATED · LIVE · PARTIAL · SUBMITTED · BLOCKED · DONE
+
+
+<!-- ralph-recheck 2026-08-26T00:08:42Z: methodology LIVE · honesty stale · awesome-mcp draft · collection 14/14 -->

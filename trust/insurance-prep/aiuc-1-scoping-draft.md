@@ -8,7 +8,7 @@
 | Question | Draft answer |
 |----------|--------------|
 | System name | CSOAI GSPC Measurement Estate |
-| Primary function | Independent AI governance measurement (13 of 14 axes) |
+| Primary function | Independent AI governance measurement (14 of 14 axes) |
 | Data processed | Frozen benchmark items, model responses, signed aggregates |
 | Human oversight | Measurement director + ClaimGuard publish gate |
 | Third-party deps | Cloudflare Pages, Hugging Face datasets, Ed25519 signing |
