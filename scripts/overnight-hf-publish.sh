@@ -73,8 +73,10 @@ create_and_upload space csoai/gspc-governance-leaderboard "$ROOT/export/gspc-gov
 echo "=== Play Spaces: Games / City / Coliseum (Gradio + MCP) ==="
 if [[ -n "${HF_TOKEN:-}" ]]; then
   bash "$ROOT/scripts/publish-play-spaces.sh" || echo "WARN: play-space publish failed (non-fatal for overnight board pack)"
+  echo "=== Product Spaces: every door MCP to Council OS ==="
+  bash "$ROOT/scripts/publish-product-spaces.sh" || echo "WARN: product-space publish failed (non-fatal for overnight board pack)"
 else
-  echo "HF_TOKEN unset — skip play-space publish"
+  echo "HF_TOKEN unset — skip play/product-space publish"
 fi
 
 echo "=== N5-05: DOIs — mint manually in repo Settings after names confirmed ==="

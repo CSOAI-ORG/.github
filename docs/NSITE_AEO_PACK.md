@@ -97,17 +97,24 @@ nsite-aeo-pack/
 
 Sites may add **skills** and **sector copy**. Sites may not add a private Elo board or a second axis count.
 
-### Hugging Face MCP doors (Games · City · Coliseum)
+### Hugging Face MCP doors (every product → Council OS)
 
-N-sites add the play Spaces as MCP servers — they do not embed a second arena engine.
+N-sites add product Spaces as MCP servers — they do not embed a second engine or board.
 
-Directory: [`connect/mcp/hf-play-spaces.json`](../connect/mcp/hf-play-spaces.json) · runbook: [`HF_PLAY_MCP_SPACES.md`](HF_PLAY_MCP_SPACES.md)
+Full fabric: [`connect/mcp/hf-product-spaces.json`](../connect/mcp/hf-product-spaces.json) · runbook: [`HF_PRODUCT_MCP_FABRIC.md`](HF_PRODUCT_MCP_FABRIC.md)
 
 | Site surface | Space | Live URL |
 |---|---|---|
+| Council OS / Lobby | `csoai/council-os` | `https://councilof.ai/os` |
 | Games / Council Space | `csoai/games-catalog` | `https://councilof.ai/gspc-arena` |
 | City | `csoai/council-city` | `https://councilof.ai/city` |
 | Coliseum / Arena | `csoai/council-coliseum` | `https://councilof.ai/coliseum` |
+| ClaimGuard | `csoai/claimguard` | `https://councilof.ai/honesty/` |
+| Verify | `csoai/gspc-verify` | `https://councilof.ai/gspc-verify/` |
+| RAS (Receipts+Arena+Scorecard) | `csoai/ras-assess` | `https://councilof.ai/?lobby=home` |
+| FAQ | `csoai/faq` | `https://councilof.ai/faq/` |
+| East-West | `csoai/east-west` | `https://councilof.ai/east-west/` |
+| Fabric index | `csoai/mcp-fabric` | `https://councilof.ai/mcp` |
 
 Clients: Hugging Face MCP badge, or the Space SSE URL, or the worker `https://councilof.ai/mcp`.
 

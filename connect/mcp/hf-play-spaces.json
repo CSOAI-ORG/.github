@@ -51,5 +51,6 @@
       }
     }
   },
+  "also_see": "connect/mcp/hf-product-spaces.json",
   "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never freeze 22/22 measured. Jail-probe here is a contract — the fleet runs the probe."
 }

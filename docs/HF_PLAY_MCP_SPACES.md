@@ -4,7 +4,8 @@
 
 Truth rail: [`https://councilof.ai/api/gspc`](https://councilof.ai/api/gspc)  
 Live worker: [`https://councilof.ai/mcp`](https://councilof.ai/mcp)  
-Directory: [`connect/mcp/hf-play-spaces.json`](../connect/mcp/hf-play-spaces.json)
+Directory: [`connect/mcp/hf-play-spaces.json`](../connect/mcp/hf-play-spaces.json)  
+**All products** (OS, ClaimGuard, Verify, RAS, FAQ, East-West, fabric, playground): [`HF_PRODUCT_MCP_FABRIC.md`](HF_PRODUCT_MCP_FABRIC.md) · [`connect/mcp/hf-product-spaces.json`](../connect/mcp/hf-product-spaces.json)
 
 ---
 
