@@ -65,6 +65,8 @@ def test_check_claim_rejects_overclaims():
     assert bad["findings"]
     sixteen = check_claim("we have 16 measured axes")
     assert sixteen["ok"] is False
+    stale = check_claim("13 of 14")
+    assert stale["ok"] is False
     elo = check_claim("public Elo league")
     assert elo["ok"] is False
     live = check_claim(f"{board['measured_axes']} measured")

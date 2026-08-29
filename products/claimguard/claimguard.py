@@ -181,26 +181,17 @@ def check_payload_complete(board: dict[str, Any]) -> list[Finding]:
 
 
 # Claims that must not be made against the living board without support.
+# Count rules compare to the board passed in — never freeze 13/14 or 15/22 here.
 CLAIM_RULES: list[tuple[re.Pattern[str], str, str]] = [
     (
-        re.compile(r"\b16\s+(measured\s+)?axes?\b", re.I),
+        re.compile(r"22\s*/\s*22|all\s+22\s+(axes?\s+)?(are\s+)?measured", re.I),
+        "claim.twenty_two_of_twenty_two",
+        "Slots and measurements are labelled separately. Quote totals.public_count.",
+    ),
+    (
+        re.compile(r"\b16\s+measured\s+axes?\b", re.I),
         "claim.sixteen_axes",
-        "Board is 14 quotable slots (+2 in-lane honesty-only). Never claim 16 measured axes.",
-    ),
-    (
-        re.compile(r"\b14\s+are\s+MEASURED\b|\ball\s+14\s+(axes?\s+)?(are\s+)?MEASURED\b", re.I),
-        "claim.fourteen_measured",
-        "Public ruling is 13 measured of 14 — jail is a floor (separation UNTESTED), not a 14th board-measured axis.",
-    ),
-    (
-        re.compile(r"\b12\s+(GSPC\s+)?axes?\b|\btwelve\s+(GSPC\s+)?axes?\b", re.I),
-        "claim.twelve_axes",
-        "Board is 14 quotable slots (13 measured of 14). Never claim twelve axes.",
-    ),
-    (
-        re.compile(r"\b15\s+(measured\s+)?axes?\b", re.I),
-        "claim.fifteen_axes",
-        "Public ruling is 13 measured of 14 quotable — not 15 axes.",
+        "16 jail-probe families are not 16 measured axes. Quote totals.public_count.",
     ),
     (
         re.compile(r"\b(elo|éelo)\s+league\b|\bpublic\s+elo\b|\belo\s+ranking\b", re.I),
@@ -249,6 +240,34 @@ def check_claims(board: dict[str, Any], claims: list[str]) -> list[Finding]:
                         )
                 else:
                     out.append(Finding(Status.FAIL, code, f"{msg} Claim: {text!r}"))
+        measured = totals.get("measured_axes")
+        axes = totals.get("axes")
+        public = totals.get("public_count")
+        if re.search(r"\b13\s+(measured\s+)?of\s+14\b", text, re.I):
+            matched = True
+            if measured is not None and axes is not None and (
+                int(measured) != 13 or int(axes) != 14
+            ):
+                out.append(
+                    Finding(
+                        Status.FAIL,
+                        "claim.stale_thirteen_of_fourteen",
+                        f"13 of 14 is a frozen sitting. Live totals.measured_axes={measured}, "
+                        f"totals.axes={axes}. Quote {public!r}.",
+                    )
+                )
+        for m_meas in re.finditer(r"\b(\d+)\s+measured(?:\s+axes?)?\b", text, re.I):
+            matched = True
+            n = int(m_meas.group(1))
+            if measured is not None and n != int(measured):
+                out.append(
+                    Finding(
+                        Status.FAIL,
+                        "claim.measured_mismatch",
+                        f"Claim says {n} measured; live totals.measured_axes is {measured}. "
+                        f"Quote {public!r}.",
+                    )
+                )
         # numeric axis count must match totals
         m = re.search(r"\b(\d+)\s+quotable\s+axes?\b", text, re.I)
         if m and totals.get("quotable_axes") is not None:
@@ -342,11 +361,11 @@ def _self_test() -> int:
     r3 = audit(signed, claims=["jail separation resolved"])
     assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r3.findings)
 
-    # Fourteen-measured + twelve-axes overclaims
-    r4 = audit(signed, claims=["14 are MEASURED", "twelve GSPC axes"])
+    # Living-board count overclaims (fixture is 13 measured of 14)
+    r4 = audit(signed, claims=["all 22 measured", "15 measured"])
     codes4 = {f.code for f in r4.findings if f.status == Status.FAIL}
-    assert "claim.fourteen_measured" in codes4, codes4
-    assert "claim.twelve_axes" in codes4, codes4
+    assert "claim.twenty_two_of_twenty_two" in codes4, codes4
+    assert "claim.measured_mismatch" in codes4, codes4
 
     print("SELF-TEST PASS — signature holds; mutation + overclaims FAIL as required")
     return 0

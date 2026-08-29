@@ -22,8 +22,8 @@ Lobby: [councilof.ai/?lobby=home](https://councilof.ai/?lobby=home).
 
 | Client | How to connect |
 |---|---|
-| Any MCP client | Add this Space at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) |
-| SSE | `https://csoai-ras-assess.hf.space/gradio_api/mcp/sse` |
+| Cursor / Grok | Add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) |
+| MCP | `https://councilof.ai/mcp` |
 | Live worker | `https://councilof.ai/mcp` — `enter-arena`, `verify_card`, `board_totals` |
 
 Not a second scorecard. Measurement, not certification. CSOAI Ltd (UK 16939677).

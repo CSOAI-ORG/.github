@@ -38,9 +38,9 @@ N-site / Cursor / Claude / Hugging Face MCP / any agent
           → fleet (3090/A100) for real runs
 ```
 
-1. Add the Space at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp).
-2. Or point the client at the Space SSE URL in the directory JSON.
-3. Or call the worker directly — Spaces are a second door, not a second truth rail.
+1. **Cursor / Grok:** add only `https://councilof.ai/mcp` ([`connect/mcp/cursor-grok.json`](../connect/mcp/cursor-grok.json)).
+2. Hub product Spaces are live **static doors** (`*.static.hf.space`). They do not speak Gradio MCP while org CPU quota is 0.
+3. Do not add `*.hf.space/gradio_api/mcp/sse` — those hosts 404 / pause.
 
 ---
 

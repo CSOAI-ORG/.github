@@ -22,8 +22,8 @@ This Space MCP-connects Council Space to N-sites and any agent. Games load on-si
 
 | Client | How to connect |
 |---|---|
-| Any MCP client | Add this Space at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) |
-| SSE | `https://csoai-council-space.hf.space/gradio_api/mcp/sse` |
+| Cursor / Grok | Add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) |
+| MCP | `https://councilof.ai/mcp` |
 | Live worker | `https://councilof.ai/mcp` — `enter-arena`, `board_totals` |
 
 Measurement, not certification. CSOAI Ltd (UK 16939677).

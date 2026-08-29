@@ -8,15 +8,15 @@
   "add_on_hub": "https://huggingface.co/settings/mcp",
   "architecture_form": {
     "keep": [
-      "HF Spaces as the client layer that MCP to Council OS (audit §6.1)",
-      "Tiny Agents / any MCP client = while-loop on this rail (audit §1.3 D)",
-      "README frontmatter + no pinned gradio (audit §1.3 / §5.4)",
+      "HF Spaces as the client layer that MCP to Council OS (audit \u00a76.1)",
+      "Tiny Agents / any MCP client = while-loop on this rail (audit \u00a71.3 D)",
+      "README frontmatter + no pinned gradio (audit \u00a71.3 / \u00a75.4)",
       "Link every Space back to councilof.ai"
     ],
     "reject": [
-      "ZeroGPU inference demo — Council OS / the fleet is the engine",
-      "Public Elo leaderboard Space — Wilson + McNemar only",
-      "Ethereum certificate verifier — living verify is Ed25519 at /gspc-verify/",
+      "ZeroGPU inference demo \u2014 Council OS / the fleet is the engine",
+      "Public Elo leaderboard Space \u2014 Wilson + McNemar only",
+      "Ethereum certificate verifier \u2014 living verify is Ed25519 at /gspc-verify/",
       "PDCA / CRM / OpenAI-compatible router hosted on a Space"
     ]
   },
@@ -25,140 +25,214 @@
       "id": "csoai/council-os",
       "role": "os",
       "site": "https://councilof.ai/os",
-      "also": ["https://councilof.ai/?lobby=home"],
+      "also": [
+        "https://councilof.ai/?lobby=home"
+      ],
       "space": "https://huggingface.co/spaces/csoai/council-os",
-      "mcp_sse": "https://csoai-council-os.hf.space/gradio_api/mcp/sse",
-      "tools": ["os_door", "living_totals", "get_axis", "list_fabric"]
+      "tools": [
+        "os_door",
+        "living_totals",
+        "get_axis",
+        "list_fabric"
+      ],
+      "door_host": "https://csoai-council-os.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-os.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/council-space",
       "role": "council-space",
       "site": "https://councilof.ai/gspc-arena",
       "space": "https://huggingface.co/spaces/csoai/council-space",
-      "mcp_sse": "https://csoai-council-space.hf.space/gradio_api/mcp/sse",
-      "tools": ["space_door", "enter_arena", "living_totals"]
+      "tools": [
+        "space_door",
+        "enter_arena",
+        "living_totals"
+      ],
+      "door_host": "https://csoai-council-space.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-space.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/games-catalog",
       "role": "games",
       "site": "https://councilof.ai/gspc-arena",
       "space": "https://huggingface.co/spaces/csoai/games-catalog",
-      "mcp_sse": "https://csoai-games-catalog.hf.space/gradio_api/mcp/sse",
-      "tools": ["list_games", "living_totals", "enter_arena"]
+      "tools": [
+        "list_games",
+        "living_totals",
+        "enter_arena"
+      ],
+      "door_host": "https://csoai-games-catalog.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-games-catalog.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/council-city",
       "role": "city",
       "site": "https://councilof.ai/city",
       "space": "https://huggingface.co/spaces/csoai/council-city",
-      "mcp_sse": "https://csoai-council-city.hf.space/gradio_api/mcp/sse",
-      "tools": ["city_door", "living_totals", "get_axis", "measure_contract"]
+      "tools": [
+        "city_door",
+        "living_totals",
+        "get_axis",
+        "measure_contract"
+      ],
+      "door_host": "https://csoai-council-city.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-city.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/council-coliseum",
       "role": "coliseum-arena",
       "site": "https://councilof.ai/coliseum",
-      "also": ["https://councilof.ai/arena"],
+      "also": [
+        "https://councilof.ai/arena"
+      ],
       "space": "https://huggingface.co/spaces/csoai/council-coliseum",
-      "mcp_sse": "https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse",
-      "tools": ["coliseum_door", "enter_arena", "jail_probe", "living_totals"],
-      "jail_families": 16
+      "tools": [
+        "coliseum_door",
+        "enter_arena",
+        "jail_probe",
+        "living_totals"
+      ],
+      "jail_families": 16,
+      "door_host": "https://csoai-council-coliseum.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/claimguard",
       "role": "claimguard",
       "site": "https://councilof.ai/honesty/",
       "space": "https://huggingface.co/spaces/csoai/claimguard",
-      "mcp_sse": "https://csoai-claimguard.hf.space/gradio_api/mcp/sse",
-      "tools": ["check_claim", "verify_card", "living_totals"]
+      "tools": [
+        "check_claim",
+        "verify_card",
+        "living_totals"
+      ],
+      "door_host": "https://csoai-claimguard.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-claimguard.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/gspc-verify",
       "role": "verify",
       "site": "https://councilof.ai/gspc-verify/",
       "space": "https://huggingface.co/spaces/csoai/gspc-verify",
-      "mcp_sse": "https://csoai-gspc-verify.hf.space/gradio_api/mcp/sse",
-      "tools": ["verify_card", "list_cards", "living_totals"]
+      "tools": [
+        "verify_card",
+        "list_cards",
+        "living_totals"
+      ],
+      "door_host": "https://csoai-gspc-verify.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-gspc-verify.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/ras-assess",
       "role": "ras",
       "site": "https://councilof.ai/?lobby=home",
-      "also": ["https://councilof.ai/gspc-verify/", "https://councilof.ai/arena"],
+      "also": [
+        "https://councilof.ai/gspc-verify/",
+        "https://councilof.ai/arena"
+      ],
       "space": "https://huggingface.co/spaces/csoai/ras-assess",
-      "mcp_sse": "https://csoai-ras-assess.hf.space/gradio_api/mcp/sse",
-      "tools": ["ras_door", "enter_arena", "verify_card", "living_totals"],
-      "note": "RAS = Receipts + Arena + Scorecard over AG-UI. Not a separate RAS product string."
+      "tools": [
+        "ras_door",
+        "enter_arena",
+        "verify_card",
+        "living_totals"
+      ],
+      "note": "RAS = Receipts + Arena + Scorecard over AG-UI. Not a separate RAS product string.",
+      "door_host": "https://csoai-ras-assess.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-ras-assess.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/faq",
       "role": "faq",
       "site": "https://councilof.ai/faq/",
       "space": "https://huggingface.co/spaces/csoai/faq",
-      "mcp_sse": "https://csoai-faq.hf.space/gradio_api/mcp/sse",
-      "tools": ["faq_door", "living_totals"]
+      "tools": [
+        "faq_door",
+        "living_totals"
+      ],
+      "door_host": "https://csoai-faq.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-faq.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/east-west",
       "role": "east-west",
       "site": "https://councilof.ai/east-west/",
       "space": "https://huggingface.co/spaces/csoai/east-west",
-      "mcp_sse": "https://csoai-east-west.hf.space/gradio_api/mcp/sse",
-      "tools": ["east_west_door", "living_totals", "get_axis"]
+      "tools": [
+        "east_west_door",
+        "living_totals",
+        "get_axis"
+      ],
+      "door_host": "https://csoai-east-west.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-east-west.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/mcp-fabric",
       "role": "fabric",
       "site": "https://councilof.ai/mcp",
       "space": "https://huggingface.co/spaces/csoai/mcp-fabric",
-      "mcp_sse": "https://csoai-mcp-fabric.hf.space/gradio_api/mcp/sse",
-      "tools": ["list_fabric", "living_totals", "ping_worker"]
+      "tools": [
+        "list_fabric",
+        "living_totals",
+        "ping_worker"
+      ],
+      "door_host": "https://csoai-mcp-fabric.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-mcp-fabric.hf.space/gradio_api/mcp/sse"
     },
     {
       "id": "csoai/council-mcp-playground",
       "role": "playground",
       "site": "https://councilof.ai/mcp",
       "space": "https://huggingface.co/spaces/csoai/council-mcp-playground",
-      "mcp_sse": "https://csoai-council-mcp-playground.hf.space/gradio_api/mcp/sse",
-      "tools": ["list_live_tools", "call_live_tool", "living_totals"],
-      "note": "Architecture-doc Space 5 mapped honestly: MCP tool rail, not an OpenAI-compatible inference playground."
+      "tools": [
+        "list_live_tools",
+        "call_live_tool",
+        "living_totals"
+      ],
+      "note": "Architecture-doc Space 5 mapped honestly: MCP tool rail, not an OpenAI-compatible inference playground.",
+      "door_host": "https://csoai-council-mcp-playground.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-mcp-playground.hf.space/gradio_api/mcp/sse"
     }
   ],
   "n_site_wire": {
-    "rule": "One shared AEO pack. Sites deep-link Council OS and add the matching Space as an MCP server. Sites do not host a second board, Elo league, or product engine.",
+    "rule": "One shared AEO pack. Sites deep-link Council OS. Cursor/Grok add only https://councilof.ai/mcp. Hub Spaces are static doors (door_host). Do not add paused Gradio SSE.",
     "cursor_mcp_snippet": {
       "mcpServers": {
-        "csoai-os": {
-          "url": "https://csoai-council-os.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-fabric": {
-          "url": "https://csoai-mcp-fabric.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-verify": {
-          "url": "https://csoai-gspc-verify.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-claimguard": {
-          "url": "https://csoai-claimguard.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-games": {
-          "url": "https://csoai-games-catalog.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-city": {
-          "url": "https://csoai-council-city.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-coliseum": {
-          "url": "https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse"
-        },
-        "csoai-live-worker": {
+        "csoai": {
           "url": "https://councilof.ai/mcp"
         }
       }
     }
   },
-  "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never present every slot as measured. Jail-probe families 1–16 are a contract — the fleet runs the probe. Org csoai cpu-basic quota is 0 — Gradio Spaces pause. Live MCP is https://councilof.ai/mcp. Hub product Spaces are live static doors until the org has Team/Enterprise CPU.",
+  "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never present every slot as measured. Jail-probe families 1\u201316 are a contract \u2014 the fleet runs the probe. Org csoai cpu-basic quota is 0 \u2014 Gradio Spaces pause. Live MCP is https://councilof.ai/mcp. Hub product Spaces are live static doors until the org has Team/Enterprise CPU.",
   "org_runtime": {
     "gradio_cpu_basic_quota": 0,
     "hub_doors": "static",
     "mcp_rail": "https://councilof.ai/mcp"
-  }
+  },
+  "also_see": "connect/mcp/cursor-grok.json"
 }

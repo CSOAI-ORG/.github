@@ -1,6 +1,6 @@
 {
-  "ts": "2026-08-25T00:20:57.620Z",
-  "card": "/tmp/overnight-agent-card-20260825T002055Z.json",
+  "ts": "2026-08-29T03:34:48.165Z",
+  "card": "/workspace/connect/agent-cards/out/agent-card.json",
   "pass": 10,
   "fail": 0,
   "results": [
@@ -38,7 +38,7 @@
     },
     {
       "status": "PASS",
-      "msg": "supportedInterfaces: 2 entry/entries"
+      "msg": "supportedInterfaces: 3 entry/entries"
     },
     {
       "status": "PASS",

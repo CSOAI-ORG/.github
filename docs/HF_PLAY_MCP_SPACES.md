@@ -19,25 +19,25 @@ Directory: [`connect/mcp/hf-play-spaces.json`](../connect/mcp/hf-play-spaces.jso
 
 Patches: [`docs/hf-patches/spaces/play/`](hf-patches/spaces/play/).
 
-The existing static printers on `games-catalog` and `council-space` stay as thin doors until the Gradio+MCP upload lands (overnight publish or `HF_TOKEN`).
+Hub play Spaces are live **static doors** (`*.static.hf.space`). They do not speak Gradio MCP while org `csoai` cpu-basic quota is 0.
 
 ---
 
 ## How MCP reaches “anywhere else”
 
 ```
-N-site / Cursor / Claude / any MCP client
-  → Hugging Face Space  (MCP badge / SSE)
-      → https://councilof.ai/mcp   (measure · verify · jail-probe · enter-arena · board_totals · get_axis)
-          → living board GET /api/gspc
-          → fleet (3090/A100) for real runs
+N-site / Cursor / Grok / Claude / any MCP client
+  → https://councilof.ai/mcp   (measure · verify · jail-probe · enter-arena · board_totals · get_axis)
+      → living board GET /api/gspc
+      → Council OS / city / coliseum / arena
+      → fleet (3090/A100) for real runs
 ```
 
-1. Add the Space at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) (MCP badge).
-2. Or point the client at the Space SSE URL in [`hf-play-spaces.json`](../connect/mcp/hf-play-spaces.json).
-3. Or keep calling the worker directly — Spaces are a second door, not a second truth rail.
+1. **Cursor / Grok:** add only `https://councilof.ai/mcp` ([`connect/mcp/cursor-grok.json`](../connect/mcp/cursor-grok.json)).
+2. Hub play Spaces are static doors (`door_host` in [`hf-play-spaces.json`](../connect/mcp/hf-play-spaces.json)).
+3. Do not add `*.hf.space/gradio_api/mcp/sse` — those hosts 404 / pause.
 
-Gradio `demo.launch(mcp_server=True)` exposes each typed function as a tool. Functions proxy JSON-RPC; they do not grade.
+Gradio patches under `docs/hf-patches/spaces/play/` stay ready for when org CPU quota is > 0. They proxy JSON-RPC; they do not grade.
 
 ---
 

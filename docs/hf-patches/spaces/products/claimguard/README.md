@@ -22,8 +22,8 @@ Thin living-board claim check + live `verify_card`. Full CLI is `products/claimg
 
 | Client | How to connect |
 |---|---|
-| Any MCP client | Add this Space at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) |
-| SSE | `https://csoai-claimguard.hf.space/gradio_api/mcp/sse` |
+| Cursor / Grok | Add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) |
+| MCP | `https://councilof.ai/mcp` |
 | Live worker | `https://councilof.ai/mcp` — `verify_card`, `board_totals` |
 
 Rejects a full-board-measured overclaim, “16 measured axes”, Elo-as-grade, certification language.

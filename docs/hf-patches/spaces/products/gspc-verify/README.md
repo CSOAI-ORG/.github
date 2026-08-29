@@ -22,8 +22,8 @@ MCP `verify_card` / `list_cards` for any site. Ed25519 over signed cards — not
 
 | Client | How to connect |
 |---|---|
-| Any MCP client | Add this Space at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) |
-| SSE | `https://csoai-gspc-verify.hf.space/gradio_api/mcp/sse` |
+| Cursor / Grok | Add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) |
+| MCP | `https://councilof.ai/mcp` |
 | Live worker | `https://councilof.ai/mcp` — `verify_card`, `list_cards` |
 
 Measurement, not certification. CSOAI Ltd (UK 16939677).

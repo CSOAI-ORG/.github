@@ -207,6 +207,15 @@ def check_claim(claim: str) -> dict[str, Any]:
             "claim.sixteen_measured",
             "16 jail-probe families are not 16 measured axes. Quote totals.public_count.",
         )
+    if re.search(r"\b13\s+(measured\s+)?of\s+14\b", text, re.I):
+        if measured is not None and axes is not None and (
+            int(measured) != 13 or int(axes) != 14
+        ):
+            fail(
+                "claim.stale_thirteen_of_fourteen",
+                f"13 of 14 is a frozen sitting. Live totals.measured_axes={measured}, "
+                f"totals.axes={axes}. Quote {public!r}.",
+            )
     if re.search(r"\b(elo|éelo)\s+league\b|\bpublic\s+elo\b|\belo\s+ranking\b", text, re.I):
         fail(
             "claim.elo_league",

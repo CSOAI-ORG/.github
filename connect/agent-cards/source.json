@@ -1,7 +1,7 @@
 {
   "domain": "councilof.ai",
   "name": "Council of AI — Measurement Agent",
-  "description": "Independent AI-governance MEASUREMENT body. Publishes the GSPC 14-slot instrument (Governance · Safety · Provenance · Continuity) — 13 measured of 14 — with frozen item banks, published scoring code, and an Ed25519-signed board. Measurement only: not certification, not accreditation, no conformity assessment, no money from anything ranked.",
+  "description": "Independent AI-governance MEASUREMENT body. Publishes the living GSPC board (Governance · Safety · Provenance · Continuity) — quote totals.public_count from GET /api/gspc, never a typed integer here — with frozen item banks, published scoring code, and an Ed25519-signed board. Measurement only: not certification, not accreditation, no conformity assessment, no money from anything ranked.",
   "version": "1.0.0",
   "provider": {
     "organization": "CSOAI Ltd",
@@ -19,6 +19,11 @@
       "protocolVersion": "1.0.0"
     },
     {
+      "url": "https://councilof.ai/mcp",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0.0"
+    },
+    {
       "url": "https://csoai-gspc-mcp.nicholastempleman.workers.dev/mcp",
       "protocolBinding": "JSONRPC",
       "protocolVersion": "1.0.0"
@@ -30,7 +35,7 @@
     {
       "id": "gspc-board",
       "name": "Signed GSPC Board",
-      "description": "Fetch the live Ed25519-signed GSPC 14-slot board (13 measured of 14): per-axis n, leader, Wilson interval, and McNemar separation. Live JSON, recomputable from published rows.",
+      "description": "Fetch the live Ed25519-signed GSPC board from GET /api/gspc: per-axis n, leader, Wilson interval, and McNemar separation. Quote totals.public_count. Empty cells stay empty. Live JSON, recomputable from published rows.",
       "tags": ["measurement", "governance", "verification"],
       "examples": ["GET /api/gspc — return the signed board JSON"]
     },

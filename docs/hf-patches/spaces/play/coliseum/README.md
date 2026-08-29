@@ -22,8 +22,8 @@ Arenas stay on the measurement fleet. This Space exports `enter-arena` and the *
 
 | Client | How to connect |
 |---|---|
-| Any MCP client | Add this Space (MCP badge) at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) |
-| SSE | `https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse` |
+| Cursor / Grok | Add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) |
+| MCP | `https://councilof.ai/mcp` |
 | Live worker | `https://councilof.ai/mcp` — tools `enter-arena`, `jail-probe`, `board_totals` |
 
 Not a public Elo league. Measurement, not certification. CSOAI Ltd (UK 16939677).

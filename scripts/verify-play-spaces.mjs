@@ -35,7 +35,18 @@ for (const rel of [
 
 const dir = JSON.parse(readFileSync(join(ROOT, "connect/mcp/hf-play-spaces.json"), "utf8"));
 ok(dir.spaces?.length === 3, "directory has 3 play spaces");
-ok(dir.spaces.every((s) => s.mcp_sse && s.site), "each space has mcp_sse + site");
+ok(
+  dir.spaces.every((s) => s.door_host && s.site && s.mcp === "https://councilof.ai/mcp"),
+  "each space has door_host + site + live worker"
+);
+ok(
+  !JSON.stringify(dir.n_site_wire?.cursor_mcp_snippet || {}).includes("gradio_api"),
+  "play Cursor snippet has no paused Gradio SSE"
+);
+ok(
+  dir.n_site_wire?.cursor_mcp_snippet?.mcpServers?.csoai?.url === "https://councilof.ai/mcp",
+  "play Cursor snippet is the live worker"
+);
 
 const py = spawnSync(
   "python3",

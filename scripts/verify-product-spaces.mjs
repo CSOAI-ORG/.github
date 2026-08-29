@@ -44,9 +44,24 @@ ok(existsSync(join(PLAY, "mcp_client.py")), "exists shared mcp_client.py");
 const dir = JSON.parse(readFileSync(join(ROOT, "connect/mcp/hf-product-spaces.json"), "utf8"));
 ok(dir.spaces?.length >= 12, `directory has ${dir.spaces?.length} spaces (>=12)`);
 ok(
-  dir.spaces.every((s) => s.mcp_sse && s.site && s.id),
-  "each space has id + mcp_sse + site"
+  dir.spaces.every((s) => s.door_host && s.site && s.id && s.mcp === "https://councilof.ai/mcp"),
+  "each space has id + door_host + site + live worker"
 );
+const grok = dir.n_site_wire?.cursor_mcp_snippet?.mcpServers || {};
+ok(grok.csoai?.url === "https://councilof.ai/mcp", "Cursor/Grok snippet is the live worker");
+ok(
+  !JSON.stringify(grok).includes("gradio_api"),
+  "Cursor/Grok snippet has no paused Gradio SSE"
+);
+const grokWire = JSON.parse(readFileSync(join(ROOT, "connect/mcp/cursor-grok.json"), "utf8"));
+ok(grokWire.mcpServers?.csoai?.url === "https://councilof.ai/mcp", "cursor-grok.json is the live worker");
+ok(
+  !JSON.stringify(grokWire).includes("gradio_api/mcp/sse"),
+  "cursor-grok.json does not list Gradio SSE as a server"
+);
+const server = JSON.parse(readFileSync(join(ROOT, "connect/mcp/gspc/server.json"), "utf8"));
+ok(server.remotes?.[0]?.url === "https://councilof.ai/mcp", "MCP server.json primary remote is councilof.ai/mcp");
+ok(!/13 of 14/.test(JSON.stringify(server)), "MCP server.json does not freeze 13 of 14");
 ok(
   dir.spaces.every((s) => s.id.startsWith("csoai/")),
   "all spaces under org csoai"
@@ -95,6 +110,9 @@ if b.get("state")=="LIVE":
     live=f"{b['measured_axes']} measured"
     good=check_claim(live)
     assert good["ok"] is True, good
+    stale=check_claim("13 of 14")
+    if b.get("measured_axes") != 13 or b.get("axes") != 14:
+        assert stale["ok"] is False, stale
     elo=check_claim("public Elo league")
     assert elo["ok"] is False, elo
 fab=load_fabric()

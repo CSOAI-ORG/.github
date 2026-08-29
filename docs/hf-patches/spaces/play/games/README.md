@@ -22,8 +22,8 @@ This Space is a **door + MCP server**, not a contest engine.
 
 | Client | How to connect |
 |---|---|
-| Any MCP client | Add this Space (MCP badge) at [huggingface.co/settings/mcp](https://huggingface.co/settings/mcp) |
-| SSE | `https://csoai-games-catalog.hf.space/gradio_api/mcp/sse` |
+| Cursor / Grok | Add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) |
+| MCP | `https://councilof.ai/mcp` |
 | Live worker | `https://councilof.ai/mcp` — tools `enter-arena`, `board_totals` |
 
 Living counts: [GET /api/gspc](https://councilof.ai/api/gspc) — quote `totals.public_count`. Do not freeze a table here.

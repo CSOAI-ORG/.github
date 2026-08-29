@@ -16,20 +16,20 @@
 | **Brand** | Cream / ink measurement body; site name is the hero; no purple SaaS defaults |
 | **ClaimGuard** | Any grade / axis-count claim passes `products/claimguard/` rules before publish |
 
-### Embedded canon (14+2, no Elo public)
+### Embedded canon (living GET, no Elo public)
 
-Copy this block into pack README and CI assertions:
+Copy this block into pack README and CI assertions. Do **not** freeze 13/14 or 15/22 here.
 
 ```
-Quotable board slots:     14
-Public measured ruling:   13 of 14
-In-lane (not quotable):   +2  (slot15 / instrument-honesty, human-vs-ai)
-Living “16” convention:   14+2 internal only — never sell “16 measured axes”
+Quote:                    GET https://councilof.ai/api/gspc → totals.public_count
+Do not freeze:            13/14, 15/22, 22/22 measured
+16 jail-probe families:   not 16 measured axes
 Public Elo on GSPC board: DOES NOT EXIST — Wilson + McNemar only
 Tone:                     Measurement, not certification
+MCP (Cursor / Grok):      https://councilof.ai/mcp
 ```
 
-Full names: [`GSPC_AXIS_CANON.md`](GSPC_AXIS_CANON.md).
+Axis names still live on the API (`axes[]`). Historical 14+2 sitting notes: [`GSPC_AXIS_CANON.md`](GSPC_AXIS_CANON.md) — Grok/Cursor read the living GET, not that freeze.
 
 ---
 
@@ -58,7 +58,7 @@ N-site / harness run
 | Gate | Rule |
 |---|---|
 | Signature | Fail closed if attestation missing or mutated post-sign |
-| Axis ids | Only the 14 board ids (plus labeled in-lane) |
+| Axis ids | Only ids present on `GET /api/gspc` (`axes[]`) |
 | Publish | Empty cells stay empty; no fill-for-marketing |
 | Claim text | ClaimGuard before README / AEO blob / lobby copy |
 
@@ -99,7 +99,7 @@ Sites may add **skills** and **sector copy**. Sites may not add a private Elo bo
 
 ### Hugging Face MCP doors (every product → Council OS)
 
-N-sites add product Spaces as MCP servers — they do not embed a second engine or board.
+N-sites deep-link Council OS and add only `https://councilof.ai/mcp`. Hub Spaces are live static doors — they do not embed a second engine or board.
 
 Full fabric: [`connect/mcp/hf-product-spaces.json`](../connect/mcp/hf-product-spaces.json) · runbook: [`HF_PRODUCT_MCP_FABRIC.md`](HF_PRODUCT_MCP_FABRIC.md)
 
@@ -116,7 +116,7 @@ Full fabric: [`connect/mcp/hf-product-spaces.json`](../connect/mcp/hf-product-sp
 | East-West | `csoai/east-west` | `https://councilof.ai/east-west/` |
 | Fabric index | `csoai/mcp-fabric` | `https://councilof.ai/mcp` |
 
-Clients: Hugging Face MCP badge, or the Space SSE URL, or the worker `https://councilof.ai/mcp`.
+Cursor / Grok / any MCP client: add only [`https://councilof.ai/mcp`](https://councilof.ai/mcp) — see [`connect/mcp/cursor-grok.json`](../connect/mcp/cursor-grok.json). Hub Spaces are live static doors (`door_host`). Do not add paused Gradio SSE.
 
 ---
 

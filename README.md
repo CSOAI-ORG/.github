@@ -23,6 +23,7 @@ certification. We do not remediate.
 | Chat vs AG-UI vs OpenRouter | [`docs/CHAT_AGUI_OPENROUTER.md`](docs/CHAT_AGUI_OPENROUTER.md) — three layers, one contract |
 | Games · City · Coliseum MCP | [`docs/HF_PLAY_MCP_SPACES.md`](docs/HF_PLAY_MCP_SPACES.md) — HF Spaces that MCP to the sites |
 | Every product → Council OS MCP | [`docs/HF_PRODUCT_MCP_FABRIC.md`](docs/HF_PRODUCT_MCP_FABRIC.md) — OS, ClaimGuard, Verify, RAS, FAQ, East-West, fabric |
+| Cursor / Grok MCP | [`connect/mcp/cursor-grok.json`](connect/mcp/cursor-grok.json) — one server: `https://councilof.ai/mcp` |
 | Verify a grade (free) | [councilof.ai/gspc-verify/](https://councilof.ai/gspc-verify/) |
 | Honesty gate | [councilof.ai/honesty/](https://councilof.ai/honesty/) |
 | Firewall Charter | [councilof.ai/firewall-charter/](https://councilof.ai/firewall-charter/) |
