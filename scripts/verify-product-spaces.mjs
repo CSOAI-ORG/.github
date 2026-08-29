@@ -56,8 +56,8 @@ ok(
 const grokWire = JSON.parse(readFileSync(join(ROOT, "connect/mcp/cursor-grok.json"), "utf8"));
 ok(grokWire.mcpServers?.csoai?.url === "https://councilof.ai/mcp", "cursor-grok.json is the live worker");
 ok(
-  !JSON.stringify(grokWire).includes("gradio_api/mcp/sse"),
-  "cursor-grok.json does not list Gradio SSE as a server"
+  !JSON.stringify(grokWire.mcpServers || {}).includes("gradio_api"),
+  "cursor-grok.json mcpServers does not list Gradio SSE"
 );
 const server = JSON.parse(readFileSync(join(ROOT, "connect/mcp/gspc/server.json"), "utf8"));
 ok(server.remotes?.[0]?.url === "https://councilof.ai/mcp", "MCP server.json primary remote is councilof.ai/mcp");
