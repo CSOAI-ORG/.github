@@ -15,10 +15,27 @@ if [[ -z "${HF_TOKEN:-}" ]]; then
 fi
 
 python3 - "$CATALOG" "$TPL" <<'PY'
-import json, os, sys, tempfile, subprocess, pathlib
+import json, os, sys, pathlib, urllib.error, urllib.request
+from huggingface_hub import CommitOperationAdd, HfApi
+
 catalog = json.loads(pathlib.Path(sys.argv[1]).read_text())
 tpl = pathlib.Path(sys.argv[2]).read_text()
-hf = os.environ.get("HF_CLI", "hf")
+token = os.environ.get("HF_TOKEN")
+api = HfApi(token=token)
+
+def space_exists(repo: str) -> bool:
+    try:
+        req = urllib.request.Request(
+            f"https://huggingface.co/api/spaces/{repo}",
+            headers={"User-Agent": "CSOAI-publish/1.0"},
+        )
+        with urllib.request.urlopen(req, timeout=20):
+            return True
+    except urllib.error.HTTPError as exc:
+        if exc.code in (404, 401):
+            return False
+        raise
+
 for row in catalog["spaces"]:
     repo = row["id"]
     title = repo.split("/", 1)[1]
@@ -49,29 +66,19 @@ Spaces cannot start. MCP from anywhere: [`https://councilof.ai/mcp`](https://cou
 Living counts: [GET /api/gspc](https://councilof.ai/api/gspc) — quote `totals.public_count`.
 Measurement, not certification. CSOAI Ltd (UK 16939677).
 """
-    stage = tempfile.mkdtemp()
-    pathlib.Path(stage, "index.html").write_text(html, encoding="utf-8")
-    pathlib.Path(stage, "README.md").write_text(readme, encoding="utf-8")
-    print(f"→ static {repo}")
-    # exist-ok create still counts against the daily Space-create cap — only create if missing.
-    probe = subprocess.run(
-        [hf, "spaces", "info", repo],
-        capture_output=True,
-        text=True,
-    )
-    if probe.returncode != 0:
-        subprocess.run(
-            [hf, "repos", "create", repo, "--type", "space", "--sdk", "static",
-             "--public"],
-            check=True,
-        )
-    subprocess.run(
-        [hf, "upload", repo, stage, ".", "--repo-type", "space",
-         "--commit-message", "feat(doors): live static door — org Gradio quota 0",
-         "--delete", "app.py", "--delete", "mcp_client.py", "--delete", "door_kit.py",
-         "--delete", "requirements.txt", "--delete", "catalog.json",
-         "--delete", "style.css"],
-        check=True,
+    print(f"→ static {repo}", flush=True)
+    if not space_exists(repo):
+        print(f"SKIP create {repo}: daily Space-create cap; create tomorrow if still missing", flush=True)
+        continue
+    # create_commit does not call /api/repos/create (hf upload does, and that is capped).
+    api.create_commit(
+        repo_id=repo,
+        repo_type="space",
+        operations=[
+            CommitOperationAdd(path_in_repo="index.html", path_or_fileobj=html.encode()),
+            CommitOperationAdd(path_in_repo="README.md", path_or_fileobj=readme.encode()),
+        ],
+        commit_message="feat(doors): live static door — org Gradio quota 0",
     )
 print("static doors published")
 PY
