@@ -53,11 +53,18 @@ Measurement, not certification. CSOAI Ltd (UK 16939677).
     pathlib.Path(stage, "index.html").write_text(html, encoding="utf-8")
     pathlib.Path(stage, "README.md").write_text(readme, encoding="utf-8")
     print(f"→ static {repo}")
-    subprocess.run(
-        [hf, "repos", "create", repo, "--type", "space", "--sdk", "static",
-         "--exist-ok", "--public"],
-        check=False,
+    # exist-ok create still counts against the daily Space-create cap — only create if missing.
+    probe = subprocess.run(
+        [hf, "spaces", "info", repo],
+        capture_output=True,
+        text=True,
     )
+    if probe.returncode != 0:
+        subprocess.run(
+            [hf, "repos", "create", repo, "--type", "space", "--sdk", "static",
+             "--public"],
+            check=True,
+        )
     subprocess.run(
         [hf, "upload", repo, stage, ".", "--repo-type", "space",
          "--commit-message", "feat(doors): live static door — org Gradio quota 0",
