@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__ — Council of AI</title>
+<meta name="description" content="__TITLE__ door to Council OS. Living counts from GET /api/gspc. Measurement, not certification.">
+<style>
+:root{--bg:#f6f1e7;--ink:#1a1714;--dim:#5c564c;--line:#d8cfc0;--panel:#fffdf8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,sans-serif;padding:clamp(20px,4vw,48px)}
+main{max-width:42rem;margin:0 auto}
+.eyebrow{font:600 11px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+h1{font-size:clamp(28px,5vw,40px);letter-spacing:-.03em;margin:.4rem 0 .6rem}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:16px 0}
+pre{white-space:pre-wrap;font:13px/1.45 ui-monospace,Menlo,monospace;margin:0}
+a{color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+a.btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;padding:8px 14px;border-radius:8px;font-weight:600;font-size:14px}
+a.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">CSOAI · product door · not an engine</p>
+<h1>__TITLE__</h1>
+<p>Live site: <a href="__SITE__">__SITE__</a>. This Space is a door. Council OS and the measurement fleet stay on councilof.ai.</p>
+<div class="box">
+<p id="board">Loading living board…</p>
+<pre id="detail"></pre>
+</div>
+<p>MCP from anywhere: add the live worker — not a second board.</p>
+<div class="btns">
+  <a class="btn" href="__SITE__">Open on councilof.ai</a>
+  <a class="btn ghost" href="https://councilof.ai/os">Council OS</a>
+  <a class="btn ghost" href="https://councilof.ai/mcp">MCP worker</a>
+  <a class="btn ghost" href="https://councilof.ai/gspc-verify/">Verify</a>
+  <a class="btn ghost" href="https://councilof.ai/api/gspc">GET /api/gspc</a>
+</div>
+<footer>
+  <strong>Measurement, not certification.</strong>
+  Empty slots stay empty. CSOAI Ltd (UK 16939677).
+  Tools on the worker: __TOOLS__.
+  Org Gradio CPU quota is 0 — this door is a live static printer; MCP is <a href="https://councilof.ai/mcp">councilof.ai/mcp</a>.
+</footer>
+</main>
+<script>
+const BOARD = "https://councilof.ai/api/gspc";
+fetch(BOARD, {headers:{Accept:"application/json"}})
+  .then(r => { if (!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+  .then(d => {
+    const t = d.totals || {};
+    document.getElementById("board").textContent =
+      "LIVE · " + (t.public_count || "see GET /api/gspc");
+    document.getElementById("detail").textContent =
+      "slots " + t.axes + " · measured " + t.measured_axes +
+      " · empty " + t.unmeasured_axes + "\n" +
+      (t.count_grammar || "") +
+      "\nQuote totals.public_count. Do not freeze a full-board measured claim.";
+  })
+  .catch(e => {
+    document.getElementById("board").textContent = "UNREACHABLE · no cached count";
+    document.getElementById("detail").textContent = String(e);
+  });
+</script>
+</body>
+</html>

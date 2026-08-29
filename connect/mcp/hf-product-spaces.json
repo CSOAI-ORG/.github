@@ -155,5 +155,10 @@
       }
     }
   },
-  "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never present every slot as measured. Jail-probe families 1–16 are a contract — the fleet runs the probe."
+  "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never present every slot as measured. Jail-probe families 1–16 are a contract — the fleet runs the probe. Org csoai cpu-basic quota is 0 — Gradio Spaces pause. Live MCP is https://councilof.ai/mcp. Hub product Spaces are live static doors until the org has Team/Enterprise CPU.",
+  "org_runtime": {
+    "gradio_cpu_basic_quota": 0,
+    "hub_doors": "static",
+    "mcp_rail": "https://councilof.ai/mcp"
+  }
 }

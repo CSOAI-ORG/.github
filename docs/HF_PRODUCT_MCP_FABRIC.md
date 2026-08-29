@@ -83,6 +83,14 @@ bash scripts/publish-product-spaces.sh
 bash scripts/publish-play-spaces.sh
 ```
 
-Until `HF_TOKEN` is in the environment, existing Hub printers stay **static**. Patches are Gradio+MCP; publish flips the SDK.
+Until `HF_TOKEN` is in the environment, existing Hub printers stay **static**.
+
+**Org runtime (2026-08-29):** `csoai` cpu-basic quota is **0**. New Gradio Spaces return 402; converted Gradio Spaces pause and cannot restart. All 12 product doors are therefore published as **live static Spaces** (RUNNING) that fetch `GET /api/gspc` in-page. MCP from anywhere is the worker [`https://councilof.ai/mcp`](https://councilof.ai/mcp). Gradio+MCP SSE on the org needs a Team/Enterprise CPU quota.
+
+```bash
+export HF_TOKEN=hf_...   # write on org csoai
+bash scripts/publish-static-product-doors.sh   # live static doors (works today)
+# bash scripts/publish-product-spaces.sh       # Gradio — only after org CPU quota > 0
+```
 
 Overnight path: `scripts/overnight-hf-publish.sh` copies product Spaces when `HF_TOKEN` is set.

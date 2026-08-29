@@ -8,7 +8,7 @@ sdk_version: 5.50.0
 app_file: app.py
 pinned: false
 license: cc-by-4.0
-short_description: Receipts + Arena + Scorecard MCP door. Not a second RAS brand.
+short_description: RAS door — Receipts + Arena + Scorecard. Not a second brand.
 tags:
   - mcp-server
   - measurement
