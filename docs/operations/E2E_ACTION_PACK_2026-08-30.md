@@ -125,3 +125,14 @@ Template: counts from `GET https://councilof.ai/api/gspc` → `totals.public_cou
 3. Listing PRs: one blurb grammar everywhere; rebase promptly on conflict.
 4. SCITT engagement: substrate first (AAC/CPB/cose); our Artifact Type later; no drive-by PRs.
 5. Confirm-before-send on all PrivateEmail drafts.
+
+
+## F. Status log (2026-08-30)
+
+- DIGITAL Art 12 reply to Emek **sent** (PrivateEmail 14:57Z) — forward-wait; co-sign only if he asks.
+- `.github` PR #83 — action pack doc (open).
+- Evidence-bind KAT + verify-card non-canonical warning — branch `cursor/evidence-bind-kat-ff6e` on councilof-ai.
+- agentrust #77 still dirty; clean replacement PR in flight (`add-csoai-gspc-rebased`).
+- Outbound listing PRs waiting review (clean): AthenaCore #70, visenger #13, morganrcu #43, punkpeye #12480.
+- RunPod low-balance mail — **ops needed by Nick** (no API token in this VM); top-up or export volume.
+- Do not unsolicited-reply Iman/Anton CPB thread; Anton already accepted.
