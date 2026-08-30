@@ -1,0 +1,14 @@
+{
+  "schema": "csoai.cursor-grok-mcp/1",
+  "purpose": "Cursor, Grok, Claude, and any MCP client: one server. Hub product Spaces are live static doors. They do not speak Gradio MCP while org csoai cpu-basic quota is 0.",
+  "board": "https://councilof.ai/api/gspc",
+  "os": "https://councilof.ai/os",
+  "verify": "https://councilof.ai/gspc-verify/",
+  "fabric_door": "https://huggingface.co/spaces/csoai/mcp-fabric",
+  "honesty": "Quote totals.public_count. Do not freeze 22/22 measured. Do not add *.hf.space/gradio_api/mcp/sse until those Spaces are RUNNING Gradio.",
+  "mcpServers": {
+    "csoai": {
+      "url": "https://councilof.ai/mcp"
+    }
+  }
+}

@@ -31,14 +31,14 @@
 ```json
 {
   "ok": false,
-  "board_axes": 14,
-  "measured_axes": 13,
-  "public_count": "13 measured of 14 (SITTING 1, 2026-08-18)",
-  "findings": [
+  "board_axes": null,
+      "measured_axes": null,
+      "public_count": "(from GET /api/gspc — never freeze here)",
+      "findings": [
     {
       "status": "FAIL",
-      "code": "AXIS_COUNT_OVERCLAIM",
-      "message": "Claim implies 16 measured board axes; live board has 14 quotable slots, 13 measured."
+      "code": "claim.sixteen_axes",
+      "message": "16 jail-probe families are not 16 measured axes. Quote totals.public_count."
     }
   ]
 }
@@ -55,11 +55,11 @@
 
 ## Canon rules enforced
 
-- 14 quotable board slots; public ruling **13 of 14 measured**
-- +2 in-lane (`slot15`, `human-vs-ai`) — not board-quotable
+- Quote `totals.public_count` from GET `/api/gspc` — never freeze 13/14 or 15/22 in this spec
+- Stale “13 of 14” FAILs when live `totals` are not 13 measured of 14 axes
 - No Elo on GSPC public board
 - Jail separation **UNTESTED** until McNemar gate
-- `public_count` string must match `/api/gspc` totals
+- `N measured` must match live `totals.measured_axes`
 
 ## CI gate
 

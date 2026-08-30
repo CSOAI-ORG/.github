@@ -25,7 +25,8 @@ pip install cryptography
 python claimguard.py --self-test
 python claimguard.py check --live
 python claimguard.py check --live --claim "16 measured axes"
-python claimguard.py check --board board.json --claim "14 quotable axes" --json
+# N measured must match live totals.measured_axes (do not freeze 13 or 15 here)
+python claimguard.py check --live --claim "all 22 measured"
 ```
 
 Exit code `0` = PASS, `1` = FAIL.
@@ -34,7 +35,7 @@ Exit code `0` = PASS, `1` = FAIL.
 
 1. **Attestation** — Ed25519 over RFC 8785 canonical JSON of payload minus `site_attestation` (same as `/api/gspc`).
 2. **Payload** — `axes[]` non-empty, totals present, MEASURED rows not empty.
-3. **Claims** — rejects 16/15-axis overclaims, public Elo league, jail-separation-resolved while `UNTESTED`, certification language.
+3. **Claims** — rejects 22/22 measured, “16 measured axes”, stale “13 of 14” when the living board is not 13/14, public Elo league, jail-separation-resolved while `UNTESTED`, certification language. `N measured` must match live `totals.measured_axes`.
 
 Living board: https://councilof.ai/api/gspc  
 Axis canon: https://github.com/CSOAI-ORG/.github/blob/main/docs/GSPC_AXIS_CANON.md

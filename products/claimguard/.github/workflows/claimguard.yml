@@ -15,4 +15,4 @@ jobs:
       - run: python -m pytest -q
       - name: Live board must attest (non-blocking if network blocked)
         continue-on-error: true
-        run: python claimguard.py check --live --claim "14 quotable axes"
+        run: python claimguard.py check --live

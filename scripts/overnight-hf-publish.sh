@@ -70,6 +70,13 @@ create_and_upload space csoai/gspc-governance-leaderboard "$ROOT/export/gspc-gov
 # Live Space was sdk=static; export README sets sdk=gradio — restart to pick up SDK change
 "$HF" spaces restart csoai/gspc-governance-leaderboard 2>/dev/null || true
 
+echo "=== Product doors on Hub (static — org cpu-basic quota is 0) ==="
+if [[ -n "${HF_TOKEN:-}" ]]; then
+  bash "$ROOT/scripts/publish-static-product-doors.sh" || echo "WARN: static door publish failed (non-fatal for overnight board pack)"
+else
+  echo "HF_TOKEN unset — skip product-space publish"
+fi
+
 echo "=== N5-05: DOIs — mint manually in repo Settings after names confirmed ==="
 echo "WARNING: DOI locks rename/delete/visibility permanently"
 

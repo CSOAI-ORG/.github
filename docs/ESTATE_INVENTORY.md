@@ -35,7 +35,8 @@ Axis names: [`GSPC_AXIS_CANON.md`](GSPC_AXIS_CANON.md). Plan: [`MASTER_PLAN.md`]
 
 **14 axis datasets:** gov, agi(safety), prv, asi, mcp, oss, mach, care, xr, det, art5, swarm, affect, jail  
 **Meta:** boards, papers, arena-results, normalized, airbench-eu-mandatory-run, signed-fleet-boards-v2, signed-measurement-records  
-**Spaces (12):** missing **affect** + **jail**  
+**Spaces:** axis printers + product MCP doors (OS, ClaimGuard, Verify, RAS, FAQ, East-West, fabric, playground, Games/City/Coliseum) — see [`HF_PRODUCT_MCP_FABRIC.md`](HF_PRODUCT_MCP_FABRIC.md)  
+**P0 remaining:** `gspc-xr` README was a DET clone (patched). Product + play Spaces need `HF_TOKEN` to flip static printers → Gradio+MCP.  
 **P0 defect:** `gspc-xr` README is a DET clone  
 **Private/adjacent:** OOWM / SOV-SIGNAL corpora + models (router, sov33/34, gates)
 

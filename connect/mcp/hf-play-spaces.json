@@ -1,0 +1,73 @@
+{
+  "schema": "csoai.hf-play-spaces/1",
+  "purpose": "Games, City, and Coliseum as Hugging Face MCP Spaces. N-sites and any MCP client add these; tools proxy to the live worker at councilof.ai/mcp. Spaces are doors, not engines.",
+  "live_worker": "https://councilof.ai/mcp",
+  "board": "https://councilof.ai/api/gspc",
+  "add_on_hub": "https://huggingface.co/settings/mcp",
+  "spaces": [
+    {
+      "id": "csoai/games-catalog",
+      "role": "games",
+      "site": "https://councilof.ai/gspc-arena",
+      "space": "https://huggingface.co/spaces/csoai/games-catalog",
+      "tools": [
+        "list_games",
+        "living_totals",
+        "enter_arena"
+      ],
+      "door_host": "https://csoai-games-catalog.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-games-catalog.hf.space/gradio_api/mcp/sse"
+    },
+    {
+      "id": "csoai/council-city",
+      "role": "city",
+      "site": "https://councilof.ai/city",
+      "space": "https://huggingface.co/spaces/csoai/council-city",
+      "tools": [
+        "city_door",
+        "living_totals",
+        "get_axis",
+        "measure_contract"
+      ],
+      "door_host": "https://csoai-council-city.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-city.hf.space/gradio_api/mcp/sse"
+    },
+    {
+      "id": "csoai/council-coliseum",
+      "role": "coliseum-arena",
+      "site": "https://councilof.ai/coliseum",
+      "also": [
+        "https://councilof.ai/arena"
+      ],
+      "space": "https://huggingface.co/spaces/csoai/council-coliseum",
+      "tools": [
+        "coliseum_door",
+        "enter_arena",
+        "jail_probe",
+        "living_totals"
+      ],
+      "jail_families": 16,
+      "door_host": "https://csoai-council-coliseum.static.hf.space",
+      "gradio_sse_live": false,
+      "mcp": "https://councilof.ai/mcp",
+      "gradio_sse_planned": "https://csoai-council-coliseum.hf.space/gradio_api/mcp/sse"
+    }
+  ],
+  "n_site_wire": {
+    "rule": "One shared AEO pack. Sites deep-link Council OS. Cursor/Grok add only https://councilof.ai/mcp. Hub Spaces are static doors (door_host). Do not add paused Gradio SSE.",
+    "cursor_mcp_snippet": {
+      "mcpServers": {
+        "csoai": {
+          "url": "https://councilof.ai/mcp"
+        }
+      }
+    }
+  },
+  "also_see": "connect/mcp/hf-product-spaces.json",
+  "honesty": "Quote totals.public_count from GET /api/gspc. Spaces never freeze a full-board measured claim. Jail-probe families 1\u201316 are a contract. Live MCP is https://councilof.ai/mcp. Hub doors are static (cpu-basic quota 0).",
+  "also_see_wire": "connect/mcp/cursor-grok.json"
+}

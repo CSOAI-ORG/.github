@@ -1,0 +1,2 @@
+# Gradio is platform-managed on Spaces — do not pin.
+# mcp_client / door_kit use stdlib only.

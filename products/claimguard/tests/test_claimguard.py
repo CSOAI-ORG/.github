@@ -56,6 +56,25 @@ def test_fail_sixteen_axes_claim():
     assert any(f.code == "claim.sixteen_axes" for f in r.findings)
 
 
+def test_living_22_15_accepts_fifteen_measured():
+    board = _signed_board(
+        totals={
+            "axes": 22,
+            "measured_axes": 15,
+            "quotable_axes": 22,
+            "unmeasured_axes": 7,
+            "public_count": "22 axis · 15 measured",
+        }
+    )
+    ok = audit(board, ["15 measured"])
+    assert ok.ok
+    bad = audit(board, ["all 22 measured"])
+    assert not bad.ok
+    stale = audit(board, ["13 of 14"])
+    assert not stale.ok
+    assert any(f.code == "claim.stale_thirteen_of_fourteen" for f in stale.findings)
+
+
 def test_fail_jail_separation_claim():
     r = audit(_signed_board(), ["jail separation resolved"])
     assert any(f.code == "claim.jail_separation" and f.status == Status.FAIL for f in r.findings)

@@ -9,7 +9,7 @@
 |-------|-------|
 | Name | Council of AI — Measurement Agent |
 | Card URL | https://councilof.ai/.well-known/agent-card.json |
-| Description | Independent AI-governance measurement — GSPC 13 measured of 14, signed board, stranger verify |
+| Description | Independent AI-governance measurement — living GSPC board (quote totals.public_count from GET /api/gspc), signed board, stranger verify |
 
 ## N5-16: artinet.io
 
@@ -28,7 +28,7 @@
 **Edit:** README.md only (English)
 
 ```markdown
-- ✨ Add: [Council of AI](https://councilof.ai) — GSPC governance measurement agent (13 measured of 14 axes, Ed25519-signed board, stranger verify at /gspc-verify). [Agent card](https://councilof.ai/.well-known/agent-card.json)
+- ✨ Add: [Council of AI](https://councilof.ai) — GSPC governance measurement agent (quote totals.public_count from GET /api/gspc, Ed25519-signed board, stranger verify at /gspc-verify). [Agent card](https://councilof.ai/.well-known/agent-card.json)
 ```
 
 **Rationale:** Independent measurement body publishing A2A v1.0 agent card with governance, crosswalk, and benchmark-quality skills. Measurement only — not certification.
@@ -39,7 +39,7 @@
 **Status:** GATED — GraphQL `addDiscussionComment` → FORBIDDEN for integration (retried 2026-08-24T21:58Z); post manually  
 **Comment (one line + link):**
 
-> Council of AI — independent GSPC governance measurement (13 of 14 axes): https://councilof.ai/.well-known/agent-card.json
+> Council of AI — independent GSPC governance measurement (quote totals.public_count from GET /api/gspc): https://councilof.ai/.well-known/agent-card.json
 
 ## N5-19: Google Cloud Agent Registry — DEFERRED
 

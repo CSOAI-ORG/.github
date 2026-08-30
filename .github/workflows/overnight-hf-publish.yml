@@ -22,6 +22,10 @@ on:
     paths:
       - 'export/**'
       - 'scripts/overnight-hf-publish.sh'
+      - 'scripts/publish-play-spaces.sh'
+      - 'scripts/publish-product-spaces.sh'
+      - 'docs/hf-patches/spaces/**'
+      - 'connect/mcp/**'
       - '.github/workflows/overnight-hf-publish.yml'
       - '.github/workflows/overnight-hf-cron.yml'
   # Schedule moved to overnight-hf-cron.yml (dedicated workflow for reliable cron).
@@ -73,6 +77,12 @@ jobs:
         env:
           STRICT: "1"
         run: bash ops/verify-overnight-pack.sh
+
+      - name: Verify play-space MCP doors
+        run: node scripts/verify-play-spaces.mjs
+
+      - name: Verify product-space MCP fabric
+        run: node scripts/verify-product-spaces.mjs
 
       - name: Upload verification log
         if: always()
