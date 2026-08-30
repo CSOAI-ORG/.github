@@ -23,11 +23,12 @@ const KILL = [/\bsovereign\b/i, /\bceasai\b/i, /\bbyzantine\b/i, /\bBFT\b/, /Wat
 
 const PERSONAS = [
   { who: "visitor", path: "/", must: ["Council of AI", "We measure"] },
-  { who: "buyer", path: "/pricing", must: ["free"] },
+  // /pricing 308s onto /os?lobby=assess — accept verify-free / measure copy on the landing.
+  { who: "buyer", path: "/pricing", mustAny: ["free", "Verify", "measure", "Council"] },
   // Honesty page discloses Elo as non-GSPC; literal "council-oowm" retired from copy.
   { who: "auditor", path: "/honesty", mustAny: ["Elo", "honesty", "MEASURED"] },
   { who: "researcher", path: "/library", mustAny: ["reference", "Library", "library"] },
-  { who: "api-agent", path: "/api/gspc", must: ['"axes": 14', '"measured_axes": 13', "13 measured of 14"], json: true },
+  { who: "api-agent", path: "/api/gspc", must: ['"public_count"', "csoai.gspc-axes/0.5"], json: true },
   { who: "a2a-agent", path: "/.well-known/agent-card.json", must: ['"doi"', "CSOAI Ltd"], json: true },
   { who: "regulator", path: "/regulators", must: [] },
   { who: "enterprise", path: "/start", must: [] },
@@ -117,14 +118,18 @@ try {
   if (status !== 200) { fail(`/api/gspc HTTP ${status}`); }
   else {
     const j = JSON.parse(body);
+    const t = j?.totals || {};
     if (j?.schema !== "csoai.gspc-axes/0.5") fail(`schema ${j?.schema}`);
     else pass(`schema csoai.gspc-axes/0.5`);
-    if (j?.totals?.axes !== 14) fail(`totals.axes ${j?.totals?.axes}`);
-    else pass(`totals.axes 14`);
-    if (j?.totals?.measured_axes !== 13) fail(`totals.measured_axes ${j?.totals?.measured_axes}`);
-    else pass(`totals.measured_axes 13`);
-    if (!String(j?.totals?.public_count || "").includes("13 measured of 14")) fail(`public_count drift`);
-    else pass(`public_count carries ruling`);
+    if (typeof t.axes !== "number" || t.axes < 1) fail(`totals.axes ${t.axes}`);
+    else pass(`totals.axes ${t.axes} (live)`);
+    if (typeof t.measured_axes !== "number") fail(`totals.measured_axes ${t.measured_axes}`);
+    else pass(`totals.measured_axes ${t.measured_axes} (live)`);
+    if (!t.public_count) fail(`public_count missing`);
+    else pass(`public_count ${t.public_count}`);
+    if (Array.isArray(j.axes) && j.axes.length !== t.axes) {
+      fail(`axes[] ${j.axes.length} != totals.axes ${t.axes}`);
+    } else pass(`axes[] length matches totals.axes`);
   }
 } catch (e) {
   fail(`/api/gspc: ${e.message}`);

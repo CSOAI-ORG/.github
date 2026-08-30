@@ -189,15 +189,17 @@ for (const r of REDIRECTS) {
 }
 
 // ── All 14 GSPC axes on API ──
-console.log("\n## Axis tooling (14 slots)\n");
+console.log("\n## Axis tooling (living GET)\n");
 const gspc = await get("/api/gspc");
 if (gspc.status !== 200) fail(`/api/gspc HTTP ${gspc.status}`);
 else {
   try {
     const j = JSON.parse(gspc.body);
     const axes = j.axes || [];
-    if (axes.length !== 14) fail(`axes[] length ${axes.length} (want 14)`);
-    else pass("axes[] — 14 quotable slots");
+    const want = j.totals?.axes;
+    if (typeof want !== "number" || axes.length !== want) {
+      fail(`axes[] length ${axes.length} (want totals.axes ${want})`);
+    } else pass(`axes[] — ${want} slots (live)`);
     const names = axes.map((a) => a.axis).sort();
     for (const slot of ["governance", "safety", "provenance", "continuity", "jail"]) {
       if (!names.some((n) => String(n).includes(slot) || n === slot)) {

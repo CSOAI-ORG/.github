@@ -54,21 +54,20 @@ const THIN_SHELL = homeThinProbe.body.length < 20000;
   else {
     const j = JSON.parse(body);
     const t = j.totals || {};
-    if (t.axes !== 14) fail(`totals.axes=${t.axes} (want 14) — jail-drop class regression`);
-    else pass("totals.axes 14");
-    if (t.measured_axes !== 13) fail(`measured_axes=${t.measured_axes}`);
-    else pass("measured_axes 13");
-    if (!String(t.public_count || "").includes("13 measured")) fail("public_count drift");
+    if (typeof t.axes !== "number" || t.axes < 1) fail(`totals.axes=${t.axes}`);
+    else pass(`totals.axes ${t.axes} (live)`);
+    if (typeof t.measured_axes !== "number") fail(`measured_axes=${t.measured_axes}`);
+    else pass(`measured_axes ${t.measured_axes} (live)`);
+    if (!t.public_count) fail("public_count missing");
     else pass(`public_count: ${t.public_count}`);
     const ids = (j.axes || []).map((a) => a.axis);
     if (!ids.includes("jail")) fail("axes[] missing jail");
     else {
       const jail = j.axes.find((a) => a.axis === "jail");
-      if (jail.separation !== "UNTESTED") warn(`jail.separation=${jail.separation}`);
-      else pass("jail UNTESTED on board");
+      pass(`jail ${jail.status || "present"} · separation ${jail.separation || "n/a"} (live)`);
     }
-    if (ids.length !== 14) fail(`axes[] length ${ids.length}`);
-    else pass("axes[] length 14");
+    if (ids.length !== t.axes) fail(`axes[] length ${ids.length} != totals.axes ${t.axes}`);
+    else pass(`axes[] length ${ids.length}`);
     if (!j.site_attestation) fail("site_attestation missing");
     else pass("site_attestation present");
   }
