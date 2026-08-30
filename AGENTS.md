@@ -25,11 +25,13 @@ integrity checker (Ed25519 over RFC 8785 canonical JSON).
   ```bash
   cd products/claimguard
   python3 claimguard.py --self-test      # signature-holds / mutation-fails demo
-  python3 -m pytest -q                   # 5 tests
-  python3 claimguard.py check --board board.json --claim "14 quotable axes"
+  python3 -m pytest -q
   python3 claimguard.py check --live     # fetches https://councilof.ai/api/gspc
+  python3 claimguard.py check --live --claim "16 measured axes"   # must FAIL
   ```
 
+- Quote `totals.public_count` from the living GET. Do not freeze 13/14 or 15/22
+  in this file. Cursor / Grok MCP is `https://councilof.ai/mcp`.
 - Exit code `0` = PASS, `1` = FAIL (by design — mutated boards / overclaims
   must fail). CI equivalent lives in `products/claimguard/.github/workflows/claimguard.yml`.
 
