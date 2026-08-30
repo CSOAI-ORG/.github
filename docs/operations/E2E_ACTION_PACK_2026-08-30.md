@@ -136,3 +136,6 @@ Template: counts from `GET https://councilof.ai/api/gspc` → `totals.public_cou
 - Outbound listing PRs waiting review (clean): AthenaCore #70, visenger #13, morganrcu #43, punkpeye #12480.
 - RunPod low-balance mail — **ops needed by Nick** (no API token in this VM); top-up or export volume.
 - Do not unsolicited-reply Iman/Anton CPB thread; Anton already accepted.
+
+- councilof-ai **PR #946** (draft): evidence-bind KAT + HOW-TO-VERIFY #461 note + verify-card non-canonical — https://github.com/CSOAI-ORG/councilof-ai/pull/946
+- agentrust clean listing **PR #86** (mergeable, needs Imran review) — close dirty #77/#83 — https://github.com/agentrust-io/awesome-ai-governance/pull/86
