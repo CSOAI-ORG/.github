@@ -9,10 +9,13 @@ body. We measure AI systems against the rules that govern them, sign the
 result (Ed25519), and publish what we cannot yet measure. Measurement, not
 certification. We do not remediate.
 
+Live hosting is **Cloudflare Pages + Wrangler** (`councilof-ai` → councilof.ai,
+`csoai-site` → csoai.org). Not Vercel.
+
 | Surface | URL |
 |---|---|
-| Public site | [councilof.ai](https://councilof.ai) |
-| Living board | [councilof.ai/api/gspc](https://councilof.ai/api/gspc) |
+| Public site | [councilof.ai](https://councilof.ai) · [csoai.org](https://csoai.org) |
+| Living board | [councilof.ai/api/gspc](https://councilof.ai/api/gspc) (schema `csoai.gspc-axes/0.5`; 22 slots · 15 measured as of 31 Aug 2026 — quote the API) |
 | Axis names (agents) | Axis names live on the API at [`councilof.ai/api/gspc`](https://councilof.ai/api/gspc); see `axes[]` |
 | Master plan | [`docs/MASTER_PLAN.md`](docs/MASTER_PLAN.md) — Moody’s × LM Arena × AG-UI one ask→does-it system |
 | Estate inventory | [`docs/ESTATE_INVENTORY.md`](docs/ESTATE_INVENTORY.md) — mined surfaces, gaps, track-loss |
