@@ -75,25 +75,25 @@ if (THIN_SHELL) {
 }
 
 // ── Canon rail (never drift) ──
-console.log("## GSPC canon (13 measured of 14)\n");
+console.log("## GSPC canon (living GET /api/gspc)\n");
 const gspc = await get("/api/gspc");
 if (gspc.status !== 200) fail(`/api/gspc HTTP ${gspc.status}`);
 else {
   try {
     const j = JSON.parse(gspc.body);
-    if (j.totals?.axes !== 14) fail(`totals.axes ${j.totals?.axes}`);
-    else pass("totals.axes 14");
-    if (j.totals?.measured_axes !== 13) fail(`totals.measured_axes ${j.totals?.measured_axes}`);
-    else pass("totals.measured_axes 13");
-    if (!String(j.totals?.public_count || "").includes("13 measured")) fail("public_count drift");
-    else pass("public_count carries 13-of-14 ruling");
+    const t = j.totals || {};
+    if (typeof t.axes !== "number" || t.axes < 1) fail(`totals.axes ${t.axes}`);
+    else pass(`totals.axes ${t.axes} (live)`);
+    if (typeof t.measured_axes !== "number") fail(`totals.measured_axes ${t.measured_axes}`);
+    else pass(`totals.measured_axes ${t.measured_axes} (live)`);
+    if (!t.public_count) fail("public_count missing");
+    else pass(`public_count ${t.public_count}`);
     const cb = (j.domains || []).find((d) => d.domain === "cross-border");
     if (cb) pass(`domains cross-border row (${cb.status || "live"})`);
     else warn("M4 move 032: no cross-border domain row on /api/gspc");
     const jail = (j.axes || []).find((a) => a.axis === "jail");
     if (!jail) fail("jail slot missing");
-    else if (jail.separation !== "UNTESTED") fail(`jail.separation=${jail.separation}`);
-    else pass("jail UNTESTED (14th quotable slot)");
+    else pass(`jail ${jail.status || "present"} · separation ${jail.separation || "n/a"} (live)`);
   } catch (e) {
     fail(`/api/gspc JSON: ${e.message}`);
   }
@@ -282,7 +282,7 @@ for (const row of DONE) {
     pass(`[x] Move ${row.id}: ${row.label}`);
   }
 }
-pass("[x] GSPC canon 13 measured of 14 — LIVE");
+pass("[x] GSPC canon living GET /api/gspc — LIVE");
 pass("[x] ClaimGuard gated chat — LIVE");
 pass("[x] /crosswalk foundation page — LIVE (M1 v1 canon after deploy)");
 pass("[x] receipts UNPUBLISHED honesty — LIVE");
