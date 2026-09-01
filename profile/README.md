@@ -10,7 +10,8 @@ Snapshot 31 Aug 2026 from that API (if this disagrees with the API, the API wins
 
 | | Live |
 |---|---|
-| Slots · measured · empty | **22 · 15 · 7** (`totals.public_count`) |
+| Slots · measured · empty | **22 · 22 · 0** (`totals.public_count`) |
+| Split | **14 model-comparison + 8 fact cards** (`by_family`) |
 | Behavioural GSPC | **14 / 14 measured** (13 canonical + jail) |
 | Signed cards | **335** (`n_cards == n_cells` on [`/signed/card_index.json`](https://councilof.ai/signed/card_index.json)) |
 | Living stamp | **SIGNED** · `did:web:csoai.org#board-attestation-1` |
