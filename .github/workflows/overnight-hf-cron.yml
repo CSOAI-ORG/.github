@@ -32,6 +32,12 @@ jobs:
           curl -LsSf https://hf.co/cli/install.sh | bash -s
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
+      # products/claimguard/claimguard.py imports cryptography at module level for
+      # Ed25519 verification. It was never installed, so the "Product doors on Hub"
+      # step died on ModuleNotFoundError every run.
+      - name: Install Python deps used by the pack (cryptography for claimguard)
+        run: pip install --quiet cryptography
+
       - name: Probe OIDC publishers (N5-01 preflight)
         continue-on-error: true
         env:
