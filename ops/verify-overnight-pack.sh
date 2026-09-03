@@ -54,13 +54,24 @@ http_code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
   if [[ "$code" == "200" ]]; then pass "Space HTTP $code"; else fail "Space HTTP $code"; fi
 
   echo "--- N5-10/11 MCP registry"
-  mcp=$(curl -s "https://registry.modelcontextprotocol.io/v0.1/servers?search=gspc" | python3 -c "
+  # Assert the SERVER IS LISTED and the registry names a current version for it.
+  # Two earlier bugs are fixed here and must not come back:
+  #   1. latest[0] was taken from a multi-server search, so the value checked was
+  #      whichever CSOAI server happened to sort first (a2a-governance-bridge-mcp),
+  #      not the gspc server. The name is now matched exactly.
+  #   2. The version was compared to a hardcoded "1.0.2", which turns this check red
+  #      on EVERY publish. The registry version is the thing we do not control, so
+  #      it is reported, never asserted equal to a frozen string.
+  mcp=$(curl -s "https://registry.modelcontextprotocol.io/v0/servers?search=gspc" | python3 -c "
 import sys,json
+NAME='io.github.CSOAI-ORG/gspc'
 d=json.load(sys.stdin)
-latest=[x['server']['version'] for x in d.get('servers',[]) if x.get('_meta',{}).get('io.modelcontextprotocol.registry/official',{}).get('isLatest')]
-print(latest[0] if latest else 'none')
+hit=[x for x in d.get('servers',[])
+     if x.get('server',{}).get('name')==NAME
+     and x.get('_meta',{}).get('io.modelcontextprotocol.registry/official',{}).get('isLatest')]
+print(hit[0]['server']['version'] if hit else 'none')
 " 2>/dev/null || echo "none")
-  if [[ "$mcp" == "1.0.2" ]]; then pass "MCP latest=$mcp"; else fail "MCP latest=$mcp (expected 1.0.2)"; fi
+  if [[ "$mcp" != "none" && -n "$mcp" ]]; then pass "MCP io.github.CSOAI-ORG/gspc listed, registry latest=$mcp"; else fail "MCP io.github.CSOAI-ORG/gspc not listed as latest in the official registry"; fi
 
   echo "--- N5-13/14 A2A agent card"
   curl -s "https://councilof.ai/.well-known/agent-card.json" -o "/tmp/overnight-agent-card-$TS.json"
