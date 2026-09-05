@@ -3,14 +3,26 @@
 # The generator lives in CSOAI-ORG/councilof-ai (scripts/github/org-readme.py) so the
 # profile and the councilof-ai README are produced by ONE script, not two drifting copies.
 # No secret is needed: every source is a public GET, and the commit uses this repo's own
-# GITHUB_TOKEN (contents: write on CSOAI-ORG/.github only). Nothing is typed by a person;
-# a source that does not answer is printed as UNCHECKABLE, never a 0.
+# GITHUB_TOKEN (contents: write on CSOAI-ORG/.github only). GSPC_BOARD_TOKEN is not used
+# and does not need to reach this repository. Nothing is typed by a person; a source that
+# does not answer is printed as UNCHECKABLE, never a 0; a page that would carry a word the
+# estate does not use, or a price, is refused by the generator itself.
+#
+# Note: CSOAI-ORG is a GitHub USER account, so profile/README.md here does not render on
+# github.com/CSOAI-ORG (that page renders CSOAI-ORG/csoai-org/README.md, the owner's
+# personal profile). This file is kept fresh so it is ready the day the account becomes an
+# organisation, and so the owner can copy it across whenever they choose.
 name: org-readme
 
 on:
   schedule:
     - cron: "17 6 * * *"     # daily 06:17 UTC
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "councilof-ai ref to read the generator from (master once PR #1413 is merged)"
+        default: master
+        required: false
 
 permissions:
   contents: write
@@ -25,10 +37,21 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: pick the councilof-ai ref that carries the generator
+        id: ref
+        run: |
+          set -euo pipefail
+          want="${{ github.event.inputs.ref || 'master' }}"
+          for ref in "$want" master ghorg-profile-05sep; do
+            if curl -sfI "https://raw.githubusercontent.com/CSOAI-ORG/councilof-ai/$ref/scripts/github/org-readme.py" >/dev/null; then
+              echo "ref=$ref" >> "$GITHUB_OUTPUT"; echo "generator found on $ref"; exit 0
+            fi
+          done
+          echo "no ref carries scripts/github/org-readme.py"; exit 1
       - uses: actions/checkout@v4
         with:
           repository: CSOAI-ORG/councilof-ai
-          ref: master
+          ref: ${{ steps.ref.outputs.ref }}
           path: councilof-ai
           sparse-checkout: |
             scripts/github
