@@ -1,0 +1,63 @@
+# Regenerates profile/README.md from LIVE endpoints once a day.
+#
+# The generator lives in CSOAI-ORG/councilof-ai (scripts/github/org-readme.py) so the
+# profile and the councilof-ai README are produced by ONE script, not two drifting copies.
+# No secret is needed: every source is a public GET, and the commit uses this repo's own
+# GITHUB_TOKEN (contents: write on CSOAI-ORG/.github only). Nothing is typed by a person;
+# a source that does not answer is printed as UNCHECKABLE, never a 0.
+name: org-readme
+
+on:
+  schedule:
+    - cron: "17 6 * * *"     # daily 06:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: org-readme
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: CSOAI-ORG/councilof-ai
+          ref: master
+          path: councilof-ai
+          sparse-checkout: |
+            scripts/github
+            docs/product
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: derive profile/README.md from live endpoints
+        env:
+          ORG_README_GH: "1"
+        run: |
+          set -euo pipefail
+          python3 councilof-ai/scripts/github/org-readme.py \
+            --product-index councilof-ai/docs/product/_INDEX.json \
+            --profile > profile/README.md.new
+          # refuse to publish a page whose lid did not derive — an UNCHECKABLE lid means the board did not answer
+          if grep -q '^> \*\*UNCHECKABLE\*\*' profile/README.md.new; then
+            echo "board did not answer; keeping the previous README"; rm profile/README.md.new; exit 0
+          fi
+          mv profile/README.md.new profile/README.md
+      - name: commit if anything but the stamp changed
+        run: |
+          set -euo pipefail
+          git config user.name "csoai-org-readme"
+          git config user.email "nicholas@csoai.org"
+          # ignore a diff that is only the derived-timestamp lines
+          if git diff --ignore-matching-lines='derived 20[0-9][0-9]-' --quiet -- profile/README.md; then
+            echo "no substantive change"; git checkout -- profile/README.md; exit 0
+          fi
+          git add profile/README.md
+          git commit -m "profile: re-derive from live endpoints ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+          git push
