@@ -9,7 +9,7 @@
 
 [![PyPI csoai-gspc](https://img.shields.io/pypi/v/csoai-gspc?style=flat-square&color=16a34a&label=PyPI%20csoai--gspc)](https://pypi.org/project/csoai-gspc/) [![npm csoai-gspc-mcp](https://img.shields.io/npm/v/csoai-gspc-mcp?style=flat-square&color=16a34a&label=npm%20csoai--gspc--mcp)](https://www.npmjs.com/package/csoai-gspc-mcp) [![DOI 10.5281/zenodo.21991104](https://zenodo.org/badge/DOI/10.5281/zenodo.21991104.svg)](https://doi.org/10.5281/zenodo.21991104) [![License MIT](https://img.shields.io/badge/license-MIT-16a34a?style=flat-square)](https://github.com/CSOAI-ORG/councilof-ai/blob/master/LICENSE)
 
-_derived 2026-09-08T11:26:32Z by [`scripts/github/org-readme.py`](https://github.com/CSOAI-ORG/councilof-ai/blob/master/scripts/github/org-readme.py) — every number on this page is read live from the URLs in that script; if this page and the API disagree, the API is right._
+_derived 2026-09-09T11:33:16Z by [`scripts/github/org-readme.py`](https://github.com/CSOAI-ORG/councilof-ai/blob/master/scripts/github/org-readme.py) — every number on this page is read live from the URLs in that script; if this page and the API disagree, the API is right._
 
 ## The board today
 
@@ -100,7 +100,7 @@ _9 products read from `docs/product/_INDEX.json` (as_of 2026-09-06T06:00:18Z). A
 | surface | what lands there | read back at derive time | carries the live root `as_of`? |
 |---|---|---|---|
 | **Hugging Face dataset** [`csoai/gspc-board`](https://huggingface.co/datasets/csoai/gspc-board) | `snapshot/` — board.json + root.json byte-for-byte, SNAPSHOT.json, check-board.sh, gspc-axes.csv/.jsonl | as_of `2026-09-07T12:30:34Z` · merkle `1340de5eb7eb…` · 168 leaves · modified 2026-09-07T15:14:00.000Z | **yes** |
-| **Hugging Face Space** [`csoai/gspc-board`](https://huggingface.co/spaces/csoai/gspc-board) | the same `snapshot/` folder beside the one living Space | runtime `RUNNING` · modified 2026-09-07T15:14:02.000Z | n/a |
+| **Hugging Face Space** [`csoai/gspc-board`](https://huggingface.co/spaces/csoai/gspc-board) | the same `snapshot/` folder beside the one living Space | runtime `RUNNING` · modified 2026-09-09T07:56:25.000Z | n/a |
 | **Kaggle dataset** [`nicktempleman/csoai-gspc-living-board`](https://www.kaggle.com/datasets/nicktempleman/csoai-gspc-living-board) | a new dataset version per changed fingerprint; the subtitle carries `as_of` | HTTP 200 · latest ISO timestamp on the listing page `2026-09-07T15:13:59Z` | no — behind |
 | **GitHub mirror** [`CSOAI-ORG/gspc-board`](https://github.com/CSOAI-ORG/gspc-board) | the snapshot files on `main` | as_of `2026-09-07T12:30:34Z` · merkle `1340de5eb7eb…` · 168 leaves | **yes** |
 | **Zenodo** [`10.5281/zenodo.22293340`](https://doi.org/10.5281/zenodo.22293340) | a new version under the concept DOI, `isDerivedFrom` the methodology record 10.5281/zenodo.21991104 | 1 versions · latest `10.5281/zenodo.22646341` = as_of `2026-09-07T12:30:34Z` (2026-09-07) | **yes** |
@@ -109,7 +109,7 @@ _9 products read from `docs/product/_INDEX.json` (as_of 2026-09-06T06:00:18Z). A
 
 _Pushed by `scripts/spray/gspc-spray.py` (daily, idempotent by `as_of` and fingerprint). The live root `as_of` at derive time was `2026-09-07T12:30:34Z`; a surface that lags is shown lagging, not reconciled. Board data is CC-BY-4.0; the reader packages are Apache-2.0 / Apache-2.0._
 
-Also on the Hub: [`csoai`](https://huggingface.co/csoai) — 100 datasets (frozen banks, hub cards), 39 Spaces, 2 models. Methodology: [10.5281/zenodo.21991104](https://doi.org/10.5281/zenodo.21991104) — latest version `10.5281/zenodo.21991105` (2026-08-18). Board snapshot cited on 2026-09-05: `10.5281/zenodo.22344048` = as_of `2026-09-05T09:00:28Z`, under concept `10.5281/zenodo.22293340`. Our own models losing our own arena: [councilof.ai/honesty](https://councilof.ai/honesty/).
+Also on the Hub: [`csoai`](https://huggingface.co/csoai) — 100 datasets (frozen banks, hub cards), 39 Spaces, 2 models. Methodology: [10.5281/zenodo.21991104](https://doi.org/10.5281/zenodo.21991104) — latest version `UNCHECKABLE` (UNCHECKABLE). Board snapshot cited on 2026-09-05: `UNCHECKABLE` = as_of `UNCHECKABLE`, under concept `UNCHECKABLE`. Our own models losing our own arena: [councilof.ai/honesty](https://councilof.ai/honesty/).
 
 ## Repositories that carry the estate
 
@@ -133,4 +133,4 @@ The PyPI reader `csoai-gspc` and the npm MCP server `csoai-gspc-mcp` are built f
 
 ---
 
-<sub>CS<strong>O</strong>AI · CSOAI Ltd · UK Companies House 16939677 · 3rd Floor 86-90 Paul Street, London EC2A 4NE · nicholas@csoai.org · [councilof.ai](https://councilof.ai) · derived 2026-09-08T11:26:32Z</sub>
+<sub>CS<strong>O</strong>AI · CSOAI Ltd · UK Companies House 16939677 · 3rd Floor 86-90 Paul Street, London EC2A 4NE · nicholas@csoai.org · [councilof.ai](https://councilof.ai) · derived 2026-09-09T11:33:16Z</sub>
