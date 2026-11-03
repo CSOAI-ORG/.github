@@ -1,41 +1,7 @@
-# 🏛️ CSOAI-ORG
+# CSOAI-ORG
 
-**200 open-source repositories for AI governance, MCP servers, and sovereign AI infrastructure.**
+Public home of the org's profile derivation: `profile/README.md` is re-derived from live endpoints by `.github/workflows/org-readme.yml` (daily; the run refuses to publish if the live board did not answer).
 
-## 📊 Live Stats
+The rendered GitHub profile lives in **[csoai-org](https://github.com/CSOAI-ORG/csoai-org)**. The measurement estate itself lives in **[councilof-ai](https://github.com/CSOAI-ORG/councilof-ai)** — live board at [councilof.ai/api/gspc](https://councilof.ai/api/gspc), free verification at [councilof.ai/gspc-verify/](https://councilof.ai/gspc-verify/).
 
-| Metric | Count |
-|--------|-------|
-| **Total Repos** | 200 |
-| **Awesome Lists** | 51 |
-| **MCP Servers (PyPI)** | 9 |
-| **MCP Servers (npm)** | 5 |
-| **GSPC Root Leaves** | 305 |
-| **Bitcoin Block** | 967007 |
-
-## 🔑 Key Projects
-
-- **[Council of AI](https://councilof.ai)** — Live platform with 305-leaf GSPC root
-- **[GSPC Board](https://councilof.ai/gspc)** — Bitcoin-anchored measurement board
-- **[csoai-governance](https://pypi.org/project/csoai-governance)** — MCP server for AI governance
-- **[awesome-mcp-servers PR #14316](https://github.com/punkpeye/awesome-mcp-servers/pull/14316)** — Adding CSOAI to the canonical list
-
-## 📦 Quick Start
-
-```bash
-# Python MCP server
-uvx csoai-governance-mcp
-
-# npm wrapper
-npx @meok-labs/csoai
-```
-
-## 🔗 Links
-
-- [councilof.ai](https://councilof.ai) — Live platform
-- [csoai.org](https://csoai.org) — Company
-- [GSPC Root](https://councilof.ai/gspc) — Bitcoin-anchored Merkle root
-
----
-
-*CSOAI Ltd (UK 16939677) — Measurement, not certification.*
+CSOAI measures AI behaviour and publishes signed evidence. Measurement, not certification.
