@@ -11,7 +11,7 @@
 
 [![PyPI csoai-gspc](https://img.shields.io/pypi/v/csoai-gspc?style=flat-square&color=16a34a&label=PyPI%20csoai--gspc)](https://pypi.org/project/csoai-gspc/) [![npm csoai-gspc-mcp](https://img.shields.io/npm/v/csoai-gspc-mcp?style=flat-square&color=16a34a&label=npm%20csoai--gspc--mcp)](https://www.npmjs.com/package/csoai-gspc-mcp) [![Methodology](https://img.shields.io/badge/methodology-councilof.ai-16a34a?style=flat-square)](https://councilof.ai/methodology/) [![License MIT](https://img.shields.io/badge/license-MIT-16a34a?style=flat-square)](https://github.com/CSOAI-ORG/councilof-ai/blob/master/LICENSE)
 
-_derived 2026-11-08T22:09:55Z by [`scripts/github/org-readme.py`](https://github.com/CSOAI-ORG/councilof-ai/blob/master/scripts/github/org-readme.py) — measurement and distribution fields are read from the sources in that script at derive time. Recheck those sources for current values; external-use examples retain their cited dates and scope._
+_derived 2026-11-09T06:37:34Z by [`scripts/github/org-readme.py`](https://github.com/CSOAI-ORG/councilof-ai/blob/master/scripts/github/org-readme.py) — measurement and distribution fields are read from the sources in that script at derive time. Recheck those sources for current values; external-use examples retain their cited dates and scope._
 
 ## The board today
 
@@ -83,7 +83,7 @@ Ed25519 cards → Merkle root → transparency-log witness → corrections ledge
 | 3 · Transparency-log witness | Rekor **WITNESSED** · OpenTimestamps `CONFIRMED_BITCOIN` · EAS `NOT_YET` · witnessed root `bc2b1b4e6ecd…` equals live `root.json` at derive time: **True** · pointer's own last drift check `MATCH` at `2026-11-08T03:33:25Z` · conflict `NONE` | [`/interop/root-witness-pointer.json`](https://councilof.ai/interop/root-witness-pointer.json) · [sidecar](https://councilof.ai/interop/root-witness-latest.json) |
 | 4 · Corrections ledger | **93** entries · latest `C-2026-1006-13` (2026-10-06) · signature_state **VALID** · CC-BY-4.0 | [`/api/corrections`](https://councilof.ai/api/corrections) |
 | Living board stamp | **SIGNED** under `did:web:csoai.org#board-attestation-1` | [`/api/gspc` → `measured_on.living_stamp`](https://councilof.ai/api/gspc) |
-| Third-party Hub cells | **438** cells: MEASURED 438 · UNMEASURED 0 · complete read: True (as_of `2026-11-08T22:09:46.368Z` — re-GET `/api/hub-cards` → `.counts`; never freeze) | [`/api/hub-cards`](https://councilof.ai/api/hub-cards) |
+| Third-party Hub cells | **438** cells: MEASURED 438 · UNMEASURED 0 · complete read: True (as_of `2026-11-09T06:37:28.971Z` — re-GET `/api/hub-cards` → `.counts`; never freeze) | [`/api/hub-cards`](https://councilof.ai/api/hub-cards) |
 | Keys (DID) | `did:web:csoai.org` · 7 verification methods · card key x=`1MsOqhbV9Q…` | [`/.well-known/did.json`](https://csoai.org/.well-known/did.json) |
 | A2A agent card · x402 manifest | `Council of AI — Measurement Agent`, 15 skills · `csoai.x402/0.2`, network `eip155:8453`, mode `live`, 32 metered resources | [`/.well-known/agent.json`](https://councilof.ai/.well-known/agent.json) · [`/.well-known/x402.json`](https://councilof.ai/.well-known/x402.json) |
 
@@ -113,7 +113,7 @@ _9 products read from `docs/product/_INDEX.json` (as_of 2026-09-06T06:00:18Z). A
 
 | surface | what lands there | read back at derive time | carries the live root `as_of`? |
 |---|---|---|---|
-| **Hugging Face dataset** [`csoai/gspc-board`](https://huggingface.co/datasets/csoai/gspc-board) | `snapshot/` — board.json + root.json byte-for-byte, SNAPSHOT.json, check-board.sh, gspc-axes.csv/.jsonl | as_of `2026-11-07T20:54:37Z` · merkle `bc2b1b4e6ecd…` · 442 leaves · modified 2026-11-08T01:05:21.000Z | **yes** |
+| **Hugging Face dataset** [`csoai/gspc-board`](https://huggingface.co/datasets/csoai/gspc-board) | `snapshot/` — board.json + root.json byte-for-byte, SNAPSHOT.json, check-board.sh, gspc-axes.csv/.jsonl | as_of `2026-11-07T20:54:37Z` · merkle `bc2b1b4e6ecd…` · 442 leaves · modified 2026-11-09T02:15:50.000Z | **yes** |
 | **Hugging Face Space** [`csoai/gspc-board`](https://huggingface.co/spaces/csoai/gspc-board) | the same `snapshot/` folder beside the one living Space | runtime `RUNNING` · modified 2026-11-08T01:05:25.000Z | n/a |
 | **Kaggle dataset** [`nicktempleman/csoai-gspc-living-board`](https://www.kaggle.com/datasets/nicktempleman/csoai-gspc-living-board) | a new dataset version per changed fingerprint; the subtitle carries `as_of` | HTTP 200 · latest listing timestamp `2026-11-08T01:05:17Z`; snapshot `as_of` not checked here | n/a |
 | **GitHub mirror** [`CSOAI-ORG/gspc-board`](https://github.com/CSOAI-ORG/gspc-board) | the snapshot files on `main` | as_of `2026-11-07T20:54:37Z` · merkle `bc2b1b4e6ecd…` · 442 leaves | **yes** |
@@ -147,4 +147,4 @@ The PyPI reader `csoai-gspc` and the npm MCP server `csoai-gspc-mcp` are built f
 
 ---
 
-<sub>CS<strong>O</strong>AI · CSOAI Ltd (Council of AI) · 3rd Floor 86-90 Paul Street, London EC2A 4NE · nicholas@csoai.org · [councilof.ai](https://councilof.ai) · derived 2026-11-08T22:09:55Z</sub>
+<sub>CS<strong>O</strong>AI · CSOAI Ltd (Council of AI) · 3rd Floor 86-90 Paul Street, London EC2A 4NE · nicholas@csoai.org · [councilof.ai](https://councilof.ai) · derived 2026-11-09T06:37:34Z</sub>
