@@ -11,7 +11,7 @@
 
 [![PyPI csoai-gspc](https://img.shields.io/pypi/v/csoai-gspc?style=flat-square&color=16a34a&label=PyPI%20csoai--gspc)](https://pypi.org/project/csoai-gspc/) [![npm csoai-gspc-mcp](https://img.shields.io/npm/v/csoai-gspc-mcp?style=flat-square&color=16a34a&label=npm%20csoai--gspc--mcp)](https://www.npmjs.com/package/csoai-gspc-mcp) [![Methodology](https://img.shields.io/badge/methodology-councilof.ai-16a34a?style=flat-square)](https://councilof.ai/methodology/) [![License MIT](https://img.shields.io/badge/license-MIT-16a34a?style=flat-square)](https://github.com/CSOAI-ORG/councilof-ai/blob/master/LICENSE)
 
-_derived 2026-11-09T06:37:34Z by [`scripts/github/org-readme.py`](https://github.com/CSOAI-ORG/councilof-ai/blob/master/scripts/github/org-readme.py) — measurement and distribution fields are read from the sources in that script at derive time. Recheck those sources for current values; external-use examples retain their cited dates and scope._
+_derived 2026-11-09T16:47:34Z by [`scripts/github/org-readme.py`](https://github.com/CSOAI-ORG/councilof-ai/blob/master/scripts/github/org-readme.py) — measurement and distribution fields are read from the sources in that script at derive time. Recheck those sources for current values; external-use examples retain their cited dates and scope._
 
 ## The board today
 
@@ -83,7 +83,7 @@ Ed25519 cards → Merkle root → transparency-log witness → corrections ledge
 | 3 · Transparency-log witness | Rekor **WITNESSED** · OpenTimestamps `CONFIRMED_BITCOIN` · EAS `NOT_YET` · witnessed root `bc2b1b4e6ecd…` equals live `root.json` at derive time: **True** · pointer's own last drift check `MATCH` at `2026-11-08T03:33:25Z` · conflict `NONE` | [`/interop/root-witness-pointer.json`](https://councilof.ai/interop/root-witness-pointer.json) · [sidecar](https://councilof.ai/interop/root-witness-latest.json) |
 | 4 · Corrections ledger | **93** entries · latest `C-2026-1006-13` (2026-10-06) · signature_state **VALID** · CC-BY-4.0 | [`/api/corrections`](https://councilof.ai/api/corrections) |
 | Living board stamp | **SIGNED** under `did:web:csoai.org#board-attestation-1` | [`/api/gspc` → `measured_on.living_stamp`](https://councilof.ai/api/gspc) |
-| Third-party Hub cells | **438** cells: MEASURED 438 · UNMEASURED 0 · complete read: True (as_of `2026-11-09T06:37:28.971Z` — re-GET `/api/hub-cards` → `.counts`; never freeze) | [`/api/hub-cards`](https://councilof.ai/api/hub-cards) |
+| Third-party Hub cells | **438** cells: MEASURED 438 · UNMEASURED 0 · complete read: True (as_of `2026-11-09T16:47:24.831Z` — re-GET `/api/hub-cards` → `.counts`; never freeze) | [`/api/hub-cards`](https://councilof.ai/api/hub-cards) |
 | Keys (DID) | `did:web:csoai.org` · 7 verification methods · card key x=`1MsOqhbV9Q…` | [`/.well-known/did.json`](https://csoai.org/.well-known/did.json) |
 | A2A agent card · x402 manifest | `Council of AI — Measurement Agent`, 15 skills · `csoai.x402/0.2`, network `eip155:8453`, mode `live`, 32 metered resources | [`/.well-known/agent.json`](https://councilof.ai/.well-known/agent.json) · [`/.well-known/x402.json`](https://councilof.ai/.well-known/x402.json) |
 
@@ -123,7 +123,7 @@ _9 products read from `docs/product/_INDEX.json` (as_of 2026-09-06T06:00:18Z). A
 
 _Pushed by `scripts/spray/gspc-spray.py` (daily, idempotent by `as_of` and fingerprint). The live root `as_of` at derive time was `2026-11-07T20:54:37Z`; a surface that lags is shown lagging, not reconciled. Board data is CC-BY-4.0; the reader packages are Apache-2.0 / Apache-2.0._
 
-Also on the Hub: [`csoai`](https://huggingface.co/csoai) — 174 datasets (frozen banks, hub cards), 33 Spaces, 7 models. Methodology record 10.5281/zenodo.21991104 — record unavailable at doi.org since 29 Sep 2026, see [the dated notice](https://councilof.ai/interop/zenodo-status.json) — latest version `UNCHECKABLE` (UNCHECKABLE). Board snapshot cited on 2026-09-05: `10.5281/zenodo.22344048` = as_of `2026-09-05T09:00:28Z`, under concept `10.5281/zenodo.22293340`. Our own models losing our own arena: [councilof.ai/honesty](https://councilof.ai/honesty/).
+Also on the Hub: [`csoai`](https://huggingface.co/csoai) — 175 datasets (frozen banks, hub cards), 33 Spaces, 7 models. Methodology record 10.5281/zenodo.21991104 — record unavailable at doi.org since 29 Sep 2026, see [the dated notice](https://councilof.ai/interop/zenodo-status.json) — latest version `UNCHECKABLE` (UNCHECKABLE). Board snapshot cited on 2026-09-05: `10.5281/zenodo.22344048` = as_of `2026-09-05T09:00:28Z`, under concept `10.5281/zenodo.22293340`. Our own models losing our own arena: [councilof.ai/honesty](https://councilof.ai/honesty/).
 
 ## Repositories that carry the estate
 
@@ -147,4 +147,4 @@ The PyPI reader `csoai-gspc` and the npm MCP server `csoai-gspc-mcp` are built f
 
 ---
 
-<sub>CS<strong>O</strong>AI · CSOAI Ltd (Council of AI) · 3rd Floor 86-90 Paul Street, London EC2A 4NE · nicholas@csoai.org · [councilof.ai](https://councilof.ai) · derived 2026-11-09T06:37:34Z</sub>
+<sub>CS<strong>O</strong>AI · CSOAI Ltd (Council of AI) · 3rd Floor 86-90 Paul Street, London EC2A 4NE · nicholas@csoai.org · [councilof.ai](https://councilof.ai) · derived 2026-11-09T16:47:34Z</sub>
