@@ -253,7 +253,7 @@ Append-only. Format: `move-ID · URL · commit SHA · timestamp · verification 
 | N5-10 | **GATED** | mcp-publisher not installed; OAuth required |
 | N5-13 | **MERGED, DEPLOY PENDING** | N5-13 · councilof-ai#483 merged c903a7d · 2026-08-24T17:19Z · master has v1.0.0 card; live still v0.2.0 (deploy cancelled/queued) |
 | N5-14 | **LOCAL PASS** | N5-14 · ops/logs/a2a-validator-local.json · (this commit) · 2026-08-24T17:22Z · 10 PASS 0 FAIL on generated card |
-| N5-15 | **PREP** | a2aagentlist.com/submit requires email to gal6111@gmail.com — no-spam law: NOT sent |
+| N5-15 | **PREP** | a2aagentlist.com/submit requires email to [address removed] — no-spam law: NOT sent |
 | N5-16 | **BLOCKED** | artinet.io is placeholder ("evolving...") — no registration form |
 | N5-17 | **LOCAL COMMIT** | N5-17 · connect/a2a/awesome-a2a-pr.diff · 3e2d0e1 local · push blocked (cursor[bot] 403) — owner push fork branch add-council-of-ai |
 | N5-18 | **GATED** | Discussion #97 comment blocked (integration 403) — draft in directory-submissions.md |
@@ -305,7 +305,7 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 
 1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
 2. `mcp-publisher login github` → `bash ops/mcp-publish-gspc.sh` (N5-10/11) — server.json on main validated (aab76f4)
-3. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
+3. a2aagentlist email to [address removed] (N5-15) — Nick decision
 4. Discussion #97 comment (N5-18) — integration lacks write access (GraphQL FORBIDDEN)
 
 ---
@@ -343,7 +343,7 @@ councilof-ai deploy.yml run for #483 was **cancelled** (concurrency); subsequent
 ### Owner unblock list (remaining)
 
 1. `export HF_TOKEN=…` → `bash scripts/overnight-hf-publish.sh` (leaderboard-results + Gradio Space + DOIs)
-2. a2aagentlist email to gal6111@gmail.com (N5-15) — Nick decision
+2. a2aagentlist email to [address removed] (N5-15) — Nick decision
 3. Discussion #97 comment (N5-18) — integration lacks write access
 
 ---
